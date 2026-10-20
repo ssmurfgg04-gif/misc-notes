@@ -1,0 +1,31 @@
+name: vtuad-ingest
+"on":
+  workflow_dispatch:
+    inputs:
+      max_clips:
+        description: "optional cap per job (0 = all)"
+        default: "0"
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - which: vessel
+          - which: background
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy pandas pyarrow scipy
+      - name: Convert VTUAD -> TOL refs
+        run: |
+          python src/vtuad_ingest.py --which "${{ matrix.which }}" --download \
+            --parts_dir parts --out output --max_clips ${{ github.event.inputs.max_clips }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: refs-${{ matrix.which }}
+          path: output/
+          retention-days: 90
