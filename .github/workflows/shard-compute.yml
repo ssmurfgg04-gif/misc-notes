@@ -1,0 +1,67 @@
+name: shard-compute
+"on":
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "number of shards the matrix runs"
+        default: "8"
+      task:
+        description: "task name understood by src/task.py"
+        default: "gen_v1"
+concurrency:
+  group: shard-compute
+  cancel-in-progress: true
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install numpy pandas pyarrow scipy lightgbm scikit-learn
+      - name: Pull data (private backup repo release asset)
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          mkdir -p data
+          curl -sfL -H "Authorization: Bearer $GH_PAT" \
+            -o /tmp/data.zip \
+            "https://github.com/${GITHUB_REPOSITORY}-data/releases/download/v1/sa_acoustics.zip" \
+            && unzip -q /tmp/data.zip -d data/ \
+            || echo "DATA ASSET MISSING — run only read-only tasks"
+      - name: Run shard
+        run: |
+          python src/task.py --task "${{ github.event.inputs.task }}" \
+            --shard "${{ matrix.shard }}" --of "${{ github.event.inputs.shards }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: out-${{ matrix.shard }}
+          path: output/
+          retention-days: 30
+          if-no-files-found: warn
+  aggregate:
+    needs: [shard]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: out-*
+          merge-multiple: true
+          path: output/
+      - run: python src/aggregate.py --dir output/ || echo "no aggregator yet"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aggregated
+          path: output/aggregated.*
+          retention-days: 30
+          if-no-files-found: warn
