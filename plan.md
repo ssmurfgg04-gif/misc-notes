@@ -166,6 +166,60 @@ upload. None may leak into logs — never `echo` secrets in workflows.
 6. Weak AIS labels: proximity ≠ audibility; absence of AIS ≠ absence of vessel.
    Never treat as ground truth — confidence-weighted only.
 
+
+## 6b. R2 findings (2026-10-20) — recipe verified, exploit dead, E2E live
+
+**The organiser recipe (verified).** The official starter notebook (byte-identical
+copy found in student repo maddwillson/DSCI550_UVNC) documents the test construction:
+passage components derive from **VTUAD v1.3.2** (Zenodo 23037895), converted with
+`minute_band_power()` (Hann periodogram, 2 s non-overlapping segments, mean removed,
+PSD integrated over base-10 third-octave bands centred 10^(1.5+0.1k), linear mean of
+30 segments per minute, NaN for unsupported bands); **absolute digital gain
+discarded**; **time trajectories, relative acoustic channel and energy varied**;
+combined with measured SA backgrounds. Our generator now replicates this exactly
+(`src/tol_convert.py`, `src/generator.py`). The unknowns are now parameter-level
+(randomisation ranges, f-grid, clip selection) — calibratable, per the SBI framing.
+
+**Door 4 (background-reuse algebraic solve): DEAD.** Pairwise correlation over all
+1,124,250 test pairs: max 0.9831, zero pairs > 0.99 — every test window has a unique
+background. No (B,V) reuse, no f-grid via subtraction. Branch closed; document as a
+negative result (write-up value).
+
+**Structure that IS real.** 10 site-like clusters (PC1 82%); per-cluster recorder
+duty-cycle fingerprints via m01-observed rate (0.03–0.88). Cluster membership and
+missingness masks are legal input-derived features (D8). Conditional background
+models (per cluster × band) are the correct replacement for the dead heuristic.
+
+**Tournament v1 (grouped holdout: clips + sites).** two-head LGBM 0.0460 <
+direct 0.0467 < constant 0.0918 << heuristic 0.6565. Dominant features: band_share
+(spectral shape) + band_excess_max. Optimism caveat: synthetic val shares generator
+signatures; treat as ceiling. Real-refs re-run pending VTUAD ingest.
+
+**AIS assumptions reviewed (user consult):** AIS remains a write-up/weak-label
+asset, NOT a label source (organisers: "AIS does not confirm which vessel produced
+a sound"). Clock alignment with export clocks must be validated on training data
+first (DATA_DICTIONARY warning). Claims about AIS-catcher SA coverage / Open Waters
+API / ZACube-2 not independently verified yet — R3 task, low priority. Tooling
+reference: lucascesarfd/onc_dataset (MIT) has a working AIS↔hydrophone sync pattern.
+
+**Open-source leverage verdicts (Pareto):**
+| Tool | License | Verdict |
+|---|---|---|
+| meridian-analytics/VND | GPLv3 | ideas only (SPL/SNLD/tonal features); no code reuse |
+| lucascesarfd/onc_dataset | MIT | reference for AIS sync (R3) |
+| lifewatch/DEEP-OC | MIT | optional detector baseline for `score_added_vessel` |
+| SONARIS / phonometry (JOMOPANS-ECHO) | check | optional physics features R3/R4 |
+| SyntheticNoisySignals | — | does not exist; concept reimplemented in generator.py |
+| Underwater-Acoustic-Synthetic-Dataset | CC-BY-4.0 | skip for primary (synthetic < real VTUAD) |
+| QiandaoEar22 / ShipsEar / DeuteroNoise | various | backup reference diversity; ShipsEar not on organiser allowlist; declare if used |
+
+**Information-first doctrine (adopted):** compute is not the bottleneck; prior
+fidelity is. Priority order: (1) conditional background model p(B) per cluster,
+(2) real VTUAD references p(V) with matched transforms, (3) calibration
+marginalisation (random per-window gain), (4) two-head architecture, (5) neural
+posterior estimation only if tails matter (R4+). GPU converts wall-clock into
+samples, not information.
+
 ## 7. Risks & mitigations
 
 | Risk | Likelihood | Mitigation |
