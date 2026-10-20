@@ -38,3 +38,13 @@
 **Next round (R2) entry point:** see `HANDOFF.md` § first-tasks.
 
 ---
+
+**R1 addendum (same day, after push)**
+- Smoke run `39451412858` SUCCESS: 8 shards + aggregate, private data pull via
+  `GH_PAT` works. Compute loop is live: edit `src/task.py` → dispatch → merge artifacts.
+- Data backup live: private `misc-notes-data` release v1 (`sa_acoustics.zip`,
+  `Test.csv`), account-only.
+- cortexm verdict: adopt — chunk-recall (`search()` → `context_block`) retrieves
+  the 8 project docs correctly; triple extraction is noisy for dense technical
+  facts, so markdown stays source of truth (D3 confirmed). db: `memory.db`,
+  `user_id=uvn`.

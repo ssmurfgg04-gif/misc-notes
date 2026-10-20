@@ -18,6 +18,7 @@ we win with a leakage-clean synthetic-mixture pipeline + real vessel references
 - [x] Compute: GH Actions sharded template live (`shard-compute.yml`), Kaggle
       token verified (Bearer REST works; CLI quirks in `docs/runner-playbook.md`)
 - [x] cortexm facts db seeded (see §facts-db)
+- [x] Data backup approved-by-default: private `misc-notes-data` release v1 (sa_acoustics.zip + Test.csv). Say the word to delete if unwanted.
 - [ ] **blocked-on-user**: Zindi credentials (for submissions + direct downloads
       + discussion posts), OK to create private `misc-notes-data` repo for the
       ~90 MB data backup asset
@@ -43,6 +44,7 @@ we win with a leakage-clean synthetic-mixture pipeline + real vessel references
 6. Kaggle CLI 2.2.4 env-token quirk → use Bearer REST; token also at
    `~/.kaggle/access_token`.
 7. GH runners: public repo = free unlimited; 6 h/job cap; 4c/16 GB; shard + aggregate.
+8. Smoke run 39451412858 verified the full loop: checkout → pip → private data pull → shard task → artifacts → aggregate.
 
 ## Rules rails (violating these = disqualification)
 Test = inference-only. No LB probing. No challenge-data redistribution (public
