@@ -79,3 +79,19 @@ organiser recipe, first E2E generator→model→submission run.
 **Open questions**
 - Q1: does the write-up disclose cluster/recorder fingerprinting? (legal per letter; flag to user)
 - Q2: AIS verification — AIS-catcher SA stations / Open Waters API claims from user's consult not yet independently verified (R3, low priority: AIS is write-up asset, not label source)
+
+**R2 completion addendum (same day)**
+- VTUAD ingest verified end-to-end on GH runners: 509 vessel + 16 background clips →
+  62,775 minute-band rows (all powers real; an earlier "all-zero" scare was our own
+  `describe().round(3)` display rounding, values are ~1e-9 — noted to avoid repeat).
+- Registry join fixed via strict-interval paths (`vessel/<n>.wav` ↔ registry `path`);
+  metadata restored (label, hull_id, length, beam; 179 hulls, 525 clips).
+- Fixed 2 real bugs found by E2E: reference-stretch broadcast `(1,15,25)`;
+  bool `@` matmul in forensics (N=1). Both now covered by self-tests.
+- Tournament on REAL VTUAD refs (12k mixtures, grouped holdout clips+sites):
+  **two-head 0.0633 ≈ direct 0.0632 << constant 0.092 << heuristic 0.714 (dead)**.
+  Physics-ref run (0.046) confirmed as optimistic ceiling — real refs harder,
+  as designed. Dominant features: band_share 20–24 (cavitation HF), flatness.
+- E2E artifact: `data/submission_r2_v1.csv` — 1,500 rows, format-validated
+  (IDs match, finite, [0,1]). Mean share 0.115, mean score 0.736. NOT submitted
+  (2/day budget; user gate).

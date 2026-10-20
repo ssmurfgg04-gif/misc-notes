@@ -1,6 +1,6 @@
 # HANDOFF.md — read this first (next-AI pickup, updated every round)
 
-> Last updated: R1, 2026-10-20. Repo: `ssmurfgg04-gif/misc-notes` (public, bland name).
+> Last updated: R2, 2026-10-20. Repo: `ssmurfgg04-gif/misc-notes` (public, bland name).
 > Companion: `plan.md` (strategy), `worklog.md` (round logs), `docs/` (evidence).
 
 ## Mission (1 line)
@@ -51,19 +51,33 @@ Test = inference-only. No LB probing. No challenge-data redistribution (public
 repo carries code/docs only). External data must be declared. Raw [0,1] outputs,
 no rounding. AIS weak labels are confidence-weighted, never ground truth.
 
-## First tasks for R2 (generator v1 + tournament)
-1. `src/tol_convert.py` — VTUAD 32 kHz WAV → 25-band one-minute TOL
-   representation (Welch → 1/3-octave base-10 aggregation onto exact centres
-   31.6–7943.3 Hz). Match the starter notebook's column layout exactly.
-2. `src/generator.py` v1 — inject real VTUAD passages into real SA background
-   periods: linear-energy add, `y = A/T` on observed cells, ~35% zeros,
-   positive mass log-uniform [1e-4, 0.6], passage placement uniform over window,
-   3 scenario variants. Splits: group by (background period, hull_id).
-3. `src/features.py` — tabular set per plan §3.3c (observed-cells-only aggregations,
-   band ratios, excess energy, masks, spectral shape stats).
-4. `src/tournament.py` — constant / energy-heuristic / LightGBM; RMSE by
-   scenario × split. Output `output/tournament_v1.json` + table in worklog R2.
-5. Commit + push; run one 8-shard `shard-compute` dispatch as smoke test.
+## State after R2 — DONE
+- [x] Recipe verified: official starter notebook (md5-identical copy in
+      maddwillson/DSCI550_UVNC) documents VTUAD v1.3.2 + exact conversion
+      (cell 11) + documented transforms (gain discard, trajectory/channel/energy
+      variation). Generator replicates it.
+- [x] Forensics: background-reuse exploit DEAD (max corr 0.983, no pairs >0.99);
+      10 site-like clusters w/ recorder duty-cycle fingerprints; excess proxy
+      needs conditional background model.
+- [x] VTUAD ingest on runners → refs_vtuad_real (525 clips, 62,775 rows)
+- [x] Tournament v1: two-head 0.0633 / direct 0.0632 / constant 0.092 /
+      heuristic 0.714. Submission artifact validated (not submitted).
+- [x] Tool review verdicts (VND GPLv3 ideas-only, onc_dataset MIT reference,
+      DEEP-OC MIT optional, SyntheticNoisySignals nonexistent).
+
+## First tasks for R3 (conditional background + calibration)
+
+1. `src/bg_model.py` — conditional background model per test cluster × band
+   (median + robust scale in linear energy), used for: excess features,
+   scenario calibration of the f-distribution, and honest zero-rate priors.
+2. Generator v2 — randomised calibration nuisance (per-window ref gain),
+   trajectory variation ranges fitted vs real test cluster statistics;
+   12k→50k mixtures via shard-compute (runner smoke test passed R1).
+3. Features v2 — add cluster-membership probability, m01-fingerprint, per-band
+   excess vs cluster background template, temporal-envelope shape stats.
+4. Model v2 — LightGBM two-head + small CNN head on 15×25 (Kaggle GPU when
+   justified); ensemble across generator scenarios.
+5. Prepare 2 candidate submissions; user submits (2/day budget gate).
 
 ## cortexm facts db (structured memory; markdown stays source of truth)
 - Repo cloned at `/home/z/my-project/workspace/context-m`; pip install `cortexm`.

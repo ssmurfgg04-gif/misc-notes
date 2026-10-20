@@ -77,7 +77,7 @@ def transform_reference(V, rng, minutes=15):
         if mode == 0:   # linear stretch of the trajectory (time-trajectory variation)
             pos = np.linspace(0, m - 1, minutes)
             lo = np.floor(pos).astype(int); hi = np.ceil(pos).astype(int)
-            w = (pos - lo)[None, :, None]
+            w = (pos - lo)[:, None]
             W = V[lo] * (1 - w) + V[hi] * w
         else:           # cyclic tiling with per-cycle gains
             reps = int(np.ceil(minutes / m))
