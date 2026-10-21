@@ -820,3 +820,79 @@ Cumulative hunt: 61 + 12 = 73 probes.
    SAMSA (A53).
 3. Optional: bed-level matching for the 16 VTUAD background clips vs G1
    (provenance check of the synthetic pool — R8, low priority).
+
+## 6o. R7e — Scholar/arXiv + south-coast harvest: Mossel Bay array found; VTUAD failure-mode mapped to G1 (docs/hunt_log_r7e.json)
+
+**A54 (provenance of the Algoa+StFrancis block):** Schoeman, Erbe & Plön 2022
+(JMSE 10(6):746) = SM2M+ recorders (registry 07 = SM2M ✓), 15-min duty-cycled
+windows, Feb 2015–Mar 2018, sites SF/AB1/AB2a/AB2b, 1/3-octave LTSA
+10–19,953 Hz. Wind correlates >0.7 at 1000–2512 Hz at SF/AB1/AB2b ⇒ wind is
+THE confound; vessel features should be wind-detrended band SHAPE, not
+absolute level. No sites beyond the registry.
+
+**A55 (Mossel Bay = rank-1 NAMED south-coast candidate for 08/G1):** Dines PhD
+2025 (Stellenbosch, Sea Search): SoundTrap 300/500 in Mossel Bay from 19 Mar
+2021; thesis includes a **six-week, three-site, five-hydrophone south-coast
+array** (sites unnamed in abstract; PDF dines_marine_2025.pdf, handle
+10019.1/132009); NEW long-term Mossel Bay hydrophone project (Oceans Research
+FB 27 Aug 2025, Sea Search collab) motivated by imminent harbour-expansion
+EIAs. Boat surveys 2016–2023 at five SA sites (ack: Ocean Odyssey Knysna,
+Offshore Adventures Plett). A 3-site 5-hydrophone array is exactly the shape
+of an unpublicised G1-class source. Enquiry slate for 08 adds **Mossel Bay**
+ahead of Hermanus/Gansbaai.
+
+**A56 (G2 = Table Bay/Cape Town harbour strengthened):** Probert, Elwen &
+Gridley 2025 (Sci Rep 43185): ST300 deployed 3 m depth at V&A Waterfront
+(Cape Town harbour), 31 Dec 2023 → 1 Jan 2024 (~16 h short campaign). The Sea
+Search pool demonstrably deploys in the harbour; G2 = 99 windows ≈ 25 h
+harbor-tinged short campaign fits this deployment class.
+
+**A57 (new agency target):** SAMSA = Lead Pilot Country (Africa) for
+GEF-UNDP-IMO GloNoise; URN Toolkit workshop Cape Town 26–27 Mar 2026;
+RAINDROP/Lite EIAs; project extended into 2026+. No fixed stations public
+yet — add SAMSA/GloNoise to the enquiry list (they would own URN monitoring).
+Minor: Sea Shepherd/Marine Dynamics Gansbaai Dec 2023 "Ecological …"
+deployment — unresolved FB snippet (PARTIAL). data.ocean.gov.za MIMS portal
+JS-walled (tempmail route open).
+
+**A58 (VTUAD literature — the failure mode IS our G1 problem):** VTUAD =
+Domingos/Skelton/Santos 2022 (ONC Strait of Georgia, 1-s clips, 3 SNR
+scenarios). Fixed-filter SOTA collapses 97% (single scenario) → 84% (mixed
+SNR) because the BACKGROUND class confounds across bed levels. CATFISH
+(Elsborg et al., arXiv 2505.23964, DTU): learnable Gabor filterbank +
+EfficientNet-B0 + attention pooling + **CTD metadata fusion (91.59→96.32%)**
+= 96.63% combined. Hummel 2026: frozen-pretrained embeddings are dominated by
+RECORDING-specific variance → per-site normalization mandatory before probing.
+
+## 7g. R7e technique playbook (ranked by gain×fit÷cost; details in hunt_log_r7e.json)
+
+1. **Station-fingerprint conditioning** (LOW cost, biggest lever): add G0/G1/G2
+   covariates to every test window (deterministic from m01/m15 missingness):
+   group one-hot, quiet-bed level (63.0/72.2/64.8 dB), tilt (−8.3/−5.7/−8.0);
+   train-side analogue = site P20 bed + tilt; plus per-station SNR-normalized
+   band powers. Directly mirrors CATFISH's metadata fusion and the VTUAD
+   multi-bed confound fix.
+2. **Wind-detrended shape features** (LOW): band ratios, spectral tilt, vessel-
+   band excess over wind-predicted level (A54 regressions).
+3. **Hurdle + calibration stack** (LOW-MED): isotonic on presence head;
+   distribution calibration (Song ICML 2019) on positive-share head; then the
+   user shrinkage k after the LB ρ readout.
+4. **Self-training on test windows** (MED): confidence-filtered pseudo-labels,
+   2–3 rounds; EMA mean-teacher if NN. Targets OOD G1.
+5. **Frozen-embedding probe, site-normalized** (MED): PANNs/BEATs per minute-bin
+   → per-station standardization → LGBM probe (Hummel caveat).
+6. **CATFISH-lite raw-waveform branch** (HIGH; fallback/paper branch):
+   learnable filterbank + attention pooling + station-covariate fusion,
+   trained on synth H_A/H_B + real backgrounds.
+7. **Ensembling + TTA** (LOW): seeds, time-shift, gain jitter; blend on
+   group-split val.
+
+## 7h. R7e next actions
+
+1. USER GATE unchanged: submit r7_v3_k045 (rec) / r7_v2 → ρ readout → k* = ρ.
+2. Enquiry list now: Sea Search (Dines/Elwen/Gridley — Mossel Bay + harbour +
+   fingerprint question A53), SAMSA GloNoise desk, SAEON. The A53 fingerprint
+   wording stays the card; add "Mossel Bay?" as an explicit allowed name.
+3. R8 build order (if modeling branch approved): T1 fingerprints + T2 wind
+   shape into train_v3_v31 → group-split val; then T3 calibration; T4/T5 only
+   if val gains ≥0.01.

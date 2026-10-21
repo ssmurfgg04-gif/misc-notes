@@ -75,3 +75,26 @@ Island** (Sea Search humpbacks), **Langebaan** (MPA history), **Yzerfontein**,
 Ordering law (R7b): registry = regional blocks (01–02 KZN, 03–06 Algoa Bay
 [non-geographic internal order], 07 south coast, 08 False Bay?, 09–10 peninsula,
 11–12 west coast, 13 Saldanha); Cape block happens to be longitude-monotone.
+
+
+## 8. R7e — south-coast + harbour additions (hunt_log_r7e.json)
+
+**A55 (08 slate updated):** Mossel Bay is now the rank-1 NAMED south-coast
+candidate for 08/G1 — Dines (PhD 2025, Stellenbosch/Sea Search) ran
+SoundTrap 300/500 deployments in Mossel Bay from 19 Mar 2021 and a six-week
+THREE-site FIVE-hydrophone south-coast array (site names in
+dines_marine_2025.pdf, scholar.sun.ac.za handle 10019.1/132009); a NEW
+long-term Mossel Bay deployment (Oceans Research/Sea Search, Aug 2025) is
+EIA-motivated. Boat-survey sites: Knysna (Ocean Odyssey), Plett (Offshore
+Adventures). Gansbaai: Sea Shepherd/Marine Dynamics Dec 2023 deployment
+snippet unresolved. Hermanus: still zero public fixed deployments.
+
+**A56 (11/12 slate updated):** Table Bay / Cape Town harbour RAISED —
+Probert/Elwen/Gridley 2025 (Sci Rep) proves Sea Search ST300 deployments at
+V&A Waterfront (31 Dec 2023–1 Jan 2024, 16 h). G2 = 99 windows ≈ 25 h
+harbor-tinged short campaign fits this class. Robben/Dassen/Langebaan retain;
+no new west-coast public deployments found (absence consistent with hide).
+
+**A57 (enquiry targets):** + SAMSA (GloNoise lead pilot country, URN toolkit,
+RAINDROP EIAs, workshop Cape Town Mar 2026) and + Dines/Oceans Research
+(Mossel Bay). A53 fingerprint card remains the core question form.

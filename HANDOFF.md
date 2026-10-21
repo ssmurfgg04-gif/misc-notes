@@ -1,3 +1,19 @@
+# HANDOFF — state banner (updated 2026-10-21, R7e)
+
+**R7e in one line:** Scholar/arXiv + south-coast harvest. **A55: Mossel Bay =
+rank-1 NAMED 08 candidate** (Dines 2025 PhD/Sea Search: SoundTrap 300/500 from
+Mar 2021 + six-week THREE-site FIVE-hydrophone south-coast array + new
+long-term Mossel Bay deployment, Oceans Research, Aug 2025). **A56: Sea Search
+deploys ST300 in V&A Waterfront / Cape Town harbour** (NYE 2023, 16 h) ⇒ G2
+(99 win ≈ 25 h, harbour-tinged) → Table Bay/Cape Town harbour strengthened.
+**A54: Schoeman 2022 = provenance of Algoa/StFrancis block** (SM2M+, 15-min
+windows, wind r>0.7 at 1–2.5 kHz ⇒ wind-detrend features). **A58: VTUAD lit —
+fixed-filter models collapse 97→84% across bed levels (background confound);
+CATFISH metadata fusion 91.6→96.3% ⇒ station-fingerprint conditioning = top
+technique lever (playbook §7g, 7 ranked items).** Unchanged: submit r7_v3_k045
+(rec) or r7_v2 → ρ readout → k*; A53 fingerprint enquiry now + "Mossel Bay?"
++ SAMSA GloNoise desk.
+
 # HANDOFF — state banner (updated 2026-10-21, R7d)
 
 **R7d in one line:** TEST-WINDOW CENSUS — exactly **3 export-fingerprint

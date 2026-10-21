@@ -320,3 +320,34 @@ probes; south-coast literature never swept).
 **Open / blocked-on-user**
 - Submit r7_v3_k045 (rec) or r7_v2 → ρ readout → k* = ρ.
 - Send the A53 fingerprint enquiry to Sea Search/SAEON/SAMSA.
+
+## R7e — 2026-10-21 — Scholar/arXiv technique harvest + south-coast intel: Mossel Bay array, harbour ST300, fingerprint-conditioning playbook
+
+**Agent:** Z.ai (main). **Directive:** user R7e ("use these findings to get even
+more findings; research even on Google Scholar and arXiv for best technique; be
+methodical").
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | South-coast sweep (Mossel Bay/Knysna/Plett/Hermanus/Gansbaai) | **HIT: Dines PhD 2025 (Stellenbosch/Sea Search) — Mossel Bay SoundTrap 300/500 from 19 Mar 2021 + six-week 3-site 5-hydrophone south-coast array + new long-term Mossel Bay deployment (Oceans Research, Aug 2025, EIA-motivated)** → A55; Mossel Bay = rank-1 named 08 candidate. Gansbaai Sea Shepherd Dec 2023 = unresolved partial |
+| 2 | Harbour probe | **HIT: Probert/Elwen/Gridley 2025 Sci Rep — ST300 at V&A Waterfront (Cape Town harbour), NYE 2023, ~16 h** → A56; G2 (99 win ≈ 25 h harbour-tinged) → Table Bay/Cape Town harbour strengthened |
+| 3 | Provenance chase | **HIT: Schoeman/Erbe/Plön 2022 JMSE — SM2M+, 15-min duty-cycled windows, Feb 2015–Mar 2018, SF/AB1/AB2a/AB2b; wind r>0.7 at 1–2.5 kHz** → A54; wind-detrend/shape features mandated |
+| 4 | Agency probe | SAMSA = GloNoise lead pilot country (RAINDROP EIAs, workshop Mar 2026) → A57 new enquiry target; MIMS portal JS-walled |
+| 5 | VTUAD/technique harvest (13 queries: arXiv 2505.23964, Hummel 2026, DCASE SED line, ICML calibration, Stowell/Jeantet) | **A58: VTUAD fixed-filter collapse 97→84% across bed levels (background confound) = our G1 problem; CATFISH metadata fusion 91.6→96.3%**; frozen embeddings dominated by recording variance → per-site normalization mandatory |
+| 6 | Synthesis | Ranked 7-item technique playbook (plan.md §7g): T1 station-fingerprint conditioning (LOW cost, top lever) → T2 wind-shape → T3 hurdle+calibration → T4 self-training → T5 site-normalized embedding probe → T6 CATFISH-lite fallback → T7 ensemble/TTA. R8 build order in §7h |
+| 7 | Docs + backup | hunt_log_r7e.json (10 probes, cum 86); plan.md §6o/§7g/§7h; station-intel §8; HANDOFF banner |
+
+**Decisions**
+- D29: R8 modeling priority = T1 (G0/G1/G2 fingerprints + site-bed SNR normalization
+  in train_v3_v31) + T2 wind-shape features, judged on background-window-level
+  group-split val; proceed to T3–T5 only if val ≥ +0.01.
+- D30: Enquiry card extended (Sea Search + Dines/Oceans Research Mossel Bay +
+  SAMSA GloNoise); A53 fingerprint wording retained; "Mossel Bay?" added as an
+  explicit allowed name.
+- D31: Submission plan UNCHANGED — r7_v3_k045 recommended; ρ readout ⇒ k* = ρ.
+
+**Open / blocked-on-user**
+- Submit r7_v3_k045 (rec) or r7_v2 → LB ρ readout.
+- Send extended enquiry (A53 + Mossel Bay + SAMSA).
+- Greenlight R8 build (T1+T2) if wanted.
