@@ -515,3 +515,82 @@ Stage Summary:
 - Submit r7_v3_k045 → ρ readout → k* = ρ.
 - Enquiry (A66 slate) to Sea Search/Dines + SAMSA-GloNoise + SAEON.
 - Optional: 4.6 GB VTUAD strict-WAV re-download for T4 self-training (SHA ledgers already in data/zenodo_r9/).
+
+---
+Task ID: BK-20261021_202408
+Agent: backup_milestone.sh
+Task: milestone backup — R10-M0: R9 artifacts committed + backup hardening
+
+Work Log:
+- git add/commit/push (fail=0)
+- tarball download/backups/milestone_20261021_202408.tar.gz created, ledger now 1 entries
+
+Stage Summary:
+- Milestone R10-M0: R9 artifacts committed + backup hardening backed up at 20261021_202408
+---
+Task ID: R10-C
+Agent: general-purpose (ruicodex round 2)
+Task: rival execution-style profile, pipeline reconstruction, next-move prediction, external-data sweep, execute-better checklist (docs/intel_r10_ruicodex2.md)
+
+Work Log:
+- Read worklog tail + intel_r9_ruicodex.md + intel_r9_vtuad.md + plan.md 7g-7k + r8_t1t2_build.py/r7_shrink.py headers + PIN submission file (hygiene audit)
+- itch.io (200): 4 browser games, "39 Play titles" bio — shipping-tempo confirmation
+- Devpost profile + all 11 project pages (200): 12 hackathons, 0 visible wins; stacks = agents/AWS/node/react + ONE OpenCV/sklearn CV project + 1 Monte-Carlo tool; no audio/ML anywhere
+- GitHub RuiCodex-dev org HTML: now 10 repos (2 NEW legal-pages repos since R9 — still shipping); langs HTML x8 / TS x3 / JS x2 — ZERO Python/ML repos
+- Zindi competition page SSR'd without login: CLOSE 13 Dec 2026, 2 subs/day 200 total, team<=4, public 30%/private 70%, metric = 1-RMSE on share_added_vessel ONLY, automl banned, no rounding/thresholding, external data allowed w/ public declaration, ADDITIONAL prizes for methodology/write-ups; 467 joined
+- Score algebra: mu=0.13007576, E[f2]=0.06057998 -> sigma_f=0.20895, constant=0.791; pack 0.816-0.824 => rho 0.61-0.65; leader 0.8720 => rho 0.79-0.81 (k=1 vs k*=rho) — +0.17 correlation over pack = background-modeling + calibration execution gap, not data
+- External sweep: Zenodo 23345657 re-verified (MIT; 8 FM embedding caches incl PANNs/BEATs on all VTUAD clips, 8x240-380MB); 23312809 verified (MIT; trained VTUAD checkpoints incl Oceanship-family 291MB + frozen splits); 4-corpus UDA/SFUDA supplements all live; NOAA NCEI PAcM + public GCS bucket noaa-passive-bioacoustic (SanctSound TOL products) verified; ONC portal JS-wall (token route stands); UniqueShip 12class-5h (17.8GB) inventoried R1, still the big pull
+- Misses logged: SAEON portal timeout x2, DDG 202 x2, SLGO 403, Ecosia 403, Marginalia wall, GitHub API 403 (rate-limit; HTML covered), Wayback unreachable, "whales-initiative" UNRESOLVED (engines all walled); LinkedIn/Kaggle/companyweb not retried per directive
+- Hygiene audit of our PIN file: ID order == Test.csv == sample order (PASS), no NaN, in [0,1], full precision; BUT 33.8% of rows pinned at shrink floor 0.07154 (260 exactly at min) — point mass wastes within-floor ranking; r7_shrink.py paths point OUTSIDE repo tree
+- Deliverable written: docs/intel_r10_ruicodex2.md (5 sections + probe log); plan.md/submissions untouched; no personal identifiers in the deliverable (founder / second member only)
+
+Stage Summary:
+- RECONSTRUCTED RIVAL PIPELINE (conf): VTUAD v1.3.2 strict WAVs + starter TOL conversion (95%) -> self-mixed vessel+bg at controlled SNR for share labels (75%) -> 25-band log/excess features (80%) -> GBDT two-head share+score (65% GBDT) -> shrink/floor output handling (80%), no SA calibration, no test fitting (90%) — a mirrored version of our own r7 family minus the transductive layer
+- 0.8720 IS CONSISTENT with honest band-power + GBDT + good shrinkage: needs rho 0.79-0.81 vs pack 0.61-0.65; gap = per-window background modeling + output calibration (execution, not data); no evidence of test-matching or extra data; public 30% noise +-0.005
+- Their next moves: k-sweep on 2 subs/day -> background-model polish -> VTUAD factory deepening -> MIT embedding-cache + ONC-background grab -> seed TTA; write-up prize likely; NO pseudo-labeling (self-declared)
+- TOP EXECUTE-BETTER: (1) SUBMIT r7_v3_k045 tonight — two rounds stalled at user gate while rival converts 2 subs/day; (2) break the 33.8% floor point-mass (soft floor / per-window k); (3) one-command asserted submission builder w/ SHA ledger (kill out-of-repo hardcoded paths); (4) grab MIT FM-embedding caches + checkpoints + UniqueShip subset TONIGHT, wire T5 probe before they do; (5) cap score-head effort, add the pressure-map write-up (additional prizes) + press our transductive T1/AdaBN-CORAL edge they publicly walled themselves off from
+---
+Task ID: R10-B
+Agent: general-purpose (VTUAD round 2)
+Task: deep round 2 on VTUAD/vessel-noise — full-text/code extraction of Yuan 2026 stack, companion UDA/SFUDA configs, CATFISH internals, Knudsen wind-fit feasibility, new 2025-26 sweep
+
+Work Log:
+- Read worklog tail + docs/intel_r9_vtuad.md (24 findings) to avoid repeats; mission = go one level deeper (code/numbers, not abstracts)
+- preprints.org still 403 (HTML+PDF+jina-proxy) -> pivoted to authors' released artifacts: Zenodo 23037895 file zenodo_vtuad_v1.2.0.zip (163 KB) = the ACTUAL six-stage pipeline + benchmark code; extracted to data/zenodo_r10/v120/
+- Extracted exact log-mel config (16 kHz/3 s/1.5 s hop, n_fft 1024, hop 320, 128 mels, power_to_db ref=np.max), ResNet-18 recipe (ImageNet 1-ch-summed conv1, AdamW 1e-3, cosine, 30 ep, batch 64, SpecAugment opt, IFW-power opt, seeds 42-46), six-stage rules (excl=incl+2000 m, 2-min vessel/30-min bg floors, AIS linear interp 20 s-1200 s, minute-scan ceding), split + segment counts (95,103/20,479/18,202)
+- Computed per-class F1s locally from released per_seed_test_predictions_s42-46.csv: pooled 5-seed seg macro-F1 0.2492 [0.167,0.285]; majority(tug) 0.3851; baseline NOT better than majority (paired +0.0205, CI -0.059..+0.109, p=0.604); background->tug 1659/2555
+- Read audit pack: first-minute drop + gap-bridging defects, 167 wraparound splices (exact list), 541->511->509 spell chain, static-AIS audit (type-5 fragment loss, pyais partno bug, 15/178 conflicting hulls)
+- Companion deposits opened at code level: paper4 SFUDA repo (zenodo 23455106) -> bn_adapt exact recipe (reset ALL BN stats, cumulative MA, batch 64 drop_last, NO aug, no grads) + 11-variant BN-layer ablation (full-coverage best; deep layers biggest; shallow-only harmful; inputnorm hurts) + n=5 paired tests (bn_adapt > TENT p=0.030/0.048; TENT collapses 2/5)
+- paper2 UDA repo (zenodo 23028253) -> source-train mean/std normalization for all UDA, Deep CORAL w=1.0 on 512-d feats, 5-kernel RBF MMD (median-heuristic gammas 2^-2..2^2), VTUAD-domain result matrix (CORAL +0.015/+0.140; MMD -0.063/-0.190 into q22), grep confirms NO whitening shrinkage anywhere -> closed-form CORAL + diagonal loading is our implementation
+- CATFISH repo tarball pulled (codeload) -> fusion = 5 pre-normalized CTD scalars -> Linear(5-128)+ReLU -> concat with 1280-d max-pooled EfficientNet-B0; LogTBN median = FULL-AXIS per-band median appended as 2nd channel (not rolling); PCEN defaults s=.04 a=.96 d=2 r=.5 eps=1e-12 clamp=1e-5; shipped config use_aux=False
+- Sweeps: TTA-tabular (FTAT AAAI24 arXiv 2412.10871, AdapTable 2407.10784) = stat re-estimation + uncertainty calibration only, TENT-style inapplicable; Knudsen/Wenz track (Wenz 1962 10.1121/1.1909155; JASA 2022 ML wind/anthro separation 10.1121/10.0013887; Cauchy 2019 TGRS 10.1109/TGRS.2018.2871422); vessel-side log-linear URN regression (Shipton & Diamant 2026 10.3389/fmars.2026.1759355); AIS-gap = static audit + 20-min interpolation policy; pseudo-label-regression + HPSS = no new techniques (R9 recipe stands)
+- Feasibility check vs local tol_convert.py: our 25 deci-decades span 31.6 Hz-7,943 Hz; wind regime 500 Hz-7.9 kHz = bands k=12-24 (13 columns) -> per-window robust log-level vs log-f fit (Theil-Sen + bed-excess mask + 1 EM refit) = continuous per-window wind index; per-station piecewise log-linear wind response -> wind-detrended excess (T2 on steroids; revives A69 gate with a better estimator)
+- Deliverable: docs/intel_r10_vtuad2.md (C1-C6 critical, M7-M11, L12-L14, do-not-adopt list, ADOPT build-order delta x9); all artifacts cached in data/zenodo_r10/
+
+Stage Summary:
+- C1: rival's entire foundation extracted at code level (exact log-mel + ResNet-18 recipe + six-stage label rules); VTUAD baseline = 0.2492 pooled macro-F1, NOT statistically above majority (p=0.604), background<->tug is the dominant confusion; NO regression head exists anywhere in the released VTUAD stack -> share regression remains untouched territory
+- C2: audit pack internals — 167 wraparound splices + first-minute-drop labels; strict-interval re-cuts are the safe mining target (T4 data rule)
+- C3: AdaBN exact recipe = re-standardize ALL layers/blocks with clean target stats, full coverage, never partial/input-only; bn_adapt n=5 significantly beats TENT/SHOT; entropy-min TTA banned (2/5 collapse)
+- C4: CORAL config locked (source-stats normalization first, weight 1.0, moment matching stable; MMD direction-lottery with -0.190 worst case) + their code has zero whitening shrinkage -> our closed-form CORAL + diagonal loading is a superset
+- C5: Knudsen/Wenz per-window wind fit is FEASIBLE on our 25 columns (13 bands in the 500 Hz-7.9 kHz wind regime); robust fit + bed-excess masking + EM refit; deliverable ranks it #1 value-per-effort
+- C6: tabular-TTA literature (FTAT/AdapTable) agrees with stat-only adaptation + uncertainty calibration = our planned AdaBN+CORAL is the sanctioned design
+RETURN: 6 CRITICAL findings (C1 rival-foundation extraction incl. per-class F1s + majority-CI; C2 audit-pack cut/wraparound rules; C3 AdaBN full-coverage recipe; C4 CORAL/MMD exact configs + VTUAD matrix; C5 Knudsen wind-fit; C6 tabular-TTA literature lock). Knudsen-spectrum wind fit: FEASIBLE — bands k=12-24 (500 Hz-7.9 kHz, 13 of 25 columns) cover the wind-dominated regime; implement as robust dB-vs-log10(f) fit with quiet-bed excess masking + one EM refit, per-station piecewise log-linear wind response; index-only (no absolute m/s without an anemometer). Probe count ~60 (Zenodo ~35 incl. file downloads, Crossref ~12, S2 ~12, arXiv ~7, preprints.org 4, GitHub/jina 3; preprints.org HTML/PDF still bot-walled, full text obtained via released code/audit artifacts instead).
+---
+Task ID: R10-A
+Agent: general-purpose (OSS tools survey)
+Task: survey pip-installable CPU permissive-license OSS tools that concretely upgrade the UVNC pipeline; rank by adoption priority
+
+Work Log:
+- Read worklog tail + docs/intel_r9_vtuad.md (F1-F24) to avoid re-treading; surveyed against current stack (LGBM two-head + E5 bump + power-map + shrinkage; T1/T2 validated)
+- ~154 web probes: PyPI JSON x~65 (version/license/deps), GitHub HTML x~22 (licenses; core API 403 like R9), readthedocs/docs x~35, raw source checks x~12, Crossref x3, Semantic Scholar x3 (429 after q1), HEAD checks x~14; ~22 negatives logged; NO heavy installs (torch/TF excluded by rule)
+- Verified + graded 40+ tools across the 9 target categories; disambiguated name collisions: pycoral = Edge TPU API (not CORAL), coral/kavinslab = unrelated, transf + duqgrep = DO NOT EXIST on PyPI
+- CRITICAL doc checks: MAPIE 1.6 has NO covariate-shift weighted CP (sitemap+API grep) -> hand-roll weighted quantiles; optuna LightGBM pruning callback moved to optuna-integration (core shim deprecated 4.9, removal 6.0) but works out-of-the-box with metric="rmse"; LGBM snapshot_freq = CLI checkpointing, NOT ensembling; noisereduce is waveform/STFT-only
+- Corrections to R9: pypam is GPL-3.0 (re-implement SPD by hand, do not vendor); skada 0.6.0 (BSD-3, NO torch) ships CORALAdapter with reg="auto" (Ledoit-Wolf) = best closed-form CORAL package; TabPFN weights are non-commercial + 5k-row cap -> skip
+- Unknown unknowns: scikit-maad 1.5.2 (BSD-3) = 40+ acoustic indices; 5 chosen vs vessel-share literature (NDSI/ACI/spectral-entropy/ADI/roughness; 3 Crossref DOIs); MAPIE exchangeability martingale tests = free shift alarm; xgboost 3.x pulls nvidia-nccl on Linux (stay 2.1.3)
+- Deliverable: docs/intel_r10_oss.md (header+method+probe count, prioritized CRITICAL/MEDIUM/SKIP tables w/ URLs, ADOPT-TONIGHT top-5 pip lines + 3-line usage sketches); no pipeline code touched
+
+Stage Summary:
+- CRITICAL (tonight): optuna 5.0.0 + optuna-integration 5.0.0 (TPE+SuccessiveHalving pruning of LGBM heads); skada 0.6.0 CORALAdapter (R9-F1, Ledoit-Wolf shrinkage; or 20-line hand-roll); scikit-maad 1.5.2 alpha-indices block (station-relative!); MAPIE 1.6.0 CQR intervals -> k(window) + Mondrian per-group + martingale alarm; librosa.pcen ALREADY INSTALLED (R9-F4)
+- MEDIUM: antropy+bottleneck (entropy + fast running median for LogTBN), statsmodels RLM robust bed (E5 upgrade), stumpy/ruptures (motifs/change-points), catboost hedge head, crepes, quantile-forest, polars/duckdb/pyarrow, audiomentations (VTUAD-WAV factory only), properscoring, joblib/psutil/filelock
+- SKIP: ketos+pypam (GPL), opensoundscape/tabpfn/pytabkit/adapt/ncalib (torch/TF heavy; tabpfn weights also NC), noisereduce (wrong domain), scaper (sox), tsfresh/tsfel (overlap), pyhydrophone (scipy pin), pyhht/EMD (low value), BirdNET (wrong domain), PAMGuard (Java/GPL), duqgrep+transf (nonexistent)
+- Risks/notes: skada bumps pandas 2.2.3->2.3.x; stumpy/antropy bump numba to >=0.61.2; xgboost stay on 2.1.3; MAPIE weighted-CP absent -> F12 stays hand-rolled; no GBDT has native snapshot ensembling -> emulate via Optuna seed/feature bags
