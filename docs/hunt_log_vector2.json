@@ -1,0 +1,80 @@
+[
+ {
+  "query": "code:share_added_vessel",
+  "total": 0,
+  "hits": []
+ },
+ {
+  "query": "repos DSCI550",
+  "total": 79,
+  "hits": [
+   [
+    "kitty-qi/550_assignment1",
+    "dsci550_assignment1 "
+   ],
+   [
+    "c-myau/DSCI550-RUSUA-War",
+    "A clustering model of Twitter sentiment on the Russo-Ukranian war of 2"
+   ],
+   [
+    "yifanWangCoding/MushroomClassification_550",
+    "DSCI550 Project: Mushroom Classification"
+   ],
+   [
+    "CarlosWsh/DSCI550_Project",
+    "None"
+   ],
+   [
+    "kitty-qi/DSCI550-Data_Science_at_Scale-Assignment3",
+    "None"
+   ]
+  ]
+ },
+ {
+  "query": "code:South_African_Real_Acoustics",
+  "total": 0,
+  "hits": []
+ },
+ {
+  "query": "code:m01_TOL_31.6",
+  "total": 0,
+  "hits": []
+ },
+ {
+  "query": "repos underwater vessel noise zindi",
+  "total": 0,
+  "hits": []
+ },
+ {
+  "query": "forks of maddwillson/DSCI550_UVNC",
+  "hits": []
+ },
+ {
+  "query": "code:201383949",
+  "total": 102,
+  "hits": [
+   [
+    "AmalgamatedHarmonics/Prism",
+    "src/scales/JI_Wholestep.cpp"
+   ],
+   [
+    "AmalgamatedHarmonics/Prism",
+    "src/scales/Indian_Shrutis.cpp"
+   ],
+   [
+    "chiararomanengo/SHREC2022",
+    "dataset/training/pointCloud/pointCloud26522.txt"
+   ]
+  ]
+ },
+ {
+  "query": "code:ST300_201650217",
+  "total": 0,
+  "hits": []
+ },
+ {
+  "query": "code:SM2M_Cape_StFrancis",
+  "total": 0,
+  "hits": []
+ }
+]
