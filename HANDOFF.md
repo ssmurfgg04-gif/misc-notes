@@ -23,6 +23,31 @@ we win with a leakage-clean synthetic-mixture pipeline + real vessel references
       + discussion posts), OK to create private `misc-notes-data` repo for the
       ~90 MB data backup asset
 
+
+## R4 STATUS BANNER (2026-10-21) — wipe survived, synth v2 live, results recorded
+
+> **Wipe + recovery:** sandbox was wiped AFTER R3. Everything below was rebuilt from
+> this repo + GH-Actions artifacts + `misc-notes-data` release v1 (SHA256SUMS 13/13 OK).
+> Environment map correction: git root is now `/home/z/my-project/` directly (the old
+> `repo/` nesting is retired); `data/` is gitignored except small report JSONs.
+
+**R3 (closed):** calibration hunt done — benchmark = all-zeros predictor (sample
+placeholder 0.0) → E[f²]=0.06058 anchor. **A16 restated:** f grid U{0,0.1,0.2,0.3,0.4}
+is *statistically inferred*, NOT organiser-disclosed; hedges trained (see plan.md §6d).
+
+**R4 done (plan.md §6e):** synth v2 accepted (RMS(f)=0.2440, E[f²]=0.0595, seed 42,
+checksummed builds); two-head retrained: clip/site/both-held-out RMSE
+0.0522/0.0434/0.0493, AUC 0.997–0.998; A17 confirmed by ablation; site-median
+structural lock = negative result in-domain (0.42–0.65) — demoted to diagnostic;
+site-ID 91.2% on confident @ 26–33% coverage; `submission_r4_v1.csv` validated, NOT
+submitted (user gate). Hunt vector 1 done (station/recorder master index in
+plan.md §6f; St-Francis SM2M × MDPI jmse10060746 cross-match confirmed).
+
+**R5 priorities:** (1) hunt vectors 2–10 with exact keys; (2) hedge ensemble +
+conditional ΣB lock-v2 + duty-cycle features; (3) ONE smoke-test submission (user);
+(4) write-up track. **Next AI: read plan.md §6c–§7b first — it is the current source
+of truth; sections below are R1/R2 history.**
+
 ## Environment map (this machine)
 | Path | What |
 |---|---|

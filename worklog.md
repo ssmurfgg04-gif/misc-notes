@@ -95,3 +95,36 @@ organiser recipe, first E2E generator→model→submission run.
 - E2E artifact: `data/submission_r2_v1.csv` — 1,500 rows, format-validated
   (IDs match, finite, [0,1]). Mean share 0.115, mean score 0.736. NOT submitted
   (2/day budget; user gate).
+
+---
+
+## R4 — 2026-10-21 — sandbox wipe recovery + corrected synth v2 + two-head retrain
+
+**Agent:** Z.ai (main). **Directive:** handoff brief §E + user GitHub keys + A16 restatement.
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | Sandbox wipe forensics | data/scripts/worklogs lost; git repo + upload brief survived; no creds in env |
+| 2 | GitHub recovery | origin/main = R2 state; GH Actions artifacts still live (90-day retention): refs-vessel (509 clips/1,978 min) + refs-background (16 clips/533 min) recovered, row counts reconcile with A12 (2,511 clip-minutes) |
+| 3 | Data package recovery | private `misc-notes-data` release v1 → sa_acoustics.zip + Test.csv; **SHA256SUMS 13/13 OK** (A1 chain restored); stations.csv + recorders.csv + DATA_DICTIONARY.md recovered = hunt vector 1 keys |
+| 4 | Zenodo re-download (deprioritized) | QA files + metadata fetched; strict WAV parts 01 (85%)/02/03 partial on disk, resumable via `scripts/fetch.sh`; refs artifact made conversion-verification optional |
+| 5 | E1 synth v2 | `generator_v2.py` seed 42: PRIMARY G_unif_04 RMS(f)=0.2440, E[f²]=0.0595 → **ACCEPTED** (0.24±0.03 / 0.060±0.006); hedges G_weighted_low (0.190) + G_nonuniform (0.283); σ∈{0,0.05,0.1,0.2}, tilt∈{0,0.1,0.25} marginalized; 15k SA bg windows, dur≥55s filter |
+| 6 | E2 two-head retrain | clip/site/both-held-out RMSE **0.0522/0.0434/0.0493**, AUC 0.997–0.998; beats zero-const 0.244 and mean-const 0.141 by ≥2.9×; vs R2 real-refs 0.0633 → calibration fix confirmed |
+| 7 | E4 ablation | no-total-features: 0.0525/0.0437/0.0493 → **A17 confirmed** (shape carries signal); **negative result:** site-median lock 0.42–0.65 + fusion hurts in-domain (within-site ΣB spread swamps +2.2 dB f-shift); lock = domain-shift diagnostic only; hedges 0.0465/0.0468 vs primary 0.0493 on fixed holdout |
+| 8 | E3 site-ID | nearest-centroid: 91.2% accuracy-on-confident @ 33%/26% coverage (site / site×recorder); Richards Bay segments resist (7–37%) — follow-up: per-segment covariance, duty-cycle fingerprints |
+| 9 | Submission artifact | `data/train_v2/submission_r4_v1.csv` format-validated (mean share 0.110, p50 0.088) — **NOT submitted** (user gate, 2/day) |
+| 10 | Docs | plan.md §6c–§7b appended (A16 restated, results, hunt status, next actions) |
+
+**Decisions**
+- D10: A16 written as *statistically inferred*, never "organiser-disclosed" (user correction of record).
+- D11: hedge variants built but submission = primary model; hedge ensemble is an R5 candidate.
+- D12: structural lock demoted to diagnostic; conditional ΣB (site×band×condition) is the lock-v2 path.
+- D13: public repo gets code/docs/metrics only; SA parquets/Test.csv NEVER pushed to public (rules); refs parquet (VTUAD, CC-BY-4.0) + submission artifact → private repo release.
+
+**Open questions**
+- Q3: does the write-up disclose cluster/recorder fingerprinting? (carried from R2 Q1 — user call)
+- Q4: rules decision if exact test backgrounds ever surface (B11 hunt) — user decides after provenance visible.
+
+**Blocked-on-user**
+- Zindi login or 2 manual submissions (E6); approval to push refs/submission release v2 to `misc-notes-data` (defaulting to yes per "backup everything" directive).

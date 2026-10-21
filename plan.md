@@ -230,3 +230,139 @@ samples, not information.
 | UniqueShip/VTUAD overlap (both ONC-derived) | MEDIUM | dedupe by hull_id/MMSI + date before mixing sources |
 | Runner 6-h cap kills long training | LOW | shard by design; checkpoint to artifacts; resume pattern in `runner-playbook.md` |
 | Saldanha coordinate ambiguity breaks AIS joins | LOW | treat as 2 candidate sites; use `station_token`+`recorder` as join keys, not coords |
+
+## 6c. R3 findings — the calibration hunt (CLOSED, 2026-10-21)
+
+**Sources:** full 12-cell notebook read; Zenodo 23037895 QA files; SA README;
+sample_submission forensics. One-line: *the calibration was hiding in plain sight —
+the notebook is the documentation, and the benchmark score is the calibration anchor.*
+
+1. **Notebook refutes "mixing cell" hypothesis** (B1): no mixing code, no
+   normalization code, no example f values in any cell. Cell 9 = recipe disclosure
+   (A5); cells 10–11 = conversion spec (A4).
+2. **Zenodo QA**: rms_dbfs −71…−38 (33 dB spread) → clips unnormalized upstream
+   (A10); wrap-around manifest → strict-interval WAVs mandatory (A9).
+3. **SA README (decisive)**: backgrounds are raw dB, NOT normalized (A11); withheld
+   stations/periods explicitly excluded from the package.
+4. **Benchmark anchor (A15/A16)**: sample_submission placeholder = 0.0 exactly ⇒
+   benchmark = all-zeros predictor ⇒ RMSE² = E[f²] = (1−0.753867825)² = 0.06058,
+   RMS(f) ≈ 0.2461.
+
+## 6d. A16 RESTATED (correction of record — highest-leverage calibration fact)
+
+**f grid = statistically inferred as U{0, 0.1, 0.2, 0.3, 0.4} from the all-zeros
+benchmark anchor (E[f²]=0.0600 vs 0.06058, ~0.3 SE); hedged against weighted-grid
+variants; NOT organiser-disclosed.** Chain: benchmark=all-zeros → E[f²]=0.06058 →
+RMS(f)=0.2461 → U{0…0.4} matches; U{0…0.5} gives E[f²]=0.0917 → score 0.697, fails.
+The grid is the best-fitting distribution to the benchmark's second moment — a
+strong prior, not a documented fact. Weighted hedges are trained and ablated
+(§6e). Any change to A16 must be surfaced to the user before adoption.
+
+Additional locked facts: **A24** station identity is in package metadata ("Roy"≈
+Richards Bay ~58%); **A25** withheld test-background periods: findability UNTESTED
+(B11 reopened — search-positive posture); **A26** maddwillson/DSCI550_UVNC = USC
+DSCI 550 course project carrying the official starter (byte-identical), not an
+organiser repo. **B5 reopenable only on new evidence.**
+
+## 6e. R4 rebuild + results (2026-10-21)
+
+**Disaster → recovery.** Sandbox wiped (data/, scripts/, worklogs lost; only the
+git repo survived). Recovered in order: (1) `misc-notes` origin/main = full R2
+state (plan, worklog, src, docs, workflows); (2) GH Actions artifacts 90-day
+retention still live → **refs-vessel + refs-background parquets** (509 vessel
+clips / 1,978 minutes + 16 bg clips / 533 minutes — reconciles exactly with A12's
+2,511 clip-minutes); (3) private `misc-notes-data` release v1 → **sa_acoustics.zip
++ Test.csv**, SHA256SUMS all 13 OK (A1 chain restored end-to-end). VTUAD strict
+WAV re-download (3.7 GB parts) deprioritized — refs artifact verified by row
+counts; re-conversion verification deferred.
+
+**E1 — synth v2 (accepted).** `src/generator_v2.py`, one command, seed 42,
+.sha256 sidecars + build manifest. PRIMARY `G_unif_04`: RMS(f)=0.2440
+(accept 0.24±0.03), E[f²]=0.0595 (accept 0.060±0.006), grid mass 0.20 each.
+Hedges: `G_weighted_low` (RMS 0.190), `G_nonuniform` (RMS 0.283). Band-gain σ and
+tilt now marginalized over documented grids {0,0.05,0.1,0.2} / {0,0.1,0.25}
+(replacing guessed 0.18/0.25 fixed). SA backgrounds: 15,000 windows (1,500/site,
+10 sites), native NaN preserved, dur≥55 s filter (DATA_DICTIONARY caveat).
+
+**E2/E4 — two-head training (accepted) + ablation.** LGBM two-head (presence ×
+conditional fraction), R2 featurize + site-ID distance features:
+
+| protocol | two-head RMSE | AUC | zero-const | mean-const | lock-only | fused w0.5 |
+|---|---|---|---|---|---|---|
+| clip-held-out | **0.0522** | 0.997 | 0.2437 | 0.1409 | 0.4199 | 0.2137 |
+| site-held-out | **0.0434** | 0.998 | 0.2447 | 0.1410 | 0.6540 | 0.3246 |
+| both-held-out | **0.0493** | 0.998 | 0.2439 | 0.1409 | 0.5683 | 0.2840 |
+
+- All protocols beat the benchmark constant (0.2461 anchor) and the train-optimal
+  constant by ≥2.9×. Improvement vs R2's real-refs 0.0633 ⇒ calibration fix worked.
+- **A17 confirmed empirically**: dropping total-energy features: 0.0522→0.0525,
+  0.0434→0.0437, 0.0493→0.0493 — shape carries the signal, ΣM almost none.
+- **Negative result (logged)**: naive site-median structural lock f=1−ΣB̂/ΣM is
+  NOT competitive in-domain (0.42–0.65; fusion at w=0.5 hurts). Within-site ΣB
+  spread (1.5–1.9 orders, B2) swamps the +2.2 dB f-shift (A17). The lock is a
+  domain-shift diagnostic, not a predictor. Conditional (site×band×condition)
+  ΣB modeling — not site-median — is the correct R5 upgrade path if pursued.
+- **Hedge comparison**: training on G_weighted_low generalizes slightly better to
+  the fixed primary holdout (0.0465 vs 0.0493); G_nonuniform 0.0468. Small vs
+  synthetic-domain noise; ensemble option for R5.
+- **Submission artifact**: `data/train_v2/submission_r4_v1.csv` (1,500 rows,
+  format-validated; mean share 0.110, p50 0.088, p90 0.199). NOT submitted —
+  user gate + 2/day budget (E6).
+
+**E3 — site-ID (accepted on confident subset, honest limits).** Nearest-centroid
+on background-window descriptors (total dB, tilt, band-share, NaN rate):
+accuracy-on-confident **91.2%** (site granularity) / 91.2% (site×recorder), at
+confident-rate 33%/26% (τ=1.0). High-variability port segments resist centroid
+assignment (Richards Bay segments 7–37% at site level; within-segment condition
+spread >> between-segment separation). Follow-ups: per-segment covariance
+(Mahalanobis), duty-cycle fingerprint features (m01 pattern across span), GMM
+regimes. Reports: `data/train_v2/site_id_confusion*.json`.
+
+## 6f. Hunt status (search-positive posture; every miss logged)
+
+**Vector 1 — package metadata forensics: DONE** (recovered from backup + verified
+SHA256SUMS). Master keys (sha256): stations.csv `8037b5d3…cb563`, recorders.csv
+`781606b5…f5053`, DATA_DICTIONARY.md `162088ac…fbe04`.
+
+Station/recorder index (17 recorder-segments / 10 public sites; site numbers
+8, 11, 12 absent = withheld-station candidates):
+- 1 Richards Bay: icListen-class serials 201383949 (24 kHz, 2017–19), 5708 (24k,
+  2020–21), 7005 (24k, 2022–24); 1,001,174 min; port, extreme condition spread.
+- 2 Durban: ST600 8230 (48k, 2025-10→12). 3 Cape Recife: ST600 8210 (48k, 19 d).
+- 4 Bird Island: URN 6509 (24k, 2022), URN 8321 (12k, 2024 — 1,080 rows).
+- 5 St Croix: URN 6509 (24k), URN.StCroix 6509 (24k), URN 8321 (12k, 135k rows).
+- 6 Riy Banks: ST600 8230 (48k, 31 d). 7 St Francis: SM2M (48k, 2015-04→2018-02).
+- 9 Fish Hoek: ST300 201650217 (96k, 2016–18), ST300 5344 (96k, 2021).
+- 10 Sea Point: ST300 201650217 (96k, 3 d, 2018). 13 Saldanha Bay: ST300 5344
+  (96k, 2022), ST500 5350 (48k, 2023).
+- **Recorder movement chain (provenance gold)**: ST300 201650217 Fish Hoek→Sea
+  Point; ST600 8230 Riy Banks→Durban; ST300 5344 Fish Hoek→Saldanha; URN 6509/8321
+  Bird Island↔St Croix.
+- **Cross-match (confirmed)**: MDPI jmse10060746 lead = St Francis SM2M+ 48 kHz
+  Feb 2015–Mar 2018 ≈ SM2M_Cape_StFrancis 2015-04-21→2018-02-28. PRIORITY lead.
+- 12 kHz anomaly (README): 136,518 rows nominal-12000 carry finite 6.3/7.9 kHz
+  bands — convention unresolved; do not infer support from sample_rate_hz.
+
+**Vectors 2–10: PENDING** (GitHub sweep; SAEON per exact ID; Zenodo version
+history; institutional repositories SUNScholar/UCT/NMU; preprints + supplements;
+consortium portals; sponsor-publication spectrogram matching; Wayback; deleted-repo
+caches). Query template + logging discipline per standing directive. MIMS Algoa
+297 / UP west-coast MPB 2022 / Zenodo 2025 Childs Bank leads: cross-match pending
+station-table fit — none of the four public-site keys hit Namaqualand/Childs Bank/
+Orange River, so those leads can only match WITHHELD stations (8/11/12?).
+
+## 7b. Next actions (R4 → R5, ordered)
+
+1. **Push R4 state to GitHub** (public: code+docs+metrics; private: refs parquet
+   backup as release v2 + submission artifact). [in progress]
+2. Hunt vectors 2–10 with exact keys above; log every query (hit/miss/partial).
+3. R5 upgrade candidates (ranked by expected RMSE impact on REAL test):
+   a. ensemble primary+hedge models; b. conditional ΣB model (site×band×condition)
+   as lock-v2 features (not median); c. duty-cycle fingerprint features; d.
+   site-ID v2 with per-segment covariance; e. UniqueShip/DeepShip reference
+   diversity if VTUAD-only shapes cap the score.
+4. Submission gate (user): smoke-test one submission (public LB = diagnostic only,
+   A20), then select 2 private submissions from {recipe-based two-head, hedge
+   ensemble, shape-based} (E6/A23 diversity rule).
+5. Write-up track: every claim → figure/control/held-out number (E7); checksums
+   + DOIs + notebook cells; negative results with search logs (B1–B11).

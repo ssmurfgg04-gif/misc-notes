@@ -218,3 +218,27 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- UVNC rules compliance: challenge data must NOT be redistributed publicly ---
+data/South_African_Real_Acoustics/
+data/Test.csv
+data/sample_submission.csv
+data/maritime_starter_notebook.ipynb
+data/sa_acoustics.zip
+data/zenodo/*.zip
+data/zenodo/*.part*
+data/synth_v2/*/X.npy
+data/synth_v2/*/f.npy
+data/synth_v2/*/aux.csv
+data/synth_v2/*/bg_meta.csv
+data/refs_vtuad_real/*.parquet
+data/gh_artifacts/
+data/train_v2/submission_r4_v1.csv
+data/tournament_*/
+data/synth_v1/
+data/refs_*/
+data/forensics/
+data/profile/
+repo/
+tool-results/
+upload/
