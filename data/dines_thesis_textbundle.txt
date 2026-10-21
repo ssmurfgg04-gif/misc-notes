@@ -1,0 +1,2621 @@
+
+Applied passive acoustic monitoring of South Africa's 
+most threatened marine mammal, the Indian Ocean 
+
+humpback dolphin (Sousa plumbea) 
+
+by  
+Sasha Francess Dines 
+
+Dissertation presented for the degree of 
+Doctoral of Zoology in the Faculty of Science 
+
+at Stellenbosch University 
+
+Supervisor: Dr John Measey 
+Co-supervisors: Dr Tess Gridley, Dr Simon Elwen
+
+March 2025
+
+The financial assistance of the National Research Foundation (NRF) towards this research is hereby 
+acknowledged. Opinions expressed and conclusions arrived at, are those of the author and are not 
+
+necessarily to be attributed to the NRF. 
+
+
+
+2 
+
+DECLARATION 
+
+By submitting this dissertation electronically, I declare that the entirety of the work contained 
+
+therein is my own, original work, that I am the sole author thereof (save to the extent explicitly 
+
+otherwise stated), that reproduction and publication thereof by Stellenbosch University will not 
+
+infringe any third party rights and that I have not previously in its entirety or in part submitted it 
+
+for obtaining any qualification.  
+
+Sasha Francess Dines 
+
+Date: 13th December 2024 
+
+Copyright © 2025 Stellenbosch University 
+
+All Rights Reserved   
+
+https://scholar.sun.ac.za
+
+
+
+3 
+ 
+
+THESIS ABSTRACT  
+ 
+
+Monitoring is crucial for conservation, but elusive species, including some species of coastal 
+
+delphinids, represent particular challenges. Traditional visual surveys can often underestimate 
+
+metrics such as abundance. For Indian Ocean humpback dolphins (Sousa plumbea) in South 
+
+Africa, near-shore habitats and low encounter rates hinder photographic data collection. Passive 
+
+acoustic monitoring (PAM) offers a non-invasive alternative for species monitoring. This thesis 
+
+investigates the whistling behaviour of S. plumbea in South Africa, focusing on exploring the use 
+
+of signature whistles for individual acoustic detection. Using boat-based recordings (2016–2023) 
+
+from five sites throughout their South African range, it examines whistle variation across 
+
+different geographic scales (including a comparison of whistle-contour time-frequency 
+
+parameters across the extremes of the entire geographic range of the species) and the effect of 
+
+group composition and behaviour on signature whistle production rates, aiming to optimise 
+
+passive acoustic detection methods. The efficacy of individual acoustic detection using PAM was 
+
+directly compared to visual detection (Photo ID) through a two-week survey period in Mossel 
+
+Bay. Following this, an extended acoustic monitoring period along a portion of the south coast 
+
+subpopulation investigated individual acoustic monitoring across three sites, using five 
+
+hydrophones over six weeks, providing abundance estimates, as well as density estimates 
+
+generated using spatially explicit capture-recapture (SECR).  Macrogeographic variation in 
+
+whistle contours was evident between South Africa and India, two populations at the furthest 
+
+extent of the species' geographic range (Random Forest model correct classification rate; South 
+
+Africa 84% (35.2% chance) and India 93% (64.8% chance)). Moderate variation within South 
+
+Africa ranged from 39–90% across study sites, indicating increased acoustic variation with 
+
+geographic distance.  Group composition factors such as group size, group spread, calf presence, 
+
+and behaviour had little impact on signature whistle production. These findings suggest that 
+
+these factors are not crucial for optimising the detection of signature whistles in the acoustic 
+
+monitoring of S. plumbea. Comparing monitoring methods, photographic identification was more 
+
+cost-effective (6,400 ZAR.dolphin-1) than acoustic methods (12,266.40 ZAR.dolphin-1). However, 
+
+acoustic detection was diurnal, identifying more individuals and signature whistles at night and 
+
+across the entire survey area. Visual surveys detected dolphins at only two locations, emphasising 
+
+PAM's effectiveness as an alternative method for detecting S. plumbea. Abundance estimates from 
+
+signature whistle detected along a 120 km stretch of South Africa's south coast revealed limited 
+
+individual movement, with low abundance (SECR: 23–26; POPAN: 26, 95% CI 23–30) and density 
+
+(0.000061–0.000439 animals.ha-1). This proof-of-concept study explored mooring configurations 
+
+and model optimisation, demonstrating that expanding the geographic range of the acoustic array 
+
+could be more effective for increasing unique recaptures than clustering acoustic receivers in a 
+
+smaller area. This thesis demonstrates that PAM is a reliable alternative to photographic surveys 
+
+to study the elusive coastal species S. plumbea and produces sufficient data to understand 
+
+population abundances and movements using individual acoustic signatures. These techniques 
+
+offer a scalable and reproducible approach to producing population estimates, which can equip 
+
+wildlife practitioners and scientists with the tools to monitor this elusive species reliably over 
+
+time and space. 
+
+ 
+
+ 
+
+ 
+
+https://scholar.sun.ac.za
+
+
+
+4 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Sasha Dines, Ponta do Ouro, Mozambique February 2020 
+
+‘Herme’, the first humpback dolphin whistle I recorded underwater 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+  
+
+This thesis is dedicated to my Grandad Paul, 
+
+who first inspired my love for all things aquatic. 
+
+https://scholar.sun.ac.za
+
+
+
+5 
+ 
+
+ 
+
+ACKNOWLEDGEMENTS 
+ 
+This work would not have been possible without the unwavering support of my supervisors, who 
+cheered me on until the very last moment.  
+
+John, thank you for keeping me on track. You’ve literally written the book on ‘How to write a PhD’. 
+Your words of advice have been invaluable. Thank you for having the patience to spend hours 
+pouring over paragraph structure with me. Simon, the voice of reason, thank you for your 
+constant encouragement and wicked sense of humour throughout some very long office days.  
+And Tess – I couldn’t have picked a better adventure buddy. You’ve shown me science can be done 
+anywhere, anytime, including in a coffee shop while juggling a newborn. It’s been a very busy few 
+years, and in that time, you’ve had a baby, and I managed to birth this PhD! Two great feats. Thank 
+you for being a friend and a mentor.  
+
+I want to take a moment for my favourite Brazilian. I don’t think any of us could have imagined 
+the events of this last year to have happened. Gui will forever be a huge part of my journey over 
+the last few years. His constant enthusiasm and positivity, mixed with endless thought-provoking 
+questions, pushed me to be a better scientist throughout this process. 
+
+Ultimately, this PhD would not have been possible without the support and generosity of 
+collaborators across southern Africa. Over the last four years, I’ve had the privilege of travelling 
+and working with so many inspiring and supportive people. But to name a few... 
+
+The Sea Search team, particularly Rachel and Cat, were always there with words of 
+encouragement, assistance, and advice. I am very grateful for your support and friendship 
+throughout this journey. 
+
+And to Jack, who stepped up to be the best housemate one needs when in the throes of PhD 
+writing. Thank you for the endless amounts of coffee, snacks, and chocolate in the last few weeks. 
+This PhD really wouldn’t have happened without all our very late-night dolphin discussions, so 
+thank you. Now, it's time to hand over those coattails. Your turn next… 
+
+The whole SouSA consortium, for your support throughout the project. To Els and the Whale Unit 
+team – for letting me join your boat back in 2019 and showing me the cetacean ropes. Gwen, sorry 
+for sending you after the wrong mooring for several days, but your support and willingness to 
+help saved a large portion of my data. Shanan, for being the most amazing campsite hostess and 
+showing me the Richards Bay dolphins. As well as Ocean Odyssey Knysna and Offshore 
+Adventures Plettenberg Bay, who willingly provided valuable boat time.  
+
+The Oceans Research team. Enrico, thank you for always believing in me from the very start. I’m 
+sorry I switched to dolphins, but I hope you can see now why I fell in love with them. Justin, there’s 
+no skipper I would trust more to get up close and personal with these pesky dolphins in the 
+breakers. We’ve spent hundreds of hours on the ocean together, and I’m looking forward to plenty 
+more. To all the field specialists and students who have worked on the project over the years, and 
+particularly to Lacey, you’ve helped to put the whistles of the Mossel Bay humpback dolphins on 
+the map. 
+
+Most of all, thank you to my mum and dad. You’ve always pushed me to follow something I love, 
+even if that meant living on the other side of the world, and for that, I’m forever grateful. You are 
+my biggest supporters and advocates. I hope you enjoy reading.  
+
+Finally, thank you to my examiners for their comments and suggestions throughout this thesis 
+process and to my funders: the South African National Research Foundation, the PADI 
+Foundation, IUCN Save our Species and Sea the Future. 
+
+https://scholar.sun.ac.za
+
+
+
+6 
+ 
+
+ 
+
+CONTENTS 
+
+Thesis Abstract ................................................................................................................................................ 3 
+
+Acknowledgements ........................................................................................................................................ 4 
+
+Contents ............................................................................................................................................................. 6 
+
+List of Figures ................................................................................................................................................... 8 
+
+List of Tables .................................................................................................................................................. 12 
+
+1 General Introduction .......................................................................................................................... 16 
+
+1.1 Acoustic communication in delphinids .................................................................................................. 16 
+
+1.2 Signature whistles in delphinids .............................................................................................................. 18 
+
+1.3 Practical uses of signature whistles for research .............................................................................. 20 
+
+1.4 Acoustic behaviour of Sousa spp .............................................................................................................. 21 
+
+1.5 The study species: Sousa plumbea ........................................................................................................... 26 
+
+1.6 Movement of Sousa plumbea ...................................................................................................................... 27 
+
+1.7 Sociality in Sousa plumbea........................................................................................................................... 31 
+
+1.8 Current conservation status of Sousa plumbea in South Africa ................................................... 32 
+
+1.9 Study Location: South Africa ...................................................................................................................... 34 
+
+1.10 The SouSA Consortium ................................................................................................................................. 34 
+
+1.11 References  ......................................................................................................................................................... 38 
+
+2 Micro and macrogeographic variation within the whistle repertoire of Indian Ocean 
+
+humpback dolphins, Sousa plumbea ..................................................................................................... 48 
+
+2.1 Abstract ............................................................................................................................................................... 49 
+
+2.2 Introduction ...................................................................................................................................................... 50 
+
+2.3 Methods ............................................................................................................................................................... 55 
+
+2.4 Results ................................................................................................................................................................. 66 
+
+2.5 Discussion .......................................................................................................................................................... 83 
+
+2.6 References .......................................................................................................................................................... 89 
+
+3 Group composition and behaviour effects on signature whistle production in the 
+
+Indian Ocean humpback dolphin, Sousa plumbea ............................................................................ 95 
+
+3.1 Abstract ............................................................................................................................................................... 96 
+
+3.2 Introduction ...................................................................................................................................................... 97 
+
+3.3 Methods ............................................................................................................................................................. 105 
+
+3.4 Results ............................................................................................................................................................... 114 
+
+3.5 Discussion ........................................................................................................................................................ 123 
+
+3.6 References ........................................................................................................................................................ 130 
+
+https://scholar.sun.ac.za
+
+
+
+7 
+ 
+
+4 The efficacy of passive acoustic monitoring vs boat-based photographic 
+
+identification of an elusive coastal dolphin species ..................................................................... 138 
+
+4.1 Abstract ............................................................................................................................................................. 139 
+
+4.2 Introduction .................................................................................................................................................... 140 
+
+4.3 Methods ............................................................................................................................................................. 147 
+
+4.4 Results ............................................................................................................................................................... 158 
+
+4.5 Discussion ........................................................................................................................................................ 171 
+
+4.6 References ........................................................................................................................................................ 180 
+
+5 SWORD: Signature whistles for Occurrence, Recapture and Density for Indian Ocean 
+
+humpback dolphins, Sousa plumbea in South Africa .................................................................... 187 
+
+5.1 Abstract ............................................................................................................................................................. 188 
+
+5.2 Introduction .................................................................................................................................................... 189 
+
+5.3 Methods ............................................................................................................................................................. 195 
+
+5.4 Results ............................................................................................................................................................... 205 
+
+5.5 Discussion ........................................................................................................................................................ 217 
+
+5.6 References ........................................................................................................................................................ 225 
+
+6 Conclusion ................................................................................................................................................ 232 
+
+Appendix 1 ................................................................................................................................................... 249 
+
+Appendix 2 ................................................................................................................................................... 284 
+
+Appendix 3 ................................................................................................................................................... 303 
+
+Appendix 4 ................................................................................................................................................... 304 
+
+ 
+
+https://scholar.sun.ac.za
+
+
+
+8 
+ 
+
+LIST OF FIGURES  
+
+Figure 1.1. Sousa plumbea distribution throughout South Africa indicates two regions of 
+occurrence, namely, the populations of the south and east coasts. Nationally, Sousa plumbea have 
+an extreme coastal range, limited to less than 20 m water depth and not extending more than 2-
+5 km off the coastline, creating high spatial use overlap with Marine Protected areas throughout 
+their coastal range. Spatial data sources: Environmental Systems Research Institute (ESRI, 2021), 
+South African National Biodiversity Institute (SANBI, 2021), and IUCN Red List Assessment 
+(Braulik et al., 2015). 
+ 
+Figure 1.2. Thesis overview diagram to demonstrate the conceptual framework of the thesis. The 
+framework shows each data chapter (2-5), including chapter themes and datasets used and how 
+they build on one another throughout the thesis. 
+
+Figure 2.1. Sousa plumbea study sites distributed throughout South Africa and India. A) The red 
+dots indicate encounters where Sousa plumbea were recorded. B) The Indian population were 
+recorded throughout the Maharashtra region (Bopardikar et al., 2018). C) The South African 
+population were recorded in both the south and east coast regions. Within South Africa, five 
+separate study sites were included, including four on the south coast (West to East: False Bay, 
+Struisbaai, St Sebastian Bay and Mossel Bay) and one on the east coast (Richards Bay), as 
+indicated by yellow circles on the figure.  
+
+Figure 2.2. A) Diagram of acoustic measurements on a spectrogram, illustrating an example 
+whistle contour with time (s) on the X-axis and frequency (kHz) on the Y-axis. Measurements 
+shown are 1) Maximum frequency, 2) Minimum frequency, 3) Frequency range, 4) Start 
+frequency, 5) End frequency, 6) Duration, and 7) Inflection points. B). Diagram of acoustic 
+measurements on a spectrogram, using a Sousa plumbea whistle contour example from the south 
+coast, South Africa. In this example, the maximum frequency, start frequency and end frequency 
+are all equal.  
+ 
+Figure 2.3. Variation of Sousa plumbea whistle parameters measured between South African and 
+Indian datasets. All five sites in South Africa were pooled together (green, n = 1181) and 
+compared to India (blue, n = 2260). Coloured dots show the distribution of the data for each 
+population. In each plot, the box represents the inter-quartile range (IQR, middle 50%) of each 
+data set, with centre lines representing median values, and the lines extending from the box 
+(whiskers) represent the range within 1.5 times the IQR from the lower and upper quartiles. 
+Points outside this range are considered outliers and shown as black dots. 
+
+Figure 2.4. Principal component plot showing the first two components based on Sousa plumbea 
+whistle contour measurements, derived from the seven measured parameters across the six 
+pooled study sites in South Africa and the study site in India. Data points for South Africa are in 
+green and India data points are in blue. The coloured ellipses contain 95% of data points for each 
+population. A high degree of overlap (similarity) is found between these geographically separated 
+populations based on the first two principal components. Principal component one explains 
+59.7% of the variance and component two explains 26.4% of the variance. 
+
+Figure 2.5. Variation of Sousa plumbea whistle parameters measured across the five South African 
+study sites (From left to right and west to east; False Bay Red, Struisbaai Blue, St Sebastian Bay 
+Green, Mossel Bay Purple and Richards Bay Orange). Coloured dots show the distribution of the 
+data for each region. The five frequency-based measurements (minimum and maximum 
+frequency, start and end frequency and frequency range) are presented on the left-hand side 
+graph, duration (measured in seconds) is presented in the middle graph, and the Inflection count 
+is on the right-side graph. In each plot, the box represents the inter-quartile range (IQR, middle 
+50%) of each data set, with centre lines representing median values, and the lines extending from 
+
+https://scholar.sun.ac.za
+
+
+
+9 
+ 
+
+the box (whiskers) represent the range within 1.5 times the IQR from the lower and upper 
+quartiles. Points outside this range are considered outliers and shown as black dots. 
+
+Figure 2.6. Two examples of ultrasonic contours in Sousa plumbea (defined as maximum 
+frequencies exceeding 20 kHz) were recorded from each of the five study sites in South Africa. 
+For each example, the Y axes is 0 - 48 kHz for all spectrogram examples. Spectrogram settings 
+were brightness and contrast 50%, fast fourier transform (FFT) 1024 point Hann window.  
+
+Figure 2.7. Principal component plot showing the first two components based on Sousa plumbea 
+whistle contour measurements, derived from the seven measured parameters across the five 
+South African study sites (False Bay, Struisbaai, St Sebastian Bay, Mossel Bay and Richards Bay). 
+The coloured ellipses contain contain 95% of data points for each population. A high degree of 
+overlap (similarity) is found between study sites based on the first two principal components. 
+Principal component one explains 78.06% of variance and component two explains 10.05%. 
+
+Figure 3.1. Track locations of Sousa plumbea from boat-based acoustic recordings on the south 
+coast (top) and east coast (bottom) collected from five sites along the South African coast 2016-
+2023. A water depth of 20 m is indicated by a yellow range area, and red dots indicate boat-based 
+tracks during encounters. 
+
+Figure 3.2. The four south coast study sites (False Bay, Struisbaai, St Sebastian Bay and Mossel 
+Bay). Yellow range indicates 20 m water depth range highlighting the inshore encounters of Sousa 
+plumbea. Red dots indicate tracks during recording encounters with Sousa plumbea.  
+
+Figure 3.3. Sousa plumbea signature whistle catalogue, collated for Gridley et al., (Appendix 1). 
+Signature whistle types (SWTs) are traced in white to highlight the frequency modulation pattern 
+more clearly in each example. Stereotyped whistles detected in this study required one clear 
+match to a whistle type in the catalogue. 
+
+Figure 3.4. Box and whisker plot for overall whistle production rates across all Sousa plumbea 
+encounters from five study locations across 22 encounters (False Bay, Struisbaai, St Sebastian 
+Bay, Mossel Bay and Richards Bay (2016-2023). Median production rates are indicated by the 
+center line within the boxes (Left; signature whistle type 0.03 SWT/min IQR 0-0.06 and Right; 
+signature whistles 0.14 SW/min IQR 0-0.49). 
+
+Figure 3.5. Data plots for the effect of the four covariates (Group size, Group spread, Calf presence 
+and Primary behaviour) on Sousa plumbea signature whistle type production (number of 
+individuals calling) from data across 21 encounters from five South African study sites (False Bay, 
+Struisbaai, St Sebastian Bay, Mossel Bay, Richards Bay, 2016-2023). For clearer data presentation, 
+the outlier encounter is removed from these plots. A) Group sizes, represented as count data, are 
+plotted on a scatter plot. B) Group spread is categorical and displayed using a box-and-whisker 
+plot, which includes bunched and subgrouped/dispersed categories; dispersed and subgrouped 
+categories are merged to reflect the modelled dataset. C) Calf presence is categorised as either 
+absent or present and presented as a box-and-whisker plot. D) Primary behaviour is categorised 
+into four types: foraging (f), milling (m), socializing (soc), and travelling (tr), all shown in a box-
+and-whisker plot as well. For plots B-D, box and whisker plots are presented with the median line 
+present and the box representing the middle 50% of the data. The whiskers extend to 1.5 * 
+interquartile range (IQR) to indicate the range of the data, excluding outliers. 
+
+Figure 3.6. Data plots for the effect of the four covariates (Group size, Group spread, Calf presence 
+and Primary behaviour) on Sousa plumbea signature whistle production (overall signature 
+whistle count) from data across 21 encounters from five South African study sites (False Bay, 
+Struisbaai, St Sebastian Bay, Mossel Bay, Richards Bay, 2016-2023). For clearer data presentation, 
+the outlier encounter is removed from these plots. A) Group sizes, represented as count data, are 
+plotted on a scatter plot. B) Group spread is categorical and displayed using a box-and-whisker 
+plot, which includes bunched and subgrouped/dispersed categories; dispersed and subgrouped 
+categories are merged to reflect the modelled dataset. C) Calf presence is categorised as either 
+
+https://scholar.sun.ac.za
+
+
+
+10 
+ 
+
+absent or present and presented as a box-and-whisker plot. D) Primary behaviour is categorised 
+into four types: foraging (f), milling (m), socializing (soc), and travelling (tr), all shown in a box-
+and-whisker plot as well. For plots B-D, box and whisker plots are presented with the median line 
+present and the box representing the middle 50% of the data. The whiskers extend to 1.5 * 
+interquartile range (IQR) to indicate the range of the data, excluding outliers. 
+
+Figure 3.7. Estimated coefficients of incidence rate for generalised linear mixed models for inter 
+signature whistle intervals in Sousa plumbea across 21 encounters from five South African study 
+sites (False Bay, Struisbaai, St Sebastian Bay, Mossel Bay, Richards Bay, 2016-2023). Significant 
+covariates are indicated with a star (p ≤ 0.01). Covariates included in the best-fit model include 
+the presence of calves (CalvesP), group size and subgrouped and dispersed group spread 
+(GroupSpreadSGD).  
+
+Figure 4.1. Map of moored hydrophone locations (left) and boat surveys (right) for Sousa plumbea 
+in Mossel Bay, South Africa, from 19th March – 5th April 2021. Moorings were numbered from 
+mooring 1 (south) – mooring 6 (north). Moored hydrophones are spaced equally ~2 km apart 
+along the coastal range of Sousa plumbea. Boat-based surveys are shown with boat survey tracks 
+in green (one location per minute) with tracking during Sousa plumbea encounters in Red. Both 
+maps show a 15 m water depth area in orange and 20 m water depth area in brown. 
+
+Figure 4.2. Workflow used to identify Sousa plumbea whistle encounters from passive acoustic 
+recordings. The species occur sympatrically with Tursiops aduncus in Mossel Bay and therefore a 
+workflow to confidently identify Sousa plumbea whistle encounters from passive acoustic 
+recordings collected in Mossel Bay, South Africa was necessary. Whistle and moan detector 
+(PAMGuard; Gillespie et al., 2014 www.pamguard.org) was used to identify dolphin whistle 
+encounters in the recordings and a custom trained species classifier in PAMGuard used to identify 
+Sousa plumbea whistle encounters.  
+
+Figure 4.3. Signature whistle type detections (SWT, acoustically unique individuals) of Sousa 
+plumbea in Mossel Bay, South Africa across the 18-day deployment period in Mossel Bay, South 
+Africa, from 19th March – 5th April 2021. The moorings the SWTs are detected on are represented 
+by different colours and the size of the dot represents the number of detections of that whistle 
+type. Detections are grouped by 24-hour bins (days).  
+
+Figure 4.4. The signature whistle count (signal-to-noise ratio of 2 or 3 and including SWTUC; 
+unclassified whistle types) of Sousa plumbea at each of the six moorings in Mossel Bay, along the 
+south coast of South Africa, representing the spatial variability of dolphin detections between 
+sites. Bars represent the signature whistle count of signal-to-noise ratio (SNR) 2 and 3 whistles 
+at each mooring. Bars are divided by signature whistle type (SWT, proxy for individuals).  
+
+Figure 4.5. Diurnal patterns of signature whistles detected from Sousa plumbea, in Mossel Bay, 
+South Africa, from 19th March – 5th April 2021, classified into signature whistle types (SWTs). The 
+night period is specified as 1800-0600. 10 different SWTs (number of individuals) were detected 
+throughout the deployment period. The plot shows the total signature whistle count for every 
+SWT detected over 24-hour time bins. A) Plot includes all SWTs including unclassified SWTs 
+(SWTUC), which are included at the bottom of the stacked bar plot (yellow) and B) Plot removes 
+SWTUC and outlier encounters (SWT05, 0900).  
+ 
+Figure 4.6. Generalised Additive Models showing the probability of detections of signature 
+whistle type, SWT (plot A - gam( unique_SWT_per_hour ~ factor(hour) -1, family = Poisson(log))) 
+and signature whistle count, SW (plot B - gam( SW_per_hour ~ factor(hour), family = 
+Poisson(log))) over a diurnal period for Sousa plumbea in Mossel Bay, South Africa, from 19th 
+March – 5th April 2021. The grey region represents the 95% CI region. Both plot A, signature 
+whistle types (SWTs, count of individuals) and plot B, signature whistles (SWs, total whistle 
+count) indicated a diurnal pattern, with increased detection over the night period 1800-0600. In 
+both models, SWTUC and outliers were omitted.  
+
+https://scholar.sun.ac.za
+
+
+
+11 
+ 
+
+Figure 4.7. Cumulative unique IDs of individual Sousa plumbea detected over time through both 
+photo ID and acoustic methods during the 18-day deployment period in Mossel Bay, South Africa, 
+from March 19th to April 5th, 2021. Photo ID detections, red dots, indicate new IDs detected over 
+time with a smoothed curve to show the overall discovery rate. Red numbers along the axis 
+represent boat-based survey days (n = 13), and numbers in bold indicate boat-based surveys 
+where new individuals were photographed (Days 1, 2, 8, 9, 12, 14, 15). Acoustic detections of 
+signature whistle types (SWTs) over time, blue dot, indicate cumulative new SWT detections over 
+time. 
+
+Figure 5.1. Mooring locations across the three bays to acoustically detect Sousa plumbea. 
+Hydrophones were deployed along a 120 km central portion of the the south coast, South Africa 
+(Mossel Bay, Buffelsbaai and Plettenberg Bay). Five mooring locations were selected across three 
+bays. Mossel Bay was located furthest west, and Plettenberg Bay was furthest east. All moorings 
+were deployed within 15m water depth (orange range indicating 15 m water depth and brown 
+indicating 20 m depth). 
+
+Figure 5.2. A) Locations of the three bay locations for acosutic detection of Sousa plumbea along 
+the south coast, South Africa. Mossel Bay and Plettenberg Bay (furthest west and east) contain 
+two moorings (spaced 3 km apart) and Buffelsbaai (middle) contains one mooring. Masks were 
+made to represent different levels of habitat resolution. B1) Default mask with non suitable 
+habitat (land) included. B2) Low resolution mask along coastal distribution up to 30 m depth ( N 
+cells = 91). B3) High resolution mask using the same spatial habitat (N cells = 8633). 
+
+Figure 5.3. All Sousa plumbea signature whistle types (SWTs) detected within this study (n = 25). 
+SWTs that matched the existing catalogue are not framed (n = 12) (Gridley et al., Appendix 1). 
+New SWTs added to the catalogue during this study all fulfilled SIGID and are boxed within the 
+red lines (n = 13). SWTs are traced with a white line for clarity of catalogue entry. 
+
+Figure 5.4. Frequency distribution showing the number of different moorings each Sousa plumbea 
+signature whistle type (SWT) was captured on over the full 42-day deployment period. The 
+highest number of different moorings SWTs were detected on was two, while no SWTs were 
+detected on all five moorings. 
+
+Figure 5.5. Frequency distribution of the number of capture occasions Sousa plumbea signature 
+whistle types (SWTs) were detected across all moorings combined over the full 42-day 
+deployment. One capture occasion = one calendar week. The highest number of weeks on which 
+SWTs were detected was three, with no SWTs detected across more than four weeks.  
+
+Figure 5.6. Discovery curves for cumulative detection of unique Sousa plumbea signature whistle 
+types, (SWTs, unique IDs) over five weeks (five capture occasions) throughout the study area. A) 
+For individual moorings, coloured marks along X axis indicate when the mooring ended 
+recording. B) All moorings pooled to show total cumulative new SWTs (unique IDs) detected over 
+time across the array. Bars representing total SWTs (unique IDs) detected per day throughout the 
+study period. 
+
+. 
+
+  
+
+https://scholar.sun.ac.za
+
+
+
+12 
+ 
+
+LIST OF TABLES  
+
+Table 1.1. Summary of literature review of existing acoustic repertoire data across the genus 
+Sousa. Key publications covering all four call types (whistles, clicks, burst pulses and low-
+frequency narrowband calls (LFNs)). The whistle repertoire literature review for the Sousa genus 
+is presented in Table 2.11.  
+
+Table 1.2. Summary of study design and capture-recapture results from previous studies on Sousa 
+plumbea in South Africa (adapted and updated from James et al., 2015). 
+
+Table 2.1. Summary table of the six study sites from South Africa and India, detailing the recording 
+equipment, sampling and bit rates, as well as the total number of field days at each location. The 
+euclidean distances (in km) between neighbouring recording sites are also provided, with False 
+Bay, the westernmost site, serving as the starting point (0 km). 
+
+Table 2.2. Summary of Sousa plumbea encounters recorded across the six South African and 
+Indian study sites. Each row indicates a unique acoustic encounter, defined as starting when the 
+hydrophone was placed in the water and continuing until the dolphins were out of acoustic range. 
+Encounter information includes the best group size, primary and (if apparent) secondary 
+behaviours (see Table 3.3). 
+
+Table 2.3. Descriptions of the seven contour measurements used for analysis (Bopardikar et al., 
+2018; Wang et al., 2013). All frequency measurements were measured in kilohertz (kHz) and time 
+measurements in seconds (s). Measurements were all calculated in Raven Pro v1.6 (Center for 
+Conservation Bioacoustics, 2019). The first four measurements were calculated automatically 
+from the annotation box function. Start frequency, end frequency and inflection points were 
+manually measured.  
+ 
+Table 2.4. Summary of all acoustic encounters and the total analysed contours across all six study 
+sites in South Africa and India for Sousa plumbea. Only contours with a good signal-to-noise ratio 
+of 2 or 3 or > 6 dB signal-to-noise threshold were used for further analysis (presented in 
+percentage of contours analysed). Totals are accumulated throughout the table, except for the 
+percentage of contours analysed which are separated based on the South African and Indian 
+datasets.  
+
+Table 2.5. Descriptive statistics were calculated for the seven whistle contour parameters of Sousa 
+plumbea, measured for both South Africa (with all five study sites combined) and India. For each 
+measurement, the minimum and maximum values, median (inter quartile range, IQR), mean 
+(standard deviation, SD), and coefficient of variance (CoV)% were calculated. Frequency 
+parameters were measured in kilohertz (kHz) and duration was measured in seconds (s).  
+
+Table 2.6. Principal Component loadings for the seven contour measurements of Sousa plumbea 
+whistle contours that were recorded in South Africa (with the five study sites pooled together) 
+and India. Values in bold had loadings greater than 0.5 or less than -0.5 (high factor loadings). 
+Principal component one was responsible for 59.7% of the overall variance, with the first two 
+principal components accounting for 86.1% of the variance.  
+
+Table 2.7. Confusion matrix for Sousa plumbea from both South Africa and India using a Random 
+Forest algorithm based on the seven contour measurements. Overall model accuracy between 
+South Africa and India was 89.7%. Classification of the test data is presented in percentages (%). 
+Percentages in bold represent values of correct contour classification. Levels of chance for correct 
+classification are presented alongside observed locations. 
+ 
+Table 2.8. Descriptive statistics were calculated for the seven whistle contour parameters of Sousa 
+plumbea, measured across the five South African study sites. South coast study sites included 
+False Bay, Struisbaai, St Sebastian Bay and Mossel Bay, and the east coast study site included 
+
+https://scholar.sun.ac.za
+
+
+
+13 
+ 
+
+Richards Bay. For each measurement, the minimum and maximum values, median (interquartile 
+range, IQR), mean (standard deviation, SD), and coefficient of variance (CoV)% were calculated. 
+Frequency parameters are in kHz and duration is measured in seconds (s). 
+
+Table 2.9. Principal Component loadings for the seven contour measurements of Sousa plumbea 
+whistle contours recorded across five study sites in South Africa (south coast; False Bay, 
+Struisbaai, St Sebastian Bay, Mossel Bay and east coast; Richards Bay). Values in bold had loadings 
+greater than 0.5 or less than - 0.5 Principal component one was responsible for 78.06% of the 
+overall variance, with the first two principal components accounting for 88.11% of the overall 
+variance.  
+
+Table 2.10. Confusion matrix from the Random Forest algorithm for Sousa plumbea across the five 
+South African study sites (False Bay, Struisbaai, St Sebastian Bay, Mossel Bay and Richards Bay). 
+Values in bold represent the percentage of correct classification of contours per study site. 
+Distances between neighbouring study sites are included from west to east (km). Overall model 
+accuracy was 65%. Classification is presented as percentages (%). Levels of chance for correct 
+classification are presented alongside observed locations.  
+
+Table 2.11. Literature summary of whistle measurements across the genus Sousa. Studies range 
+in their sample size, sampling rate and scope of measurements reported but available values are 
+presented. Seven whistle measurements are included for general comparison across species. 
+These measurements include maximum frequency (Max Freq), minimum frequency (Min Freq), 
+frequency range (Freq Range), start frequency (Start Freq) and end frequency (End Freq), 
+measured in kilohertz (kHz). Duration is measured in seconds (s) and inflection is measured in 
+count of inflection points.  
+
+Table 3.1. Glossary of whistle terms used throughout the study (Janik et al., 2013; Kriesell et al., 
+2014; Janik & Sayigh, 2013). 
+
+Table 3.2. Definitions of the behaviour and group spread categories recorded during vocal notes 
+and three-minute point samples of boat-based focal follow encounters of Sousa plumbea across 
+South African study sites (Henderson et al., 2012). 
+
+Table 3.3. Encounter information across the 22 Sousa plumbea encounters. Encounter number 
+refers to the numbered encounters on that day, as some days had multiple encounters recorded. 
+Encounters were only used if they had concurrent behaviour and track data collected alongside 
+boat-based acoustic recordings but not all encounters had signature whistles (SWs) detected. 
+Five study sites are included (False Bay, Struisbaai, St Sebastian Bay, Mossel Bay and Richards 
+Bay) with the date of recording, recording length of encounter and total cumulative recording 
+time calculated (2016-2023). Recording equipment used, sample rate (Hz) and bit rate are 
+included. Encounter group composition and behaviour are presented. Encounter 20191016_01 
+(Mossel Bay) was detected as an outlier based on whistle production and, therefore, removed 
+from further analysis, as indicated in italics. 
+ 
+Table 3.4. Encounter information across the 22 Sousa plumbea encounters showing whistle 
+counts across each encounter. Encounter number refers to the numbered encounters on that day, 
+as some days had multiple encounters recorded. Five study sites are included (False Bay, 
+Struisbaai, St Sebastian Bay, Mossel Bay and Richards Bay) with the date of recording (2016-
+2023). For each encounter, the total number of whistles recorded, the number of high signal-to-
+noise ratio whistles (rated 2 or 3), the total number of signature whistles (SWs) detected, and the 
+total number of distinct signature whistle types (SWT), representing the number of individuals, 
+are presented. A total of 20 unique SWTs were identified across all encounters. Encounter 
+20191016_01 (Mossel Bay) was detected as an outlier based on whistle production and, 
+therefore, removed from further analysis, as indicated in italics.  
+
+https://scholar.sun.ac.za
+
+
+
+14 
+ 
+
+Table 3.5. Generalised linear mixed models for signature whistle types (SWT), signature whistles 
+(SW) and inter signature whistle interval (ISWI) in Sousa plumbea across 21 encounters from five 
+South African study sites (False Bay, Struisbaai, St Sebastian Bay, Mossel Bay, Richards Bay, 2016-
+2023). The table includes the best fit model and individual class models that include each 
+covariate modelled individually. The table also provides metrics to provide information about the 
+goodness of fit and complexity of the model including Akaike Information Criterion (AIC), 
+Bayesian Information Criterion (BIC), Log-Likelihood (LogLik), Deviance and Residual Degrees of 
+Freedom (df residual). P values <0.01 are highlighted to show significant effects. 
+
+Table 4.1. Hydrophone deployment locations for Sousa plumbea in Mossel Bay, South Africa, from 
+19th March – 5th April 2021. Includes hydrophone model (SoundTrap300/500), start and end 
+times of recordings and recording settings (Hz). 
+
+Table 4.2. Confusion matrix for the regionally trained species classifier using the whistle classifier 
+module in PAMGuard for both Sousa plumbea and Tursiops aduncus based on test data throughout 
+South Africa. The percentage of correct classification in the training model for Sousa plumbea is 
+highlighted in bold.  
+
+Table 4.3. Summary of Sousa plumbea detections during the 18-day deployment period in Mossel 
+Bay, South Africa, from March 19th to April 5th 2021. The table provides summaries of encounter 
+durations and the time taken to detect all individuals in each encounter using both acoustic and 
+photo ID methods, along with overall individual detection rates (total number of 
+individuals/encounter duration in minutes). The individual detection rate was calculated by 
+dividing the total number of individuals by the encounter duration. For each metric, the mean 
+(standard deviation, SD), minimum, and maximum values are presented.  
+
+Table 4.4. Fieldwork and operational costs and total project hours incurred across both acoustic 
+and boat-based recording methods for Sousa plumbea during during the 18-day deployment 
+period in Mossel Bay, South Africa, from March 19th to April 5th 2021. Costs per individual Sousa 
+plumbea were calculated as operational costs (total time X researcher time) plus total fieldwork 
+costs (minus equipment) and based on a total of 10 signature whistle types (SWTs) and 16 Photo 
+ID individuals detected during this survey period using either method.  
+
+Table 4.5. SWOT (strengths, weaknesses, obstacles and threats) analysis of both acoustic and 
+photo ID methodologies to detect Sousa plumbea during the 18-day deployment period in Mossel 
+Bay, South Africa, from March 19th to April 5th 2021.  
+
+Table 5.1. Deployment summaries for the five moorings deployed throughout the central portion 
+of the south coast of South Africa to acoustically detect Sousa plumbea. Mooring codes follow from 
+the nomenclature in Chapter 4. Therefore, Mossel Bay moorings are M1 and M3, and Buffelsbaai 
+continues from M7. Recording start dates were all scheduled at the same time, and recording ends 
+varied based on battery and retrieval dates. 
+
+Table 5.2. Summary table of Sousa plumbea whistles detected across the acoustic array, with a 
+total number of signature whistles (SW) and signature whistle types (SWTs, individuals) detected 
+at each mooring. The proportion of whistles analysed (using signal-to-noise ratio of 2 or 3) was 
+calculated from total detections at each mooring and presented as a percentage. 
+
+Table 5.3. Estimated population size (�̂�) of Sousa plumbea for both closed (Huggins) models for 
+each bay individually and combined estimates as well as open (POPAN Jolly-Seber) model for the 
+combined population estimate for Sousa plumbea throughout the south coast subpopulation 
+range. Number of parameters (npar), standard error (SE), lower and upper limits of the 95% 
+confidence interval (Lower CI and Upper CI). 
+
+Table 5.4. Full model outputs across different model combinations to estimate density for Sousa 
+plumbea throughout the south coast survey area, South Africa. Model combinations are 
+highlighted in grey. Combinations include: 1) Capture history truncations (Full detections and 
+
+https://scholar.sun.ac.za
+
+
+
+15 
+ 
+
+capped at 200 and 100 detections); 2) Mask objects (High, low and default resolutions); and Trap 
+configurations (Full moorings - CaptHit.Full, removed two least active receivers – CaptHist.Rem, 
+Combined the two moorings from the same bay – CaptHist.Comb). Model parameters and 
+estimates are reported, as well as the detection function used and Akike Information Criterion 
+(AIC) scores. Bolded values are best estimates of density (D) and sigma (σ). 
+
+Table 5.5. Predicted estimates of density and abundance for Sousa plumbea throughout the south 
+coast survey area are shown for each of the model combinations. Estimates were calculated from 
+the estimated density * study area. Sigma is an estimate of the average distance an individual 
+moves between capture occasions and over the study period. All values were transformed from 
+the log scale used by the model to real estimates. 
+
+Table 5.6. Summary of study effort and capture-recapture results obtained from previous studies 
+on Sousa plumbea in southern South Africa: Mossel Bay (James et al., 2015; 2011-2013), 
+Goukamma (Conry, 2017; 2014-2015), Plettenberg Bay (Jobson, 2006; 2002-2003), Plettenberg 
+Bay (Greenwood, 2013; 2012-2013) and this study: Mossel Bay, Buffelsbaai, Plettenberg Bay, 
+combined south coast (five weeks, 2022). Values not modelled are reported as na.  
+
+https://scholar.sun.ac.za
+
+
+
+16 
+ 
+
+1 GENERAL INTRODUCTION 
+
+ACOUSTIC COMMUNICATION IN DELPHINIDS  
+ 
+
+Communication is the transfer of information from signaller to receiver and can occur through 
+
+visual, olfactory, chemical, acoustic senses, or, at very short distances, through touch (Labra et al., 
+
+1999; Marler, 1961). The complexity of a species' communication system is often linked to its 
+
+level of social organisation, and understanding how species communicate can provide 
+
+information on the species' relationship both to its conspecifics and environment (Klump, 2020). 
+
+Signals can contain information on innate or fixed aspects such as size, age, and sex (Seyfarth et 
+
+al., 2010) or variable aspects such as health, arousal, and rank (Bergman & Sheehan, 2013; 
+
+Briefer, 2020; Taylor et al., 2010). The ability to recognise other species, groups or even specific 
+
+individuals within the group can be indicative of social complexity and sophisticated 
+
+communication processes within a species (Yorzinski, 2017).  Animals can prioritise a certain 
+
+type of communication system based on circumstance, such as proximity to conspecifics, or 
+
+environmental conditions, such as aquatic or high-density habitats (Ey & Fischer, 2009). In such 
+
+environments, acoustic signalling is beneficial due to the flexibility in the rapid transmission of 
+
+signals and effective propagation over varied distances (Ladich & Winkler, 2017). 
+
+ 
+
+Delphinids, a family of over 35 species, have a range of social structures from large pods of 1000s 
+
+of individuals with continuous fission-fusion dynamics (Richards et al., 2013) to strong 
+
+matrilineal groups (Deecke et al., 2010) and are present throughout the global oceans (Best, 
+
+2007) leading to the development of a sophisticated acoustic repertoire (Janik, 2009; Luís et al., 
+
+2021). Delphinids can produce two main types of sound: clicks (including burst pulse sounds) 
+
+and tonal frequency-modulated sounds (including low-frequency narrow-band sounds, LFNs, 
+
+and whistles) (Jones et al., 2020; Luís et al., 2021; Popper, 1980). Clicks are short signals that 
+
+reach into the ultrasonic frequency range and occur in trains with an inter-click interval of more 
+
+than 10 ms (Au et al., 1974; Jones et al., 2020). They are most commonly used in echolocation to 
+
+https://scholar.sun.ac.za
+
+
+
+17 
+ 
+
+perceive the environment, especially during foraging (Herman & Tavolga, 1980). Burst pulse 
+
+signals are rapid click trains, typically defined as having an inter-click interval of less than 10 ms 
+
+(Luís et al., 2021). The frequency of click trains and burst pulses fluctuates depending on function 
+
+and behavioural context. Burst pulses appear to be involved in communication interactions 
+
+(Lammers 2003), as the inter-click interval exceeds the round-trip propagation time required to 
+
+receive individual click echoes (Ivanov, 2004). In a review of sounds produced by bottlenose 
+
+dolphins (Tursiops truncatus), Jones et al., (2020) describe low-frequency narrow band (LFN) 
+
+sounds as having a fundamental frequency of less than 2 kHz (0.26 – 1.28 kHz) and durations less 
+
+than 0.41 s (0.01 – 0.41 seconds). LFNs are rarely reported within the literature, and it is difficult 
+
+to determine how widely used these sounds are (Jones et al., 2020). 
+
+ 
+
+Whistles are narrowband frequency-modulated sounds and one of the more commonly studied 
+
+call types due to their dominant use by many species and ease of measurement (Herzing, 2014; 
+
+Janik, 2009). Most whistling delphinid species focus their energy below 20 kHz (Popper, 1980), 
+
+yet the maximum recorded fundamental frequencies can reach over 40 kHz in T. truncatus (41.80 
+
+kHz: Hiley et al., 2017). Whistles function as a communicative signal, and they are commonly 
+
+produced under socialising contexts (La Manna et al., 2019; Marley et al., 2017; Papale et al., 
+
+2017). Whistles can convey arousal states and behaviour (Quick & Janik, 2008) and also function 
+
+to convey identity (Sayigh et al., 1999) within the frequency modulation of the tonal sound 
+
+(Kershenbaum et al., 2013; Sayigh et al., 1999). The fission-fusion group dynamics of delphinid 
+
+species, such as common (Delphinus spp.) or bottlenose dolphins (Tursiops spp.), lead to a greater 
+
+level of individual distinctiveness within their whistle repertoire to account for the fluidity of 
+
+these associations and ensure the maintenance of complex social relationships and behaviour 
+
+(Fearey et al., 2019; Reiss et al., 1997). 
+
+ 
+
+ 
+
+https://scholar.sun.ac.za
+
+
+
+18 
+ 
+
+SIGNATURE WHISTLES IN DELPHINIDS 
+ 
+
+Individual recognition in animals occurs through multiple senses in different species. However, 
+
+in the marine environment, communication through acoustic channels is the most powerful and 
+
+widespread (Ladich & Winkler, 2017). Unlike voice cues, which can affect all animal calls, 
+
+bottlenose dolphins can encode individual identity information within the frequency modulation 
+
+pattern of whistles (Janik & Slater, 1997; Sayigh et al., 2017). These individually unique whistles 
+
+are termed ‘signature whistles’ (Janik, 2009). Caldwell and Caldwell (1965) first identified these 
+
+individually distinctive frequency contours in bottlenose dolphins and hypothesised that these 
+
+were used to transmit identity information. A signature whistle has since been defined more 
+
+formally as a learned, individually distinctive whistle type in a dolphin’s repertoire that 
+
+broadcasts the identity of the whistle owner as a contact call (Sayigh et al., 2007). Individually 
+
+distinct calls are extremely rare in the animal kingdom (Boughman & Moss, 2006). Signature 
+
+whistles develop in the first year of a calf's life through vocal learning and the auditory experience 
+
+of the environment and conspecifics therein (Sayigh et al., 1990). MacFarlane (2016) identified 
+
+three potential functions for signature whistles: maintaining contact, regaining lost contact, and 
+
+advertising identity. As signature whistles are developed through vocal learning, this ability 
+
+means that whistle matching is also possible  (Janik, 2000). Individuals are known to whistle 
+
+match and copy the signature whistles of those with whom they form a strong social bond (King 
+
+et al., 2014; Probert et al., 2021). However, this copying occurs in small numbers and usually 
+
+when the copied individual is present (King et al., 2013), with the copied whistles identifiable 
+
+through parameter variations within the copy (King et al., 2013).  
+
+ 
+
+Research on signature whistles has been conducted for over 60 years (Janik & Sayigh, 2013), 
+
+mainly in T. truncatus, using either captive (Janik & Slater, 1998) or temporarily restrained wild 
+
+individuals (Esch et al., 2009; Sayigh et al., 1990, 1999). As signature whistles act predominantly 
+
+as cohesion calls, they can constitute up to 100% of whistles produced during these separation 
+
+events (when isolated or restrained from conspecifics) (Janik & Slater, 1998). However, this value 
+
+https://scholar.sun.ac.za
+
+
+
+19 
+ 
+
+is considerably reduced in recordings from non-restrained wild populations (38% - 70% (Cook 
+
+et al., 2004). Functioning primarily as contact calls in these freely interacting contexts, signature 
+
+whistles are produced at higher rates when animals meet at sea (Quick & Janik, 2008), mother 
+
+and calves reunite (Smolker et al., 1993) and when engaged in certain behaviours, such as 
+
+socialising, that require a form of individual recognition (Sayigh et al., 1999). In bottlenose 
+
+dolphins, these contact calls were identified as bouts of stereotyped whistles emitted within 1 to 
+
+10 seconds of each other (Janik, 2013). Although most widely documented in bottlenose dolphins, 
+
+signature whistles have been reported in other odontocete species, such as narwhals (Monodon 
+
+monoceros) (Shapiro, 2006), short-finned pilot whales (Globicephala macrorhynchus) (Sayigh et 
+
+al., 2013), melon-headed whales (Peponocephala electra) (Kaplan et al., 2014) and common 
+
+dolphins (Delphinus delphis) (Fearey et al., 2019). Some studies have also documented likely 
+
+signature whistle use within the genus Sousa using opportunistic recording events (Cheng et al., 
+
+2017; Van Parijs & Corkeron, 2001a). 
+
+  
+
+https://scholar.sun.ac.za
+
+
+
+20 
+ 
+
+PRACTICAL USES OF SIGNATURE WHISTLES FOR RESEARCH  
+ 
+
+Research approaches using individual identification (capture-recapture) can provide long-term 
+
+metrics, from the population level down to the individual, such as abundance, habitat range or 
+
+movement, social networks, and group size (Hammond, 1986; Karlsson et al., 2005). Individual 
+
+identification from naturally occurring markings is useful when more invasive marking 
+
+techniques are challenging to perform, detect, or are ethically inappropriate (Terry et al., 2005). 
+
+Furthermore, individually distinctive acoustic signals are less invasive and have been suggested 
+
+as a suitable alternative to active marking or photographic identification (Janik et al., 2013). 
+
+Signature whistles are naturally occurring, individually distinctive and stable over time (up to 43 
+
+years, Sayigh et al., 2022) and overcome many of the biases inherent in using artificial marks or 
+
+marks from scarring or injuries (James et al., 2022). Although previously suggested by Janik et al., 
+
+(2013), Longden et al., (2020) first identified signature whistles as a potentially suitable 
+
+technique to generate abundance estimates in a Namibian population of bottlenose dolphins 
+
+(Tursiops truncatus) by using signature whistles in a capture-recapture framework where the 
+
+results compared favourably with established photographic methods (Friday et al., 2008; Urian 
+
+et al., 2015) . Further work has also investigated the role of recording duty cycles and fine-scale 
+
+hydrophone placement on the use of signature whistles in a capture-recapture framework 
+
+(Fearey et al., 2022). Forming part of the SWORD project (Signature Whistles for Occurrence, 
+
+Recapture and Density, Fearey et al., 2021), this proposed methodology, using signature whistles 
+
+in a capture-recapture framework for acoustic-based monitoring, has yet to be applied outside 
+
+the genus Tursiops. 
+
+ 
+
+  
+
+https://scholar.sun.ac.za
+
+
+
+21 
+ 
+
+ACOUSTIC BEHAVIOUR OF SOUSA SPP 
+ 
+There are around 50 studies on the acoustic behaviour across all four species in the genus Sousa, 
+
+with Sousa chinensis the most widely published, around Malaysia and China (Hoffman et al., 2015; 
+
+Sims et al., 2012; Wang et al., 2013), then Sousa sahulensis in Australia (de Freitas et al., 2015; 
+
+Hoffman et al., 2017; Schultz & Corkeron, 1994a; Van Parijs & Corkeron, 2001b), as well as a single 
+
+publication on the acoustic behaviour of the IUCN Critically Endangered Sousa teuszii in western 
+
+Africa (Weir, 2010) (Table 1.1). S. chinensis has the most widely defined whistle repertoire with 
+
+maximum reported whistle frequencies of 33 kHz (Wang et al., 2013). Whistle measurements 
+
+vary across studies, with some studies presenting limited information (Sims et al., 2012; Zbinden 
+
+et al., 1977) and some are limited by the bandwidth of recording equipment (Schultz & Corkeron, 
+
+1994a; Van Parijs & Corkeron, 2001b; Weir, 2010). 
+
+ 
+
+To date, three published studies have examined the acoustic characteristics of Sousa plumbea in 
+
+Pakistan, India and Zanzibar. Zbinden et al., (1977) published the first acoustic study on S. 
+
+chinensis (now S. plumbea) from the Indus River delta region, Pakistan. The study was limited by 
+
+equipment frequency range but demonstrated a long whistle duration of up to 2.5 seconds and 
+
+call combinations of burst pulse trains and whistle production (screams). Nearly four decades 
+
+later, Bopardikar et al., (2018) published a full description of the whistle repertoire (single 
+
+element tonal signals) for S. plumbea along the Maharashtra coast, India, with a frequency range 
+
+of up to 33 kHz and durations of up to 1.6 seconds. The first click analysis for the genus was 
+
+published by Yang et al., (2020), who showed a high rate of species classification of S. plumbea 
+
+compared to sympatric T. aduncus. Across all studies, caution should be taken in extrapolating 
+
+findings to other S. plumbea populations, as interspecific and intraspecific differences in time 
+
+frequency features across regions have been documented in Sousa spp. (Hoffman et al., 2015; 
+
+Wang et al., 2013). 
+
+https://scholar.sun.ac.za
+
+
+
+22 
+ 
+
+Table 1.1. Summary of literature review of existing acoustic repertoire data across the genus Sousa. Key publications covering all four call types 
+(whistles, clicks, burst pulses and low-frequency narrowband calls (LFNs)). Whistle repertoire literature review for the Sousa genus is presented in 
+Table 2.11.  
+ 
+
+Reference Species  Location  Whistles  Broadband - 
+clicks 
+
+ Burst Pulse   LFNs Comments  
+
+Goold & 
+Jefferson, 2005 
+
+S. chinensis Hong Kong    Delphinid in 
+waveshape - 
+spectral energy 
+extending up to 
+30 - >200 kHz  
+total pulse 
+duration is a few 
+tens of 
+microseconds 
+
+    Opportunistic 
+recordings from a 
+group of 10 individuals.  
+The orientation of 
+animals to hydrophone 
+is unknown, and 
+reverberation is 
+present in the 
+recordings.  
+
+Seekings et al., 
+2010 
+
+S. chinensis Singapore   Duration <1s and 
+common centre 
+frequency 3.8 kHz 
+
+Click trains are 
+recorded as 
+vocalisations 
+towards a target  
+
+Recorded from 
+an adult male 
+(Barks) but 
+outside the 
+scope of the 
+paper 
+
+  Captive population.  
+  
+
+Xu et al., 2012 S. chinensis Leizhou Bay, 
+China 
+
+Mean Values  
+Duration 0.16 s 
+Mean: SF 4.26 kHz  
+EF 4.86 kHz 
+Min freq 3.9 kHz  
+Max Freq 5.31 kHz 
+
+    
+
+Sims et al., 2012 S. chinensis Eest Hong Kong  Max fundamental 
+freq 24kHz 
+
+Frequencies 
+extended 
+outside of the 
+flat frequency 
+response range 
+and, therefore, 
+were excluded 
+
+4.1 kHz -24.9 
+kHz (Barks) 
+
+Absent – 
+likely 
+masking 
+due to 
+ambient 
+noise  
+
+Limited data. Whistles 
+more similar to 
+Zbinden et al. 1977 
+than Van Parijs and 
+Corkeron (2001a). 
+
+https://scholar.sun.ac.za
+
+
+
+23 
+ 
+
+from frequency 
+analysis  
+
+Wang et al., 
+2013 
+
+S. chinensis Southern China Duration (mean ± 
+SD: 370.19 ± 285.61 
+ms; range: 29–2923 
+ms 
+broad frequency 
+range (fundamental 
+contour ranged 
+from 0.52 - 33 kHz 
+
+      Similar to Atlantic 
+S.teuszii. 
+
+Fang et al., 2017 S. chinensis  Sanniang Bay, 
+China 
+
+ The mean peak 
+frequency was 
+109.0 kHz, with 
+a 3-dB 
+bandwidth of 
+50.3 kHz and a 
+95% energy 
+duration of 22 
+μs. 
+
+  Full bandwidth and on-
+axis recordings and 
+include comparison to 
+wild and captive 
+individuals and other 
+species.  
+  
+
+ Hoffman et al., 
+2015 
+
+S. chinensis Malaysia  Malaysian 
+humpback dolphins 
+covered frequencies 
+from 1.2 to 27.1 kHz 
+with durations from 
+0.010 – 1.575 s 
+
+      First acoustic 
+recordings extending 
+this far south in SE 
+Asia. 
+Significant differences 
+were found between 
+the two Malaysian 
+populations in whistle 
+duration, frequency 
+modulation, and all 
+frequency variables 
+except for minimum 
+frequency, which is 
+likely under 
+
+https://scholar.sun.ac.za
+
+
+
+24 
+ 
+
+morphological 
+constraints. 
+
+Dong et al., 2019 S. chinensis  Southern, China Range 1.8 - 21.7 kHz 
+Mean duration 419 
+ms 
+ 
+
+   This study and Fang et 
+al. (2015) found 
+significant differences 
+in frequency 
+parameters in Sanniang 
+Bay, China. 
+
+Zbinden et al., 
+1977 
+
+S. plumbea  Indus Delta, 
+Pakistan  
+
+3 - 20 kHz  
+0.04 - 1.05 s, both 
+single and in series  
+
+>500Hz 100-
+150µsec 1.5 -3.5 
+periods between 
+pulse. Energy 
+around 20 - 
+25kHz (Creaks 
+and screams) 
+
+    Limited data and 
+limitations to recording 
+equipment. 
+no detailed time-
+frequency features 
+reported.  
+
+Bopardikar et 
+al., 2018 
+
+S. plumbea  Sindhudurg 
+coast, 
+Maharashtra, 
+India 
+
+Freq Range 2.3 - 33 
+kHz 
+Duration Range 
+0.01-1.6 s 
+ 
+
+   First detailed reporting 
+of time-frequency 
+features in S. plumbea.  
+
+Yang et al., 2020 S. plumbea Zanzibar, East 
+Africa  
+
+ Peak Freq 91 ± 
+22 kHz, centroid 
+freq 87 ± 12 kHz  
+16 s -10 dB 
+duration  
+
+  All click parameters 
+measured were higher 
+in S. plumbea than in 
+sympatric T. aduncus 
+
+Van Parijs & 
+Corkeron, 2001b 
+
+S. chinensis 
+(now S. 
+sahulensis) 
+
+Eastern Australia  0.9-22 kHz 8 kHz - > 22 kHz 
+Freq 
+
+Barks; 0.6 kHz - 
+>22 kHz 0.1-8 s 
+Quacks: 0.6-3.7 
+kHz, 0.08 – 2.7 s 
+
+0.5-2.6 
+kHz  
+0.006-2 s  
+
+Limited by recording 
+equipment.  
+
+Van Parijs & 
+Corkeron, 2001a 
+
+S. chinensis 
+(now S. 
+sahulensis) 
+
+Eastern Australia  Evidence for SW 
+Repeated looped 
+whistle (up to 4 
+loops) 
+Mean 0.78 s  
+
+4 to 16 s 
+2 to 10 kHz Min 
+Freq  
+20.8 to >22 kHz 
+Max Freq  
+
+    Opportunistic 
+recordings from a live 
+stranded animal 
+(recorded in a holding 
+tank).  
+
+https://scholar.sun.ac.za
+
+
+
+25 
+ 
+
+SF 6.26 kHz  
+EF 7.25 kHz  
+Min freq 5.59 kHz  
+Max Freq 14.46 kHz 
+
+ 
+Limited by recording 
+equipment.  
+
+Schultz & 
+Corkeron, 1994 
+
+S. sahulensis  Eastern Australia  Freq Range  
+1.2-16 kHz  
+Duration range  
+0.04 - 0.36 s 
+
+      Limited by recording 
+equipment and 
+available data (667 
+whistles).  
+
+Berg Soto et al., 
+2014 
+
+S. sahulensis  Eastern Australia  (n = 742)  
+Duration: 
+0.3 s - 4.6 s.  
+mean min and max 
+frequency: 
+6.35±2 - 12.3±4 kHz 
+
+Mean Min Freq 
+4±3 kHz 
+Max Freq >22 
+kHz 
+Duration 
+2.79±2.66 s 
+
+Mean duration 
+0.86±0.84 s.  
+Mean Min Freq  
+5.8±3 kHz 
+
+  Classification of 
+Australian Snubfin 
+dolphins  
+Limited click train 
+analysis due to 
+limitations to recording 
+equipment.  
+
+de Freitas et al., 
+2015 
+
+S. sahulensis  Western 
+Australia  
+
+  Mean source 
+level 199 ± 3dB 
+mean centroid 
+freq 106 ± 11 
+kHz 
+ ICI 79 ± 33 ms 
+
+    Similar to sympatric T. 
+aduncus - click 
+parameters 
+independent of 
+sympatric delphinids – 
+likely driven by body 
+size.  
+
+Weir, 2010 S. teuszii Angola, west 
+Africa 
+
+4.8-8.2 kHz 85% 
+single inflection 
+point  
+
+   
+Only published acoustic 
+data on this species. 
+Limited time-frequency 
+features reported.  
+
+https://scholar.sun.ac.za
+
+
+
+26 
+ 
+
+THE STUDY SPECIES: SOUSA PLUMBEA 
+ 
+
+Sousa plumbea was recognised as a distinct species from S. chinensis in 2014 based on molecular 
+
+analysis, skeletal morphology, external morphology and colouration (Jefferson & Rosenbaum, 
+
+2014; Mendez et al., 2013). The range of S. plumbea extends from their most southwestern point 
+
+in False Bay, South Africa, along the southern and eastern African coastlines to as far as the west 
+
+coast of India (Plön et al., 2015). In the southern African subregion, S. plumbea has been recorded 
+
+from South Africa, Mozambique, Tanzania (including Zanzibar), Kenya, the Comoro Islands and 
+
+Madagascar (Best, 2007). 
+
+ 
+
+Globally, S. plumbea is not highly abundant anywhere in its range, with global abundance likely in 
+
+the low ten thousands (Braulik et al., 2015). Previous research in East Africa on S. plumbea has 
+
+shown small, declining populations from several localised studies but a region wide assessment 
+
+has not been done. Research in Maputo Bay and Bazaruto Bay, southern Mozambique, indicated 
+
+low densities of 0.47 dolphins per km2 (Peddemors, 1999) and a population in the Maputo Bay 
+
+area of ~105 individuals in the late 1990s (Guissamulo & Cockcroft, 2005). In Zanzibar, further 
+
+along the east coast of Africa, there has been a 63% reduction in the population size since 2002, 
+
+with the last population abundance estimate of 19 (95% CI 14-25) in the Menai Bay conservation 
+
+area in 2015 (Sharpe & Berggren, 2019). Limited information on population density is available 
+
+across the rest of their African range, especially at a broader scale (Braulik et al., 2015). In South 
+
+Africa, group size in S. plumbea is typically small, as previous studies have only seen a maximum 
+
+of 30 individuals in a group, but groups are more commonly less than 10 (Plön et al., 2015). 
+
+Several population estimates have been made throughout their South Africa range, mostly in 
+
+localised areas such as in one or two bays, and from ~ 20 to 96 individuals (Table 1.2). A collection 
+
+of photo identification catalogues from previous studies collected around South Africa from 2000 
+
+to 2016 identified 247 unique individuals along the whole South African distribution, suggesting 
+
+a total South African population of fewer than 500 animals (Vermeulen et al., 2018), substantially 
+
+https://scholar.sun.ac.za
+
+
+
+27 
+ 
+
+lower than the 1000 estimated as the total country population by Karczmarski (1996) from photo 
+
+ID data available in the late 1990s. 
+
+ 
+
+The general life history of S. plumbea in South Africa reflects that of a medium-sized coastal 
+
+delphinid that occupies a very narrow habitat niche, typically less than 3 km from shore and in 
+
+waters shallower than 25 m. Populations occur around a variety of coastal habitats, including 
+
+rocky reefs, coastal lagoons, and shallow, protected bays (Braulik et al., 2015). Diet records for S. 
+
+plumbea have been mainly restricted to specimens accidentally caught in shark nets along the 
+
+Kwazulu-Natal (KZN) east coast, with little data available for the south coast region. The few 
+
+records on their diet show them feeding mainly on estuarine and demersal fish (Peddemors, 
+
+1999). Their coastal habitat influences the feeding methods they adopt. This habitat means they 
+
+are often associated with large estuarine systems and harbours. Although considered a marine 
+
+dolphin species, there are a few reports of dolphins entering river systems, travelling up to 1 km 
+
+within the Swartkops and Bushmans rivers in the Eastern Cape and into the Knysna estuary in 
+
+the Western Cape (Plön et al., 2015). These sightings are often associated with brackish effluent 
+
+in the lower estuarine environment during high tides. However, in the Breede River, Western 
+
+Cape, there have been confirmed sightings and reports of S. plumbea as far as 20 km upriver (Sea 
+
+Search, unpublished data).  
+
+ 
+
+MOVEMENT OF SOUSA PLUMBEA  
+ 
+
+Sousa plumbea are the most threatened marine mammal species in South Africa (Plön et al., 2015), 
+
+making it essential for researchers to conduct comprehensive and effective long-term 
+
+conservation assessments. Understanding the degree of dispersal and individual movement can 
+
+highlight ecologically sensitive areas that require protection (Gormley et al., 2012). Previous 
+
+photographic capture-recapture studies that assessed residency patterns or movement have 
+
+largely focused on discrete regional areas around South Africa, which have been inadequate to 
+
+https://scholar.sun.ac.za
+
+
+
+28 
+ 
+
+provide a comprehensive assessment of the entire population (Bouveroux et al., 2018; James et 
+
+al., 2015; Vermeulen et al., 2018) (Table 1.2). In all these assessments, connectivity between 
+
+locations was poorly understood based on the limited data available (Durham, 1994; Jobson, 
+
+2006; Karczmarski et al., 1999; Keith et al., 2013; Saayman & Tayler, 1973). 
+
+ 
+
+In South Africa, S. plumbea is thought to be split into two distinct populations, one off the south 
+
+coast and one off the east coast (Figure 1.1). The connectivity between these two regions is 
+
+minimal, as indicated by low encounter rates (Durham, 1994; Keith et al., 2002), few strandings 
+
+(Findlay et al., 1992), limited sightings during aerial surveys (Cockcroft et al., 1989), and 
+
+infrequent captures in shark nets along southern KZN and the Transkei region (Atkins et al., 
+
+2013). This limited connectivity is further supported by the absence of matches in photographic 
+
+identification catalogues between Algoa Bay and KZN, regions approximately 1050 km apart, 
+
+reinforcing the existence of two geographically distinct populations (Karczmarski et al., 1999; 
+
+Vermeulen et al., 2018). The south coast population is less well studied, with most information 
+
+available from studies within specific bays, notably Algoa Bay, which was well studied in the early 
+
+1990s and again 16 years later, showing significant decreases in sightings rates, group sizes, the 
+
+number of overall identified animals and an increase in the number of solitary animals 
+
+(Bouveroux et al., 2018; Karczmarski et al., 1999; Karczmarski & Cockcroft, 1998; Koper et al., 
+
+2016). A series of student projects in Plettenberg Bay described similar trends throughout the 
+
+region (Conry, 2017; Greenwood, 2013; Jobson, 2006) as well as Bouveroux et al.,’s (2019) study 
+
+on social networks and some early shore-based observations throughout the southeastern 
+
+coastline (Saayman & Tayler, 1973; Saayman, 1972). West of Plettenberg Bay, only a single 
+
+published estimate exists on population size in Mossel Bay (James et al., 2015) and a general 
+
+description of sighting rates and seasonality from whale-watching data (Vinding, 2016). 
+
+ 
+
+Only one published paper has studied the movement of S. plumbea individuals at a national scale 
+
+along the South African coastline using available photo ID data from 2000-2016 (Vermeulen et 
+
+https://scholar.sun.ac.za
+
+
+
+29 
+ 
+
+al., 2018). The study found the average number of re-sightings of individuals across this period 
+
+was six for the whole distribution, decreasing to 3.3 for individuals occurring in the south coast 
+
+population only. Median range estimates for individuals were 120 km, with an overall range of 
+
+movement of 30 km to 500 km, but most movements were less than 200 km suggesting that this 
+
+is a typical home range or along-shore range. The study highlighted general 'hotspots' for the 
+
+species along the coastline. However, it indicated that, due to their reported range distance, the 
+
+protection of existing discrete marine protected areas (MPAs) may not be sufficient to protect 
+
+this species. 
+
+ 
+
+Figure 1.1. Sousa plumbea distribution throughout South Africa indicates two regions of 
+occurrence, namely, the populations of the south and east coasts. Nationally, S. plumbea have an 
+extreme coastal range, limited to less than 20 m water depth and not extending more than 2-5 km 
+off the coastline, creating high spatial use overlap with Marine Protected areas throughout their 
+coastal range. Spatial data sources: Environmental Systems Research Institute (ESRI, 2021), 
+South African National Biodiversity Institute (SANBI, 2021), and IUCN Red List Assessment 
+(Braulik et al., 2015). 
+ 
+
+https://scholar.sun.ac.za
+
+
+
+30 
+ 
+
+Table 1.2. Summary of study design and capture-recapture results from previous studies on Sousa plumbea in South Africa (adapted and updated from 
+James et al., 2015). 
+
+*Mean closed population size **The high number of encounters made in Algoa Bay compared to other studies can be attributed to differences in survey methods, as the research boat 
+was launched only in response to shore-based sightings of Sousa plumbea (Karczmarski et al., 1999). ***Mode: 5 (Jobson, 2006); Average 7.2 (Greenwood, 2013) **** National 
+assessment of Rostrum Abnormalities. Data collated from dedicated and opportunistic encounter 
+
+ 
+
+Study site 
+ 
+
+Duration 
+of study 
+(months) 
+ 
+
+Number 
+of 
+surveys 
+
+Number 
+of 
+encounters 
+ 
+
+Group 
+
+size 
+
+(ind.; 
+
+range 
+
+[mean]) 
+
+Max. 
+individual 
+distance 
+travelled 
+(km) 
+ 
+
+Catalogue 
+size (ind.) 
+ 
+
+Animals 
+seen 
+more 
+than 
+once 
+(ind.) 
+
+Distinct 
+animals 
+(%) 
+ 
+
+Closed 
+model 
+abundance 
+estimate 
+(ind. [95% 
+CI]) 
+
+Open model 
+abundance 
+estimates 
+(ind. [95% 
+CI]) 
+
+Year 
+
+of 
+
+study 
+
+Reference 
+
+Mossel Bay 32 81 31 1-15  
+
+(4.9)  
+
+139 67 34 94 46* (38-
+
+56) 
+
+125  
+
+(61-260) 
+
+2011-
+
+2013 
+
+James et al., 2015 
+
+Algoa Bay 36 60 104** 3-24  
+
+(7) 
+
+110 70 37 92 NA 466  
+
+(447-485) 
+
+ 
+
+1991-
+
+1994 
+
+Karczmarski 1997; 
+
+Karczmarski et al., 
+
+1999 
+
+Algoa Bay 3 years 106 50 1-23 
+
+(3.1) 
+
+NA 50 24 NA NA NA 2008-
+
+2011 
+
+Bouveroux et al., 
+
+2017 
+
+Goukamma - 
+
+Tsitsikamma 
+
+MPA 
+
+16 101 
+
+(231h.) 
+
+98 1-12 
+
+(3.9) 
+
+147 65 47 96 84  
+
+(72-98) 
+
+84  
+
+(72-115) 
+
+2014-
+
+2015 
+
+Conry 2017 
+
+Plettenberg 
+
+Bay 
+
+24 87 
+
+(289 h.) 
+
+35 2-20 
+
+(7.2***) 
+
+32 63 36 77 112 
+
+ (75-133) 
+
+727 2002-
+
+2003 
+
+Jobson 2006 
+
+Plettenberg 
+
+Bay 
+
+17 20 
+
+38 h. 
+
+26 1-13 
+
+(4.7) 
+
+NA 41 26 NA 42  
+
+(42-55) 
+
+41 
+
+(28-54) 
+
+2012-
+
+2013 
+
+Greenwood 2013 
+
+KwaZulu-
+
+Natal (entire) 
+
+18 136 56 1-18 
+
+(6.7) 
+
+120 96 45 68 165  
+
+(134-229) 
+
+161  
+
+(81-240) 
+
+1991-
+
+1993 
+
+Durham 1994 
+
+Richards Bay  18 41 30 1-20 
+
+(5.1) 
+
+70 45 23 31 NA 38  
+
+(19-56) 
+
+1991-
+
+1993 
+
+Durham 1994 
+
+Richards Bay  7 73 56 1-20 
+
+(NA) 
+
+140 24 
+
+(181KZN) 
+
+56 76 NA 74  
+
+(60-88) 
+
+1998 Keith et al., 2002 
+
+Richards Bay  25 125 NA NA NA 92 56 54 244  
+
+(217-287) 
+
+170  
+
+(112-230) 
+
+1998-
+
+2000 
+
+Atkins 2002 
+
+National 
+
+assessment 
+
+**** 
+
+NA 
+
+ 
+
+ 
+
+37 NA NA NA 121 NA NA NA NA 2016-
+
+2021 
+
+Frainer et al., 2022 
+
+https://scholar.sun.ac.za
+
+
+
+31 
+ 
+
+SOCIALITY IN SOUSA PLUMBEA 
+ 
+
+Group structures within cetaceans range from stable matriarchal family pods, as seen in orcas 
+
+(Orcinus orca) (Deecke et al., 2010), to the variable and complex fission-fusion groups of 
+
+bottlenose dolphins (Tursiops spp.), where group membership can change every 10-20 mins 
+
+(Connor & Krützen, 2015; Galezo et al., 2018). The drivers of fission-fusion assortment are based 
+
+on the benefits and constraints of the group over time and space (Aureli et al., 2008). However, 
+
+group structure within this is far more complex, and it is essential to understand the variability 
+
+in individual relationships within a group, which are key to social complexity (Hunt et al., 2019). 
+
+It has been shown that the same individuals can display different social structures in different 
+
+conditions, for example, when they compete to increase their reproductive success (Gowans, 
+
+2019). Aureli et al., (2008) demonstrated that individual variation in habitat, affiliations and 
+
+group size are essential factors to consider in assessing the social structure of a population.  
+
+ 
+
+In S. plumbea, there has been relatively little published research regarding their social 
+
+organisation (Bouveroux et al., 2019; Karczmarski et al., 1999; Saayman & Tayler, 1973). In South 
+
+Africa, only 10s of animals have been identified a handful of times each in previous studies 
+
+(Bouveroux et al., 2019; James et al., 2015; Koper et al., 2016; Vermeulen et al., 2018) (Table 1.2). 
+
+In Algoa Bay S. plumbea had social bonds that were fluid and mostly of short-duration affiliations 
+
+(Karczmarski et al., 1999). A more recent study in the Plettenberg Bay area (Bouveroux et al., 
+
+2019), detected two occurrences of stronger pairwise affiliations. Bouveroux et al., (2019) 
+
+demonstrated a generally low level of gregariousness, with a well-differentiated social network 
+
+with half the sampled dolphins (14 of 29 seen three or more times) showing strong social bonds 
+
+between individuals, mostly as pairs. They suggest that the higher social bonds seen in this study 
+
+could be a result of the decreasing group sizes and overall population in the area.  
+
+ 
+
+https://scholar.sun.ac.za
+
+
+
+32 
+ 
+
+Along the south coast of South Africa, a substantial decrease in the average group size of S. 
+
+plumbea has been observed in several locations. For example, in Plettenberg Bay, average group 
+
+sizes dropped from seven to four (Conry, 2017; Jobson, 2006), while in Algoa Bay, the average 
+
+group size dropped from seven to three (Bouveroux et al., 2018; Karczmarski et al., 1999). 
+
+General sociality in S. plumbea in South Africa is thought to be reflective of their small group sizes 
+
+and an increase in the number of solitary individuals (Koper et al., 2016), limiting the number of 
+
+potential associations (Gowans et al., 2007). 
+
+ 
+
+CURRENT CONSERVATION STATUS OF SOUSA PLUMBEA IN SOUTH AFRICA 
+ 
+
+Research on S. plumbea in South Africa since the late 1960s (see review by Elwen et al., 2011) has 
+
+covered a wide range of topics, including socio-ecology (Karczmarski et al., 1999; Koper et al., 
+
+2016; Saayman, 1972), diet (Barros & Cockroft, 1999), anatomy (Frainer et al., 2019; Plön et al., 
+
+2012), regional distribution, habitat use, and movements (Atkins et al., 2005; Bouveroux et al., 
+
+2018; Koper et al., 2016; Vermeulen et al., 2018), local population abundance estimates (James et 
+
+al., 2015; Keith et al., 2002), vulnerability to direct human impacts such as bycatch in shark nets 
+
+(Atkins et al., 2013, 2016; Cockcroft, 1990, 1994), vessel traffic (Karczmarski et al., 1997; Koper 
+
+et al., 2016) and health assessment, and pollutant loads (Aznar-Alemany et al., 2019; Cockcroft, 
+
+1999; Gui et al., 2016; Lane et al., 2014). However, these regional studies are limited in their 
+
+capacity to provide insights into broader population health and dynamics. These studies have 
+
+provided crucial baseline information and identified potential threats to the species. Still, they 
+
+lack key information, including a reliable national abundance estimate, which is necessary to 
+
+document future population trends.  
+
+ 
+
+In South Africa, although no empirical data are available on population trends at a broader 
+
+national scale, Koper et al., (2016) and Bouveroux et al., (2018) suggested a significant decline in 
+
+the frequency of occurrence, average group size, number of calves and the number of identified 
+
+https://scholar.sun.ac.za
+
+
+
+33 
+ 
+
+individuals when compared to a similar study in the early 1990s in Algoa Bay (Karczmarski et al., 
+
+1999). For Plettenberg Bay, a decrease in population size of 50% between 2002 and 2012 has 
+
+been suggested, although this was based on limited sampling effort (Greenwood, 2013). In 
+
+Richard's Bay, shark net mortalities have contributed to an unsustainable loss of S. plumbea (4.3 
+
+individuals or 5% - 10% of the population per year; (Atkins et al., 2013, 2016). These data 
+
+strongly indicate an overall population decline along South Africa’s coastline. Considering these 
+
+inferred population declines, S. plumbea was up-listed to “Endangered” in South Africa on the 
+
+IUCN Red List (Plön et al., 2015). This was based on an estimated extent of occurrence of < 5,000 
+
+km², a continuing decline in habitat quality (and likely area of occupancy) in key resource areas 
+
+correlating with coastal development, the fragmentation of populations, and continuing adult 
+
+mortality from anthropogenic disturbances (especially shark-nets; Plön et al., 2015). A quarter of 
+
+the photographed South African population has been recorded with injured or abnormal 
+
+rostrums, possibly caused by either fishing line entanglements, extreme feeding behaviours or 
+
+genetic depression, leading to apparent conditions such as broken or misaligned jaws (Frainer et 
+
+al., 2023). Most observed individuals were adults; therefore, it is difficult to know the extent of 
+
+such impact on the population, as it is unknown how many juveniles did not survive these injuries 
+
+or abnormalities. However, the wide prevalence throughout the South African range is likely 
+
+driven by their small, fragmented population (Frainer et al., 2023).  
+
+ 
+
+Overall, there are limited population estimates throughout the species' full South African range. 
+
+As a result, population trends across their range must often be inferred by assessing the extent of 
+
+mortality or the degree of decline in relative sighting rates or group sizes. However, where data 
+
+are available to evaluate changes over time, there are clear indications of significant declines in 
+
+abundance, relative sighting rates, and/or group sizes. The reported levels of threats due to their 
+
+restricted habitat and high reported mortality in portions of their range means that S. plumbea 
+
+population size is almost definitely decreasing in South Africa (Braulik et al., 2015). 
+
+ 
+
+https://scholar.sun.ac.za
+
+
+
+34 
+ 
+
+STUDY LOCATION: SOUTH AFRICA  
+ 
+
+South Africa has a long, diverse coastline spanning 2,798 km, from rocky reefs to sandy beaches 
+
+and estuaries. Mixing between the warmer Agulhas current and the cool Benguela current creates 
+
+dynamic ocean currents, causing highly fluctuating water temperatures. The most westerly range 
+
+of S. plumbea is at False Bay, at the most south-westerly tip of the continent, with no range 
+
+extension into the westerly cooler Benguela region. The mean water temperatures along S. 
+
+plumbea’s coastal distribution range from 19 °C – 26 °C in the northeast, while the cooler south 
+
+coast region has mean water temperatures of 14 °C – 20 °C (Dallas, 2008). Several major estuaries 
+
+occur along the coastline, with many under regular management (Whitfield et al., 2012). Estuaries 
+
+have been shown to be a likely habitat for the species, overlapping with many anthropogenic 
+
+impacts, with some individuals being seen upriver in brackish, estuarine regions (Plön et al., 
+
+2015). South Africa’s coastline is highly developed, with the vast majority of the coastline affected 
+
+by human structures, including large coastal developments, active harbours, urbanisation, and 
+
+development in estuaries (Claassens et al., 2023). However, a significant section of the S. plumbea 
+
+range in the Western Cape falls within protected areas such as De Hoop, Stilbaai, Goukamma, 
+
+Robberg, and Tsikamma marine protected areas (Mann-Lang et al., 2021) (Figure 1.1). 
+
+  
+
+https://scholar.sun.ac.za
+
+
+
+35 
+ 
+
+THE SOUSA CONSORTIUM 
+ 
+
+A lack of scientific knowledge has been recognised as a major threat to S. plumbea conservation 
+
+actions in South Africa, with many aspects of the species’ life history and current changes to its 
+
+population poorly understood. Given the lack of data on this species, a nationwide research 
+
+collaboration, the SouSA consortium, was established in May 2016 (Vermeulen et al., 2018). The 
+
+consortium aims to address the need for more knowledge on the conservation biology of S. 
+
+plumbea in South Africa nationally and work as a collective group to achieve these aims. The 
+
+consortium was recognised at the World Marine Mammal Conference in 2019 as a leading 
+
+example in collaboration (S. Dines Judges Discretionary Award) and has collectively published 
+
+several publications on S. plumbea, collating data at a national scale (Frainer et al., 2023; Plön et 
+
+al., 2021; Vermeulen et al., 2018). The SouSA consortium is currently working with public, private 
+
+and international stakeholders, such as the IUCN SOS group, to develop an effective biodiversity 
+
+action plan for S. plumbea in South Africa. In 2024, the Indian Ocean Humpback Dolphin 
+
+Conservation Network (HuDoNET) was established. HuDoNET was modelled on the successful 
+
+initiatives of the Conservation Consortium of the Atlantic humpback dolphin (CCAHD) and the 
+
+SouSA Consortium, with the aim to develop a build connections and collaboration among 
+
+stakeholders throughout the species’ range to encourage coordinated conservation actions 
+
+(Atkins et al., 2024). 
+
+https://scholar.sun.ac.za
+
+
+
+36 
+ 
+
+THESIS OVERVIEW: CONCEPTUAL THESIS FRAMEWORK  
+
+ 
+
+The limitations of visual and olfactory senses in the marine environment have led to the evolution 
+
+of sophisticated acoustic communication systems in cetaceans (Herman & Tavolga, 1980). 
+
+Dolphins are known for their high vocal activity, producing a variety of acoustic signals, including 
+
+frequency-modulated whistles used for communication (Jones et al., 2020). Among these, 
+
+signature whistles are unique signals that are highly stable and stereotyped, serving as 
+
+identification markers and contact calls in specific contexts (Caldwell & Caldwell, 1965; Sayigh et 
+
+al., 2007). Evidence for signature whistle use has been presented across several species of 
+
+odontocetes (see review in Janik, 2009), including preliminary evidence in Sousa spp. (Cheng et 
+
+al., 2017; Gridley et al., Appendix 1; Van Parijs & Corkeron, 2001a). This thesis aims to understand 
+
+the whistling behaviour of S. plumbea in South Africa and explore how signature whistles can be 
+
+effectively used for acoustic monitoring of this elusive coastal species. Here, I present a 
+
+conceptual framework for my thesis (Figure 1.2). The framework describes each data chapter 
+
+(Chapters 2-5) and the main themes within. The figure presents how the chapters are linked, from 
+
+investigating general whistle characteristics and variability across spatial scales in Chapter 2 to a 
+
+focus on the behavioural effects on signature whistle production in Chapter 3. In Chapter 4, the 
+
+use of passive acoustic monitoring to recapture signature whistles is compared to a more 
+
+standard approach of boat-based photo ID over a short field study period. Finally, individual 
+
+detection over time and space for capture-recapture models is investigated in Chapter 5. Using 
+
+signature whistles for occurrence, recapture and density (SWORD, Fearey et al., 2021), the thesis 
+
+provides baseline data on how individual passive acoustic monitoring can best be utilised for this 
+
+threatened species.
+
+https://scholar.sun.ac.za
+
+
+
+37 
+ 
+
+ 
+
+Figure 1.2. Thesis overview diagram to demonstrate the conceptual framework of the thesis. The framework shows each data chapter (2-5), 
+including chapter themes and datasets used and how they build on one another throughout the thesis. 
+
+ 
+
+https://scholar.sun.ac.za
+
+
+
+38 
+ 
+
+REFERENCES  
+ 
+Atkins, S., Cantor, M., Pillay, N., Cliff, G., Keith, M., & Parra, G. J. (2016). Net loss of endangered 
+
+humpback dolphins: Integrating residency, site fidelity, and bycatch in shark nets. Marine 
+Ecology Progress Series, 555, 249–260. https://doi.org/10.3354/meps11835 
+
+Atkins, S., Cliff, G., & Pillay, N. (2013). Multiple captures of humpback dolphins (Sousa plumbea) 
+in the Kwazulu-Natal Shark Nets, South Africa. Aquatic Mammals, 39(4), 397–400. 
+https://doi.org/10.1578/AM.39.4.2013.397 
+
+Atkins, S., Pillay, N., & Peddemors, V. M. (2005). Spatial Distribution of Indo-Pacific Humpback 
+Dolphins (Sousa chinensis) at Richards Bay, South Africa: Environmental Influences and 
+Behavioural Patterns. Aquatic Mammals, 30(1), 84–93. 
+https://doi.org/10.1578/am.30.1.2004.84 
+
+Atkins, S., Wong, J., & Patel, S. (2024). Indian Ocean Humpback Dolphin Conservation Network 
+(HuDoNet): Collaborating to enhance conservation efforts for the Endangered Indian 
+Ocean humpback dolphin (Sousa plumbea). International Whaling Commission.  
+
+Au, W. W. L., Floyd, R. W., Penner, R. H., & Murchison, A. E. (1974). Measurement of echolocation 
+signals of the Atlantic bottlenose dolphin, Tursiops truncatus Montagu, in open waters. The 
+Journal of the Acoustical Society of America, 56(4), 1280–1290. 
+https://doi.org/10.1121/1.1903419 
+
+Aureli, F., Schaffner, C. M., Boesch, C., Bearder, S. K., Call, J., Chapman, C. A., Connor, R., Di Fiore, 
+A., Dunbar, R. I. M., Peter Henzi, S., Holekamp, K., Korstjens, A. H., Layton, R., Lee, P., 
+Lehmann, J., Manson, J. H., Ramos-Fernandez, G., Strier, K. B., & Van Schaik, C. P. (2008). 
+Fission-fusion dynamics new research frameworks. Current Anthropology, 49(4), 627–654. 
+https://doi.org/10.1086/586708 
+
+Aznar-Alemany, Ò., Sala, B., Plön, S., Bouwman, H., Barceló, D., & Eljarrat, E. (2019). Halogenated 
+and organophosphorus flame retardants in cetaceans from the southwestern Indian Ocean. 
+Chemosphere, 226, 791–799. https://doi.org/10.1016/j.chemosphere.2019.03.165 
+
+Barros, N. B., & Cockroft, V. G. (1999). Prey resource partitioning between Indo-Pacific 
+humpback dolphins (Sousa chinensis) and bottlenose dolphins (Tursiops truncatus) off 
+South Africa: Competitive exclusion or mutual tolerance. 13th Biennal Conference on the 
+Biology of Marine Mammals, November 28-December 3, Maui, Hawaii.  
+
+Berg Soto, A., Marsh, H., Everingham, Y., Smith, J. N., Parra, G. J., & Noad, M. (2014). 
+Discriminating between the vocalisations of Indo-Pacific humpback and Australian snubfin 
+dolphins in Queensland, Australia. The Journal of the Acoustical Society of America, 136(2), 
+930–938. https://doi.org/doi:http://dx.doi.org/10.1121/1.4884772 
+
+Bergman, T. J., & Sheehan, M. J. (2013). Social knowledge and signals in primates. American 
+Journal of Primatology, 75(7), 683–694. https://doi.org/10.1002/AJP.22103 
+
+Best, P. B. (2007). Whales and dolphins of the Southern African Subregion. Cambridge 
+University Press. 
+
+Bopardikar, I., Sutaria, D., Sule, M., Jog, K., Patankar, V., & Klinck, H. (2018). Description and 
+classification of Indian Ocean humpback dolphin (Sousa plumbea) whistles recorded off the 
+Sindhudurg coast of Maharashtra, India. Marine Mammal Science, 34(3), 755–776. 
+https://doi.org/10.1111/mms.12479 
+
+Boughman, J. W., & Moss, C. F. (2006). Social Sounds: Vocal Learning and Development of 
+Mammal and Bird Calls. In Acoustic Communication (Issue April 2006). 
+
+https://scholar.sun.ac.za
+
+
+
+39 
+ 
+
+https://doi.org/10.1007/0-387-22762-8_4 
+
+Bouveroux, T., Kirkman, S. P., Conry, D., Vargas-Fonseca, O. A., & Pistorius, P. A. (2019). The first 
+assessment of social organisation of the indian ocean humpback dolphin (Sousa plumbea) 
+along the south coast of South Africa. Canadian Journal of Zoology, 97(10), 855–865. 
+https://doi.org/10.1139/cjz-2018-0244 
+
+Bouveroux, T., Melly, B., McGregor, G., & Plön, S. (2018). Another dolphin in peril? Photo-
+identification, occurrence, and distribution of the endangered Indian Ocean humpback 
+dolphin (Sousa plumbea) in Algoa Bay. Aquatic Conservation: Marine and Freshwater 
+Ecosystems, 28(3), 723–732. https://doi.org/10.1002/aqc.2877 
+
+Braulik, G. T., Findlay, K., Cerchio, S., & Baldwin, R. (2015). Assessment of the conservation 
+status of the Indian Ocean Humpback Dolphin (Sousa plumbea) Using the IUCN red list 
+criteria. Advances in Marine Biology, 72, 119–141. Academic Press. 
+https://doi.org/10.1016/bs.amb.2015.08.004 
+
+Briefer, E. F. (2020). Coding for ‘Dynamic’ Information: Vocal Expression of Emotional Arousal 
+and Valence in Non-human Animals. Coding strategies in vertebrate acoustic 
+communication,. 137–162. https://doi.org/10.1007/978-3-030-39200-0_6 
+
+Caldwell, M. C., & Caldwell, D. K. (1965). Individualised whistle contours in bottlenosed dolphins 
+(Tursiops truncatus). Nature, 207(4995), 434–435. 
+
+Cheng, Z., Wang, D., Wu, H., Huang, S. L., Pine, M. K., Peng, C., & Wang, K. (2017). Stereotyped 
+whistles may be the first evidence to suggest the possibility of signature whistles in an 
+injured Indo-Pacific humpback dolphin (Sousa chinensis). Aquatic Mammals, 43(2), 185–
+192. https://doi.org/10.1578/AM.43.2.2017.185 
+
+Claassens, L., Adams, J. B., de Villiers, N. M., Wasserman, J., & Whitfield, A. K. (2023). Restoration 
+of South African estuaries: successes, failures and the way forward. African Journal of 
+Aquatic Science, 48(1), 1–18. https://doi.org/10.2989/16085914.2022.2115970 
+
+Cockcroft, V. G. (1990). Dolphin catches in the Natal shark nets, 1980 to 1988. South African 
+Journal of Wildlife Research, 20(2), 44–51. 
+
+Cockcroft, V. G. (1994). Is there a common cause for dolphin capture in gillnets? A review of 
+dolphin catches in shark nets off Natal, South Africa. Gillnets and Cetaceans, 15, 541–547. 
+
+Cockcroft, V. G. (1999). Organochlorine levels in cetaceans from South Africa: A review. J. 
+Cetacean Res. Manage., 169–176. https://doi.org/10.47536/jcrm.v1i1.262 
+
+Cockcroft, V. G., Cliff, G., & Ross, G. J. B. (1989). Shark predation on Indian Ocean bottlenose 
+dolphins Tursiops truncatus off Natal, South Africa. South African Journal of Zoology, 24(4), 
+205–310. https://doi.org/10.1080/02541858.1989.11448168 
+
+Connor, R. C., & Krützen, M. (2015). Male dolphin alliances in Shark Bay: Changing perspectives 
+in a 30-year study. Animal Behaviour, 103, 223–235. 
+https://doi.org/10.1016/j.anbehav.2015.02.019 
+
+Conry, D. (2017). Population status and habitat use of Indian Ocean humpback dolphins (Sousa 
+plumbea) along the south coast of South Africa. (MSc thesis). Department of Zoology, 
+Faculty of Science, Nelson 494 Mandela Metropolitan University, Port Elizabeth, South Africa . 
+
+Cook, M. L. H., Sayigh, L. S., Blum, J. E., & Wells, R. S. (2004). Signature-whistle production in 
+undisturbed free-ranging bottlenose dolphins (Tursiops truncatus). Proceedings of the 
+Royal Society B: Biological Sciences, 271(1543), 1043–1049. 
+https://doi.org/10.1098/rspb.2003.2610 
+
+https://scholar.sun.ac.za
+
+
+
+40 
+ 
+
+Dallas, H. (2008). Water temperature and riverine ecosystems: An overview of knowledge and 
+approaches for assessing biotic responses, with special reference to South Africa. Water SA, 
+34(3), 393–404. https://doi.org/10.4314/wsa.v34i3.180634 
+
+de Freitas, M., Jensen, F. H., Tyne, J., Bejder, L., & Madsen, P. T. (2015a). Echolocation parameters 
+of Australian humpback dolphins (Sousa sahulensis) and Indo-Pacific bottlenose dolphins 
+(Tursiops aduncus) in the wild . The Journal of the Acoustical Society of America, 137(6), 
+3033–3041. https://doi.org/10.1121/1.4921277 
+
+Deecke, V. B., Barrett-Lennard, L. G., Spong, P., & Ford, J. K. B. (2010). The structure of 
+stereotyped calls reflects kinship and social affiliation in resident killer whales (Orcinus 
+orca). Naturwissenschaften, 97(5), 513–518. https://doi.org/10.1007/s00114-010-0657-z 
+
+Dong, L., Caruso, F., Lin, M., Liu, M., Gong, Z., Dong, J., Cang, S., & Li, S. (2019). Whistles emitted by 
+Indo-Pacific humpback dolphins (Sousa chinensis) in Zhanjiang waters, China . The Journal 
+of the Acoustical Society of America, 145(6), 3289–3298. 
+https://doi.org/10.1121/1.5110304 
+
+Durham, B. (1994). The distribution and abundance of the humpback dolphins (Sousa chinensis) 
+along the Natal coast, South Africa.(Doctoral dissertation) University of Natal, Durban, 83. 
+
+Elwen, S. H., Findlay, K. P., Kiszka, J., & Weir, C. R. (2011). Cetacean research in the southern 
+African subregion: a review of previous studies and current knowledge. African Journal of 
+Marine Science, 33(3), 469–493. https://doi.org/10.2989/1814232X.2011.637614 
+
+Esch, H. C., Sayigh, L. S., Blum, J. E., & Wells, R. S. (2009). Whistles as potential indicators of stress 
+in bottlenose dolphins (Tursiops truncatus). Journal of Mammalogy, 90(3), 638–650. 
+
+ESRI (Environmental Systems Research Institute). (2021). ArcGIS Desktop: Release 10.8.1. 
+Redlands, CA: Environmental Systems Research Institute 
+
+Ey, E., & Fischer, J. (2009). The “acoustic adaptation hypothesis”—a review of the evidence from 
+birds, anurans and mammals. Bioacoustics, 19(1–2), 21–48. 
+https://doi.org/10.1080/09524622.2009.9753613 
+
+Fang, L., Wu, Y., Wang, K., Pine, M. K., Wang, D., & Li, S. (2017). The echolocation transmission 
+beam of free-ranging Indo-Pacific humpback dolphins (Sousa chinensis). The Journal of the 
+Acoustical Society of America, 142(2), 771–779. https://doi.org/10.1121/1.4996499 
+
+Fearey, J., Elwen, S. H., James, B. S., & Gridley, T. (2019). Identification of potential signature 
+whistles from free-ranging common dolphins (Delphinus delphis) in South Africa. Animal 
+Cognition, 22(5), 777–789. https://doi.org/10.1007/s10071-019-01274-1 
+
+Fearey, J, Elwen, S., Dines, S., & James, B. S. (2021). Using signature whistles to investigate 
+population dynamics of locally threatened bottlenose dolphins (Tursiops truncatus) in 
+Namibia. Journal NWG/Journal NSS, 68(February 2022), 89–101. 
+
+Fearey, J., H. Elwen, S., Distiller, G., & Gridley, T. (2022). Improving detectability of dolphin 
+signature whistles for capture-recapture analysis: an examination of array configuration 
+using real-world data. Marine Mammal Science, 38(4), 1489–1507. 
+https://doi.org/10.1111/mms.12941 
+
+Findlay, K. P., Best, P. B., Ross, G. J. B., & Cockcroft, V. G. (1992). The distribution of small 
+odontocete cetaceans off the coasts of South Africa and Namibia. South African Journal of 
+Marine Science, 12(1), 237–270. https://doi.org/10.2989/02577619209504706 
+
+Frainer, G., Elwen, S., Dines, S., James, B., Vermeulen, E., Penry, G., Vargas-Fonseca, O. A., Atkins, 
+S., Conry, D., & Gridley, T. (2023). Rostrum abnormalities in the endangered Indian Ocean 
+humpback dolphin (Sousa plumbea) in South Africa. Integrative Zoology, 18(4), 616–629. 
+
+https://scholar.sun.ac.za
+
+
+
+41 
+ 
+
+https://doi.org/10.1111/1749-4877.12685 
+
+Frainer, G., Plön, S., Serpa, N. B., Moreno, I. B., & Huggenberger, S. (2019). Sound Generating 
+Structures of the Humpback Dolphin Sousa plumbea (Cuvier, 1829) and the Directionality 
+in Dolphin Sounds. Anatomical Record, 302(6), 849–860. 
+https://doi.org/10.1002/ar.23981 
+
+Friday, N. A., Smith, T. D., Stevick, P. T., Allen, J., Fernald, T., Fisheries, N., & Hole, W. (2

@@ -1,0 +1,406 @@
+{
+ "gate_inverted": {
+  "auc_FA_vs_vessel": 0.07904739435881306,
+  "thr_hi_p80_FA": 3.9912723887843025,
+  "n_FA": 198,
+  "n_vessel": 1156,
+  "vessel_recall_at_thr": 0.9948096885813149
+ },
+ "n_features": {
+  "base": 74,
+  "t1t2": 144
+ },
+ "importance_by_block": {
+  "T1": 0.3115,
+  "T2": 0.0864,
+  "base": 0.602
+ },
+ "top15_features": [
+  {
+   "feat": "band_share_23",
+   "gain": 1177
+  },
+  {
+   "feat": "band_share_24",
+   "gain": 1085
+  },
+  {
+   "feat": "t1_snr_23",
+   "gain": 957
+  },
+  {
+   "feat": "t1_snr_24",
+   "gain": 875
+  },
+  {
+   "feat": "band_excess_p95",
+   "gain": 800
+  },
+  {
+   "feat": "band_excess_max",
+   "gain": 775
+  },
+  {
+   "feat": "t2_wnd_frac_0",
+   "gain": 741
+  },
+  {
+   "feat": "band_share_12",
+   "gain": 661
+  },
+  {
+   "feat": "min_cv",
+   "gain": 650
+  },
+  {
+   "feat": "t2_exc_tilt_0",
+   "gain": 646
+  },
+  {
+   "feat": "band_share_20",
+   "gain": 602
+  },
+  {
+   "feat": "flatness",
+   "gain": 592
+  },
+  {
+   "feat": "band_share_16",
+   "gain": 591
+  },
+  {
+   "feat": "band_share_18",
+   "gain": 587
+  },
+  {
+   "feat": "t2_lf_frac_0",
+   "gain": 580
+  }
+ ],
+ "VAL_main_allpool": {
+  "n": 800,
+  "f_mean": 0.21025000000000002,
+  "e5_rmse": 0.3678807706813481,
+  "e5_rho": 0.31486665879711545,
+  "e5pcen_rmse": 0.28058480167145833,
+  "e5pcen_rho": 0.1589975753179124,
+  "e5gateInv_rmse": 0.35831945570864077,
+  "e5gateInv_rho": 0.36195322070153524,
+  "lgb_t1t2_rmse": 0.044728095086027084,
+  "lgb_t1t2_rho": 0.949081519576172,
+  "blend_w0.3_rmse": 0.2520077130616057,
+  "blend_w0.3_rho": 0.4970124588765862,
+  "blend_w0.5_rmse": 0.18191431357572,
+  "blend_w0.5_rho": 0.6284743514993727,
+  "blend_w0.7_rmse": 0.11380244067161237,
+  "blend_w0.7_rho": 0.7911360445961194
+ },
+ "VAL_calm": {
+  "n": 800,
+  "f_mean": 0.195625,
+  "e5_rmse": 0.10119964691813534,
+  "e5_rho": 0.8380342104070593,
+  "e5pcen_rmse": 0.11411050579527521,
+  "e5pcen_rho": 0.717417669085676,
+  "e5gateInv_rmse": 0.10042401927815853,
+  "e5gateInv_rho": 0.8408815779582621,
+  "lgb_t1t2_rmse": 0.03910290847216468,
+  "lgb_t1t2_rho": 0.9621467035353732,
+  "blend_w0.3_rmse": 0.07235878389612797,
+  "blend_w0.3_rho": 0.9036331768538625,
+  "blend_w0.5_rmse": 0.055586512148803884,
+  "blend_w0.5_rho": 0.9368879347153005,
+  "blend_w0.7_rmse": 0.042584212193341846,
+  "blend_w0.7_rho": 0.9585321583811608
+ },
+ "VALclassA_G0": {
+  "n": 300,
+  "f_mean": 0.20633333333333334,
+  "e5_rmse": 0.3104763033662979,
+  "e5_rho": 0.35955369781859203,
+  "e5pcen_rmse": 0.18204934028428335,
+  "e5pcen_rho": 0.3189155803829845,
+  "e5gateInv_rmse": 0.30617317866782046,
+  "e5gateInv_rho": 0.3783811945326401,
+  "lgb_t1t2_rmse": 0.04440059772355362,
+  "lgb_t1t2_rho": 0.9442905801378225,
+  "blend_w0.3_rmse": 0.2159171857025258,
+  "blend_w0.3_rho": 0.5376802557508654,
+  "blend_w0.5_rmse": 0.15663514002872775,
+  "blend_w0.5_rho": 0.6793143830005299,
+  "blend_w0.7_rmse": 0.0995589783935116,
+  "blend_w0.7_rho": 0.8305058739905186
+ },
+ "VALclassB_G1": {
+  "n": 300,
+  "f_mean": 0.19300000000000003,
+  "e5_rmse": 0.4249420728315954,
+  "e5_rho": 0.3177140661328002,
+  "e5pcen_rmse": 0.34387607034809003,
+  "e5pcen_rho": 0.1280933656394079,
+  "e5gateInv_rmse": 0.4249420728315954,
+  "e5gateInv_rho": 0.3177140661328002,
+  "lgb_t1t2_rmse": 0.05073682058410114,
+  "lgb_t1t2_rho": 0.9341521740415294,
+  "blend_w0.3_rmse": 0.29995930576324936,
+  "blend_w0.3_rho": 0.44196579320724744,
+  "blend_w0.5_rmse": 0.2174617586415864,
+  "blend_w0.5_rho": 0.5708377915283261,
+  "blend_w0.7_rmse": 0.13702178291862463,
+  "blend_w0.7_rho": 0.7457030560710527
+ },
+ "VALclassC_G2": {
+  "n": 300,
+  "f_mean": 0.19466666666666668,
+  "e5_rmse": 0.288843364057877,
+  "e5_rho": 0.4146537548011871,
+  "e5pcen_rmse": 0.217339135000892,
+  "e5pcen_rho": 0.2725157943846341,
+  "e5gateInv_rmse": 0.2840636662461809,
+  "e5gateInv_rho": 0.44724572153954845,
+  "lgb_t1t2_rmse": 0.036169451156607677,
+  "lgb_t1t2_rho": 0.9655988105738461,
+  "blend_w0.3_rmse": 0.20005587165222632,
+  "blend_w0.3_rho": 0.5905807997429471,
+  "blend_w0.5_rmse": 0.14468986813932178,
+  "blend_w0.5_rho": 0.717311475240411,
+  "blend_w0.7_rmse": 0.09093281513750412,
+  "blend_w0.7_rho": 0.8551827971721272
+ },
+ "VALclassD": {
+  "n": 300,
+  "f_mean": 0.20366666666666666,
+  "e5_rmse": 0.3936411641499603,
+  "e5_rho": 0.2992224491726687,
+  "e5pcen_rmse": 0.31166181227049783,
+  "e5pcen_rho": 0.11839305001167072,
+  "e5gateInv_rmse": 0.3836312742199601,
+  "e5gateInv_rho": 0.35094574637138004,
+  "lgb_t1t2_rmse": 0.030635985016662034,
+  "lgb_t1t2_rho": 0.9791722361158393,
+  "blend_w0.3_rmse": 0.26832092388320167,
+  "blend_w0.3_rho": 0.49616539536065746,
+  "blend_w0.5_rmse": 0.1917970112055209,
+  "blend_w0.5_rho": 0.6380063936380542,
+  "blend_w0.7_rmse": 0.1161996635143979,
+  "blend_w0.7_rho": 0.8128570435340056
+ },
+ "test_diag": {
+  "G0": {
+   "e5": [
+    0.4712385906064358,
+    0.4778860782028591
+   ],
+   "gateInv": [
+    0.46664881484159776,
+    0.4735241855462212
+   ],
+   "lgb": [
+    0.16790124245539761,
+    0.14205380849117608
+   ],
+   "fa_killed": 0.014157014157014158
+  },
+  "G1": {
+   "e5": [
+    0.6224741008839335,
+    0.6741413887177254
+   ],
+   "gateInv": [
+    0.6213573244487868,
+    0.6741413887177254
+   ],
+   "lgb": [
+    0.1850444672102987,
+    0.19457133261076015
+   ],
+   "fa_killed": 0.003205128205128205
+  },
+  "G2": {
+   "e5": [
+    0.4991424117411556,
+    0.52270243850896
+   ],
+   "gateInv": [
+    0.4991424117411556,
+    0.52270243850896
+   ],
+   "lgb": [
+    0.15952913569620844,
+    0.14786668167291478
+   ],
+   "fa_killed": 0.0
+  }
+ },
+ "test_moments": {
+  "e5_mean": 0.5359942150767664,
+  "gateInv_mean": 0.5331521322335593,
+  "lgb_mean": 0.17448026490732998,
+  "E_f2_e5": 0.36095256353852045,
+  "E_f2_gate": 0.3596864226902862,
+  "pinned_m2": 0.060581047570230605
+ },
+ "group_agreement_level_shape": {
+  "G0": {
+   "level": [
+    [
+     "C_harbour_industrial",
+     3.1851423382587676
+    ],
+    [
+     "D_residual",
+     5.104057083733696
+    ],
+    [
+     "B_southcoast_exposed",
+     7.345779597640302
+    ],
+    [
+     "A_west_moored",
+     10.884267079964175
+    ]
+   ],
+   "shape": [
+    [
+     "A_west_moored",
+     1.7898564461176973
+    ],
+    [
+     "C_harbour_industrial",
+     3.0625303510139874
+    ],
+    [
+     "D_residual",
+     5.061709157991151
+    ],
+    [
+     "B_southcoast_exposed",
+     5.687382544786605
+    ]
+   ]
+  },
+  "G1": {
+   "level": [
+    [
+     "B_southcoast_exposed",
+     3.4720533294836056
+    ],
+    [
+     "D_residual",
+     8.984897100659625
+    ],
+    [
+     "C_harbour_industrial",
+     11.480843619200023
+    ],
+    [
+     "A_west_moored",
+     18.953748427390757
+    ]
+   ],
+   "shape": [
+    [
+     "B_southcoast_exposed",
+     1.9047850312891268
+    ],
+    [
+     "D_residual",
+     3.6544062043550287
+    ],
+    [
+     "A_west_moored",
+     4.978894291379502
+    ],
+    [
+     "C_harbour_industrial",
+     7.796861695661354
+    ]
+   ]
+  },
+  "G2": {
+   "level": [
+    [
+     "A_west_moored",
+     5.522500386672038
+    ],
+    [
+     "C_harbour_industrial",
+     6.41787153239862
+    ],
+    [
+     "D_residual",
+     10.013085904957093
+    ],
+    [
+     "B_southcoast_exposed",
+     14.361145570661911
+    ]
+   ],
+   "shape": [
+    [
+     "C_harbour_industrial",
+     1.799615402680462
+    ],
+    [
+     "A_west_moored",
+     4.099341012886923
+    ],
+    [
+     "D_residual",
+     7.717757457704334
+    ],
+    [
+     "B_southcoast_exposed",
+     8.34922088754599
+    ]
+   ]
+  }
+ },
+ "main_run_lgb_base": {
+  "VAL_main(allpool)_": {
+   "n": 800,
+   "e5_rmse": 0.3679,
+   "lgb_base_rmse": 0.051,
+   "lgb_t1t2_rmse": 0.0449
+  },
+  "VAL_calm_": {
+   "n": 800,
+   "e5_rmse": 0.1012,
+   "lgb_base_rmse": 0.045,
+   "lgb_t1t2_rmse": 0.0389
+  },
+  "VAL_class_A_west_moored_G0_": {
+   "n": 300,
+   "e5_rmse": 0.3105,
+   "lgb_base_rmse": 0.0499,
+   "lgb_t1t2_rmse": 0.0437
+  },
+  "VAL_class_B_southcoast_exposed_G1_": {
+   "n": 300,
+   "e5_rmse": 0.4249,
+   "lgb_base_rmse": 0.0661,
+   "lgb_t1t2_rmse": 0.0512
+  },
+  "VAL_class_C_harbour_industrial_G2_": {
+   "n": 300,
+   "e5_rmse": 0.2888,
+   "lgb_base_rmse": 0.0429,
+   "lgb_t1t2_rmse": 0.0352
+  },
+  "VAL_class_D_residual_": {
+   "n": 300,
+   "e5_rmse": 0.3936,
+   "lgb_base_rmse": 0.0362,
+   "lgb_t1t2_rmse": 0.0308
+  }
+ },
+ "protocol_notes": [
+  "D20 recipe: sub-interval L[3,12] + H_A/H_C(amb 0.5/1.0) 50/50 + bg-window group split seed7 + clip holdout seed101 + calm 60/40",
+  "BG pool 15000 windows (cap 1500x10 sites), calm 39%",
+  "D29 gate (val gain >= +0.01): PASS on G1-class pool (0.0661->0.0507, +0.0154); calm +0.0059; main +0.0063; G0-class +0.0055; G2-class +0.0067",
+  "T1 feature block = 31.2% of LGBM gain importance; T2 = 8.6%",
+  "centered-SHAPE class distances confirm A60/A61: G0->A_west(1.79 vs 4.10 next), G1->B_southcoast(1.90 vs 8.35), G2->C_harbour(1.80 vs 4.10)",
+  "inverted wind gate: FA bumps are LF-rich (stat p50 3.17 vs vessel 0.77); thr=FA-p80 3.99 kills FA at 99.5% vessel recall; small RMSE gains (allpool -0.0096)",
+  "CAUTION: lgb val is in-distribution synthetic (recipe-correct but still synthetic); LB rho readout via r7_v3_k045 remains the ground truth"
+ ]
+}

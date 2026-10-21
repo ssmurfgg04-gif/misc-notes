@@ -115,3 +115,29 @@ G2 = 3-way shape tie (Richards/Saldanha/StCroix) = harbour class → Table Bay/
 V&A best pin (Probert 2025 ST300 at V&A, NYE 2023). Within-group splits =
 weather states, not stations. Bump rates (10 dB thr): G0 .593 / G1 .509 /
 G2 .518 = mid-train-range ⇒ no per-group μ shift.
+
+## 10. R9 — Dines thesis ACQUIRED: station 08 slate closes to 5 SWORD moorings (docs/intel_r9_dines.md)
+
+**Working routes (automation-safe, DSpace 7 API):** item
+`https://scholar.sun.ac.za/items/ba08fdd7-4a00-4367-b6fd-f7dd10e309c6`;
+PDF `https://scholar.sun.ac.za/server/api/core/bitstreams/b304c9c7-9499-4625-9227-b3742d7f9c81/content`.
+Old 404 root cause: uuid 00218139-… = TEXT bundle, not the item. PDF in
+`data/dines_marine_2025.pdf` (304 pp, sha256 174b3b1c…).
+
+**SWORD array (Ch. 5) — 120 km, 5 hydrophones, 26 Aug–7 Oct 2022:**
+
+| mooring | site | duty | notes |
+|---|---|---|---|
+| M1 | Mossel Bay Harbour | 33 d | harbour-adjacent |
+| M3 | Mossel Bay Diaz | 19 d | open-ocean beach, most exposed |
+| M7 | Buffelsbaai | 32 d | whistle hotspot: 2,070 SWs / 13 ind. |
+| M8 | Plett Robberg Point | 20 d | exposed point |
+| M9 | Plett Beacon Isle | 42 d | exposed islet |
+
+2021 Mossel Bay array (Ch. 4): M1 −34.1767/22.14221 ST500 … M6 −34.1331/22.11944,
+~2 km spacing, 8–10 m depth, instruments 3 m off bottom, 19 Mar–5 Apr 2021.
+
+**⇒ 08 slate: {Buffelsbaai, Plett Robberg Pt, Plett Beacon Isle, Mossel Bay
+Diaz}** (M1 conflicts with G1 = exposed St-Francis-class). Gansbaai: zero
+thesis mentions — dead. Enquiry card: "08 ∈ {Buffelsbaai, Robberg Pt, Beacon
+Isle, Diaz}?" — answerable by Sea Search/Dines without breaking anything.
