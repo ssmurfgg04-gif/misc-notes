@@ -1,0 +1,32 @@
+{
+ "round": "R8",
+ "date": "2026-10-21",
+ "directive": "user R8: Rainbolt-method station hunt (find the tell, eliminate, decision tree, margins) + research remaining gaps/uncertainties",
+ "local_tell_mining": {
+  "scripts": ["scripts/r8_tells.py", "scripts/r8_tells2.py"],
+  "outputs": ["docs/r8_tells.json", "docs/r8_tells2.json"],
+  "findings": {
+   "A59_fingerprint_census": "725 any-NaN windows = 623 m01-crop + 99 m15-crop + 1 both + 2 internal; exactly 3 export fingerprints; ID order 813 runs (max 10) = fully interleaved -> NO batch-order tell (negative result)",
+   "A60_G1_branch": "25-band P20 fingerprint matching, shape space: StFrancis 8.96 vs FishHoek 17.06 (margin 8.1); level space: StFrancis 13.96 vs next 39.63 (margin 25.7) -> G1 = St-Francis-class EXPOSED SOUTH-COAST environment; 08 south-coast belief ~45%",
+   "A61_G0_G2": "G0 -> Saldanha class (margin 2.6, moderate); G2 -> 3-way near-tie Richards/Saldanha/StCroix (0.3 dB) = generic harbour class; Table Bay/V&A stays best pin (A56 support)",
+   "A62_state_vs_station": "within-group 2-component splits are FLAT level shifts (flat-shift fraction 0.968-0.998, same tilt) = swell/wind states, NOT stations -> 3-station theory HOLDS; duplicates ~5-8%",
+   "A63_vessel_prior": "bump rate @10 dB threshold: G0 0.593 / G1 0.509 / G2 0.518 vs train range 0.302 (FishHoek) - 0.598 (Richards) -> no per-group mu shift; global shrink family stands"
+  }
+ },
+ "web_probes": [
+  {"id": 1, "target": "Dines thesis PDF via DSpace API (bundles -> TEXT bitstream retrieve)", "result": "blocked: nginx 403 on curl, app 404 via fetch; handle 10019.1/132009 + bitstream uuid 00218139-21b4-4e5d-9d6f-98c4ed54d6af recorded for MANUAL download; 3 array site names remain the open name-gap", "verdict": "BLOCKED (route documented)"},
+  {"id": 2, "target": "Rufford project page (Mossel Bay PAM)", "result": "project START 13 Feb 2026 (post-competition); long-term PAM + photo-ID; 'tested deployment locations' = PhD-era; HTi hydrophone in boat work", "verdict": "PARTIAL (dates pinned; sites not named)"},
+  {"id": 3, "target": "Sea Search humpback dolphin project page", "result": "Mossel Bay = the named ongoing south-coast PAM site (harbour-expansion EIA pressure); no other south-coast PAM sites listed", "verdict": "HIT (confirms A55 focus)"},
+  {"id": 4, "target": "Oosthuizen et al. 2026 Frontiers (humpback abundance)", "result": "Garden Route hotspot zone documented: Goukamma MPA -> Groot River East (152 km; Knysna/Plett/Tsitsikamma sections); cites Dines 2025 for continuous acoustic monitoring", "verdict": "HIT (context)"},
+  {"id": 5, "target": "Probert 2025 Robben Island hydrophone details", "result": "no new fixed-station details surfaced (fireworks paper Table 1 = in-air sites incl Robben; underwater = V&A only)", "verdict": "MISS"},
+  {"id": 6, "target": "Langebaan/WCNP + Hermanus/Kogelberg + Tsitsikamma 3-hydrophone probes", "result": "0 relevant hits (Langebaan results = Vemco telemetry only; Hermanus none; DFFE 'three hydrophones' snippet still unverifiable)", "verdict": "MISS (absence evidence)"},
+  {"id": 7, "target": "Zindi/competition chatter check", "result": "no indexed solver chatter on hidden stations", "verdict": "MISS (silence = evidence per Rainbolt #5)"}
+ ],
+ "rainbolt_tree": {
+  "G1_623": "if bed ~72 dB, tilt ~-5.7, shape ~= St Francis (margin 8.1): south-coast exposed site -> 08 (~45%); nearest name: Mossel Bay (Dines/Sea Search); alternates: Gansbaai/Agulhas-class",
+  "G0_777": "if bed ~63 dB, tilt ~-8.3, shape ~= Saldanha: west-coast ST300 class -> 11 or 12 (~40% combined); slate Robben/Dassen/Langebaan",
+  "G2_99": "if bed ~65 dB, harbour-tinged, short campaign: Table Bay/V&A-class -> the other of 11/12 (~25%)",
+  "eliminated": "reserved slots (dead), non-SA (dead), ID-order batch tell (dead), within-group station splits (dead - state factor)"
+ },
+ "cumulative_probes": 94
+}

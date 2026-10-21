@@ -1,0 +1,132 @@
+{
+ "round": "R8",
+ "date": "2026-10-21",
+ "nan_census": {
+  "windows_with_any_nan": 725,
+  "windows_missing_only_m01": 623,
+  "windows_missing_only_m15": 99,
+  "windows_missing_both": 1,
+  "windows_with_partial_minute_nan_other": 2,
+  "nan_minute_count_distribution": {
+   "1": 717,
+   "2": 7,
+   "3": 1
+  }
+ },
+ "test_vessel_proxy_recal": {
+  "G0_full": {
+   "bump_rate_thr6": 0.6809,
+   "bump_rate_thr10": 0.5931,
+   "bump_rate_thr14": 0.5403
+  },
+  "G1_m01miss": {
+   "bump_rate_thr6": 0.67,
+   "bump_rate_thr10": 0.5088,
+   "bump_rate_thr14": 0.3511
+  },
+  "G2_m15miss": {
+   "bump_rate_thr6": 0.6256,
+   "bump_rate_thr10": 0.5178,
+   "bump_rate_thr14": 0.402
+  }
+ },
+ "train_vessel_proxy_recal": {
+  "01_Richards_Bay": {
+   "bump_rate_thr6": 0.685,
+   "bump_rate_thr10": 0.5979,
+   "bump_rate_thr14": 0.5383
+  },
+  "02_Durban": {
+   "bump_rate_thr6": 0.6884,
+   "bump_rate_thr10": 0.5414,
+   "bump_rate_thr14": 0.3977
+  },
+  "03_Cape_Recife": {
+   "bump_rate_thr6": 0.6157,
+   "bump_rate_thr10": 0.4646,
+   "bump_rate_thr14": 0.3072
+  },
+  "04_Bird_Island": {
+   "bump_rate_thr6": 0.653,
+   "bump_rate_thr10": 0.5201,
+   "bump_rate_thr14": 0.3842
+  },
+  "05_St_Croix_Island": {
+   "bump_rate_thr6": 0.6012,
+   "bump_rate_thr10": 0.5194,
+   "bump_rate_thr14": 0.4391
+  },
+  "06_Riy_Banks": {
+   "bump_rate_thr6": 0.6125,
+   "bump_rate_thr10": 0.3283,
+   "bump_rate_thr14": 0.2075
+  },
+  "07_St_Francis": {
+   "bump_rate_thr6": 0.6662,
+   "bump_rate_thr10": 0.5045,
+   "bump_rate_thr14": 0.3442
+  },
+  "09_Fish_Hoek": {
+   "bump_rate_thr6": 0.5003,
+   "bump_rate_thr10": 0.3016,
+   "bump_rate_thr14": 0.1824
+  },
+  "10_Sea_Point": {
+   "bump_rate_thr6": 0.6552,
+   "bump_rate_thr10": 0.4831,
+   "bump_rate_thr14": 0.2885
+  },
+  "13_Saldhana_Bay": {
+   "bump_rate_thr6": 0.5824,
+   "bump_rate_thr10": 0.3701,
+   "bump_rate_thr14": 0.2361
+  }
+ },
+ "split_characterization": {
+  "G0_full": {
+   "c0": {
+    "n": 403,
+    "p20_bb_db": 82.82,
+    "tilt_db_dec": -10.7
+   },
+   "c1": {
+    "n": 374,
+    "p20_bb_db": 61.63,
+    "tilt_db_dec": -10.8
+   },
+   "centroid_diff_flat_shift_fraction": 0.998,
+   "centroid_diff_shape_residual_db": 6.28,
+   "reading": "level/state factor (flat shift dominates)"
+  },
+  "G1_m01miss": {
+   "c0": {
+    "n": 540,
+    "p20_bb_db": 80.61,
+    "tilt_db_dec": -2.94
+   },
+   "c1": {
+    "n": 83,
+    "p20_bb_db": 63.31,
+    "tilt_db_dec": -10.31
+   },
+   "centroid_diff_flat_shift_fraction": 0.968,
+   "centroid_diff_shape_residual_db": 28.48,
+   "reading": "level/state factor (flat shift dominates)"
+  },
+  "G2_m15miss": {
+   "c0": {
+    "n": 55,
+    "p20_bb_db": 63.99,
+    "tilt_db_dec": -10.28
+   },
+   "c1": {
+    "n": 44,
+    "p20_bb_db": 80.54,
+    "tilt_db_dec": -9.0
+   },
+   "centroid_diff_flat_shift_fraction": 0.997,
+   "centroid_diff_shape_residual_db": 7.07,
+   "reading": "level/state factor (flat shift dominates)"
+  }
+ }
+}

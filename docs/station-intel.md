@@ -98,3 +98,20 @@ no new west-coast public deployments found (absence consistent with hide).
 **A57 (enquiry targets):** + SAMSA (GloNoise lead pilot country, URN toolkit,
 RAINDROP EIAs, workshop Cape Town Mar 2026) and + Dines/Oceans Research
 (Mossel Bay). A53 fingerprint card remains the core question form.
+
+
+## 9. R8 — quantified branch margins (r8_tells.json / r8_tells2.json)
+
+**08 (G1, 623 win):** shape-space d = 8.96 to 07_St_Francis (next 17.06,
+margin 8.1); level-space margin 25.7 ⇒ St-Francis-class exposed south coast.
+Nearest NAME: Mossel Bay (Dines PhD array, SoundTrap 300/500 2021 + six-week
+3-site 5-hydrophone south-coast array; Rufford long-term project starts
+13 Feb 2026 = post-competition). Thesis PDF handle 10019.1/132009 blocked to
+automation — manual download names the 3 sites. Garden Route hotspot zone
+(Goukamma→Groot River E) documented by Oosthuizen 2026.
+
+**11/12:** G0 = Saldanha-class (margin 2.6) → Robben/Dassen/Langebaan slate;
+G2 = 3-way shape tie (Richards/Saldanha/StCroix) = harbour class → Table Bay/
+V&A best pin (Probert 2025 ST300 at V&A, NYE 2023). Within-group splits =
+weather states, not stations. Bump rates (10 dB thr): G0 .593 / G1 .509 /
+G2 .518 = mid-train-range ⇒ no per-group μ shift.

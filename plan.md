@@ -896,3 +896,56 @@ RECORDING-specific variance → per-site normalization mandatory before probing.
 3. R8 build order (if modeling branch approved): T1 fingerprints + T2 wind
    shape into train_v3_v31 → group-split val; then T3 calibration; T4/T5 only
    if val gains ≥0.01.
+
+## 6p. R8 — Rainbolt tell-mining: G1 = St-Francis-class CONFIRMED with margins; state-vs-station disambiguated (docs/r8_tells.json, r8_tells2.json, hunt_log_r8.json)
+
+**A59 (fingerprint census tightened):** any-NaN windows = 725 = 623 (m01 crop)
++ 99 (m15 crop) + 1 (both) + 2 (internal stragglers). Exactly 3 export
+fingerprints. ID order = 813 runs (max 10) → fully interleaved ⇒ **no
+batch-order tell** (negative result, logged).
+
+**A60 (G1 branch quantified — the decision tree's big fall-off):** 25-band
+P20 fingerprints, shape space (centered): d(G1, 07_St_Francis) = 8.96 vs
+d2 = 17.06 → **margin 8.1 dB L2**; level-space margin **25.7** (St Francis
+13.96 vs next 39.63). The mystery box = a St-Francis-class EXPOSED SOUTH-
+COAST environment. With duplicates ~5–8% and 07 in train, **08 = St-Francis-
+class south-coast exposed site (~45%)** — Mossel Bay (Dines/Sea Search array)
+sits exactly in that exposure class.
+
+**A61 (G0/G2 branches):** G0 shape top1 = 13_Saldanha (6.0), margin 2.6 —
+west-coast ST300 class (Robben/Dassen/Langebaan slate stands). G2 shape =
+THREE-way near-tie (Richards 10.55 / Saldanha 10.82 / StCroix 10.88) =
+generic harbour/industrial class; with A56 (V&A ST300 deployments) the
+Table Bay/Cape Town-harbour reading stays the best pin.
+
+**A62 (state vs station — duplicate/extra-station check):** within-group
+2-component splits (GMM BIC strongly favors 2) are **flat level/state shifts**
+(centroid-diff flat-shift fraction 0.968–0.998; tilts match within ~1 dB/dec)
+⇒ swell/wind states, NOT hidden stations ⇒ 3-station theory HOLDS; reserved
+slots stay dead; duplicate theory stays ~5–8%.
+
+**A63 (vessel-activity prior — overfit trap closed):** recalibrated bump rate
+(threshold 10 dB over site quiet bed): test G0 0.593 / G1 0.509 / G2 0.518 —
+mid-range of train sites (Richards 0.598 → Fish Hoek 0.302). No per-group μ
+shift justified; keep the global μ = 0.130076 shrink family.
+
+**A64 (Mossel Bay dates pinned):** Dines Rufford project START = 13 Feb 2026
+(post-competition) ⇒ competition-era candidates remain the PhD's 2021 Mossel
+Bay SoundTrap 300/500 deployments + the six-week three-site five-hydrophone
+south-coast array. Thesis PDF (dines_marine_2025.pdf, handle 10019.1/132009)
+is 403/404-blocked for automation — manual download will name the 3 sites.
+**A65:** Oosthuizen et al. 2026 (Frontiers) documents the Garden Route
+humpback-dolphin hotspot (Goukamma MPA → Groot River East, 152 km, sections
+Knysna/Plett/Tsitsikamma); Sea Search's own page names Mossel Bay as the
+ongoing south-coast PAM site.
+
+## 7i. R8 next actions
+
+1. USER GATE unchanged: r7_v3_k045 (rec) / r7_v2 → ρ → k* = ρ.
+2. MANUAL (1 min): download dines_marine_2025.pdf from
+   https://scholar.sun.ac.za/handle/10019.1/132009 — the three array site
+   names are the last open name-gap on 08.
+3. Enquiry (A53 + Mossel Bay) to Sea Search / SAMSA-GloNoise / SAEON.
+4. R8 build (if greenlit): T1 station-fingerprint features (G0/G1/G2 covariates
+   + site-bed SNR normalization) + T2 wind-shape features into train_v3_v31;
+   validate on background-window-level group split.

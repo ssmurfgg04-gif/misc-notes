@@ -351,3 +351,34 @@ methodical").
 - Submit r7_v3_k045 (rec) or r7_v2 → LB ρ readout.
 - Send extended enquiry (A53 + Mossel Bay + SAMSA).
 - Greenlight R8 build (T1+T2) if wanted.
+
+## R8 — 2026-10-21 — Rainbolt tell-mining: G1 branch quantified (St-Francis-class, margin 8.1/25.7), state-vs-station closed, Mossel Bay dates pinned
+
+**Agent:** Z.ai (main). **Directive:** user R8 ("Rainbolt method" station hunt
++ research remaining gaps/uncertainties).
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | Tell-mining (scripts/r8_tells.py, r8_tells2.py) | 25-band P20 fingerprints per group/site; within-group GMM/KMeans substructure tests; recalibrated vessel proxies (6/10/14 dB); ID-order run analysis; outputs docs/r8_tells.json + r8_tells2.json |
+| 2 | G1 branch | **St-Francis-class CONFIRMED with margins: shape margin 8.1 dB L2 (8.96 vs 17.06), level margin 25.7** ⇒ 08 = exposed south-coast site ~45%, nearest name Mossel Bay (A60) |
+| 3 | G0/G2 branches | G0 = Saldanha-class (margin 2.6); G2 = 3-way near-tie = generic harbour class → Table Bay/V&A best pin (A61) |
+| 4 | Duplicate/extra-station check | within-group 2-component splits = FLAT level/state shifts (fraction ≥0.968, same tilt) ⇒ weather states, NOT stations ⇒ 3-station theory holds (A62) |
+| 5 | Vessel-activity prior | thr10 rates G0 .593 / G1 .509 / G2 .518 = mid-train-range ⇒ no per-group μ shift; global shrink stands; overfit trap closed (A63) |
+| 6 | Negative tells logged | ID order 813 runs = interleaved (no batch tell); NaN census = 3 clean fingerprints + 3 stragglers (A59) |
+| 7 | Web gaps (7 probes) | Dines PDF blocked (handle 10019.1/132009, bitstream uuid logged for manual DL); Rufford start = 13 Feb 2026 (post-competition); Sea Search page = Mossel Bay THE south-coast PAM site; Oosthuizen 2026 Garden Route zone; Probert-Robben/Langebaan/Hermanus/Zindi = 0 (silence = evidence) |
+| 8 | Docs + backup | hunt_log_r8.json (cum 94); plan.md §6p/§7i; station-intel §9; HANDOFF banner |
+
+**Decisions**
+- D32: Decision tree locked — G1→08 south coast (~45%, Mossel Bay lead),
+  G0→11/12 west coast, G2→11/12 Table Bay/V&A; duplicates 5–8%; all other
+  theories dead/weakened per A62.
+- D33: No per-group μ adjustment in submissions (A63) — global r7_v3 family
+  remains the hedge set.
+- D34: Manual user action requested: download dines_marine_2025.pdf (names
+  the 3 south-coast array sites — last open name-gap on 08).
+
+**Open / blocked-on-user**
+- Submit r7_v3_k045 (rec) or r7_v2 → ρ readout → k* = ρ.
+- Download Dines PDF; send A53+Mossel Bay enquiry (Sea Search / SAMSA / SAEON).
+- Greenlight R8 build (T1 fingerprints + T2 wind-shape).

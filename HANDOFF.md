@@ -1,3 +1,17 @@
+# HANDOFF — state banner (updated 2026-10-21, R8)
+
+**R8 in one line:** Rainbolt tell-mining DONE — **G1 = St-Francis-class exposed
+south-coast site CONFIRMED with margins** (shape margin 8.1 dB, level margin
+25.7 dB vs next site) ⇒ 08 south-coast ~45%, nearest name Mossel Bay (Dines/
+Sea Search; thesis PDF blocked — manual download at handle 10019.1/132009
+names the 3 array sites). G0 = Saldanha-class west coast (Robben/Dassen/
+Langebaan); G2 = harbour-class short campaign (Table Bay/V&A). Within-group
+splits = weather STATE shifts (flat-shift ≥0.97), NOT stations ⇒ 3-station
+theory holds. No per-group μ shift (bump rates mid-range). ID order fully
+interleaved (no batch tell). **NEXT:** submit r7_v3_k045 (rec) → ρ → k*;
+manual PDF download; A53+Mossel Bay enquiry; R8 build = T1 fingerprints +
+T2 wind-shape on greenlight.
+
 # HANDOFF — state banner (updated 2026-10-21, R7e)
 
 **R7e in one line:** Scholar/arXiv + south-coast harvest. **A55: Mossel Bay =
