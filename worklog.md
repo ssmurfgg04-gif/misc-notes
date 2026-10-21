@@ -382,3 +382,136 @@ methodical").
 - Submit r7_v3_k045 (rec) or r7_v2 → ρ readout → k* = ρ.
 - Download Dines PDF; send A53+Mossel Bay enquiry (Sea Search / SAMSA / SAEON).
 - Greenlight R8 build (T1 fingerprints + T2 wind-shape).
+
+---
+Task ID: R9-C
+Agent: general-purpose (Dines thesis rescue)
+Task: find working route to Dines 2025 thesis + 3 south-coast array site names
+
+Work Log:
+- Read worklog R7e/R8 (lines 324-385); found stale /data/dines_thesis_text.txt = 162 B nginx 403 stub
+- GET /handle/10019.1/132009 (browser UA) -> 200 OK, 459 KB DSpace 7 Angular page; prior "resource not found"/403/404 was transient or wrong-path, handle resolves fine
+- Decoded SSR state (<script id="dspace-angular-state">, &q;/&s; entities): item uuid = ba08fdd7-4a00-4367-b6fd-f7dd10e309c6; recorded 00218139-21b4-4e5d-9d6f-98c4ed54d6af is a BITSTREAM uuid (TEXT bundle) not an item uuid -> explains earlier /server/api/core/items/00218139... 404
+- Bitstream inventory: PDF b304c9c7-9499-4625-9227-b3742d7f9c81 (ORIGINAL, 6,286,780 B); TEXT 00218139... (100,242 B); thumb cc0058ea...; license c2d8de08...
+- /bitstreams/<uuid>/download (UI proxy) -> nginx 429 x2 (rate-limited path; avoid for automation)
+- /server/api/core/bitstreams/<uuid>/content (DSpace 7 REST) -> 200 OK: PDF + TEXT both downloaded
+- OAI-PMH: /oai/request 403/wrong path; /server/oai/request?verb=GetRecord (browser UA) -> 200 full oai_dc record incl. complete English abstract
+- Wayback CDX: web.archive.org unreachable from sandbox (timeout x3) — moot
+- OpenAIRE title query 400 (encoding) — moot after acquisition
+- PDF sha256 174b3b1c521881d7a309bb00a51e7d79dab6e0034d1a826c115004e98148dbd4 (6,286,780 B, 304 pp); official TEXT bundle + pdftotext extraction saved; docs/intel_r9_dines.md written
+
+Stage Summary:
+- PDF ACQUIRED. Dines, S. F. 2025. "Applied passive acoustic monitoring of South Africa's most
+  threatened marine mammal, the Indian Ocean humpback dolphin (Sousa plumbea)" PhD, Stellenbosch
+  (advisors Measey/Gridley/Elwen, Sea Search). Working route: scholar.sun.ac.za/server/api/core/
+  bitstreams/b304c9c7-9499-4625-9227-b3742d7f9c81/content; item page /items/ba08fdd7-4a00-4367-b6fd-f7dd10e309c6
+- THE PRIZE — 3 array site names (Ch. 5 SWORD, 120 km, 5 hydrophones, 42 days, 26 Aug-7 Oct 2022):
+  Mossel Bay, Buffelsbaai, Plettenberg Bay; moorings M1 MB_Harbour, M3 MB_Diaz, M7 Buffelsbaai,
+  M8 Plett_Robberg Point, M9 Plett_Beacon Isle. M1+M7 = 77% of SW detections; Buffelsbaai =
+  hottest site (2,070 whistles, single hydrophone, 13 inds) -> new name candidate for station 08
+  alongside Mossel Bay. Harbour-adjacent M1 (MB_Harbour) noted for harbour-tinged fingerprint risk
+- Bonus: 2021 Mossel Bay 6-mooring array WITH coordinates (Table 4.1): M1 -34.1767/22.14221 (ST500,
+  harbour), M2 -34.1703/22.13575 (ST500), M3 -34.1646/22.12037 (ST300), M4 -34.1446/22.1151,
+  M5 -34.1546/22.1138, M6 -34.1331/22.11944 (Hartenbos/Kleinbrak end); 19 Mar-5 Apr 2021, 96 kHz
+  continuous 10-min files, 8-10 m depth, 2 km spacing; 2022 M1/M3 = redeploys of 2021 M1/M3
+- D34 (manual Dines download) CLOSED. Gansbaai: 0 mentions in thesis -> R7e Gansbaai lead stays
+  uncorroborated. Abundance: MB 8, Buffelsbaai 19, Plett 22; POPAN 26 (CI 23-30), SECR 23-26
+
+---
+Task ID: R9-B
+Agent: general-purpose (ruicodex OSINT)
+Task: rival dossier — Zenodo deposit, Belgian registry, people, tactical read
+
+Work Log:
+- Zenodo: resolved DOI 10.5281/zenodo.23037895 (302→zenodo.org, API 200); record = "VTUAD: An AIS-Auto-Labeled Vessel-Type Underwater Acoustic Dataset Reconstructed from Ocean Networks Canada Archives", v1.3.2, 2026-09-29, CC-BY-4.0, concept DOI 10.5281/zenodo.22274549; creators Yuan/Wang/Li/Chen/Zeng/Liu (WUST + CSSC-LINCOM Wuhan, ORCIDs present)
+- Version chain pulled (6): v1.0.0 2026-09-03 (2 files, 255 KB) → v1.1 09-03 (25.8 GB) → v1.2.0 09-15 (36.2 GB) → v1.3.0 09-23 (40.9 GB) → v1.3.1 + v1.3.2 09-29 (63 files, 40.9 GB) — 26-day release cadence, rebuild-from-ONC framing is the deposit's own
+- Declared-file cross-check PASS: vtuad_strict_wav_vessel.zip parts 01-03 (3,712,337,699 B reassembled, SHA-256 96564721a917… in README), vtuad_strict_wav_background.zip (926 MB), metadata.csv (166,858 B), registry_anonymized.csv (164,251 B) all exist in v1.3.2; downloaded the 2 CSVs + 8 small docs to data/zenodo_r9/; registry_anonymized.csv SHA-256 matches SHA256SUMS.txt, metadata.csv MD5 matches API
+- CSV analysis: 525 rows each; 12 labels (tug 188/cargo 97/passengership 71/bg 38/…); registry anonymization = MMSI→hull_id, 179 MMSIs ↔ 178 hulls (1:1), 509 vessel clips, 22 bg-with-hull (6 hulls), 16 dedicated bg; CTD p1 144.5–149.2 dbar ⇒ hydrophone ~14.5–14.9 m; 32 kHz mono, ICLISTENAF2523 Strait of Georgia, 2016-05-09..2017-05-28, only 33 distinct UTC days, 56.0 h, durations 119–2220 s; ResNet-18 baseline macro-F1 0.2766 (their card); audit pack: 167/525 wrap-around splices, grouping drops first minute
+- ONC DOI 10.17616/R3RW43 → re3data r3d100011094 "Oceans 3.0 Data Portal"/ONC — CONFIRMED; license_evidence_v131.md quotes ONC CC-BY-4.0 data policy per stream (hydrophone redistributable; AIS = derived metadata only; CTD = derived averages)
+- Registry: Belgian KBO registry hit — Rui Codex = sole proprietorship (natuurlijk persoon), founded 4 Feb 2026, Nacebel 62.100/62.200/63.100/58.290/70.200; KBO/VIES/site-footer all agree; identity details kept in the PRIVATE dossier only (docs/intel_r9_ruicodex.md, not pushed); "2 employees" = UNVERIFIABLE from KBO (probable, LinkedIn-only)
+- People: founder identified and verified across site JSON-LD/About/itch.io/Devpost (name in private dossier only); GitHub RuiCodex=0 public repos, RuiCodex-dev=8 company repos, ZERO competition code — confirms GitHub does NOT disclose the project; second member: no footprint outside LinkedIn (UNCONFIRMED); Zindi profile zindi.world/users/ruicodex EXISTS (rank #7060/100k aggregate)
+- VTUAD upstream: original = Domingos, Skelton & Santos 2022 IEEE DataPort 10.21227/msg0-ag12 (DOI + title + authors verified; gated access); "rebuilt" = Yuan et al. MDPI preprint 10.20944/preprints202609.0617 (v1 09-08/v2 09-20, six-stage AIS auto-label pipeline, silver-standard labels) + Oct-2026 companion deposits (cross-water benchmark, SimCLR, foundation-model eval, source-free adaptation) — all public
+- Blocked: LinkedIn 999, Kaggle reCAPTCHA, companyweb 403, belgiancompanies/northdata/trendstop/efis DNS, northdata.de 429, staatsbladmonitor 404, kbopub name-search JSF wall, DDG 202-throttle after q1, Mojeek timeout, Bing query-mangled, GitHub core API rate-limited (HTML used instead), Zindi LB login-walled
+- Deliverable: docs/intel_r9_ruicodex.md (VERIFIED/PROBABLE/UNCONFIRMED sections, per-claim URLs); local data in data/zenodo_r9/; plan.md and submissions untouched
+
+Stage Summary:
+- VERIFIED: deposit 23037895 v1.3.2 exists and matches ruicodex's declared file set byte-for-byte on names/sizes/checksums; 525 clips / 178 hulls / 12 classes / 56.0 h / ~14.5–14.9 m icListen SoG / 33 duty days — license CC-BY-4.0 with ONC attribution (re3data r3d100011094 confirmed)
+- VERIFIED: Rui Codex = Belgian sole proprietorship, founded 4 Feb 2026 (KBO/VIES-confirmed; personal identifiers in private dossier only); "2 employees" plausible but only LinkedIn-sourced; second member invisible outside LinkedIn
+- VERIFIED: original VTUAD = Domingos et al. 2022 IEEE DataPort (gated); rebuild = Yuan et al. 2026 preprint + open Zenodo; both teams now use the SAME data + SAME starter-conversion band power — zero data asymmetry
+- TACTICAL: their declared pipeline = strict re-cut vessel+background WAVs → minute deci-decade band power, no calibration, no test-window matching ⇒ auxiliary prior/pretraining usage; lacks site/state features ⇒ our T1 fingerprint conditioning + T2 wind-shape remain the differentiators; only gap to close = download the 4.6 GB strict WAV set (SHA ledgers already captured)
+- TACTICAL: rival profile = generalist AI-automation studio (hackathon tempo, solo+1), Zindi aggregate rank #7060, no deep-audio research footprint — expect solid pragmatic pipelines, not novel architectures; #1 position likely won on the same band-power/shrink family we already run
+---
+Task ID: R9-A
+Agent: general-purpose (VTUAD mining)
+Task: deep-mine VTUAD + vessel-noise literature/code, sorted critical→medium
+
+Work Log:
+- ~36 web probes (arXiv API, Crossref, Semantic Scholar w/ backoff, Zenodo API,
+  GitHub API/raw, ar5iv; DDG/Bing/OpenAlex/IEEE-DataPort/preprints.org/grep.app
+  bot-walled or out of budget — logged as misses)
+- VTUAD identity pinned: original = Domingos 2022a IEEE Access 10.1109/ACCESS.2022.3220265
+  (1-s clips, 3 range scenarios, benchmark 84.13% combined); 2026 re-release = Yuan et al.
+  preprints 10.20944/preprints202609.0617 (Zenodo 23037895: 525 clips, 133,784 log-mel
+  segments, MMSI+CTD covariates, cut-rule/wraparound audits); pipeline code =
+  lucascesarfd/onc_dataset + mominali12/vtuad_personal; SOTA = Jotels/CATFISH
+- CATFISH fulltext+code mined: ablation Table 2 (filters alone 91.59 → +CTDSV 96.32 →
+  +attention 96.23 → both 96.63), Δ-band diagnostic (discriminative bands narrow 0–60→0–10
+  with range), LogTBN median-filter dual-channel config, PCEN option (s=.04 α=.96 δ=2 r=.5)
+- Yuan 2026 five-paper series found via Zenodo/Crossref: UDA four-corpus benchmark
+  (CORAL>MMD, MMD negative transfer −0.190), SFUDA benchmark (AdaBN suffices, TENT
+  collapses, post-hoc rejection fails), cross-archive direct-transfer (all 12 directions
+  collapse; sqrt weights > inverse), SimCLR in-corpus SSL (encodes recording ID — probe
+  diagnostic), frozen-FM zero-label transfer (BEATs best on VTUAD; source-validation
+  selection rule)
+- Citation-graph sweep (S2 on Domingos 2022a, 35 citers): MFAV JASA 2026 arctic ship
+  detection (FAV statistic, +22% small boats, open tool), sea-state-7 generalization
+  study, UniqueShip leakage audit (random splits +10–48 pp; vessel diversity ≫ duration),
+  sonar texture metrics (code), CAM++ change-point features, Oceanship 121 h dataset
+- Wind track: Ragland & Abadi 2025 (piecewise log-linear AN-wind), Cho 2021 Ocean Eng,
+  Kalman wind tracking 2017, Rogers 2024 (wave params <0.3 dB gain = skip swell proxies)
+- Calibration track: ZIB regression (two-head = ZOIB), weighted conformal under
+  covariate shift, mixture-consistency projection → per-station closed-form
+  projection-share; rejected: MMD, TENT/entropy-min TTA, MSP/Energy/OpenMax gates,
+  inverse-frequency weighting, in-corpus SSL shortcut
+- Deliverable: docs/intel_r9_vtuad.md (24 findings, sorted CRITICAL 6 / MEDIUM 11 / LOW 7,
+  each with URL, technique, fit, grade + build-order delta to plan §7h)
+
+Stage Summary:
+- F1 CORAL station alignment (closed-form, label-free; MMD documented harmful) — CRITICAL
+- F2 AdaBN-analogue: test-station robust re-standardization of frozen features — CRITICAL
+- F3+F4 LogTBN median-detrend dual channels + PCEN on band-power series (CATFISH/LEAF) — CRITICAL
+- F5 UniqueShip: vessel-ID-disjoint validation mandatory; diversity>duration in factory — CRITICAL
+- F6 low bands survive at far range → SNR-gated band weighting (CATFISH Δ-diagnostic) — CRITICAL
+- F7/F13 MFAV dispersion features + mixture-consistency projection share; F11/F12 per-window
+  adaptive shrinkage (ZOIB / weighted conformal) replace single global k — MEDIUM
+
+---
+
+## R9 — 2026-10-22 — Dines thesis acquired (08 slate closed), ruicodex dossier, VTUAD steals, R8 T1+T2 VALIDATED (D29 gate PASS)
+
+**Agent:** Z.ai (main) + 3 parallel research agents (R9-A VTUAD mining, R9-B ruicodex OSINT, R9-C thesis rescue). **Directive:** user R9 (place pin; greenlight R8 T1+T2; mine VTUAD papers/code critical→medium; ruicodex intel; thesis link broken).
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | Pin verified | r7_v3_k045 sha 98775aed ✓ 1,500 rows ✓ → staged download/submission_r7_v3_k045_PIN.csv |
+| 2 | R9-C thesis rescue | **PDF ACQUIRED** — 404 root cause = wrong uuid (TEXT bundle); item ba08fdd7-4a00-4367-b6fd-f7dd10e309c6 + bitstream b304c9c7 (docs/intel_r9_dines.md); data/dines_marine_2025.pdf 304 pp |
+| 3 | A66 | SWORD array 5 moorings named: Mossel Bay Harbour/Diaz, **Buffelsbaai**, Plett Robberg Pt/Beacon Isle (Aug–Oct 2022) + 2021 M1–M6 coords ⇒ 08 slate closed to 4 exposed candidates |
+| 4 | R9-B ruicodex | Zenodo 23037895 verified (Yuan et al. AIS-auto-labeled rebuild, 525 clips/178 hulls, CC-BY-4.0); Rui Codex = BE sole prop (identity in private dossier only); **zero data asymmetry** (docs/intel_r9_ruicodex.md, 80 probes) |
+| 5 | R9-A VTUAD harvest | 4 CRITICAL: CORAL alignment, AdaBN re-standardization, PCEN/LogTBN (CATFISH code), vessel-ID-disjoint validation law (docs/intel_r9_vtuad.md, ~36 probes) |
+| 6 | Data recovery | refs/bg_refs parquets re-pulled from misc-notes-data v2 (49,450+13,325 rows A12-exact); symlinks fixed |
+| 7 | R8 build | scripts/r8_t1t2_build.py + r8_followup.py: D20 recipe (sub-interval + H_A/H_C + bg-group split + clip holdout); 15k bg pool, 39% calm; 6k train/1.5k cal/2.2k val pools incl. 4 class-matched pools |
+| 8 | R8 result | **LGBM+T1T2 beats base everywhere; G1-class 0.0661→0.0507 (+0.0154) = D29 PASS**; T1 = 31.2% importance; T2 = 8.6% |
+| 9 | A69 negative result | wind gate inverted: FA bumps LF-rich (AUC 0.92) but gate moves calm-val only −0.0008 — FA is not the E5 bottleneck |
+| 10 | A70 | centered-shape distances confirm decision tree: G0→A_west 1.79, G1→B_south 1.90, G2→C_harbour 1.80 |
+| 11 | Docs + backup | plan.md §6q/§7j/§7k; station-intel §10; HANDOFF banner; reports merged r8_t1t2_report.json; test vectors r8_test_diag.npz |
+
+**Decisions**
+- D35: R8 track = LGBM+T1T2 (recipe-correct val 0.039–0.051 beats E5 0.10–0.42 in-domain); E5 stays the calibration anchor + fallback.
+- D36: r8 candidate submission ONLY after r7_v3_k045 ρ readout; moment-pin via r7_v2 power-map machinery; Spearman-check vs r7_v2 first.
+- D37: T5 = AdaBN+CORAL per test group = next build (no training loop, stackable).
+
+**Open / blocked-on-user**
+- Submit r7_v3_k045 → ρ readout → k* = ρ.
+- Enquiry (A66 slate) to Sea Search/Dines + SAMSA-GloNoise + SAEON.
+- Optional: 4.6 GB VTUAD strict-WAV re-download for T4 self-training (SHA ledgers already in data/zenodo_r9/).

@@ -1,3 +1,21 @@
+# HANDOFF — state banner (updated 2026-10-22, R9)
+
+**R9 in one line:** Intel + R8 build round. **A66: Dines thesis PDF ACQUIRED**
+(root cause of the 404: wrong uuid — item uuid ba08fdd7, PDF bitstream
+b304c9c7; routes in station-intel §10) — **08 slate = {Buffelsbaai, Plett
+Robberg Pt, Plett Beacon Isle, Mossel Bay Diaz}** (SWORD array Aug–Oct 2022).
+**A67: ruicodex = Belgian sole proprietorship (verified via KBO registry;
+identity details in private dossier only); their Zenodo 23037895 = the SAME public VTUAD rebuild we already
+ingest — zero data asymmetry.** **A68: 4 CRITICAL technique steals** (CORAL
+alignment, AdaBN re-standardization, PCEN/LogTBN channels, vessel-ID-disjoint
+validation). **R8 BUILD GREENLIT AND VALIDATED:** LGBM+T1+T2 on the D20
+sub-interval recipe beats base on every pool — G1-class (hidden-station
+proxy) 0.0661→0.0507 (**D29 gate PASS**), T1 block = 31% of importance;
+shape-space distances re-confirm G0/G1/G2 class mapping (A70). Test-side
+per-group vectors saved (no new submission built). **NEXT: submit r7_v3_k045
+→ ρ readout → k*=ρ; then r8 candidate = T1T2 vector moment-pinned (only if
+ρ≥0.5); T5 = AdaBN+CORAL stack.**
+
 # HANDOFF — state banner (updated 2026-10-21, R8)
 
 **R8 in one line:** Rainbolt tell-mining DONE — **G1 = St-Francis-class exposed

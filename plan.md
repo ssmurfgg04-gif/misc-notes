@@ -949,3 +949,96 @@ ongoing south-coast PAM site.
 4. R8 build (if greenlit): T1 station-fingerprint features (G0/G1/G2 covariates
    + site-bed SNR normalization) + T2 wind-shape features into train_v3_v31;
    validate on background-window-level group split.
+
+## 6q. R9 — intel round: Dines thesis ACQUIRED (3 sites named), ruicodex dossier, VTUAD technique harvest (2026-10-22; docs/intel_r9_*.md)
+
+**A66 (Dines thesis acquired — the 08 name-gap is CLOSED to a 5-mooring slate):**
+Working routes (automation-safe): item
+`scholar.sun.ac.za/items/ba08fdd7-4a00-4367-b6fd-f7dd10e309c6`, PDF bitstream
+`/server/api/core/bitstreams/b304c9c7-9499-4625-9227-b3742d7f9c81/content`.
+Old 404 root cause: recorded uuid 00218139-… was the TEXT bundle, not the item.
+PDF saved `data/dines_marine_2025.pdf` (304 pp, sha256 174b3b1c…).
+**SWORD array (Ch. 5): 120 km, 5 hydrophones, 26 Aug–7 Oct 2022 — sites
+M1 Mossel Bay Harbour (33 d), M3 Mossel Bay Diaz (19 d), M7 Buffelsbaai (32 d),
+M8 Plett Robberg Point (20 d), M9 Plett Beacon Isle (42 d).** Buffelsbaai =
+whistle hotspot (2,070 SWs, 13 individuals). 2021 Mossel Bay array coords:
+M1 −34.1767/22.14221 (ST500) … M6 −34.1331/22.11944; 8–10 m depth, 19 Mar–
+5 Apr 2021. **⇒ station 08 slate: {Buffelsbaai, Plett Robberg Pt, Plett Beacon
+Isle, Mossel Bay Diaz}** (M1 harbour-adjacent → conflicts with G1=exposed).
+Gansbaai: 0 mentions — lead dead.
+
+**A67 (ruicodex dossier — zero data asymmetry):** Zenodo 23037895 verified
+real: "VTUAD: AIS-Auto-Labeled Vessel-Type Underwater Acoustic Dataset
+Reconstructed from ONC Archives" v1.3.2 (Yuan Hao et al., WUST), 6 versions in
+26 days, CC-BY-4.0, 525 clips / 178 hulls / 56 h / 32 kHz / icListen ~14.5 m,
+Strait of Georgia; their own ResNet-18 baseline = macro-F1 0.2766. Files we
+already hold (metadata.csv + registry_anonymized.csv in data/zenodo_r9/,
+A12-exact). Company: Rui Codex = Belgian **sole proprietorship** (verified via the KBO registry;
+identity details in the private dossier only);
+GitHub has zero competition code. **Tactical read: they run the same public
+data + the same starter conversion we do — no data advantage; our T1/T2 and
+calibration stack remain the differentiators.**
+
+**A68 (VTUAD technique harvest — R9-A, docs/intel_r9_vtuad.md):** 4 CRITICAL
+steals beyond A58: (1) **closed-form covariance alignment (CORAL)** of
+band-power features per target station — best UDA family on this domain;
+(2) **AdaBN-style re-standardization** of normalization stats on unlabeled
+test windows (frozen model) — survives contamination where TENT collapses;
+(3) **PCEN/LogTBN dual raw+median channels** from the actual CATFISH code
+(github.com/Jotels/CATFISH); (4) **UniqueShip leakage law** (arXiv 2609.13659):
+vessel-ID-disjoint validation mandatory, clip diversity beats duration.
+MEDIUM: per-window adaptive shrinkage (uncertainty-driven k instead of global).
+
+## 7j. R8 build RESULTS — T1+T2 validated on the honest plant protocol (scripts/r8_t1t2_build.py + r8_followup.py; data/train_v3/r8_t1t2_report.json)
+
+Protocol (D20-exact): sub-interval L∈[3,12] planting, H_A/H_C(0.5/1.0) 50/50,
+bg-window group split (seed 7, site-stratified), clip holdout (seed 101),
+calm 60/40. Pools: 15,000 bg windows (39% calm), 6,000 train / 1,500 cal /
+800 val / 800 calm-val / 4×300 class-val (G0↔{13,09}, G1↔{07,03},
+G2↔{01,02,05}, D-residual). Class-matched val pools = the hidden-station proxy.
+
+| val pool | E5 | LGBM base | **LGBM +T1+T2** | Δ |
+|---|---|---|---|---|
+| allpool (800) | 0.3679 | 0.0510 | **0.0447** | +0.0063 |
+| calm (800) | 0.1012 | 0.0450 | **0.0389** | +0.0061 |
+| classA↔G0 | 0.3105 | 0.0499 | **0.0437** | +0.0062 |
+| **classB↔G1** | 0.4249 | 0.0661 | **0.0507** | **+0.0154** |
+| classC↔G2 | 0.2888 | 0.0429 | **0.0352** | +0.0077 |
+| classD | 0.3936 | 0.0362 | **0.0306** | +0.0056 |
+
+- **D29 gate: PASS on the G1-class pool (+0.0154)** — the hidden-station-
+  critical class; overall pools +0.006. T1 block = **31.2% of LGBM gain
+  importance** (top: t1_snr_23/24 = HF cavitation excess over site bed);
+  T2 = 8.6% (t2_wnd_frac, t2_exc_tilt in top-15).
+- **A69 (inverted wind gate — negative result, measured):** natural FA bumps
+  in SA backgrounds are **LF-rich** (r_lf_wnd p50 3.17) while planted VTUAD
+  passages are wind-band-rich (0.77); AUC(FA vs vessel) = 0.92. Gate at
+  FA-p80 kills FA at 99.5% vessel recall but moves calm-val RMSE only
+  0.1012→0.1004 (errors live in f>0 misestimation, not FA). Logged, cheap.
+- **A70 (shape-space class distances CONFIRM the decision tree):** centered
+  bed-shape distances land G0→A_west (1.79 vs 4.10 next), G1→B_southcoast
+  (1.90 vs 8.35), G2→C_harbour (1.80 vs 4.10) — independent replication of
+  A60/A61 in a new space.
+- **Test-side diagnostics (per G0/G1/G2, saved r8_test_diag.npz):** LGBM+T1T2
+  means G0 0.168 / G1 0.185 / G2 0.160 (p50 0.142/0.195/0.148) — consistent
+  with the global μ family (A63 holds). Raw E5 means 0.47–0.62 (beds not
+  calm) — unchanged vs R7. NO submission built from this yet.
+- **CAUTION carried from R7:** this val is recipe-correct but still
+  synthetic; the r7_v3_k045 ρ readout remains the only ground truth before
+  any r8 candidate is pinned.
+
+## 7k. Next actions (R9 → R10)
+
+1. USER: submit **r7_v3_k045** (pin file verified, sha 98775aed, staged
+   download/submission_r7_v3_k045_PIN.csv) → LB → **ρ readout → k\* = ρ**
+   (RMSE² = σ_f²(1−2kρ+k²), two-k solve if a second k is spent).
+2. Decision: if ρ ≥ 0.5, build **r8 candidate** = LGBM+T1T2 vector
+   moment-pinned (E[p]=0.130076, E[p²]=0.060581 exact) on the SAME
+   power-map machinery as r7_v2; validate ranking (Spearman) vs r7_v2 before
+   spending the slot. If ρ < 0.2, pivot to T5 embeddings (R9-A #1/#2).
+3. T5 build (R9-A steals): AdaBN re-standardization per test group +
+   CORAL closed-form alignment of train band features to each test group —
+   cheap, no training loop, stackable with T1T2.
+4. Enquiry card updated (A66): "08 ∈ {Buffelsbaai, Plett Robberg Pt, Plett
+   Beacon Isle, Mossel Bay Diaz}?" to Sea Search/Dines + SAMSA/SAEON.
+
