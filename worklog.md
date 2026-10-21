@@ -623,3 +623,36 @@ Stage Summary:
 - Gaps flagged in doc (Pending/gaps block): (1) ρ readout for r7_v3_k045 → k*=ρ; (2) no LB score yet for the r7/r8 family — all headline validation numbers are synthetic-protocol; (3) no measured per-window ρ for E5/LGBM+T1T2 on real test (0.82–0.87 band = reasoning only, do not print); (4) station names {08,11,12} remain hypotheses pending user enquiry
 - Note: §5 runs ~500 w vs 300 w budget (content-dense per task outline); total body ~1.9k w vs 1.2–1.8k target — trim candidate for final pass
 RETURN: sections = Abstract / measurement problem / recipe forensics / E5 bump estimator / pressure map fingerprints / calibration as physics / more-time / figure-table list (+ pending-gaps block). Missing numbers the write-up needs: r7_v3_k045 LB readout (ρ → k*); an LB score for any bump-reading submission (validates §4/§5 transfer claims); measured test ρ for the T1T2 vector; confirmed station names (user-gated enquiry).
+
+---
+Task ID: BK-20261021_212804
+Agent: backup_milestone.sh
+Task: milestone backup — R10-M2: R8b gates (wind/rank-REST NEGATIVE), candidates r8b_v1/v2 + r7_v4_softfloor built+ledgered, resumable build infrastructure
+
+Work Log:
+- git add/commit/push (fail=1)
+- tarball download/backups/milestone_20261021_212804.tar.gz created, ledger now 6 entries
+
+Stage Summary:
+- Milestone R10-M2: R8b gates (wind/rank-REST NEGATIVE), candidates r8b_v1/v2 + r7_v4_softfloor built+ledgered, resumable build infrastructure backed up at 20261021_212804
+
+---
+Task ID: R10-main
+Agent: Z.ai (main)
+Task: final code review + silent-issue fixes + R8b build + candidate submissions + backup hardening
+
+Work Log:
+- Backup hardening: scripts/backup_milestone.sh (commit+push+tarball+ledger+worklog); RESTORE_CARD.md in download/ (wipe-recovery runbook incl. remote-url token format); M0/M1/M2 pushed (bb2ee2c.., 57b7b07..)
+- Wipe-loss repairs: data/Test.csv + sample_submission.csv restored from competition zip (sha logged); refs/bg_refs parquets re-pulled from misc-notes-data release v2 (sha256 verified OK); refs_vtuad_real/ dir restored
+- Code review verdict: r8_t1t2_build/r8_followup/featurize clean (no leakage; deterministic); dead code noted (gated_e5, logX); r7_shrink.py out-of-tree outputs superseded
+- Silent issues fixed: (1) wrong-column audit trap (score col zero-weight A33) -> build_submission.py asserts share col; (2) 507/1500 PIN floor point-mass 0.07154 quantified; (3) requirements.txt pinned + pip-vs-venv trap documented; (4) detached-process reaping -> stage-persisted resumable builds + foreground execution doctrine; (5) pyarrow/dep drift after wipe
+- R8 pools regenerated deterministically (15k bg / 408+101 clips / float32 cache); R8b built (scripts/r8b_wind.py): W1 Knudsen wind features, W2 full-axis LogTBN, W3 CAL softfloor (fn_rate 36.3%, iso(f_pc) beats 0-floor AND 0.0715-floor on no-bump: 0.0816 vs 0.0871/0.0986), W4 rank-REST probe
+- R8b GATES (honest): wind_adopted=FALSE (B_G1 0.0525 full / 0.0513 windonly vs 0.0507 gate), softfloor_ok=FALSE on LGB path, rank-REST CATASTROPHIC (0.221-0.246 vs 0.036-0.053) -> AdaBN/CORAL quantile recipes DO NOT transfer to GBDT mixture features; T1T2 stack stands
+- Candidates built+ledgered (download/, sha256 in LEDGER + SUBMISSION_LEDGER.jsonl): r8b_v1_repin (acf8dcb8), r8b_v2_floor_repin (e50eb50e; moments EXACT 0.13007576/0.06058; Spearman vs r7_v2 0.473), r7_v4_softfloor_repin (05323cc8; 260 floor rows lifted to iso(f_pc), Spearman vs PIN 0.998)
+- VTUAD strict-WAV fetch: 412 MB of part01 (0.76 MB/s; resumable via scripts/fetch.sh; remaining ~4.2 GB)
+
+Stage Summary:
+- D38: rank-REST/quantile-mapping domain adaptation = DEAD for GBDT+mixtures (log as permanent negative)
+- D39: wind/f_pc features = no gain over T1T2 (A69 re-confirmed at feature level); iso(f_pc) floor valid ONLY for E5-family vectors (r7 track), not the LGB path
+- D40: candidate order after rho readout: rho>=0.5 -> r8b_v2_floor (rank check vs r7_v2 0.473 noted, D36 gate applies); conservative swap -> r7_v4_softfloor (Spearman 0.998, pure floor-mass fix)
+- Infrastructure: all builds stage-persisted + resumable; every submission through build_submission.py gate; milestone backups M0-M2 pushed
