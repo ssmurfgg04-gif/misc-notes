@@ -680,3 +680,46 @@ Work Log:
 
 Stage Summary:
 - Milestone R10-M4: HANDOFF/plan final for round backed up at 20261021_213740
+
+---
+Task ID: BK-20261021_213751
+Agent: backup_milestone.sh
+Task: milestone backup — R10-M4 retry: tar self-inclusion fix
+
+Work Log:
+- git add/commit/push (fail=0)
+- tarball download/backups/milestone_20261021_213751.tar.gz created, ledger now 9 entries
+
+Stage Summary:
+- Milestone R10-M4 retry: tar self-inclusion fix backed up at 20261021_213751
+
+---
+Task ID: R10-E
+Agent: general-purpose (leaderboard + rival watch)
+Task: Compact final probe of round 10 — Zindi LB state, rival 24-48h activity, new Zenodo resources, T7 URL checks
+Work Log:
+- Zindi ×2 (main page + /leaderboard/ subpage, both HTTP 200): SSR gives 469 joined / 189 active; Start 16 Oct 26, Close **13 Dec 26** ✓, private Reveal 29 Jan 27; metric = 1 − RMSE on share_added_vessel; limits **2 subs/day, 200 total, team ≤4**; prizes $2.5k/$1k/$500 + 2×$1k best-writeup, 5 000 Zindi points; benchmark row 0.753867825. LB table rows are client-rendered behind auth — SSR shows only header + Benchmark + "No submissions yet" ⇒ top-5 NOT extractable without login (0.8720 lead from 10-21 unconfirmable from public HTML); moved on after 2 probes per doctrine
+- Zenodo q=VTUAD mostrecent ×1: 7 records; newest = 23411528 (2026-10-16, SimCLR suppl., preprint 10.20944/preprints202609.0999.v3) — already in docs/intel_r10_*; ZERO new Yuan-group deposits in last 24-48h
+- GitHub org RuiCodex-dev ×1 (HTML; API returned 403 rate-limit): 14 repos, all non-competition (hearthnote, purser, scopecast, 6× *-legal, …); latest activity datetimes 2026-10-16/18 ⇒ nothing in the 24-48h window, no new repos
+- Preprint 0617 v3 check FAILED: preprints.org 403 ×3 (WAF; full browser headers don't help); Crossref REST 404 ×2 + DOI Handle API 404 (responseCode 100, handle not found) ⇒ **10.20944/preprints202609.0617 NO LONGER RESOLVES** (R9 had it Crossref-verified v1 09-08 / v2 09-20) — causes: version re-registration gap, withdrawal, or takedown; v3 status unverifiable from this sandbox; Wayback archive.org timed out
+- Zenodo "vessel noise" (44 hits) / "ship noise" (41 hits) mostrecent ×2: nothing published 2026-10 worth grabbing — top hits are known 23037895 or off-topic (cetacean/noise-impact/marine-sediment records)
+- Version freshness on known records: 23345657 = **v3.2** (updated 2026-10-13, is latest ✓); 23312809 = **v1.2** (updated 2026-10-12, is latest ✓); 23037895 = **v1.3.2** (updated 2026-09-29, unchanged — matches the version ruicodex declared, no bump)
+- Probes: **18/25**; misses logged, not retried per blocked-list doctrine (preprints.org 403 ×3, GitHub API 403 ×1, Crossref 404 ×2, Handle 404 ×1, Wayback timeout ×1)
+Stage Summary:
+- Leaderboard: login-walled (confirmed, 2 probes then stopped); competition facts re-confirmed from public SSR — close 13 Dec 2026 ✓, 2/day + 200 total + team ≤4, 469 joined, benchmark 0.7539; no public signal on top-5 movement vs 0.8720 @ 10-21
+- Rival: QUIET in the 24-48h window — no new Zenodo deposits, no new GitHub repos, no visible preprint v3; ⚠️ one anomaly: preprint DOI 0617 stopped resolving (Crossref + Handle 404) — flag for T7 follow-up via journal/publisher angle rather than preprints.org
+- New resources: NONE — all Yuan-group deposits already catalogued R9/R10 (23411528 & 23328407 pre-date today's window and are in intel docs); no new Oct-2026 vessel/ship-noise records on Zenodo
+- URL checks for T7: zenodo.org/api/records/23345657 ✅ 200 (v3.2) · zenodo.org/api/records/23312809 ✅ 200 (v1.2) — both green for build
+
+---
+Task ID: R10-F
+Agent: Z.ai (main)
+Task: round close — figures, leaderboard watch, download progress
+
+Work Log:
+- R10-E watch: LB login-walled (469 joined/189 active; 2 subs/day, 200 total, close 13 Dec 26 confirmed; 2x$1k writeup prizes); rival quiet 48h; Yuan preprint 0617 DOI VANISHED (404 Crossref+Handle — flag for T7 journal angle); T7 embedding URLs 200 OK
+- Write-up figures generated: download/fig_pressure_map.png (3 hidden stations vs 10 sites), download/fig_group_vectors.png (two-family per-station means)
+- VTUAD strict-WAV part01 at ~0.8 GB / 1.24 GB (resumable; ~3.4 GB remain across parts)
+
+Stage Summary:
+- Round R10 CLOSED: audit clean, 5 silent issues fixed, R8b double-negative logged (D38/D39), 3 candidates ledgered, 4 milestones pushed, write-up track live
