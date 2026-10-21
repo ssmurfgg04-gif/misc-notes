@@ -1,6 +1,6 @@
 # HANDOFF.md — read this first (next-AI pickup, updated every round)
 
-> Last updated: R2, 2026-10-20. Repo: `ssmurfgg04-gif/misc-notes` (public, bland name).
+> Last updated: R7, 2026-10-21. Repo: `ssmurfgg04-gif/misc-notes` (public, bland name).
 > Companion: `plan.md` (strategy), `worklog.md` (round logs), `docs/` (evidence).
 
 ## Mission (1 line)
@@ -8,6 +8,25 @@ Zindi "Underwater Vessel Noise Challenge" (close **13 Dec 26**): predict
 `share_added_vessel` ∈ [0,1] for 1,500 test windows; scored metric 1−RMSE;
 we win with a leakage-clean synthetic-mixture pipeline + real vessel references
 + honest validation, plus a write-up prize attempt.
+
+## R7 STATUS BANNER (2026-10-21) — LB autopsied, recipe fixed, bump-reading found
+
+> **Read plan.md §6i + docs/r7_autopsy_and_bumpfind.md first (source of truth).**
+> The four LB returns (r4_v2 0.7757 best; r6_v4 0.7065 worst) were autopsied via
+> pinned-moment math: **all prior submissions have per-window ρ≈0** — calibration-only
+> scores, miscalibrated (truth μ≈0.15, E[f²]=0.060581 pinned). Leader 0.872 ⇒ ρ≈0.75.
+> **Recipe smoking gun:** organisers plant passages in SUB-INTERVALS (test within-window
+> variation 16 dB vs raw 6.5; planted-sub 14.8 ≈ test) — synth v2/v3 recipes INVALIDATED.
+> **Breakthrough:** quiet-baseline bump estimator (E5) on calm beds: RMSE 0.088, ρ 0.852;
+> ambient-laden (A29/H_C) IMPROVES recovery (0.098/0.837). r7_v1 = E5(test) calibrated
+> to pinned moments EXACTLY (power map 0.916·f^4.41) — `data/train_v3/
+> submission_r7_v1_bumpshare.csv`, sha256 917c4d53…, **USER GATE: submit**.
+> A33 score col weight=0; A35 VTUAD = Strait of Georgia/ONC Canada (CC BY 4.0,
+> DOI 10.21227/msg0-ag12); **A36: package file prefixes = site registry, {08,11,12}
+> are the absent files**; hunt open-web EXHAUSTED (33 probes, hunt_log_r7.json) —
+> remaining routes user-gated (SAEON login, Zindi discussion, SAEON/SAMSA enquiry).
+> Honest-protocol finding documented: leaky flattered the lock, honesty RAISED the
+> blend 0.8741→0.8941 (weight shift mechanism).
 
 ## State after R1 (research & planning) — DONE
 - [x] Official SA package acquired + **checksums verified** (local

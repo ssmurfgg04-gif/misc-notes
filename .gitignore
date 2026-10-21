@@ -263,3 +263,7 @@ data/synth_v3_mixed/aux*.csv
 data/synth_v3_mixed/bg_sums.csv
 data/synth_v3_mixed/bg_split.csv
 data/train_v*/submission_*.csv
+
+data/*.parquet
+data_backup/
+logs/

@@ -1,0 +1,97 @@
+{
+ "01_Richards_Bay": {
+  "n": 65397,
+  "sumB_cv": 18.87222470236791,
+  "anchor_resid_p50": 0.5253402559605451,
+  "anchor_resid_p90": 1.3227549074874543,
+  "naive_resid_p50": 1.125715176552296,
+  "fhat_floor_rmse": 0.4417196578520215,
+  "fhat_floor_p50": 0.0,
+  "fhat_floor_p90": 0.952439644377088,
+  "fhat_floor_p99": 0.9994586242491942
+ },
+ "02_Durban": {
+  "n": 2976,
+  "sumB_cv": 9.08392955868202,
+  "anchor_resid_p50": 0.2504337031011268,
+  "anchor_resid_p90": 0.5302992912979718,
+  "naive_resid_p50": 0.7626943599347875,
+  "fhat_floor_rmse": 0.33636104370639125,
+  "fhat_floor_p50": 0.0,
+  "fhat_floor_p90": 0.6213923968756168,
+  "fhat_floor_p99": 0.9124348455067581
+ },
+ "04_Bird_Island": {
+  "n": 3168,
+  "sumB_cv": 21.53114900401875,
+  "anchor_resid_p50": 0.3518689822062395,
+  "anchor_resid_p90": 0.6062640856666823,
+  "naive_resid_p50": 0.5822171582503071,
+  "fhat_floor_rmse": 0.3906786580706577,
+  "fhat_floor_p50": 0.0,
+  "fhat_floor_p90": 0.7160138254103466,
+  "fhat_floor_p99": 0.9486308794718902
+ },
+ "05_St_Croix_Island": {
+  "n": 16702,
+  "sumB_cv": 24.078184783089633,
+  "anchor_resid_p50": 0.1261946770986766,
+  "anchor_resid_p90": 0.26172762306566966,
+  "naive_resid_p50": 0.8290679091119264,
+  "fhat_floor_rmse": 0.23375351302524588,
+  "fhat_floor_p50": 0.0,
+  "fhat_floor_p90": 0.41304019804039876,
+  "fhat_floor_p99": 0.9500646153394903
+ },
+ "07_St_Francis": {
+  "n": 3371,
+  "sumB_cv": 5.050807989331677,
+  "anchor_resid_p50": 0.2788564197899088,
+  "anchor_resid_p90": 0.6197736400317275,
+  "naive_resid_p50": 0.7028185935988187,
+  "fhat_floor_rmse": 0.3594627173655131,
+  "fhat_floor_p50": 0.013237484890004314,
+  "fhat_floor_p90": 0.6543855119056142,
+  "fhat_floor_p99": 0.9149344500126922
+ },
+ "09_Fish_Hoek": {
+  "n": 297,
+  "sumB_cv": 6.405894122332633,
+  "anchor_resid_p50": 0.24070536121293884,
+  "anchor_resid_p90": 0.6484421161854325,
+  "naive_resid_p50": 0.3896964303936521,
+  "fhat_floor_rmse": 0.34464421272434365,
+  "fhat_floor_p50": 0.0,
+  "fhat_floor_p90": 0.7243613885265671,
+  "fhat_floor_p99": 0.9814882952797972
+ },
+ "10_Sea_Point": {
+  "n": 244,
+  "sumB_cv": 1.8158158199971475,
+  "anchor_resid_p50": 0.20096229330818716,
+  "anchor_resid_p90": 0.47840522935743784,
+  "naive_resid_p50": 0.5553641033682801,
+  "fhat_floor_rmse": 0.3028866458255774,
+  "fhat_floor_p50": 0.0,
+  "fhat_floor_p90": 0.5972035098875685,
+  "fhat_floor_p99": 0.8085786609754874
+ },
+ "13_Saldhana_Bay": {
+  "n": 8870,
+  "sumB_cv": 12.538076641776756,
+  "anchor_resid_p50": 0.13713091395238486,
+  "anchor_resid_p90": 0.3647261240741914,
+  "naive_resid_p50": 0.5812648212548694,
+  "fhat_floor_rmse": 0.2622413477906017,
+  "fhat_floor_p50": 0.0,
+  "fhat_floor_p90": 0.4949468521632742,
+  "fhat_floor_p99": 0.9083396128650963
+ },
+ "_overall": {
+  "anchor_resid_p50": 0.3607865355125224,
+  "anchor_resid_p90": 1.0319003052301625,
+  "naive_resid_p50": 0.9804348662296061,
+  "projected_f_rmse_at_f15": 1.5606138190362142,
+  "note": "projected f error ~ (1-f) * relerr(sumB); rough scaling 0.8 for clipping at 0"
+ }
+}

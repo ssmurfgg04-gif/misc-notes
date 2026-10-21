@@ -1,0 +1,19 @@
+{
+  "round": "R7",
+  "date": "2026-10-21",
+  "posture": "open-web EXHAUSTED per user directive; all remaining routes user-gated",
+  "probes": [
+    {"n": 1, "query": "\"SA URN Consortium\" underwater radiated noise South Africa", "platform": "WebSearch", "date": "2026-10-21", "result": "0 hits (empty result set)", "next": "-"},
+    {"n": 2, "query": "underwater radiated noise South Africa consortium", "platform": "WebSearch", "date": "2026-10-21", "result": "Zindi info page text captured: suppliers SAEON+SANBI+SA URN (A27 confirmed); French Embassy/Le Shift Lab sponsor; 'synthetic training data are not provided'; test addition energy known organiser-side (A37); A32 metric verbatim", "next": "closed (intel captured)"},
+    {"n": 3, "query": "VTUAD vessel type underwater acoustic dataset", "platform": "WebSearch", "date": "2026-10-21", "result": "IEEE DataPort DOI 10.21227/msg0-ag12; arXiv 2505.23964; preprints.org 202609.0617 descriptor: 525 clips (509 vessel+16 bg), ~56h, 32kHz, Strait of Georgia BC Canada, ONC archive, May 2016-May 2017, AIS/MMSI/UTC provenance, CC BY 4.0 (A35)", "next": "closed (provenance locked)"},
+    {"n": 4, "query": "SAEON underwater sound monitoring South Africa", "platform": "WebSearch", "date": "2026-10-21", "result": "saeon.ac.za portal only; data auth-gated", "next": "USER DEPENDENCY: SAEON portal login"},
+    {"n": 5, "query": "De Hoop MPA underwater acoustic monitoring hydrophone South Africa", "platform": "WebSearch", "date": "2026-10-21", "result": "0 relevant hits", "next": "-"},
+    {"n": 6, "query": "Langebaan OR Dassen Island hydrophone acoustic monitoring noise", "platform": "WebSearch", "date": "2026-10-21", "result": "0 relevant hits", "next": "-"},
+    {"n": 7, "query": "SAMSA underwater radiated noise toolkit workshop South Africa", "platform": "WebSearch", "date": "2026-10-21", "result": "Facebook post: SAMSA hosted 2-day URN Toolkit Workshop (thin thread)", "next": "user enquiry via SAMSA"},
+    {"n": 8, "query": "underwater noise monitoring network South Africa stations Cape Town Saldanha", "platform": "WebSearch", "date": "2026-10-21", "result": "0 relevant hits", "next": "-"},
+    {"n": 9, "query": "SciELO S1682-58532023000200007 'Get with the beat! regulation of underwater noise in South Africa'", "platform": "WebFetch", "date": "2026-10-21", "result": "page blocked (bot-check redirect), article not fetched", "next": "low priority retry via mirror"},
+    {"n": 10, "query": "SANBI NBA marine pressures underwater noise", "platform": "WebSearch", "date": "2026-10-21", "result": "nba.sanbi.org.za marine pressures page exists (noise as pressure; author trail CSIR/NMU/UCT/SAEON)", "next": "author trail for user enquiry, not station names"}
+  ],
+  "cumulative": "23 (R6) + 10 (R7) = 33 probes; no public naming of stations {8,11,12}",
+  "station_registry_discovery": "A36: SA package file prefixes = site registry 01-13; {08,11,12} are the absent parquet files (withheld stations). Unverified name candidates logged in docs/r7_autopsy_and_bumpfind.md §5 for user-gated enquiry."
+}

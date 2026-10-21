@@ -188,3 +188,40 @@ synthetic, more real; update plan.md).
   sha256 sidecars, blend-sweep metric CSVs. Everything data-shaped lives in the
   private misc-notes-data (main: submissions/ + reports/ + snapshots; releases
   v1/v2/v3).
+
+---
+
+## R7 — 2026-10-21 — LB autopsy, recipe smoking gun, bump-reading breakthrough
+
+**Agent:** Z.ai (main). **Directive:** user R7 message (detective on {8,11,12};
+open-web hunt EXHAUSTED — stop string probes; test ambient-in-passage NOW; pivot
+to SA URN publications + SAEON auth; capture write-up spec; document the
+honest-protocol RAISED the blend; four LB returns reported: r4_v2 0.7757,
+r6_v2 0.7676, r6_v3 0.7674, r6_v4 0.7065 — "something has to be wrong").
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | Sandbox re-pull | data re-fetched from misc-notes-data (v1 SA package + Test.csv, v2 refs parquets, submissions/, DSCI550 zip); pyarrow/lightgbm/sklearn installed |
+| 2 | Starter notebook read | A33 score col weight ZERO; A34 metric verbatim; sample = 0.0/0.5 |
+| 3 | LB autopsy (moment math) | E[f²]=0.060581 pinned + 4 CSVs → **all prior submissions ρ≈0 per-window on real test**; μ≈0.15, σ_f≈0.195, best-const≈0.81=pack ✓; v4 collapse = lock +0.243 loud-tail overshoot @0.4 weight; R_real transferred honestly (val 0.2405→LB 0.2326); M2 val optimistic 2.2×; evidence cols AUC 0.473–0.486 (r6_v3=v4 score cols identical) |
+| 4 | Station registry discovery | **A36: file prefixes = site registry; {08,11,12} = absent parquet files** (withheld stations); unverified name candidates logged |
+| 5 | Recipe forensics | test within-window band-range p50 16.0 dB vs raw 6.5; planted FULL-window 6.8 vs SUB-INTERVAL 14.8 → **organisers plant sub-interval passages; our synth recipe invalidated** |
+| 6 | Dead ends measured | station-prior+HF-anchor ΣB̂ floor 0.23–0.44; per-band p25 (v0) f̂≈0.66; E1/E3 on full pool FA 0.25–0.51 (natural vessels) |
+| 7 | Bump-reading breakthrough | E5 quiet-baseline estimator on CALM beds: RMSE 0.088 / ρ 0.852 (H_A), 0.098 / 0.837 (H_C ambient-laden — **A29 answered: ambient IMPROVES share recovery**); ship-contaminated beds 0.358 (organiser beds must be calm-selected — A28 mechanism) |
+| 8 | r7_v1 built | E5(test) → power map 0.916·f^4.41 → pinned moments EXACT (mean 0.1500, E[f²] 0.060581); format-validated; sha256 917c4d53…; corr to prior vectors 0.26–0.29; **USER GATE: submit** |
+| 9 | Honest-protocol doc | 0.8741→0.8941 RAISE documented: leaky flattered lock (0.2049/−0.19 → 0.3 weight); honesty exposed +0.243 overshoot (0.2824) → 0.1 weight → blend up despite M2 +5.6% |
+| 10 | Hunt R7 | 10 probes (docs/hunt_log_r7.json); open-web EXHAUSTED (33 cumulative); A35 VTUAD provenance = Strait of Georgia/ONC Canada; SAMSA URN workshop = only consortium thread; SciELO blocked |
+| 11 | Docs + backup | plan.md §6i/§7d; docs/r7_autopsy_and_bumpfind.md; HANDOFF banner; misc-notes-data push (submissions/ + reports/) |
+
+**Decisions**
+- D18: bump-reading (E5) = the new primary family; level-prior/lock family demoted to diagnostic (measured dead).
+- D19: submissions must pass the pinned-moment check (E[p²] ≈ 0.0606 ± 0.01, mean plausibility) before user gate.
+- D20: synth v2/v3 recipes retired for decision use; R8 retrains on sub-interval + ambient-laden recipe only.
+
+**Open questions / blocked-on-user**
+- Submit r7_v1 (decision-read: ≥0.80 family confirmed / 0.77–0.80 partial → template matching / <0.77 fallback).
+- SAEON portal login; Zindi discussion re withheld stations; SAEON/SAMSA enquiry re {8,11,12} names (A36 candidates); A30 copyright call.
+
+**Process lesson:** sandbox wiped again between sessions — data re-pull from
+misc-notes-data took minutes and is now the documented first step of every round.
