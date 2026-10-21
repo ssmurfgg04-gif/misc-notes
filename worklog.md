@@ -668,3 +668,15 @@ Work Log:
 
 Stage Summary:
 - Milestone R10-M3: worklog R10-main + candidates ledgered backed up at 20261021_213654
+
+---
+Task ID: BK-20261021_213740
+Agent: backup_milestone.sh
+Task: milestone backup — R10-M4: HANDOFF/plan final for round
+
+Work Log:
+- git add/commit/push (fail=1)
+- tarball download/backups/milestone_20261021_213740.tar.gz created, ledger now 8 entries
+
+Stage Summary:
+- Milestone R10-M4: HANDOFF/plan final for round backed up at 20261021_213740

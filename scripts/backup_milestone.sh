@@ -28,9 +28,11 @@ fi
 # --- 2) tarball of everything irreplaceable (small files only) ---------------
 mkdir -p download/backups
 TAR=download/backups/milestone_${TS}.tar.gz
-tar -czf "$TAR" --exclude='*.pdf' --exclude='*.wav' --exclude='*.parquet' --exclude='*.zip' \
+tar -czf /tmp/milestone_${TS}.tar.gz --exclude='*.pdf' --exclude='*.wav' \
+  --exclude='*.parquet' --exclude='*.zip' --exclude='milestone_*.tar.gz' \
   plan.md worklog.md HANDOFF.md "Users note on r4 previous findings" \
   scripts/ src/ docs/ download/backups 2>/dev/null || FAIL=1
+mv /tmp/milestone_${TS}.tar.gz "$TAR" 2>/dev/null || FAIL=1
 
 # --- 3) checksum ledger -------------------------------------------------------
 sha256sum "$TAR" >> download/backups/LEDGER.sha256
