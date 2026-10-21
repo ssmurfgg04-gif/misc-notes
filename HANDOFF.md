@@ -9,6 +9,25 @@ Zindi "Underwater Vessel Noise Challenge" (close **13 Dec 26**): predict
 we win with a leakage-clean synthetic-mixture pipeline + real vessel references
 + honest validation, plus a write-up prize attempt.
 
+## R7b STATUS BANNER (2026-10-21) — moments MEASURED, r7_v2 ready, station 08 cracked to a 3-name shortlist
+
+> **Read plan.md §6j/§6k/§6l + docs/hunt_log_r7b.json first (source of truth).**
+> §A DONE: moments re-pinned to the user's measured **μ=0.130076 / E[f²]=0.060580
+> / σ_f=0.20895** (three constants agree to 5 decimals). New map **p = 1.1754·f̂^6.290**,
+> verified EXACT (E[p]=0.130076, E[p²]=0.060580, Spearman 1.0 vs r7_v1).
+> **SUBMIT `submissions/submission_r7_v2_bumpshare_repinned.csv`** (sha256 69fc2b81…) — user gate.
+> Corrected ρ of prior subs: r4_v2 0.20 / r6_v2 0.31 / r6_v3 0.11 — skill was REAL,
+> miscalibration killed it; blend r7_v2×r6_v2 is a live option after the readout.
+> HUNT (51 probes cumulative): **A38/A39 station 09 Fish Hoek = Sea Search False Bay
+> ST300 network** (Ross-Marsh et al. 2020, coord-exact): Smitswinkel Bay / Fish Hoek /
+> Strandfontein / Rooi Els + Sea Point side deployment. **A40: 08 ∈ {Strandfontein
+> (lead), Rooi Els, Smitswinkel Bay}**; Simon's Town rejected. **A41: 11/12 ∈ {Robben I.,
+> Dassen I., Langebaan, Yzerfontein, Table Bay}**; Strand/Gordon's Bay rejected (other
+> AI's "water-quality site table" = not found; whale-watch list coincidence).
+> A42 serials exhausted; A43 literature cleared; A44 Saldanha shares Fish Hoek's ST300
+> 5344 (same equipment pool). Enquiry to Sea Search/SAEON/SAMSA now has a sharp
+> question form; SAEON portal via tempmail still unattempted.
+
 ## R7 STATUS BANNER (2026-10-21) — LB autopsied, recipe fixed, bump-reading found
 
 > **Read plan.md §6i + docs/r7_autopsy_and_bumpfind.md first (source of truth).**

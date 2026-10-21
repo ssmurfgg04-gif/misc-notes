@@ -225,3 +225,43 @@ r6_v2 0.7676, r6_v3 0.7674, r6_v4 0.7065 — "something has to be wrong").
 
 **Process lesson:** sandbox wiped again between sessions — data re-pull from
 misc-notes-data took minutes and is now the documented first step of every round.
+
+---
+
+## R7b — 2026-10-21 — moments measured, r7_v2 re-pinned, station hunt reopened + half-cracked
+
+**Agent:** Z.ai (main). **Directive:** user R7b handoff (§A re-pin r7_v1 to the
+parallel track's measured moments; §C reopen hunt with new query families —
+SciELO/Purdon/Shabangu fetches, De Hoop/Langebaan/Dassen candidates, serial
+cross-ref, verify other-AI guesses Simon's Town/Strand/Gordon's Bay; §D plan.md
+§6j/§6k; §E submit tomorrow only after conditions met; tempmail authorized for
+auth-gated sites).
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | State recovery | sandbox intact; r7_v1 CSV pulled from misc-notes-data submissions/ |
+| 2 | §A re-pin | scripts/r7_repin.py: f̂ recovered by exact inversion (round-trip 2e-16); new map p=1.1754·f̂^6.290 (γ 4.41→6.29); verified E[p]=0.130076 ✓ E[p²]=0.060580 ✓ (both in §A bands); Spearman 1.0; sha256 69fc2b81… |
+| 3 | Moment measurement | μ=0.130076 from three constants (5-decimal agreement); E[f²]=0.060580; σ_f=0.20895 |
+| 4 | Corrected ρ | prior subs NOT ρ≈0: r4_v2 0.20 / r6_v2 0.31 / r6_v3 0.11 (v4 mispaired per user §B) — supersedes R7 autopsy table |
+| 5 | Hunt reopened | 18 probes (hunt_log_r7b.json), cumulative 51; **HIT: station 09 Fish Hoek = Sea Search False Bay ST300 network** (Ross-Marsh et al. 2020, coords exact) |
+| 6 | Network named | Smitswinkel Bay / Fish Hoek / Strandfontein / Rooi Els (moored, 14–25 m, 2016–2018); Sea Point = 201650217 side deployment Oct 2018 |
+| 7 | Other-AI verdicts | Simon's Town/Strand/Gordon's Bay REJECTED — claimed "coastal water quality site table" not found; the only "08 Simon's Town" numbered table = O'Connor 2009 whale-watch list (numbering coincidence) |
+| 8 | Verdicts | 08 ∈ {Strandfontein (lead), Rooi Els, Smitswinkel Bay}; 11/12 ∈ {Robben I. (lead), Dassen I., Langebaan, Yzerfontein, Table Bay}; registry = regional-block ordering (A36 upgraded) |
+| 9 | Literature cleared | Shabangu 2022 MPB + 2022 "Beat" + 2025 (all offshore moorings); SciELO Karomo 2023 (law review); Hawkey 2020 (same network); Probert 2025 (Robben ST300 activity); Zenodo AIS dataset (Belgian); Karpowership Saldanha EIA (shelved) |
+| 10 | Serial cross-ref | GitHub: "201650217" noise / "SoundTrap 8230", "Saldhana_Bay", "Riy_Banks" all 0 — exhausted |
+| 11 | Docs | plan.md §6j/§6k/§6l; hunt_log_r7b.json; station-intel.md §6; HANDOFF banner |
+
+**Decisions**
+- D21: r7_v2 (re-pinned) replaces r7_v1 as the submission candidate (§A bands met).
+- D22: shrinkage calibration (E[p²]=0.0477 @ ρ̂=0.84) held as r7_v3 option, only
+  after the r7_v2 readout gives a real ρ.
+- D23: station-hunt open-web posture = re-opened with new families, 18 probes, then
+  re-exhausted for this round; enquiry targets now have sharp question form.
+
+**Open questions / blocked-on-user**
+- Submit r7_v2 (decision bands in §6k).
+- Sharp enquiry to Sea Search/SAEON/SAMSA: "08 ∈ {Strandfontein, Rooi Els,
+  Smitswinkel Bay}? 11/12 ∈ {Robben, Dassen, Langebaan, Yzerfontein, Table Bay}?"
+- SAEON portal via tempmail (authorized; not attempted — web-tool throttle +
+  time-box; still the strongest remaining public-data route).

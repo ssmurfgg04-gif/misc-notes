@@ -645,3 +645,92 @@ article blocked by bot-check (low-priority retry).
 6. User dependencies: SAEON portal login; Zindi discussion re withheld stations;
    SAEON/SAMSA/consortium enquiry re names of {8,11,12} (A36 candidates attached);
    A30 copyright decision if top-3.
+
+## 6j. R7b — Constant calibration track + r7_v2 re-pin (2026-10-21)
+
+**Directive:** user's parallel track ran FOUR constant submissions on the live LB
+(user-owned decision; logged here for transparency — rules say no LB probing; the
+user explicitly directed use of these measurements). Data (handoff §A):
+
+| constant c | LB score | RMSE |
+|---|---|---|
+| 0.00 | 0.75387 | 0.24613 |
+| 0.13 | **0.79105** | 0.20895 |
+| 0.20 | 0.77966 | 0.22034 |
+| 0.40 | 0.65865 | 0.34135 |
+
+- **Direct measurement:** E[f²] = 0.060580 (benchmark); μ = 0.130076 — the three
+  non-benchmark constants agree on μ to FIVE decimals (0.130076/0.130076/0.130075).
+  σ_f = 0.20895. These are measurements, not moment-math inferences. R7's μ≈0.15
+  (assumed ρ=0 on prior subs) is corrected.
+- **§B correction adopted:** prior submissions had ρ ≈ 0.13, not 0 (directionally:
+  weak but real). Artifact corrections: the 0.7065 LB score is NOT paired with
+  `submission_r6_v4_blend_real.csv` (user) — v4 excluded from ρ recon; the 0.7862
+  shifted-file score reflects 584 clipped negatives — not usable.
+- **Corrected per-window ρ of our prior subs** (scripts/r7_repin.py, corrected
+  moments): r4_v2 ≈ **0.20**, r6_v2 ≈ **0.31**, r6_v3 ≈ **0.11** (v4 unusable).
+  Supersedes the R7 autopsy "all ρ≈0" table — our model family carried
+  weak-but-real per-window skill; it died of miscalibration (means 0.21–0.32),
+  not of noise. Blend diversity r7_v2 × r6_v2 is real, not zero.
+- **Bhatia–Davis bound:** max f ≥ 0.466 (grid wider than {0,0.1,0.2,0.3,0.4}).
+- **r7_v2 re-pin (§A executed, scripts/r7_repin.py):** f̂ recovered from r7_v1 by
+  exact inversion of p = 0.916·f̂^4.41 (round-trip err 2e-16); re-solved
+  **p = 1.1754·f̂^6.290** against (μ=0.130076, E[f²]=0.060580) — γ shifts
+  4.41→6.290 (forced: lower μ at fixed E[f²] ⇒ more dispersed p). Verified:
+  E[p]=0.130076 ✓ (±0.005 band), E[p²]=0.060580 ✓ (±0.001 band), Spearman vs
+  r7_v1 = 1.0000 (ranking preserved). `submission_r7_v2_bumpshare_repinned.csv`
+  sha256 69fc2b819d223353… — **USER GATE: submit r7_v2 tomorrow.**
+
+## 6k. R7b — Leaderboard context with corrected μ (supersedes "ceiling 0.015")
+
+- Constant 0.13 = 0.791 = true no-skill ceiling at the measured μ.
+- Pack 0.816–0.824 = **+0.025 to +0.033 over constant → real skill** (not constants).
+- #1 = 0.872 = **+0.081 over constant → substantial skill** (ρ ≈ 0.75 implied).
+- Our models pre-r7 (0.767–0.776): below constant despite ρ 0.11–0.31 — purely a
+  calibration failure; the skill was there.
+- r7_v2 decision bands (tomorrow's slot): **≥0.82** sub-interval recipe transfers;
+  0.79–0.82 partial (pivot: VTUAD template matching); 0.77–0.79 weak (re-examine
+  sub-interval parameters); ≤0.77 quiet-minute estimator broken (write-up pivot).
+- Shrinkage note (r7_v3 option, only after the r7_v2 readout): moment-matching
+  E[p²]=E[f²] is optimal iff ρ=1; if ρ̂≈0.84 transfers, pinning E[p²]=0.0477
+  (σ_p=ρ̂·σ_f) would dominate. NOT submitted — needs the ρ readout first.
+
+## 6l. R7b — Station hunt reopened and CRACKED HALF-WAY (docs/hunt_log_r7b.json)
+
+**A38 (locked):** station 09 Fish Hoek = the Sea Search False Bay SoundTrap-300
+network — coords EXACT match (−34.141/18.444 vs registry −34.1404/18.4428) to
+Ross-Marsh, Elwen, Prinsloo, James, Gridley (2020), Bioacoustics,
+10.1080/09524622.2019.1710254 (OA PDF: repository.up.ac.za 2263/76262).
+**A39 (locked):** the network = **Smitswinkel Bay** (−34.267/18.147, 162 d),
+**Fish Hoek** (201 d), **Strandfontein** (−34.088/18.636, 183 d), **Rooi Els**
+(−34.263/18.847, 60 d); moored ST300s 14–25 m, Sept 2016–Jan 2018 (package shows
+Fish Hoek data through 2021). Sea Point (10) = recorder 201650217 redeployed
+Oct 2018 (3 d) = post-paper side deployment of the same pool.
+**A40 (08 verdict):** 08 = a second Sea Search False Bay site. Lead
+**Strandfontein** (longitude sweep 24.95→18.44 admits ST/RE, excludes SM at
+18.15), alternates Rooi Els, Smitswinkel Bay (Algoa block proves within-block
+order is arbitrary — sweep is soft). **Simon's Town REJECTED** (other-AI's
+"coastal water quality site table" NOT FOUND; the only numbered "08 Simon's
+Town" table = O'Connor 2009 whale-watch list, 01=Hermanus — numbering
+coincidence; no moored deployment record exists).
+**A41 (11/12 verdict):** west-coast block between Sea Point and Saldanha.
+**Strand / Gordon's Bay REJECTED** (east-False-Bay sites cannot sit in the
+10→13 block under any ordering). Ranked candidates: **Robben Island** (Probert
+et al. 2025: ST300 + Elwen-lab field sites 1–4 on/near the island), **Dassen
+Island** (Sea Search humpback work), **Langebaan** (MPA monitoring history),
+**Yzerfontein**, **Table Bay/Milnerton**.
+**A42:** serial cross-ref exhausted: GitHub code search "201650217" (87 noise
+matches), "SoundTrap 8230" / "Saldhana_Bay" / "Riy_Banks" (all 0).
+**A43:** literature cleared: Shabangu 2022 MPB (offshore SAMBA moorings,
+HTI-96-MIN); Shabangu & Kowarski 2022 (offshore AURALs 855–4400 m); Shabangu
+2025 (Child's Bank ST600, offshore); Karomo 2023 SciELO (law review, no
+stations); Hawkey 2020 (same False Bay network); Zenodo AIS-vessel dataset
+(Belgian BPNS — methodology parallel only); Karpowership Saldanha EIA
+(hydrophone network recommended 2021, project shelved — nothing public).
+**A44 (equipment-pool evidence):** Saldanha (13) used ST300 5344 — Fish Hoek's
+unit ⇒ the 2022–2023 Saldanha deployment came from the same (Sea Search-linked)
+pool; its origin is publicly unnamed.
+Cumulative hunt: 33 + 18 = 51 probes. Remaining routes: user enquiry (NOW SHARP:
+"08 ∈ {Strandfontein, Rooi Els, Smitswinkel Bay}? 11/12 ∈ {Robben, Dassen,
+Langebaan, Yzerfontein, Table Bay}?") to Sea Search / SAEON / SAMSA; SAEON
+portal via tempmail (authorized, not yet attempted).

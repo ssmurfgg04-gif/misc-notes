@@ -46,3 +46,32 @@ Derived from the official package (checksums verified). Coordinates are
 - Join key: time-window × distance-to-candidate-coords; Saldanha = 2 candidates.
 - Validate export-clock vs UTC on obvious port-traffic diurnal patterns first.
 - Output = confidence-scored likelihood, never 0/1 label.
+
+## 6. Withheld stations {08, 11, 12} — R7b intel (2026-10-21)
+
+**A38–A39:** station 09 Fish Hoek = the Sea Search False Bay ST300 network
+(Ross-Marsh et al. 2020, Bioacoustics; coords exact match). Network sites:
+| name | coords | effort | note |
+|---|---|---|---|
+| Smitswinkel Bay | −34.267, 18.147 | 162 d | most humpback song |
+| Fish Hoek | −34.141, 18.444 | 201 d | = registry 09 |
+| Strandfontein | −34.088, 18.636 | 183 d | north shore |
+| Rooi Els | −34.263, 18.847 | 60 d | east shore |
+Moored, 14–25 m, Sept 2016–Jan 2018 (package Fish Hoek runs to 2021).
+Sea Point (10) = same recorder 201650217, Oct 2018, 3 d (side deployment).
+
+**08 (A40):** a second Sea Search False Bay site — lead **Strandfontein**,
+alternates Rooi Els / Smitswinkel Bay. Simon's Town rejected (no deployment
+record; "site 8 = Simon's Town" tables in the wild are whale-watch lists —
+numbering coincidence).
+
+**11/12 (A41):** west-coast block (Sea Point → Saldanha). Ranked: **Robben
+Island** (ST300 field activity proven by Probert et al. 2025), **Dassen
+Island** (Sea Search humpbacks), **Langebaan** (MPA history), **Yzerfontein**,
+**Table Bay/Milnerton**. Strand/Gordon's Bay rejected (wrong block).
+**A44:** Saldanha (13) shares ST300 5344 with Fish Hoek ⇒ same equipment pool
+(Sea Search-linked) deployed the west coast 2022–2023.
+
+Ordering law (R7b): registry = regional blocks (01–02 KZN, 03–06 Algoa Bay
+[non-geographic internal order], 07 south coast, 08 False Bay?, 09–10 peninsula,
+11–12 west coast, 13 Saldanha); Cape block happens to be longitude-monotone.
