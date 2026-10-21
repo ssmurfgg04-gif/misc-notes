@@ -1042,3 +1042,35 @@ G2↔{01,02,05}, D-residual). Class-matched val pools = the hidden-station proxy
 4. Enquiry card updated (A66): "08 ∈ {Buffelsbaai, Plett Robberg Pt, Plett
    Beacon Isle, Mossel Bay Diaz}?" to Sea Search/Dines + SAMSA/SAEON.
 
+
+## §7l — R10 execution round (2026-10-22): code audit + intel harvest + R8b build
+
+**Code-review verdict (final, full pipeline):** r8_t1t2_build/r8_followup/featurize
+clean — no leakage, deterministic seeds throughout. Fixed silent issues:
+(1) Test.csv + refs parquets lost to wipe → restored from misc-notes-data
+release v1/v2, SHA256SUMS verified, restore path in download/RESTORE_CARD.md;
+(2) r7_shrink.py wrote authoritative outputs outside repo tree → superseded
+by scripts/build_submission.py (single gate: share-col assert, ID-order
+assert, point-mass census, sha256 ledger, refuse-overwrite);
+(3) requirements.txt pins known-good env + `pip`-vs-`python -m pip` trap;
+(4) PIN share col has 507/1500 (33.8%) at the shrink floor 0.07154 → W3
+softfloor candidate. Known-cosmetic: dead gated_e5 in r8 build, dead logX
+in featurize, site_fp val-fallback edge (noted, no action).
+
+**R10 intel (docs/intel_r10_{oss,vtuad2,ruicodex2}.md):**
+- Rival pipeline reconstructed: VTUAD v1.3.2 + starter conversion + self-mixed
+  share labels + GBDT two-head + shrink — a mirror of our r7 family minus the
+  transductive/station layer; 0.8720 consistent with honest execution (ρ 0.79-0.81).
+- VTUAD baseline is WEAK (macro-F1 0.2492 pooled, below majority class) — its
+  value is raw vessel audio only. Zero data asymmetry confirmed at code level.
+- CRITICAL steals adopted: C5 Knudsen wind-index (13/25 bands in wind regime),
+  C3 AdaBN analogue = rank-REST quantile mapping (monotone per feature = tree-safe;
+  CORAL rotation is not), M8 full-axis LogTBN median, C2 strict-interval rule.
+- Tools adopted: optuna(+integration), antropy, bottleneck; hand-rolled CORAL/
+  weighted-CP over skada/MAPIE (dependency risk); pypam GPL → re-implement by hand.
+
+**R8b build (scripts/r8b_wind.py) — gates:** W1 wind features adopt iff
+VALclassB_G1 < 0.0507; W3 softfloor must not worsen any pool; W4 rank-REST
+must beat unmapped on its own class pool. Candidate r8b vector (softfloor +
+wind lgb) moment-pinned via build_submission.py --repin, gated on user +
+ρ readout (D36 unchanged: r8 candidates only after r7_v3_k045 ρ).

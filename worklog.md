@@ -594,3 +594,32 @@ Stage Summary:
 - MEDIUM: antropy+bottleneck (entropy + fast running median for LogTBN), statsmodels RLM robust bed (E5 upgrade), stumpy/ruptures (motifs/change-points), catboost hedge head, crepes, quantile-forest, polars/duckdb/pyarrow, audiomentations (VTUAD-WAV factory only), properscoring, joblib/psutil/filelock
 - SKIP: ketos+pypam (GPL), opensoundscape/tabpfn/pytabkit/adapt/ncalib (torch/TF heavy; tabpfn weights also NC), noisereduce (wrong domain), scaper (sox), tsfresh/tsfel (overlap), pyhydrophone (scipy pin), pyhht/EMD (low value), BirdNET (wrong domain), PAMGuard (Java/GPL), duqgrep+transf (nonexistent)
 - Risks/notes: skada bumps pandas 2.2.3->2.3.x; stumpy/antropy bump numba to >=0.61.2; xgboost stay on 2.1.3; MAPIE weighted-CP absent -> F12 stays hand-rolled; no GBDT has native snapshot ensembling -> emulate via Optuna seed/feature bags
+
+---
+Task ID: BK-20261021_205642
+Agent: backup_milestone.sh
+Task: milestone backup — R10-M1: code-review fixes (build_submission.py gate, requirements pin, refs restored, Test.csv restored, RESTORE_CARD, r8b_wind.py staged)
+
+Work Log:
+- git add/commit/push (fail=0)
+- tarball download/backups/milestone_20261021_205642.tar.gz created, ledger now 2 entries
+
+Stage Summary:
+- Milestone R10-M1: code-review fixes (build_submission.py gate, requirements pin, refs restored, Test.csv restored, RESTORE_CARD, r8b_wind.py staged) backed up at 20261021_205642
+---
+Task ID: R10-D
+Agent: general-purpose (write-up skeleton)
+Task: draft Zindi UVNC write-up prize skeleton (pressure map) at docs/writeup_skeleton.md
+
+Work Log:
+- Read worklog tail (250 lines), plan.md §6i/§6k/§6q/§7g/§7j/§7k/§7l, docs/r7_autopsy_and_bumpfind.md, HANDOFF.md
+- Verified every load-bearing number at source before use: repin_r7_v2_report.json (a=1.1753819817608406, γ=6.290444301438674, μ=0.13007576, σ_f=0.20895, corrected prior-ρ 0.20/0.31/0.11), RESTORE_CARD.md (map precision), hunt_log_r7d.json (silhouette 0.998, G0=777/G1=623/G2=99), r8_tells.json (A60 margins 8.96/17.06, 25.7), intel_r10_ruicodex2.md (leader ρ 0.79–0.81 table, floor census 507/1500 @0.07154), intel_r9_dines.md facts via §6q (SWORD 5 moorings), r8_test_diag.npz + r8_t1t2_report.json existence
+- Wrote skeleton: Abstract (150 w) / measurement problem / recipe forensics / E5 estimator / pressure map (station fingerprints) / calibration as physics / more-time levers / 8-item figure-table list with per-item repo source notes
+- Enforced numbers policy: only repo-documented numbers; [PENDING: r7_v3_k045 readout] used for k*=ρ; honesty finding 0.8741→0.8941 explicitly labelled synthetic-equivalent H_B, not LB; station names framed as slate-level hypotheses (A66 + Table Bay/V&A pin)
+- Trimmed to budget (~1,890 w body §1–7 + 318 w figure list); no pipeline scripts, submissions, plan.md touched
+
+Stage Summary:
+- ALL 8 sections done: Abstract; §2 measurement problem (constants pin μ=0.130076/E[f²]=0.06058, ρ arc 0→0.11–0.31 corrected, leader 0.8720⇒ρ 0.79–0.81, A33 zero-weight evidence cols); §3 recipe forensics (6.5/16.0/6.8/14.8 dB sub-interval smoking gun, D20 recipe); §4 E5 (0.088/0.852 calm H_A, H_C improves 0.098/0.837, FA floor 0.135, dead ends + A69 measured); §5 pressure map (3 fingerprints sil 0.998, bed/tilt classes, G1 St-Francis margin 8.1 dB, Dines 08 slate, T1 31.2% + classB 0.0661→0.0507, honesty 0.8741→0.8941); §6 calibration (power map a/γ exact, shrink RMSE²(k)=σ_f²(1−2kρ+k²)→k*=ρ, floor point-mass 33.8% + softfloor); §7 more time (Knudsen wind index 13/25 bands, AdaBN/rank-REST+CORAL, VTUAD self-training); §8 figure list 8 items
+- Gaps flagged in doc (Pending/gaps block): (1) ρ readout for r7_v3_k045 → k*=ρ; (2) no LB score yet for the r7/r8 family — all headline validation numbers are synthetic-protocol; (3) no measured per-window ρ for E5/LGBM+T1T2 on real test (0.82–0.87 band = reasoning only, do not print); (4) station names {08,11,12} remain hypotheses pending user enquiry
+- Note: §5 runs ~500 w vs 300 w budget (content-dense per task outline); total body ~1.9k w vs 1.2–1.8k target — trim candidate for final pass
+RETURN: sections = Abstract / measurement problem / recipe forensics / E5 bump estimator / pressure map fingerprints / calibration as physics / more-time / figure-table list (+ pending-gaps block). Missing numbers the write-up needs: r7_v3_k045 LB readout (ρ → k*); an LB score for any bump-reading submission (validates §4/§5 transfer claims); measured test ρ for the T1T2 vector; confirmed station names (user-gated enquiry).

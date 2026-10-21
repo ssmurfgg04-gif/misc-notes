@@ -159,12 +159,17 @@ def t1_features(X):
 def t2_wind(stats):
     return {"wind_int": stats["w_int"][:, None], "wind_sl": stats["w_sl"][:, None],
             "wind_mad": stats["w_mad"][:, None],
-            "f_pcfull": stats["f_pcfull"][:, None]}
+            "f_pcfull": stats["f_pcfull"][:, None],
+            "f_pc": stats["f_pc"][:, None], "f5_raw": stats["f5"][:, None],
+            "nobump": stats["nobump"].astype(float)[:, None]}
 
-def assemble(X, stats):
+def assemble(X, stats, arms="t1t2w"):
     Fb, nb = featurize(X)
     parts, names = [Fb], list(nb)
-    for tag, d in (("t1", t1_features(X)), ("t2w", t2_wind(stats))):
+    blocks = [("t1", t1_features(X))]
+    if "w" in arms:
+        blocks.append(("t2w", t2_wind(stats)))
+    for tag, d in blocks:
         for k, v in d.items():
             parts.append(np.nan_to_num(np.asarray(v, float), nan=0.0, posinf=0.0, neginf=0.0))
             names += [f"{tag}_{k}_{j}" for j in range(np.asarray(v).shape[1])]
@@ -192,12 +197,31 @@ for nm in ["train", "cal", "val_main", "val_calm", "val_A_west_moored",
     print(" ", nm, P[nm][0].shape, flush=True)
 
 print("window stats per pool (E5/E5pcen/fullaxis/wind)...", flush=True)
-S = {nm: window_stats(X) for nm, (X, f) in P.items()}
+S = {}
+for nm, (X, f) in P.items():
+    sp = f"{POOL}/wstats_{nm}.npz"
+    if os.path.exists(sp):
+        z = np.load(sp)
+        S[nm] = {k: z[k] for k in z.files}
+        print(f"  {nm}: restored", flush=True)
+    else:
+        S[nm] = window_stats(X)
+        np.savez(sp, **S[nm])
+        print(f"  {nm}: computed+saved", flush=True)
 
 print("features train/cal...", flush=True)
-F_tr, names_tr = assemble(P["train"][0], S["train"])
-F_cal, _ = assemble(P["cal"][0], S["cal"])
+F_tr, names_tr = assemble(P["train"][0], S["train"], arms="t1t2w")
+F_cal, _ = assemble(P["cal"][0], S["cal"], arms="t1t2w")
 mc, mr = twohead(F_tr, P["train"][1])
+
+# ARM control: t1-only (r8 replica) and t1+windonly (no f_pc family)
+def t2_windonly(stats):
+    return {"wind_int": stats["w_int"][:, None], "wind_sl": stats["w_sl"][:, None],
+            "wind_mad": stats["w_mad"][:, None], "f_pcfull": stats["f_pcfull"][:, None]}
+Ftr_w, _ = assemble(P["train"][0], S["train"], arms="t1")
+Ftr_w = np.hstack([Ftr_w] + [np.nan_to_num(np.asarray(v, float), nan=0.0, posinf=0.0, neginf=0.0)
+                             for v in t2_windonly(S["train"]).values()])
+mc_w, mr_w = twohead(Ftr_w, P["train"][1])
 
 # ---------------- W3 softfloor: CAL isotonic on no-bump windows ----------------
 cal = S["cal"]
@@ -216,8 +240,12 @@ def predict_set(X, f, st, F=None):
     if F is None:
         F, _ = assemble(X, st)
     lgb_p = np.clip(mc.predict_proba(F)[:, 1] * mr.predict(F), 0, 1)
+    Fw, _ = assemble(X, st, arms="t1")
+    Fw = np.hstack([Fw] + [np.nan_to_num(np.asarray(v, float), nan=0.0, posinf=0.0, neginf=0.0)
+                           for v in t2_windonly(st).values()])
+    lgb_w = np.clip(mc_w.predict_proba(Fw)[:, 1] * mr_w.predict(Fw), 0, 1)
     soft = np.where(st["nobump"], iso.predict(st["f_pc"]), lgb_p)
-    return {"lgb": lgb_p, "lgb_softfloor": np.clip(soft, 0, 1)}, F
+    return {"lgb": lgb_p, "lgb_windonly": lgb_w, "lgb_softfloor": np.clip(soft, 0, 1)}, F
 
 def evalrow(tag, f, preds):
     row = {"n": len(f)}
@@ -239,13 +267,16 @@ for nm, tag in [("val_main", "VAL_main"), ("val_calm", "VAL_calm"),
     preds, _ = predict_set(X, f, S[nm])
     evalrow(tag, f, preds)
     if tag == "VALclassB_G1":
-        GATE_OK["wind"] = preds["lgb_rmse"] < GATE_B_G1
+        GATE_OK["wind"] = R[tag]["lgb_rmse"] < GATE_B_G1
     # softfloor must not worsen
-    if preds["lgb_softfloor_rmse"] > preds["lgb_rmse"] + 1e-4:
+    if R[tag]["lgb_softfloor_rmse"] > R[tag]["lgb_rmse"] + 1e-4:
         GATE_OK["softfloor"] = False
 
+_b_full = R["VALclassB_G1"]["lgb_rmse"]; _b_wo = R["VALclassB_G1"]["lgb_windonly_rmse"]
+_best = min([("full", _b_full), ("windonly", _b_wo), ("replica_gate", GATE_B_G1)], key=lambda t: t[1])
 R["gates"] = {"wind_adopted": bool(GATE_OK["wind"]), "softfloor_ok": bool(GATE_OK["softfloor"]),
-              "gate_ref": GATE_B_G1}
+              "gate_ref": GATE_B_G1, "B_G1_full": _b_full, "B_G1_windonly": _b_wo,
+              "best_arm": _best[0]}
 
 # ---------------- W4 rank-REST probe (A/B/C class pools) ----------------
 print("\nrank-REST probe...", flush=True)
@@ -273,9 +304,19 @@ TX = test.drop(columns=["ID"]).to_numpy(float).reshape(-1, WIN, NB)
 TX_lin = 10.0 ** (TX / 10.0)
 m01m = np.isnan(TX[:, 0, :]).all(1); m15m = np.isnan(TX[:, 14, :]).all(1)
 grp = np.where(m01m, "G1", np.where(m15m, "G2", "G0")).astype("<U2")
-St = window_stats(TX_lin)
+_spT = f"{POOL}/wstats_TEST.npz"
+if os.path.exists(_spT):
+    _z = np.load(_spT); St = {k: _z[k] for k in _z.files}
+    print("test stats restored", flush=True)
+else:
+    St = window_stats(TX_lin)
+    np.savez(_spT, **St)
 Ft, _ = assemble(TX_lin, St)
 lgb_t = np.clip(mc.predict_proba(Ft)[:, 1] * mr.predict(Ft), 0, 1)
+Ftw, _ = assemble(TX_lin, St, arms="t1")
+Ftw = np.hstack([Ftw] + [np.nan_to_num(np.asarray(v, float), nan=0.0, posinf=0.0, neginf=0.0)
+                         for v in t2_windonly(St).values()])
+lgb_tw = np.clip(mc_w.predict_proba(Ftw)[:, 1] * mr_w.predict(Ftw), 0, 1)
 soft_t = np.clip(np.where(St["nobump"], iso.predict(St["f_pc"]), lgb_t), 0, 1)
 R["test_census"] = {"nobump_frac": float(St["nobump"].mean()),
                     "lgb_mean": float(lgb_t.mean()), "soft_mean": float(soft_t.mean()),
@@ -284,7 +325,7 @@ print("test census:", json.dumps(R["test_census"]), flush=True)
 R["test_moments"] = {"E_f2_lgb": float(np.mean(lgb_t**2)), "E_f2_soft": float(np.mean(soft_t**2)),
                      "pinned": 0.06058}
 
-np.savez(f"{OUT}/r8b_test_diag.npz", lgb=lgb_t, softfloor=soft_t,
+np.savez(f"{OUT}/r8b_test_diag.npz", lgb=lgb_t, lgb_windonly=lgb_tw, softfloor=soft_t,
          nobump_mask=St["nobump"], f_pc=St["f_pc"], f5=St["f5"], grp=grp,
          wind_int=St["w_int"], wind_sl=St["w_sl"])
 json.dump(R, open(f"{OUT}/r8b_report.json", "w"), indent=1, default=float)

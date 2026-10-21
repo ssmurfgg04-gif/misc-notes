@@ -62,8 +62,16 @@ CLASS_SITES = {  # A60/A61: test-group <-> train-site class mapping
 
 # ---------------- data ----------------
 print("loading backgrounds...", flush=True)
-BG, BGmeta = load_backgrounds(f"{BASE}/data/South_African_Real_Acoustics",
-                              per_site_cap=1500, seed=43)
+BGPath = f"{POOL}/BG_pool.npy"
+if os.path.exists(BGPath):
+    BG = np.load(BGPath)
+    BGmeta = pd.read_csv(f"{POOL}/BG_meta.csv")
+    print("BG pool restored from cache", flush=True)
+else:
+    BG, BGmeta = load_backgrounds(f"{BASE}/data/South_African_Real_Acoustics",
+                                  per_site_cap=1500, seed=43)
+    np.save(BGPath, BG.astype(np.float32))
+    BGmeta.to_csv(f"{POOL}/BG_meta.csv", index=False)
 sites = BGmeta["site"].to_numpy()
 print("BG pool:", BG.shape, "| per-site:", pd.Series(sites).value_counts().to_dict(), flush=True)
 
@@ -108,7 +116,12 @@ def calm_mask(X, range_thr=9.0, cv_thr=0.5):
     return m
 
 print("calm mask...", flush=True)
-calm = calm_mask(BG)
+calmPath = f"{POOL}/calm_mask.npy"
+if os.path.exists(calmPath):
+    calm = np.load(calmPath)
+else:
+    calm = calm_mask(BG)
+    np.save(calmPath, calm)
 print(f"calm windows: {calm.sum()} / {len(BG)} ({calm.mean()*100:.0f}%)", flush=True)
 
 # ---------------- planting (plant_protocol_v3, verbatim math) ----------------
@@ -177,8 +190,13 @@ def build_pool(name, bg_idx, n_max, clip_pool, seed, calm_frac=0.6, hc_frac=0.5)
 
 tr_idx = np.where(gtr)[0]
 va_idx = np.where(gva)[0]
-X_tr, f_tr, aux_tr = build_pool("train", tr_idx, 6000, clips_tr, seed=202)
-X_cal, f_cal, aux_cal = build_pool("cal", tr_idx, 1500, clips_tr, seed=303)
+def have(name):
+    return os.path.exists(f"{POOL}/X_{name}.npy")
+
+X_tr, f_tr, aux_tr = (np.load(f"{POOL}/X_train.npy"), np.load(f"{POOL}/f_train.npy"),
+                      pd.read_csv(f"{POOL}/aux_train.csv")) if have("train") else build_pool("train", tr_idx, 6000, clips_tr, seed=202)
+X_cal, f_cal, aux_cal = (np.load(f"{POOL}/X_cal.npy"), np.load(f"{POOL}/f_cal.npy"),
+                         pd.read_csv(f"{POOL}/aux_cal.csv")) if have("cal") else build_pool("cal", tr_idx, 1500, clips_tr, seed=303)
 
 # class-matched val pools (calm only — A28 organiser-bed logic)
 val_class = {}
@@ -187,12 +205,20 @@ for cls, slist in CLASS_SITES.items():
     if len(idx) < 80:
         print(f"  !! {cls}: only {len(idx)} val bg windows", flush=True)
     val_class[cls] = idx
-X_va, f_va, aux_va = build_pool("val_main", va_idx, 800, clips_va, seed=404)
-X_vc, f_vc, aux_vc = build_pool("val_calm", va_idx[calm[va_idx]], 800, clips_va, seed=505)
+X_va, f_va, aux_va = (np.load(f"{POOL}/X_val_main.npy"), np.load(f"{POOL}/f_val_main.npy"),
+                      pd.read_csv(f"{POOL}/aux_val_main.csv")) if have("val_main") else build_pool("val_main", va_idx, 800, clips_va, seed=404)
+X_vc, f_vc, aux_vc = (np.load(f"{POOL}/X_val_calm.npy"), np.load(f"{POOL}/f_val_calm.npy"),
+                      pd.read_csv(f"{POOL}/aux_val_calm.csv")) if have("val_calm") else build_pool("val_calm", va_idx[calm[va_idx]], 800, clips_va, seed=505)
 X_cls, f_cls, aux_cls = {}, {}, {}
 for cls, idx in val_class.items():
-    X_cls[cls], f_cls[cls], aux_cls[cls] = build_pool(f"val_{cls.split('_G')[0]}", idx, 300,
-                                                      clips_va, seed=505 + sum(map(ord, cls)) % 97)
+    nmv = f"val_{cls.split('_G')[0]}"
+    if have(nmv):
+        X_cls[cls], f_cls[cls], aux_cls[cls] = (np.load(f"{POOL}/X_{nmv}.npy"),
+                                                np.load(f"{POOL}/f_{nmv}.npy"),
+                                                pd.read_csv(f"{POOL}/aux_{nmv}.csv"))
+    else:
+        X_cls[cls], f_cls[cls], aux_cls[cls] = build_pool(nmv, idx, 300,
+                                                          clips_va, seed=505 + sum(map(ord, cls)) % 97)
 
 # ---------------- feature builders ----------------
 def bed_profile(w):
