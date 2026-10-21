@@ -1,0 +1,22 @@
+{
+ "hold_01_Richards_Bay+09_Fish_Hoek": {
+  "p50": 0.9003542101732878,
+  "p90": 2.519865516940714
+ },
+ "hold_02_Durban+03_Cape_Recife": {
+  "p50": 0.19400963982087838,
+  "p90": 1.174458555519573
+ },
+ "hold_06_Riy_Banks+09_Fish_Hoek": {
+  "p50": 0.3980010857648253,
+  "p90": 1.6436119422497433
+ },
+ "site_heldout_all_folds": {
+  "p50": 0.44355758738420725,
+  "p90": 1.9885635352240796
+ },
+ "format_submission_r6_v1_mixed.csv": true,
+ "format_submission_r6_v2_blend.csv": true,
+ "format_submission_r6_v3_real.csv": true,
+ "format_submission_r6_v4_blend_real.csv": true
+}

@@ -429,3 +429,122 @@ weather proxies), background-window-group-split protocol; (2) duty-cycle
 fingerprint features (m01 pattern across span); (3) residual HF-deficit features
 (wind proxy); (4) optional H_C partial-matching generator scenario; (5) hunt
 vectors 2–10 (parallel track, unchanged).
+
+## 6h. R6 — circularity FIXED, honest decision table, pursue-real (2026-10-21)
+
+**Directive chain:** keep chasing {8,11,12}; fix the circularity via
+background-window-level group splits; rerun the blend (0.874 may drop — report
+the honest number); store all competition data + submissions in
+`misc-notes-data`; stop leaning on synthetic, pursue real; update plan.md.
+
+**New locked facts (organizer-page capture, full Zindi info text):**
+- **A27**: data suppliers = **NRF-SAEON + SANBI + SA Underwater Radiated Noise
+  Consortium (SA URN)**. The consortium has no independent public footprint
+  (appears challenge-specific) — station numbering 1–13 is an internal registry.
+- **A28**: "The background periods used for the test are excluded from the
+  training release" (organizer-stated) — withheld stations/periods are
+  network-internal; the ΣB̂ lookup path needs those exact periods, not regression.
+- **A29**: "A passage reference may include ambient sound from its original
+  recording" — the added component is recorded-passage-derived and may carry
+  ambient ⇒ shape signal attenuated ⇒ reconciles cell-9 disclosure with H_B
+  evidence (H_C partial-matching is back on the table as generator scenario).
+- **A30**: top-3 leaderboard winners must assign worldwide copyright in their
+  winning solution code to Zindi (flagged to user).
+- **A31**: write-up evaluation spec requires held-out released stations/periods,
+  controls vs received-energy baseline, declared window IDs, pressure maps,
+  runnable code — our group-split protocol maps onto this directly.
+- **A32**: metric page target definition confirms exact share convention
+  (same observed minute-band cells, linear energy, added/total) — A14 upheld.
+- LB render via crawler showed only the benchmark row ("no submissions yet") —
+  JS-render artifact or LB state change; LOCKED fact #4 (LB #1 = 0.8720 on 20
+  Oct) stands until user verifies on login. Do not overwrite.
+
+**Circularity fix (R4b caveat #2 CLOSED).** Background pool (15,000 rows,
+seed-43 deterministic — mapping verified 24,000/24,000 synth windows, 0
+unmapped, loud-tail flag agreement 1.0) split at BACKGROUND-WINDOW level:
+G_train 12,000 / G_val 3,000, site-stratified, seed 7 (`src/r6_bgmap.py` →
+`bg_split.csv`). Every component trains only on G_train and is evaluated only
+on G_val: no synth-val window shares its background row with any training input
+of ANY component. Secondary control: 3-fold site-held-out ΣB̂.
+
+**Honest decision table (data/train_v3/decision_table_v31.json):**
+
+| metric | leaky R4b | honest R6 (bg-group-split) |
+|---|---|---|
+| M2 two-head H_B RMSE | 0.1018 | **0.1078** (overall 0.0925, H_A 0.0737, AUC 0.917) |
+| ΣB̂ err p50 / p90 (log10 dB) | 0.229 / 1.70 (site-heldout) | **0.147 / 0.799** window-split; **0.444 / 1.989** site-heldout 3-fold |
+| lock f RMSE on H_B val | 0.2049 | **0.2824** |
+| lock ferr loud-tail / quiet | −0.19 / −0.20 | **+0.243 / 0.00** (SIGN FLIP — leaky protocol hid the overshoot; loud-tail extrapolation over-estimates f) |
+| blend best (w_M2, w_lock, w_const) | 0.3 lock | **(0.90, 0.10, 0.00)** |
+| blend H_B RMSE → score | 0.1259 → 0.8741 | **0.1059 → 0.8941** (overall 0.8990) |
+
+- Circular inflation is REAL but SMALL for M2 (H_B +5.6%); larger for the lock
+  (f RMSE +38%). The R4b 0.8741 is RETIRED as a leaky-protocol number; the two
+  values are not directly comparable (different val subsets) — the honest
+  protocol stands on its own: **synthetic-equivalent H_B score 0.8941, blend
+  w = 0.9·M2 + 0.1·lock, no const term**.
+- Decision-relevant for test: test stations/periods are WITHHELD (A27/A28), so
+  the site-extrapolation ΣB̂ number (0.444 dB p50) is the conservative planning
+  figure — it justifies the small lock weight (0.1) independent of recipe bet.
+
+**Pursue-real track (new).** R_real two-head trained on REAL mixtures only
+(real SA background × real VTUAD clip, H_A recipe; no synthetic waveforms
+anywhere; clip-level holdout AND bg-window split): **0.0590 / AUC 0.997
+in-domain** (matches R2 real-refs 0.0633 lineage); on v3 H_B val 0.2405
+(H_A-trained models are blind under H_B — consistent with M1); real blend
+(R_real + lock): best w_lock 0.4 → H_B RMSE 0.1736. Meaning: the real pipeline
+is the recipe HEDGE and the write-up engine, not the H_B primary.
+
+**R6 submission candidates (all format-validated, user-gated, E6/A23):**
+| file | contents | test quantiles 10/50/90 |
+|---|---|---|
+| `submission_r6_v1_mixed.csv` | M2 refit (all synth windows) | 0.128 / 0.197 / 0.321 |
+| `submission_r6_v2_blend.csv` | honest w: 0.9·M2 + 0.1·lock | 0.128 / 0.243 / 0.374 |
+| `submission_r6_v3_real.csv` | R_real refit (all-real mixtures) | 0.000 / 0.132 / 0.324 |
+| `submission_r6_v4_blend_real.csv` | 0.6·R_real + 0.4·lock | 0.001 / 0.376 / 0.570 |
+
+Smoke-test recommendation: `r6_v2_blend` (highest information under the honest
+protocol: ≈0.89 ⇒ H_B + extrapolation OK; 0.82–0.87 ⇒ H_B partial; <0.80 ⇒
+extrapolation failure). Second slot: `r6_v1_mixed` (M2 pure) or `r6_v3_real`
+(real-data diversification for A23 private-pair diversity).
+
+**Hunt R6 — stations {8,11,12} (log: docs/hunt_log_r6.json; posture positive).**
+23 probes this session (19 web + GitHub code API + package-metadata grep +
+Wayback). Geographic gap analysis: 8 = south coast between St Francis (24.95°E)
+and Fish Hoek (18.44°E); 11/12 between Sea Point (18.35°E) and Saldanha
+(17.95°E). VERDICT: no public archive/thesis/deployment record names stations
+8/11/12; the numbering is internal to SAEON/SANBI/SA-URN-Consortium (A27).
+Open-web vectors are FALSIFIED (not closed: standing directive). Remaining
+viable: Wayback CDX via GH runner (sandbox egress to web.archive.org blocked —
+logged, not a miss), SAEON portal (login), Zindi discussion board (user),
+direct SAEON/consortium enquiry (user, legitimate public route).
+
+**Backup state (misc-notes-data, user directive):** main branch: `submissions/`
+(9 CSVs r4+r6 + SHA256SUMS), `reports/` (15 report JSONs incl. all R6 honest
+tables), plan/worklog snapshots, README inventory; `competition files main.zip`
+preserved (DSCI550_UVNC clone; notebook md5 20e62deb…, Test.csv md5
+f45428f9… = official); release v3 = `vtuad_metadata_qa.zip` (Zenodo 23037895
+metadata/QA, 26 files) — insurance vs Zenodo/mirror loss. Release v1 (official
+package) + v2 (VTUAD refs) verified by checksums this session after re-pull.
+
+**Process lesson (logged):** the R4b blend script was never persisted as a file
+(ran inline) and could not be reconstructed exactly — R6 rebuilt the blend from
+spec under the fixed protocol. Script-persistence rule (Rule 9) is now enforced
+without exceptions.
+
+## 7c. Next actions (R6 → R7, ordered)
+
+1. **Submission gate (user)**: smoke-test `submission_r6_v2_blend.csv`; select
+   2 private picks from {r6_v1, r6_v2, r6_v3, r6_v4} after the smoke read (A23).
+2. ΣB̂ v3: conditional site×band×condition regression with loud-tail
+   quantile heads + weather proxies; target the +0.243 loud-tail overshoot
+   (honest failure mode now measured); always under bg-group-split protocol.
+3. H_C generator scenario (A29): mixture family where the added component =
+   real passage + ambient share; quantify shape-signal attenuation; recheck
+   M2/lock mix under H_C.
+4. Write-up track (E7/A31): pressure maps from site-ID clusters; hold-out
+   protocol = our group-split tables; controls = received-energy baseline;
+   assemble runnable notebook + dependency versions.
+5. Hunt (standing): Wayback CDX via runner; SAEON portal login (user); Zindi
+   discussion post asking organizers about withheld-station policy (user);
+   UniqueShip 5h/class download if ref diversity caps score (R5 plan carry).

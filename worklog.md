@@ -128,3 +128,47 @@ organiser recipe, first E2E generator→model→submission run.
 
 **Blocked-on-user**
 - Zindi login or 2 manual submissions (E6); approval to push refs/submission release v2 to `misc-notes-data` (defaulting to yes per "backup everything" directive).
+
+### R4b same-day addendum — the recipe question resolved to a decision table
+
+- Push conflict integrated: origin d9241a3 (parallel hunt session's mission update) — claims H_B background-matched recipe M≈B/(1−f); independently verified before adoption (guardrail: no verdict without own search/experiment).
+- Ran experiments P (plant control: 99.5% detect in-distribution; test p50 0.987 PRESENT — contradicts their p0=0.981; both = condition artifacts), R (matched-level residuals: test is windier/flatter than level-matched pool — condition shift, recipe-non-diagnostic), M1/M2/M3 (recipe-exclusive models; mixed two-head 0.073/0.102; ΣB̂ absolute-feature poisoning found+fixed via scale-invariant subset; blend w=0.3 → 0.8741 synthetic-equivalent).
+- Bayesian verdict ≈85% H_B from pack-below-constant evidence (0.816–0.824 < 0.859 with 122 competitors); #1's 0.872 reproducible by our blend on H_B val.
+- 5 submission candidates prepared (r4_v1/v2_mixed/v3_HA/v4_superseded/v6_blend); smoke-test recommendation: r4_v2_mixed, then r4_v6_blend. User gates all submissions (E6).
+- Known limitation logged: ΣB̂-family circularity (val windows built from pool backgrounds seen by regressor) — R5 enforces background-window-group splits.
+- Files: src/recipe_discrimination.py, src/synth_v3_mixed.py (seed 43, sha256 sidecar), src/train_v3.py; reports in data/train_v2/recipe_discrimination.json + data/train_v3/{decision_table,lockv2b_report,blend_report}.json.
+
+---
+
+## R6 — 2026-10-21 — circularity fixed, honest blend, pursue-real, hunt {8,11,12}, full backup
+
+**Agent:** Z.ai (main). **Directive:** user R6 message (chase 8/11/12; fix circularity
+via background-window group splits; rerun blend — honest number; data repo = single
+backup home incl. submissions folder; DSCI550 zip = user's local clone; less
+synthetic, more real; update plan.md).
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | Repo state recovery | sandbox restored from git (R4b state); data re-pulled from misc-notes-data v1/v2: SA package 14/14 checksums OK, Test.csv md5 = official, VTUAD refs 49,450+13,325 rows = A12-exact; deps reinstalled |
+| 2 | DSCI550 zip (user's clone) | found in data repo root as `competition files main.zip`; extracted + verified: notebook 12 cells, md5 `20e62deb…` (official), Test.csv md5 `f45428f9…` = official; preserved in data repo + README provenance |
+| 3 | Circularity fix | `src/r6_bgmap.py`: seed-43 pool reproduced deterministically (24,000/24,000 synth windows mapped, loud-tail agreement 1.0); bg-window split G_train 12k / G_val 3k site-stratified seed 7 → `bg_split.csv`; protocol: no synth-val window shares bg row with ANY component's training input |
+| 4 | Honest rerun | `src/train_v3_v31.py`: M2 H_B 0.1078 (leaky 0.1018 → circularity bounded +5.6%); ΣB̂ window-split 0.147/0.799 dB, site-heldout 3-fold 0.444/1.989 dB; lock f H_B 0.2824 (leaky 0.2049); **loud-tail ferr SIGN FLIP +0.243** (leaky said −0.19); honest blend (0.9 M2, 0.1 lock, 0 const) → **H_B 0.1059 → score 0.8941**; R4b 0.8741 retired (leaky-protocol number, not comparable) |
+| 5 | Pursue-real | R_real two-head on 16k REAL mixtures (real bg × real VTUAD clips, H_A; clip+bg group splits): 0.0590/AUC 0.997 in-domain; v3 H_B val 0.2405; real+lock blend w_lock 0.4 → 0.1736 |
+| 6 | Submissions | 4 r6 CSVs written + format-validated (r6_v1_mixed / r6_v2_blend / r6_v3_real / r6_v4_blend_real); smoke rec: r6_v2_blend; user gate |
+| 7 | Hunt {8,11,12} | 23 probes (19 web + GH code API + metadata grep + Wayback attempt) → no public record names stations 8/11/12; geographic gaps: 8 between St Francis/Fish Hoek, 11+12 between Sea Point/Saldanha; **A27 suppliers = SAEON+SANBI+SA URN Consortium** (consortium has no public footprint); A28 test bg periods excluded from release; A29 passage ref may carry ambient (H_C reopened); A30 copyright assignment (top-3); A31 write-up eval spec; log: docs/hunt_log_r6.json |
+| 8 | Backup | misc-notes-data: main pushed (submissions/ 9 CSVs+SUMS, reports/ 15 JSONs, snapshots, README inventory); release v3 = vtuad_metadata_qa.zip (Zenodo insurance); release v1/v2 verified after re-pull |
+| 9 | Docs | plan.md §6h + §7c added; HANDOFF banner updated; hunt log written |
+
+**Decisions**
+- D14: honest protocol = bg-window-group splits mandatory for ΣB̂-family metrics; R4b leaky numbers retired from decision use.
+- D15: lock weight capped at 0.1 (blend optimum) — justified by measured site-extrapolation error (0.444 dB p50) since test stations/periods are withheld (A28).
+- D16: R_real = recipe hedge + write-up engine; M2/blend remains H_B primary pending smoke test.
+- D17: data repo misc-notes-data = single backup home (main: submissions/reports/snapshots; releases: bulk data); sandbox NOT a delivery channel (user cannot download from it).
+
+**Open questions / blocked-on-user**
+- Zindi login: smoke-test r6_v2_blend + verify LB state (crawler showed benchmark-only render — artifact?).
+- User-routable hunt: SAEON portal login; Zindi discussion re withheld-station policy; SAEON/consortium enquiry.
+- A30 flag: top-3 winners assign worldwide copyright of solution code to Zindi — acceptable?
+
+**Process lesson:** R4b blend ran inline (never persisted) → unrecoverable; R6 rebuilt from spec. Rule 9 (script persistence) now enforced with zero exceptions.

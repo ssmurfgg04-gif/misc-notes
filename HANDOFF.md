@@ -24,7 +24,24 @@ we win with a leakage-clean synthetic-mixture pipeline + real vessel references
       ~90 MB data backup asset
 
 
-## R4 STATUS BANNER (2026-10-21) — wipe survived, synth v2 live, results recorded
+## R6 STATUS BANNER (2026-10-21) — circularity fixed, honest numbers, pursue-real, backup complete
+
+> **Read plan.md §6h + §7c first (source of truth).** R6: ΣB̂-family circularity
+> CLOSED via background-window-level group splits (seed 7); honest blend =
+> 0.9·M2 + 0.1·lock → H_B synthetic-equivalent **0.8941** (R4b 0.8741 RETIRED —
+> leaky-protocol number); loud-tail lock bias SIGN FLIPPED (+0.243 overshoot);
+> R_real (all-real mixtures) = 0.0590/AUC 0.997 in-domain = recipe hedge;
+> 4 submission candidates `data/train_v3/submission_r6_*.csv` (user-gated; smoke
+> rec: r6_v2_blend). Stations {8,11,12}: no public record (23 probes, hunt_log_r6);
+> **A27** suppliers = SAEON+SANBI+SA URN Consortium; **A28** test bg periods
+> excluded from release; **A29** passage ref may carry ambient (H_C reopened);
+> **A30** top-3 must assign solution copyright to Zindi. Backup: misc-notes-data
+> main (submissions/reports/snapshots) + release v3 (Zenodo QA) — repo is the
+> single backup home; DSCI550 zip = user clone, verified official-md5.
+
+## R5 priorities (superceded by plan.md §7c): hunt vectors, hedge ensemble, smoke-test submission, write-up track.
+
+**R4 STATUS (2026-10-21) — wipe survived, synth v2 live, results recorded**
 
 > **Wipe + recovery:** sandbox was wiped AFTER R3. Everything below was rebuilt from
 > this repo + GH-Actions artifacts + `misc-notes-data` release v1 (SHA256SUMS 13/13 OK).
@@ -43,7 +60,14 @@ site-ID 91.2% on confident @ 26–33% coverage; `submission_r4_v1.csv` validated
 submitted (user gate). Hunt vector 1 done (station/recorder master index in
 plan.md §6f; St-Francis SM2M × MDPI jmse10060746 cross-match confirmed).
 
-**R5 priorities:** (1) hunt vectors 2–10 with exact keys; (2) hedge ensemble +
+**R4b UPDATE (same day) — THE RECIPE QUESTION:** parallel-session note claims
+H_B background-matched recipe (M≈B/(1−f)); independently verified ≈85% posterior
+(pack-below-constant evidence + blend reproducing #1's 0.872). Mixed two-head M2 =
+0.073/0.102 (H_A/H_B val) — best robust candidate; blend w=0.3 = 0.874 H_B.
+5 submissions prepared (data/train_v3/), smoke-test rec: r4_v2_mixed. FULL DETAIL:
+plan.md §6g — read it before any submission action.
+
+**R5 priorities (updated):** (1) hunt vectors 2–10 with exact keys; (2) hedge ensemble +
 conditional ΣB lock-v2 + duty-cycle features; (3) ONE smoke-test submission (user);
 (4) write-up track. **Next AI: read plan.md §6c–§7b first — it is the current source
 of truth; sections below are R1/R2 history.**

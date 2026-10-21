@@ -242,3 +242,24 @@ data/profile/
 repo/
 tool-results/
 upload/
+data/backup/
+
+# --- R6 hardening: public repo = code/docs/metrics ONLY (D13) ---
+skills/
+upload/
+data/backup/
+data/zenodo/
+data/South_African_Real_Acoustics/
+data/refs_v*/
+data/refs_vtuad_real/
+data/sa_acoustics.zip
+data/Test.csv
+data/vtuad_meta_qa.zip
+data/**/*.npy
+data/*.npy
+data/synth_v3_mixed/X.npy.sha256
+data/synth_v3_mixed/f.npy.sha256
+data/synth_v3_mixed/aux*.csv
+data/synth_v3_mixed/bg_sums.csv
+data/synth_v3_mixed/bg_split.csv
+data/train_v*/submission_*.csv
