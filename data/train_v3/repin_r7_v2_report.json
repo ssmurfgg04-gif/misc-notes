@@ -1,0 +1,79 @@
+{
+ "round": "R7b",
+ "date": "2026-10-21",
+ "task": "handoff \u00a7A re-pin",
+ "inputs": {
+  "old_map": "0.916\u00b7f\u0302^4.41",
+  "lb_constants": {
+   "0.0": 0.75387,
+   "0.13": 0.79105,
+   "0.2": 0.77966,
+   "0.4": 0.65865
+  }
+ },
+ "derived_moments": {
+  "E_f2": 0.06057997689999998,
+  "mu_per_constant": [
+   0.13007644,
+   0.13007565324999995,
+   0.13007519299999998
+  ],
+  "mu": 0.1300757620833333,
+  "sigma_f": 0.2089504080360698,
+  "note": "three constants converge on \u03bc to 5 decimals (0.130075) \u2014 strong internal consistency"
+ },
+ "old_vector": {
+  "E_p": 0.14999968918608966,
+  "E_p2": 0.060580771083636346
+ },
+ "new_map": {
+  "a": 1.1753819817608406,
+  "gamma": 6.290444301438674,
+  "gamma_old": 4.41
+ },
+ "verify": {
+  "E_p_new": 0.13007576208333327,
+  "E_p2_new": 0.060579976899999964,
+  "ok_mean_\u00b10.005": true,
+  "ok_Ep2_\u00b10.001": true,
+  "spearman_vs_old": 1.0
+ },
+ "inversion_roundtrip_maxerr": 2.220446049250313e-16,
+ "prior_subs_rho_corrected": [
+  {
+   "file": "submission_r4_v2_mixed.csv",
+   "lb": 0.7757,
+   "mean_p": 0.2143,
+   "E_tp": 0.03104,
+   "cov": 0.00316,
+   "rho_perwindow": 0.1973
+  },
+  {
+   "file": "submission_r6_v2_blend.csv",
+   "lb": 0.7676,
+   "mean_p": 0.2478,
+   "E_tp": 0.03797,
+   "cov": 0.00573,
+   "rho_perwindow": 0.3078
+  },
+  {
+   "file": "submission_r6_v3_real.csv",
+   "lb": 0.7674,
+   "mean_p": 0.1435,
+   "E_tp": 0.02175,
+   "cov": 0.00307,
+   "rho_perwindow": 0.1149
+  },
+  {
+   "file": "submission_r6_v4_blend_real.csv",
+   "lb": 0.7065,
+   "mean_p": 0.3159,
+   "E_tp": 0.05698,
+   "cov": 0.01588,
+   "rho_perwindow": 0.3815
+  }
+ ],
+ "out_csv": "submissions/submission_r7_v2_bumpshare_repinned.csv",
+ "sha256": "69fc2b819d22335381cfd48ed4eb0350b89e8da7a9c4e587da398a1028a2f039",
+ "user_gate": "submission decision is user's (\u00a7E bands apply to this vector)"
+}

@@ -1,0 +1,1133 @@
+The Beat Goes On: Humpback
+Whale Song Seasonality in Antarctic
+and South African Waters
+Fannie W. Shabangu 1,2* and Katie A. Kowarski 3
+1 Fisheries Management Branch, Department of Forestry, Fisheries and the Environment, Cape Town, South Africa,
+2 Mammal Research Institute Whale Unit, Department of Zoology and Entomology, University of Pretoria, Hat ﬁeld, Pretoria,
+South Africa, 3 JASCO Applied Sciences, Dartmouth, NS, Canada
+Little is known of the movements and s easonal occurrence of humpback whales
+(Megaptera novaeangliae ) of South Africa and the Antarctic, populations once brought
+to near extinction by historic commercia l whaling. We investigated the seasonal
+occurrence and diel-vocalizing pattern of humpback whale songs off the west coast of
+South Africa (migration route and opportunistic feeding ground) and the Maud Rise,
+Antarctica (feeding ground), using passive acoustic monitoring data collected between
+early 2014 and early 2017. Data were collected using acoustic autonomous recorders
+deployed 200-300 m below the sea surface in waters 855, 1,118 and 4,400 m deep.
+Acoustic data were manually analyzed for humpback whale vocalizations. While non-song
+calls were never identi ﬁed, humpback whale songs were detected from June through
+December in South African waters, with a peak in percentage of acoustic occurrence
+around September/October in the austral spring. In Antarctic waters, songs were
+detected from March through May and in July (with a peak occurrence in April) where
+acoustic occurrence of humpback whales was negatively correlated to distance to the sea
+ice extent. Humpback whales were more vocally active at night than in the day at all
+recording sites. Detection range modelling indicates that humpback whale vocalizations
+could be detected as far as 18 and 45 km from recorders in South African and Antarctic
+waters, respectively. This study provides a multi-year description of the offshore acoustic
+occurrence of humpback whales off the west coast of South Africa and Maud Rise,
+Antarctica, regions that should continue to be monitored to understand these
+recovering populations.
+Keywords: seasonal occurrence, humpback whales, passive acoustics, diel-vocalizing patterns, Antarctica,
+South Africa, songs
+INTRODUCTION
+Southern Hemisphere humpback whales ( Megaptera novaeangliae ) perform impressive seasonal
+migrations between their austral summer feeding grounds in Antarctica and their winter breeding
+and calving grounds in low latitudes. The distribution and migration of humpback whales are
+believed to be driven by food availability, suitable environmental conditions, and reproductive
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273241
+Edited by:
+Ryan Rudolf Reisinger,
+University of Southampton,
+United Kingdom
+Reviewed by:
+Yujiang Hao,
+Institute of Hydrobiology (CAS), China
+Elena Schall,
+Alfred Wegener Institute Helmholtz
+Centre for Polar and Marine Research
+(AWI), Germany
+*Correspondence:
+Fannie W. Shabangu
+fannie.shabangu@yahoo.com
+Specialty section:
+This article was submitted to
+Marine Megafauna,
+a section of the journal
+Frontiers in Marine Science
+Received: 01 December 2021
+Accepted: 21 March 2022
+Published: 26 April 2022
+Citation:
+Shabangu FW and Kowarski KA
+(2022) The Beat Goes On: Humpback
+Whale Song Seasonality in Antarctic
+and South African Waters.
+Front. Mar. Sci. 9:827324.
+doi: 10.3389/fmars.2022.827324
+ORIGINAL RESEARCH
+published: 26 April 2022
+doi: 10.3389/fmars.2022.827324
+status ( Matthews, 1938 ; Lockyer, 1984 ; Best et al., 1995 ; Brown
+et al., 1995 ; Pomilla and Rosenbaum, 2005 ; Purdon et al., 2020 ;
+Dey et al., 2021 ; El-Gabbas et al., 2021 ; Reisinger et al., 2021 ;
+Schall et al., 2021a ; Schall et al., 2021b ). Off the west coast of
+South Africa, current knowledge on humpback whale occurrence
+is based on whaling data ( Olsen, 1914 ; Mackintosh, 1942 ; Best,
+2007; Best and Allison, 2010), sighting data (e.g., Best et al., 1995;
+Findlay and Best, 1995 ; Barendse et al., 2010 ; Barendse et al.,
+2011; Barendse et al., 2013 ; Purdon et al., 2020 ), and one coastal
+(i.e., adjacent to the coast and shallower than 100 m water depth)
+acoustic study ( Ross-Marsh et al., 2021 ). In the Southern Ocean,
+the known seasonal occurrence of humpback whales is based on
+whaling data (e.g., Mackintosh, 1942), sighting data (e.g., Thiele
+et al., 2004 ) and ﬁve acoustic studies ( Mckay et al., 2004 ; Van
+Opzeeland et al., 2013 ; Schall et al., 2020 ; Schall et al., 2021a ;
+Schall et al., 2021b ). There is a general knowledge gap in spatio-
+temporal occurrence of humpback whales in both these regions
+since whaling data is dated, sighting data are mainly limited to
+spring and summer, and acoustic studies have been limited to
+inshore waters or ice edge regions to the marginal ice zone. More
+research is required in both Antarctic and South African waters
+to improve our knowledge of humpback whale movements and
+distribution and how the species adapts to ecological variabilities
+over time. As the species continues to recover from the impacts
+of historic whaling, this information is critical to understanding
+their trends in occurrence that can inform management and
+mitigations for multiple populations.
+Humpback whales are vocally active making them ideal for
+passive acoustic monitoring (PAM). Their vocalizations can be
+categorized into non-song and song ( Payne and McVay, 1971 ;
+Dunlop et al., 2007 ; Dunlop et al., 2008 ; Cholewiak et al., 2013 ).
+Non-songs are produced by males, females, and calves throughout
+the year and are used for a wide range of purposes including
+foraging and social interaction (e.g., Stimpert et al., 2007 ; Parks
+et al., 2014; Videsen et al., 2017; Fournet et al., 2018). In addition to
+non-song calls, male humpback whales produce complex rhythmic
+songs and singing can last for several hours (e.g.,Payne and McVay,
+1971; Cholewiak et al., 2013
+). Songs are made up of units, phrases,
+and themes, and a series of repeated songs makes up a song session
+(Cholewiak et al., 2013). Whales within the same breeding ground
+sing a rendition of the same song, and songs change through time
+and can spread across different regions via social learning (e.g.,
+Dunlop et al., 2007; Garland et al., 2013; Garland et al., 2017). Songs
+are a largely seasonal reproductive display produced proliﬁcally on
+the breeding grounds, as well as during migration, and on feeding
+grounds pre- and post-migration (Edds-Walton, 1997; Dunlop and
+Noad, 2016; Gridley et al., 2018; Kowarski et al., 2021; Ross-Marsh
+et al., 2021). Song notes can range in frequency from approximately
+20 Hz to above 24 kHz (Au et al., 2006; Stimpert et al., 2007; Zoidis
+et al., 2008; Cholewiak et al., 2013).
+Here, we use PAM to monitor the acoustic occurrence of
+humpback whales over long-periods of time in regions difﬁcult to
+monitor regularly by visual techniques. PAM was employed in two
+regions of known ecological signi ﬁcance: the west coast of South
+Africa and the Maud Rise Seamount (Figure 1). Humpback whales
+off the west coast of South Africa belong to the Breeding Stock B1
+(Best, 2011 ), Breeding Stock B2 ( Rosenbaum et al., 2004 ;
+Rosenbaum et al., 2009 ), and possibly Breeding Stock C ( Findlay
+et al., 2017) that breed in Angola, Congo, Gabon, Gulf of Guinea,
+Namibia or Mozambique (Best et al., 1995; Best and Allison, 2010;
+Best, 2011). Whales off the Maud Rise belong to Breeding Stocks B,
+Ca n dD( Amaral et al., 2016; Schall et al., 2021b). Both regions are
+positioned within the boundaries of the International Whaling
+Commission (IWC) Southern Hemisphere Management Area III
+FIGURE 1 | Locations of moorings with autonomous acoustic recorders
+(AARs) off the west coast of South Africa (AARs 1, 2, 3 and 4) and the Maud
+Rise, Antarctica (AMR). Shading colour of each circle, as detailed in the key,
+represents positions of AARs.
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273242
+(Donovan, 1991). The west coast of South Africa (Figure 1)i sf o u n d
+in the southern Benguela ecosystem, an area which is characterized
+by the strong wind-driven upwelling regime of the Benguela
+Current ( Shannon, 2009 ). Cold, nutrient rich waters of the
+Benguela ecosystem support the occurrence of high numbers of
+marine mammals (Best, 2007; Shabangu et al., 2019; Shabangu et al.,
+2020a; Shabangu and Andrew, 2020 ; Shabangu et al., 2021 ;
+Letsheleha et al., 2022). Humpback whales have been observed off
+the west coast of South Africa feeding opportunistically on
+euphausiids (possibly Euphausia lucens ), amphipods ( Themisto
+gaudichaudi ), copepods and clupeid ﬁsh such as sardine
+(Sardinops sagax) and anchovy ( Engraulis encrasicolus)( Olsen,
+1914; Matthews, 1938; Best et al., 1995 ; Findlay et al., 2017 ). The
+Maud Rise ( Figure 1) is a seamount in the eastern Weddell Sea
+characterized by topographically induced upwelling of relatively
+warm (>1°C), nutrient-rich deep water, which enhances
+phytoplankton blooms and breaks sea ice in winter to form
+polynyas and initiates sea ice melt in spring (e.g., Comiso and
+Gordon, 1987 ; Hellmer, 2007 ; Gordon, 2009 ). Due to
+phytoplankton blooms, large swarms of Antarctic krill Euphausia
+superba are usually present around the Maud Rise (Everson, 2000).
+As a result, krill-eating predators, such as seals, blue whales, and
+humpback whales, return to the Maud Rise annually (e.g.,
+Matthews, 1938; Shabangu et al., 2017; Shabangu and Rogers, 2021).
+No offshore description of the acoustic occurrence of
+humpback whales exists in South African waters, and likewise,
+humpback whale occurrence has not previously been studied off
+the Maud Rise, Antarctica. We aim to ﬁll this knowledge gap by
+studying PAM data collected between 2014 and 2017. Estimates
+of detection ranges of humpback whale vocalizations are
+provided for the recording sites based on acoustic propagation
+modelling. Results of this study are placed within the context of
+other baleen whale acoustic occurrence previously described
+from these same recordings. This information on seasonal
+occurrence and behavior of humpback whales can inform the
+assessment of the ecology and the appropriate management of
+breeding stocks in Antarctic and South African waters.
+MATERIALS AND METHODS
+Data Collection
+Acoustic recordings were collected between early 2014 and early
+2017 from four PAM stations off the west coast of South Africa,
+and the Maud Rise, Antarctica ( Figure 1 ) as part of the South
+African Blue Whale Project (SABWP; Shabangu et al., 2019). We
+used autonomous acoustic recorders (AARs) of Autonomous
+Underwater Recorder for Acoustic Listening-Model 2 version
+04.1.3 (Multi-Électronique Inc., Canada). AARs were deployed
+on oceanographic moorings ( Shabangu et al., 2019 ) in three
+locations off the west coast of South Africa, and on an acoustic
+mooring off the Maud Rise, Antarctica ( Figure 1 ). Settings and
+sampling protocols for each AAR are detailed in Table 1 .
+For diel analysis, hourly sun altitude data were required. Since
+all AARs off the west coast of South Africa were on the
+same latitudinal position, we used hourly sun altitudes for each
+day of the year from 34° 22’ S, 17° 37’ E for all AAR locations. For
+the Maud Rise, we used the exact location of the seamount
+(65° 00’ S, 2° 50 ’ E). We obtained data on sun altitudes from the
+United States Naval Observatory Astronomical Applications
+Department (http://aa.usno.n avy.mil). Daylight regimes
+(daytime, night-time, and twilight) were classi ﬁed according to
+the geometrical position of the centre of the sun relative to the
+horizon as detailed in Shabangu et al. (2020a) and Shabangu and
+Andrew (2020) .
+For Antarctica, monthly sea ice extensions were sourced from
+the data set ID: G02135 ( Fetterer et al., 2016 ) at the National
+Snow and Ice Data Centre data pool server: ftp://sidads.colorado.
+edu/DATASETS/NOAA/G02135/shapeﬁles/. The distance of the
+nearest sea ice edge to the AAR off the Maud Rise (AMR)
+mooring position was measured from the monthly sea ice extents
+to determine the effects of sea ice on the acoustic occurrence of
+humpback whales off the Maud Rise. Daily sea ice concentrations
+(%) were obtained from the satellite sea ice concentration
+product of the Advanced Microwave Scanning Radiometer-2
+with a 3.1 km grid resolution ( Spreen et al., 2008 ; Beitsch
+et al., 2014 ).
+Humpback Whale Acoustic
+Occurrence Analysis
+All acoustic ﬁles were reviewed by an experienced acoustic analyst
+(FWS) to the Nyquist frequency of each AAR recordings (1,024 Hz
+for AMR; 2,048 Hz for AARs 1 and 2; 4,096 Hz for AARs 3 and 4).
+Acoustic data were inspectedvia spectrogram analysis in Raven Pro
+(Center for Conservation Bioacoustics, 2019). The aim of acoustic
+analysis was to identify humpback whale vocalizations and
+subsequently categorized them into songs and non-songs using
+guidelines from published literature (e.g.,Payne and McVay, 1971;
+TABLE 1 | Summary of deployment details and recording settings of the ﬁve autonomous acoustic recorders (AARs) used in this study.
+AAR ID Latitude (S) Longitude (E) Water
+depth (m)
+AAR
+depth (m)
+Sampling
+rate (Hz)
+Sampling
+protocol
+(min h-1)
+Hydrophone
+sensitivity
+(dB re 1 V/µPa)
+Start
+recording date
+Stop
+recording date
+AMR 65° 00.00 ’ 2° 50.00 ’ 1,267 250 2,048 25 −164.10 12/01/2014 17/09/2014
+AAR1 34° 22.21 ’ 17° 37.69’ 855 200 4,096 30 –164.20 24/07/2014 01/12/2014
+AAR2 34° 23.64 ’ 17° 35.66’ 1,118 300 4,096 20 –163.90 16/09/2014 01/12/2015
+AAR3 34° 23.64 ’ 17° 35.66’ 1,118 300 8,192 25 –164.10 04/12/2015 01/01/2017
+AAR4 34° 30.36 ’ 14° 58.81’ 4,481 200 8,192 25 –164.20 04/12/2015 13/01/2017
+AARs deployed in South African waters are numbered according to order of their chronological deployment. ID stands for identi ﬁcation. Hydrophone sensitivities are from factory
+calibrations of the HTI-96-MIN (High Tech Inc.) hydrophones.
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273243
+Stimpert et al., 2012; Cholewiak et al., 2013; Kowarski et al., 2019).
+Song complexity, in terms of level of hierarchy and repetition of
+phrases, occurs on a spectrum ranging from the repetition of
+phrases and sub-phrases over minutes to ﬁve or more themes
+repeated in sequence for hours. To manage this spectrum of
+complexity, Kowarski et al. (2019) broadly divided songs into full
+songs, where at least three themes are repeated, and song fragments,
+which can be as simple as a repeated phrase. Such differentiation of
+full songs and song fragments can be challenging when working
+with duty-cycled data or faint acoustic signals and was beyond the
+scope of the present work. Therefore, the deﬁnition of song applied
+here encompasses both full songs and song fragments where any
+organization of units into a sequence of phrases or themes was
+categorized as song. Readers should be mindful of this inclusive
+deﬁnition when interpreting results. Vocalizations not organized
+into phrases or themes would have been categorized as non-songs,
+but acoustic signals falling within this de ﬁnition were never
+identiﬁed. Humpback whale acoustic presence or absence was
+scored for each acoustic ﬁle. The time between which acoustic
+data were recorded demarcated the sampling session of each
+AAR (Table 1).
+Monthly percentages of humpback whale occurrence for each
+AAR were calculated as the number of sound ﬁles with presence
+of songs per month divided by the total number of sound ﬁles per
+month. To establish the seasonal diel pattern of humpback whale
+acoustic occurrence, we divided the number of sampling sessions
+with humpback whale songs for each hour of the day for that
+season by the total number of sampling sessions recorded for
+each hour of the day for that season. Austral seasons were used:
+summer (December to February), autumn (March to May),
+winter (June to August), and spring (September to November).
+Given that time of day is a circular variable, the pattern of diel
+occurrence of humpback whale songs per season were smoothed
+through penalized cyclic cubic regression splines ( Wood, 2017 )
+in generalized additive models ( Guisan et al., 2002 ). Pearson ’s
+correlation (r) was used to determine the relationship between
+the percentage of humpback whale occurrence and distance to
+the sea ice extent.
+The SABWP acoustic monitoring program was initiated with
+the aim to study acoustic occurrence of Antarctic blue whales
+(Balaenoptera musculus intermedia ). Since then, the acoustic
+occurrence of Antarctic minke (B. bonaerensis), ﬁn( B. physalus),
+southern right ( Eubalaena australis ), and sperm ( Physeter
+macrocephalus) whales have been described ( Shabangu et al.,
+2019; Shabangu and Andrew, 2020 ; Shabangu et al., 2020b ;
+Shabangu et al., 2021 ; Letsheleha et al., 2022 ). Humpback
+whale acoustic occurrence results are interpreted using the
+current knowledge on both humpback whales and the
+previously analyzed species in the monitoring areas.
+Detection Range Estimation
+The objective of detection range estimation was to determine the
+distance at which humpback whale songs were likely to be
+detected by our recorders, allowing us to better interpret any
+variation in occurrence results across recording sites. We used
+Detection Range Modelling (DRM) software (JASCO) previously
+described by Warren et al. (2021) and Delarue et al . (In Press)
+and summarized here. DRM uses the following inputs to model
+the detection range of humpback whales at different sites:
+recorded ambient noise, bat hymetry, sound speed pro ﬁles,
+geoacoustic properties, and characteristics of humpback whale
+vocal behaviour. Ambient sound levels were input in the form of
+sound pressure levels averaged over one min in each decidecade
+band of the recorded data ( International Organization for
+Standardization, 2017 ; Ainslie et al., 2018 ; Martin et al., 2019 ).
+Bathymetry information for the modelled sites was collected
+from the SRTM15+ grid (Smith and Sandwell, 1997; Becker et al.,
+2009). Sound speed pro ﬁles were derived from the U.S. Naval
+Oceanographic Of ﬁce’s Generalized Digital Environmental
+Model V 3.0 ( Teague et al., 1990 ; Carnes, 2009 ). Geoacoustic
+properties for the modelled sites were classi ﬁed as volcanic rock
+for the Maud Rise ( Huang and Jokat, 2016 ) and sandy mud for
+the west coast of South Africa ( Birch, 1977 ). For humpback
+whale vocalization parameters, we input information on songs as
+that was the only type of acoustic signal identi ﬁed during manual
+analysis (as opposed to non-song calls which have different
+source levels). Song source levels were modelled at 171.5 dB re
+1 mPa
+2 (standard deviation of 5.7; Girola et al., 2019 ). We
+modelled from 100-1,000 Hz to capture the predominant
+frequencies in which humpback whale songs occur and
+assumed the vocalizing source depth to be between 10 and
+30 m. We modelled out to a 50 km distance of the recorders,
+with the option of extending further if results indicated the full
+detection range was not captured within 50 km. DRM used the
+aforementioned parameters and the Marine Operations Noise
+Model ( Matthews and MacGillivray, 2013 )t oe s t i m a t et h e
+probability of acoustically detecting humpback whales under
+different noise conditions.
+DRM was performed on AAR2, AAR4, and AMR for the
+month of May. AARs 1, 2, and 3 were not more than 5 km apart
+(Figure 1), so these recorders would be expected to have a similar
+detection range and AAR2 was selected to represent them. One
+month (May) was selected because 1) it was an achievable
+timeframe over which modelling could be performed, 2) South
+Africa does not undergo dramatic seasonal ﬂuctuations, thus a
+single month is likely representative of the entire year in terms of
+sound propagation, 3) for Antarctica, May is one of the few
+months humpback whales were con ﬁrmed present and 4) May
+was a time when there was little interference from ocean current-
+induced mooring noise across the sites. Low frequency mooring
+noise was a particular issue for AAR1 and AAR4, with the
+greatest impact under 100 Hz and spanning to 500 Hz
+(Shabangu et al., in preparation). Manual analysis of humpback
+whale songs was still effective above 100 Hz and analysts could
+make out signals through the noise, therefore, because humpback
+whale vocalization detection was undergone manually (rather
+than an automated method) we are con ﬁdent that mooring
+induced noise did not signi ﬁcantly impact our humpback whale
+occurrence results, but it was more of a concern for DRM and
+therefore mooring noise should be considered when interpreting
+DRM results.
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273244
+RESULTS
+Seasonal Acoustic Occurrence
+A total of 1,567 hours were recorded from AAR1, 3,490 hours
+from AAR2, 3,982 hours from AAR3, and 4,096 hours from
+AAR4, which yielded a total of 13,135 hours of acoustic
+recordings from the South African waters ( Table 2 ). A total of
+2,479 hours of acoustic data were recorded off the Maud Rise,
+Antarctica (Table 2). All detected humpback whale vocalizations
+were classiﬁed as songs ( Figure 2) from the 15,614 hours of data
+analyzed. Non-song calls were never con ﬁdently identi ﬁed,
+though these signals may have been missed amongst the songs,
+particularly when there were multiple singers. Off the Maud Rise,
+the highest number of days and hours with humpback whale
+songs present were in autumn with few detections in winter
+(Table 2 ). In contrast, off the west coast of South Africa, the
+number of days and hours with detections were high in spring
+and low in winter with few detections in summer and no
+detections in autumn ( Table 2 ). With an average of 25% of
+hours with humpback whale acoustic presence across months,
+AAR2 had the highest percenta ge of hours with acoustic
+occurrence; AARs 3 and 4 had the second highest percentage
+of hours (20%) with humpback whales while AAR1 had the
+lowest percentage of hours (15%) with detections ( Table 2 ).
+Percentage of humpback whale acoustic occurrence from
+AMR had a single peak of 71.40% in April, and the lowest
+TABLE 2 | Seasonal number and percentage of hours and days containing male humpback whale songs off the west coast of South Africa and the Maud Rise, Antarctica.
+AAR ID Season Hours
+recorded
+Hours with
+humpback
+whale songs
+% of hours with
+humpback
+whale songs
+Number of
+days recorded
+Number of days
+with humpback
+whale songs
+% of days with
+humpback
+whale songs
+AMR Summer 481 0 0 48 0 0
+Autumn 927 281.82 30.40 92 51 55.43
+Winter 927 0.42 0.05 92 1 01.09
+Spring 164 0 0 17 0 0
+AAR1 Summer 10 0 0 1 0 0
+Autumn –– – – – –
+Winter 465 12.50 2.69 39 7 17.95
+Spring 1,092 465 42.58 91 65 71.43
+AAR2 Summer 715 0 0 91 0 0
+Autumn 729 0 0 92 0 0
+Winter 729 209.88 28.79 92 51 55.44
+Spring 1,317 953.70 72.42 167 140 83.83
+AAR3 Summer 1,211 1.26 0.10 120 1 0.83
+Autumn 927 0 0 92 0 0
+Winter 927 275.52 29.72 92 64 69.57
+Spring 917 481.32 52.49 91 64 70.34
+AAR4 Summer 1,324 7.56 0.57 132 4 03.03
+Autumn 927 0 0 92 0 0
+Winter 927 156.24 16.85 92 22 23.91
+Spring 917 586.74 63.98 91 68 74.73
+– represents period without passive acoustic monitoring effort.
+FIGURE 2 | Example of humpback whale song recorded off the west coast of South Africa from AAR2 on 7 July 2015. Spectrogram parameters: frame size 2.32 s,
+90% overlap, discrete Fourier transform size 16,384 samples.
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273245
+percentage of occurrence was 0.13% in July ( Figure 3 ). Sea ice
+concentration was 0% within 3.1 km of the AAR position from
+12 January to 20 April 2014 but increased to 50% by the end of
+April. The AMR mooring position was submerged under sea ice
+from the beginning of May through mid-September when the
+recorder stopped working, with sea ice concentrations around
+80% at beginning of May and 100% by mid-May through mid-
+September. Humpback whale songs were ﬁrst detected in March
+and continued to be detected even when the AAR mooring
+position was submerged under sea ice. Percentage of humpback
+whale occurrence had a weak negative correlation (Pearson ’sr =
+-0.31) with the distance to the sea ice extent, indicating that the
+acoustic occurrence decreased with increasing distance to the sea
+ice extent.
+For AARs 1 and 2, the percentage of humpback whale acoustic
+occurrence peaked in October and were complementary during
+periods of recording overlap (from September through November
+2014), whereas AAR3 peak in acoustic occurrence was in
+September 2016 ( Figure 3 ). AAR4 had a bimodal peak of
+acoustic occurrence in June and October 2016 ( Figure 3 ).
+Humpback whale songs were detected from late winter through
+spring in South African waters, and no humpback whale songs
+were detected from autumn until mid-winter ( Figure 3 ). Songs
+were detected from August through November for AAR1. For
+AAR2, songs were detected from September through November in
+2014 and from June through November in 2015. Songs were
+detected in December 2015 and from June through November
+2016 for AAR3 ( Figure 3 ). For AAR4, songs were detected in
+December 2015, between June and July, and from September
+through November in 2016. The seasonal occurrence of songs did
+not change inter-annually between AARs 2 and 3 that were
+deployed on the same location ( Figure 3).
+Observed Diel-Vocalizing Pattern
+Diel percentages of occurrence of humpback whale songs were
+lowest between 06h00 and 16h00 in winter and spring for South
+African waters and in autumn for Antarctic waters ( Figure 4 ).
+Diel percentages of acoustic occurrence were highest between
+18h00 and 04h00 for autumn, winter and spring ( Figure 4). Due
+to few hours with songs in summer ( Table 3), no diel occurrence
+FIGURE 3 | Monthly percentage of acoustic occurrence of male humpback whale songs off the west coast of South Africa and Maud Rise, Antarctica. Asterisks
+represent cases when the monthly percentage of acoustic occurrence was less than 0.5%. Gray shaded areas designate periods without passive acoustic
+monitoring effort. Su is summer, A is autumn, W is winter, and Sp is spring are shown on the top axis and de ﬁned by dashed lines, and years are stated on the
+bottom axis.
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273246
+pattern was established for all sites ( Figure 4). Likewise, no diel
+occurrence patterns were established for AARs 1-4 in autumn
+and for AMR in winter and spring due to few hours with
+songs ( Figure 4 ).
+Detection Ranges
+Quiet noise conditions (NL 10) resulted in longer detection
+ranges, whereas very noisy conditions (NL 90)r e s u l t e di n
+shorter detection ranges ( Table 3 ). In average noise conditions
+(NL50) and detection probability (P d=0.5), humpback whales
+were modelled to be detected at a range of approximately 1 to
+8 km from the recorder ( Table 3). This detection range is likely
+an underestimate as a portion of the sound levels in the
+humpback whale vocalization band were high due to mooring
+noise, but manual analysis of spectrograms allowed for songs to
+be observed through this noise or in the frequencies above
+this noise.
+DISCUSSION
+Here, we provide the offshore seasonal and diel acoustic
+occurrence of male humpback whales off the west coast of
+South Africa and the Maud Rise, Antarctica. Humpback
+whales were acoustically present offshore the west coast of
+South Africa from June through December and off the Maud
+Rise from March through May and in July. Given that all acoustic
+data were analyzed manually, the presence results can be
+considered a reliable representation of the acoustic occurrence
+of humpback whales in the data. Though, some considerations
+should be taken when interpreting the present results.
+Detectability
+Maximum detection ranges were modelled to be limited for some
+recording sites, particularly for the more offshore station
+(AAR4). The short detection ranges are likely a re ﬂection of
+elevated mooring noise which in ﬂuenced the modelling outputs.
+Detection range results indicate that, off South Africa ’s west
+coast, detected humpback whale songs were produced by animals
+near the recorder and acoustic signals from more distant animals
+could have been missed. Detections at these sites should
+therefore be considered a minimum. For the Maud Rise, which
+had lower ambient and mooring noise, the detection range
+FIGURE 4 | Diel percentage of acoustic occurrence per season for humpback whales off the west coast of South Africa (AARs 1, 2, 3 and 4) and Maud Rise,
+Antarctica (AMR). Note different y-axes scales. Horizontal bar shadings indicate daylight regime: black represents the average nighttime hours; g rey represents
+average twilight hours; white represents average daytime hours. Grey shading around line plots indicates the standard error (SE). Autumn daylight r egime is from the
+Maud Rise since there was no pattern for South African waters, and remaining daylight regimes are from South African waters since there was no presence data for
+the Maud Rise. Coordinated Universal Time (UTC) is used.
+TABLE 3 | Detection ranges (km) of male humpback whale vocalizations in May
+around AAR2, AAR4 and AMR.
+Recorder Percentile noise P d conditional
+Pd=0.1 P d=0.5 P d=0.9
+AMR NL 10 30.0 – 44.8 5.9 – 15.8 2.0 – 2.2
+NL50 18.3 – 33.8 4.1 – 7.4 1.5 – 1.6
+NL90 10.3 – 20.2 2.8 – 3.1 1.1 – 1.3
+AAR2 NL 10 8.2 – 18.0 2.2 – 2.3 1.0 – 1.2
+NL50 2.8 – 11.9 1.6 – 1.7 0.6 – 0.6
+NL90 1.9 – 2.0 0.8 – 0.9 0.1 – 0.1
+AAR4 NL 10 3.0 – 3.6 2.3 – 2.9 0.9 – 1.0
+NL50 3.0 – 3.5 1.3 – 2.1 0.8 – 0.8
+NL90 2.8 – 3.1 1.0 – 1.1 0.6 – 0.7
+Pd is probability of detecting humpback whale vocalization of 0.1, 0.5, and 0.9, which is
+based on the source level. The source level is high at 0.1, average at 0.5, and low at 0.9.
+NL is noise level given in the 10
+th (NL10), 50 th (NL50), and 90 th (NL90) percentile.
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273247
+estimation of 40 km likely captures most vocal animals in the
+region. Low sampling rate used for AMR, AARs 1 and 2 that
+yielded recordings with Nyquist frequencies below 2,048 Hz
+could have, in some cases, negatively biased the detection of
+some songs and song notes that reside above this frequency. Such
+instances are expected to be rare given that most humpback
+whale song notes reside, at least in part, below 2,000 Hz and these
+lower frequencies would propagate further. Mooring noise below
+500 Hz (likely generated by mooring strumming during high
+ocean current speeds) could have masked some songs below this
+frequency during strong weather events. The impacts of mooring
+noise were mitigated by analyzing the data manually, where
+humans are more sensitive to visually identifying partially
+masked signals than automated techniques. In addition to the
+above considerations, it must always be considered that PAM
+techniques will only capture vocally active animals in the region.
+We currently do not have a quantitative estimate of the above
+errors, but these recordings provide a good opportunity to
+estimate the acoustic occurrence of humpback whales and the
+overarching trends are certainly accurate.
+Offshore South Africa ’s West Coast
+Acoustic occurrence of humpback whales off the west coast of
+South Africa was observed from June through December, which
+is in conjunction with the humpback whale breeding season and
+seasonal high productivity of the Benguela ecosystem ( Best,
+2007; Shannon, 2009 ; Dey et al., 2021 ). The high humpback
+whale song detections from early to mid-spring (i.e., September
+through October) correspond with high sighting rates of the
+species at this time of the year in coastal waters where whales
+were observed moving in both southerly and northerly directions
+(Best et al., 1995 ; Barendse et al., 2010 ; Barendse et al., 2011 ;
+Barendse et al., 2013 ; Findlay et al., 2017 ). Shore based sightings
+indicate that humpback whales are present year-round off the
+Saldanha Bay on the west coast of South Africa, designating some
+form of inshore residency ( Barendse et al., 2010 ; Barendse et al.,
+2011). Bimodal peaks (June and October) in humpback whale
+catches were reported from the Hangklip and Dankegrat
+Whaling Stations off the west coast of South Africa ( Best and
+Allison, 2010 ). Our acoustic efforts only detected one peak of
+acoustic occurrence around September/October for most
+recording sites except for AAR4 that had a small peak in June
+and a bigger peak in October, suggesting that humpback whales
+present off the west coast of South Africa around June were less
+vocally active, were outside the detection ranges of our AARs, or
+that the whales changed their migration behavior since the end of
+the whaling era.
+The lack of humpback whale songs between January and May
+from the offshore locations of our South African AARs was
+somewhat unexpected given recent indications of inshore
+residency on the west coast of South Africa by Barendse et al.
+(2011); (2013). The lack of detections could be due to low
+n u m b e r so fw h a l e si nt h ea r e a(Findlay and Best, 1995; Barendse
+et al., 2011; Barendse et al., 2013), as call numbers (which are used to
+calculate call rates) of other ba leen whales have been found to
+increase with whale numbers (e.g., Shabangu et al., 2017 ).
+Alternatively, whales could have been less frequently vocalizing
+because it was not the breeding season associated with
+singing or because the residency observed by Barendse et al.
+(2011, 2013) was dominated by females. Moreover, whales
+could have migrated out of the South African waters to higher
+latitudes if environmental conditions and food availability
+were limiting.
+Where there were recordings at the same location over
+multiple years (AARs 2 and 3), the seasonal occurrence trends
+were similar, con ﬁrming the region is regularly frequented by
+this species. Coastal acoustic recordings in False Bay, off the west
+coast of South Africa, similarly detected humpback whale songs
+in September and October ( Ross-Marsh et al., 2021 ). The coastal
+song detections of Ross-Marsh et al. (2021) correspond to the
+peak acoustic occurrence from AARs 1, 2 and 3; indicating that
+whales may have passed through the offshore stations on their
+way to coastal areas or vice versa since these locations are about
+70 km apart. Off the Walvis Ridge, Namibia, humpback whale
+non-songs and songs were detected from May through January
+(Thomisch et al., 2019 ), which is comparable to our documented
+offshore acoustic occurrence of the species.
+Humpback whale acoustic occurrence was similar between
+the closely spaced (5 km apart) AARs 1 and 2 during periods of
+recording overlap, which is different to that observed for other
+baleen whales such as Antarctic blue and ﬁn whales ( Shabangu
+et al., 2019 ) and southern right whales ( Shabangu et al., 2021 )
+that have different detections between AARs 1 and 2 even though
+the recorders were only 5 km apart. The difference in percentage
+of acoustic occurrence between AARs 1 and 2 for both blue and
+southern right whales was associated with varying AAR depths
+relative to the thermocline depth, whale vocalizing depth and
+noise levels between recording sites ( Shabangu et al., 2019 ;
+Shabangu et al., 2021 ; Letsheleha et al., 2022 ). Humpback
+whales produce sounds from the sea surface to as deep as
+175 m ( Stimpert et al., 2012 ), our recorders deployed at
+different depths were well positioned to equally record
+vocalizations of these whales. Thus, the difference in acoustic
+occurrence of humpback whales from this study and whale
+species from other studies might be caused by different
+ecological use of the region and differences in vocalizing
+depths of different whale species.
+In August 2016, humpback whales were not detected at AAR4
+but were present 240 km away at AA3. Correspondingly,
+Antarctic minke and sperm whale acoustic signals were also
+more common at the more inshore stations and simultaneously
+detected between AARs 1 and 2 but differently detected between
+AARs 3 and 4 during periods of overlap ( Shabangu et al., 2020a ;
+Shabangu and Andrew, 2020 ). The difference in humpback
+whale signal detection between AARs 3 and 4 during the
+period of overlap is due to the great distance between them
+(i.e., 240 km) and indicates a preference for the more inshore
+AAR3 waters. Peak humpback whale acoustic occurrence was in
+October for AARs 1, 2 and 4, suggesting that most humpback
+whales arrive in the South African west coast around that month
+or they sing more often during that month. The peak acoustic
+occurrence for AAR3 was September (spring), indicating that
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273248
+arrival of whales is slightly early in some years. Barendse et al.
+(2010) also observed a mid-spring peak of whale occurrence
+from shore-based observations off Saldanha Bay. Furthermore,
+difference in peak occurrence between AARs 3 and 4 during time
+of recording overlap might indicate that whales in the 1,100 and
+4,400 m water depths transitioned back and forth between the
+two sites.
+Maud Rise
+Off Antarctica, the highest percentage of acoustic occurrence of
+humpback whales was in April with few detections in May and
+July, which supports ﬁndings of previous studies that showed
+humpback whales can sometimes inhabit ice-infested areas as
+they occasionally provide suitable year-round feeding conditions
+and inhabitable overwintering conditions (e.g., Van Opzeeland
+et al., 2013 ; Schall et al., 2020 ; Schall et al., 2021a ; Schall et al.,
+2021b). The peak occurrence at mid-autumn relates to the high
+Antarctic krill abundance dominated by large sized zooplankton
+in late summer ( Hewitt et al., 2004 ), which could indicate that
+whales were feeding in that region by then. Humpback whales
+present in Antarctica during winter could be few males that do
+not migrate to mid- and low latitudes to reproduce ( Brown et al.,
+1995) in efforts to conserve energy associated with migration and
+reproduction ( Lockyer, 1984 ). Van Opzeeland et al. (2013)
+detected humpback whale non-songs produced by males and
+females year-round off the Ekström Ice Shelf, eastern Weddell
+Sea, and attributed such presence of whales in sea ice-infested
+waters to food availability and presence of polynyas in that area.
+Antarctic blue whales ( Shabangu et al., 2020a ), Antarctic
+minke whales ( Shabangu et al., 2020b ), and crabeater seals
+(Lobodon carcinophaga )( Shabangu and Charif, 2021 )w e r e
+detected acoustically off the Maud Rise during periods of high
+sea ice concentration. Humpback whales seems to show a
+different pattern by having little to no detections when sea ice
+concentration increased above 80% (hence negative correlation
+with distance to the sea ice extent), likely to avoid resource
+competition with Antarctic blue and minke whales that increased
+their acoustic presence with increasing sea ice concentration
+(Shabangu et al., 2020a ; Shabangu et al., 2020b ). Additionally,
+limited acoustic presence could be due to humpback whales
+moving on with their migration.
+Unfortunately, there was little overlap in recording periods
+between the Antarctic site and South African sites, making it
+difﬁcult to interpret movements between the areas. Nonetheless,
+these acoustic detections pro vide useful information about
+acoustic occurrence in these regions. The Maud Rise has been
+shown to be a useful habitat for other marine mammals such as
+Antarctic blue and ﬁn whales ( Shabangu et al., 2020a ), minke
+whales ( Shabangu et al., 2020b ), crabeater seals ( Shabangu and
+Charif, 2021 ), and Ross seals ( Ommatophoca rossii )( Shabangu
+and Rogers, 2021 ). Thus, the Maud Rise is likely an important
+summer foraging habitat for humpback whales given their
+elevated percentage of acoustic occurrence in austral autumn.
+It is conceivable that songs were produced while feeding
+(Stimpert et al., 2012 ; Gridley et al., 2018 ). Equally, humpback
+whales have been observed to sing outside of their breeding
+grounds in the Southern Ocean IWC Management Area V
+between ~68°S and 166°E ( Garland et al., 2013 ). Furthermore,
+studies around the world have found humpback whales singing
+outside of breeding grounds ( Au et al., 2000 ; Parks et al., 2014 ;
+Kowarski et al., 2017; Kowarski et al., 2019; Kowarski et al., 2021;
+Martin et al., 2021 ), and our results from South Africa and the
+Maude Rise support the notion that this pattern is true for all
+migratory humpback whale populations. Humpback whales were
+observed to sing extensively in IWC Management Area II during
+the years, 2011-2013, but not in 2015-2016, but again in 2017-
+2018, most likely in relation to El Niño Southern Oscillation
+(Schall et al., 2021a ). It would therefore be informative to collect
+more long-term data for the Maud Rise and South Africa to
+investigate the effects of climate variabilities on humpback whale
+acoustic ecology.
+Diel Trends
+T h ei n c r e a s ei nh u m p b a c kw h a l es o n gd e t e c t i o nd u r i n g
+nighttime off the west coast of South Africa and the Maud
+Rise, Antarctica, suggests that humpbacks are more vocally
+active at night. Likewise, humpback whale songs were
+modelled to vocalize more at nighttime in the coastal area of
+False Bay on the west coast of South Africa ( Ross-Marsh et al.,
+2021). To our best knowledge, the diel pattern of humpback
+whale songs was previously unknown for the Maud Rise
+although Schall et al. (2020 ; 2021a) found no diel vocalizing
+patterns of humpback whale non-songs and songs from multi-
+year data for sites close to the Maud Rise. Humpback whales have
+also been observed elsewhere to vocalize more at night; for
+example, off Angola ( Cerchio et al., 2014 ) and eastern Canada
+(Kowarski et al., 2017 ; Kowarski et al., 2019 ). Parks et al. (2014)
+showed that humpback whales tagged with multi-sensor acoustic
+tags in the Gulf of Maine, western North Atlantic, were more
+vocally active at nighttime while performing relatively shallower
+dives. In contrast, bottom dives during daytime were not
+accompanied by sound production when whales were observed
+with a conspeci ﬁc nearby ( Parks et al., 2014 ). Sound production
+during nighttime dives may allow whales to maintain aural
+contact with conspeci ﬁcs when visual contact is limited ( Au
+et al., 2000 ). Likewise, other baleen whales (Antarctic blue, ﬁn,
+minke and southern right whales) studied from this data were
+also more vocally active at night (Shabangu et al., 2019; Shabangu
+et al., 2020a ; Shabangu et al., 2020b ; Shabangu et al., 2021 ;
+Letsheleha et al., 2022 ).
+CONCLUSIONS
+We provide the ﬁrst description of the offshore seasonal
+occurrence and diel-vocalizing behavior of humpback whales
+off the west coast of South Africa and the Maud Rise, Antarctica,
+which both seem to be important regions for this species. High
+percentages of acoustic occurrence were detected in spring
+(September/October) off the west coast of South Africa, which
+corresponds to the breeding season and elevated Benguela
+Current upwelling activities . Off the Maud Rise, the high
+percentage of whale acoustic occurrence in mid-autumn
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 8273249
+(April) matches the high abundance of Antarctic krill at the end
+of summer. Whales were more vocally active at nighttime in both
+regions, potentially to maintain acoustic communication with
+conspeciﬁcs when visual contact was not possible. We found the
+simultaneous acoustic occurrence of humpback whales between
+two AARs during time of recording overlap to be different to
+other baleen whale acoustic occurrence previously described
+from these same recordings given their vocalizing depths and
+ecological use of the west coast of South Africa. This study
+contributes essential knowledge towards improving our
+understanding of the seasonal occurrence and diel-vocalizing
+behavior of humpback whales in both regions, which is crucial
+for understanding their occurrence trends which can inform
+appropriate management of these breeding stocks. Future work
+should expand upon the present PAM program to observe trends
+over extended timeframes, understand movements, and identify
+critical habitats.
+DATA AVAILABILITY STATEMENT
+The original contributions presented in the study are included in
+the article/supplementary material. Further inquiries can be
+directed to the corresponding author.
+AUTHOR CONTRIBUTIONS
+FS conceived the original idea. FS and KAK designed the study.
+FS processed the acoustic data, performed the statistical data
+analysis, and lead in writing the manuscript. KAK conducted the
+sound propagation modelling. KAK provided critical feedback
+and helped shape the research, analysis and manuscript. All
+authors contributed to the article and approved the
+submitted version.
+FUNDING
+Project data collection was funded by the South African National
+Antarctic Programme Grant No. SNA 2011112500003. The
+funder was not involved in the study analysis, interpretation of
+data, the writing of this article or the decision to submit it
+for publication.
+ACKNOWLEDGMENTS
+We thank the National Research Foundation and South African
+National Antarctic Programme for funding the SABWP (Grant
+No. SNA 2011112500003). We are sincerely grateful to Prof Ken
+Findlay, Meredith Thornton, Marcel van den Berg, Bradley
+Blows, Chris Wilkinson, numerous colleagues, collaborators,
+Captains and crew of the RVs SA Agulhas II and Algoa for
+their assistance with the deployment and recovery of the acoustic
+instruments used in this study. Thank you to those at JASCO
+Applied Sciences that contributed to the detection range
+modelling including Julien Delarue, Marie-Noel Matthews, and
+Ildar Urazghildiiev. Special thanks to the two reviewers for their
+thoughtful comments on earlier version of this manuscript.
+REFERENCES
+Ainslie, M. A., Miksis-Olds, J. L., Martin, S. B., Heaney, K. D., de Jong, C. A. F., von
+Benda-Beckmann, A. M., et al. (2018). DEON Underwater Soundscape and
+Modeling Metadata Standard, Version 1.0. Technical report by JASCO Applied
+Sciences for ADEON Prime Contract No. M16PC00003 (Halifax: JASCO).
+doi: 10.6084/m9. ﬁgshare.6792359.v2
+Amaral, A. R., Loo, J., Jaris, J., Olavarria, C., Thiele, D., Ensor, P., et al. (2016).
+Population Genetic Structure Among Feeding Aggregations of Humpback
+Whales in the Southern Ocean. Mar. Biol. 163, 132. doi: 10.1007/s00227-016-
+2904-0
+Au, W. W. L., Mobley, J., Burgess, W. C., Lammers, M. O., and Nachtigall, P. E.
+(2000). Seasonal and Diurnal Tre nds of Chorusing Humpback Whales
+Wintering in Waters Off Western Maui. Mar. Mam. Sci. 16 (3), 530 –544.
+doi: 10.1111/j.1748-7692.2000.tb00949.x
+Au, W. W. L., Pack, A. A., Lammers, M. O., Herman, L. M., Deakos, M. H., and
+Andrews, K. (2006). Acoustic Properties of Humpback Whale Songs. J. Acoust.
+Soc Am. 120, 1103 –1110. doi: 10.1121/1.2211547
+Barendse, J., Best, P. B., Carvalho, I., and Pomilla, C. (2013). Mother Knows Best:
+Occurrence and Associations of Resighted Humpback Whales Suggest
+Maternally Derived Fidelity to a Southern Hemisphere Coastal Feeding
+Ground. PloS One 8 (12), e81238. doi: 10.1371/journal.pone.0081238
+Barendse, J., Best, P. B., Thornton, M., Elwen, S. H., Rosenbaum, H. C., Carvalho,
+I., et al. (2011). Transit Station or Destination? Attendance Patterns,
+Movements and Abundance Estimate of Humpback Whales Off West South
+Africa From Photographic and Genotypic Matching. Afr. J. Mar. Sci. 33 (3),
+353–373. doi: 10.2989/1814232X.2011.637343
+Barendse, J., Best, P. B., Thornton, M., Pomilla, C., Carvalho, I., and Rosenbaum,
+H. C. (2010). Migration Rede ﬁned? Seasonality, Movements and Group
+Composition of Humpback Whales Megaptera Novaeangliae Off the West
+Coast of South Africa. Afr. J. Mar. Sci. 32 (1), 1 –22. doi: 10.2989/
+18142321003714203
+Becker, J. J., Sandwell, D. T., Smith, W. H. F., Braud, J., Binder, B., Depner, J., et al.
+(2009). Global Bathymetry and Elevation Data at 30 Arc Seconds Resolution:
+SRTM30_PLUS.Mar. Geod. 32 (4), 355–371. doi: 10.1080/01490410903297766
+Beitsch, A., Kaleschke, L., and Kern, S. (2014). Investigating High Resolution
+AMSR2 Sea Ice Concentrations During the February 2013 Fracture Event in
+the Beaufort Sea. Remote Sens 6, 3841 –3856. doi: 10.3390/rs6053841
+Best, P. B. (2007). Where Is the Breeding Ground for Humpback Whales from
+Breeding Stock B2? (SC/63/SH17) (Cambridge: International Whaling
+Commission), p. 18.
+Best, P. B. (2011). Catch history, seasonal and temporal trends in the migrations of
+humpback whales along the west coast of southern Africa. (SC/62/SH5).
+Cambridge: International Whaling Commission, 25.
+Best, P. B., and Allison, C. (2010). “Catch History, Seasonal and Temporal Trends
+in the Migrations of Humpback Whales Along the West Coast of Southern
+Africa,” in Paper SC/62/SH5 Presented to the IWC Scienti ﬁc Committee
+(Agadir, Morocco), p. 25.
+Best, P. B., Sekiguchi, K., and Findlay, K. P. (1995). A Suspended Migration of
+Humpback WhalesMegaptera Novaeangliae on the West Coast of South Africa.
+Mar. Ecol. Prog. Ser. 118, 1 –12. doi: 10.3354/meps118001
+Birch, G. (1977). Sur ﬁcial Sediments on the Continental Margin Off the West
+Coast of South Africa. Mar. Geol. 23 (4), 305–337. doi: 10.1016/0025-3227(77)
+90037-8
+Brown, M. R., Corkeron, P. J., Thale, P. T., Schultz, K. W., and Bryden, M. M.
+(1995). Evidence for a Sex-Segregated Migration in the Humpback Whale
+(Megaptera Novaeangliae ). P r o c .R .S o c . B259, 229 –234. doi: 10.1098/
+rspb.1995.0034
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 82732410
+Carnes, M. R. (2009). Description and Evaluation of GDEM-V 3.0 (Stennis Space
+Centre: US Naval Research Laboratory), 21 p. Available at: https://apps.dtic.
+mil/dtic/tr/fulltext/u2/a494306.pdf. MS. NRL Memorandum Report 7330-09-
+9165.
+Center for Conservation Bioacoustics (2019). Raven Pro: Interactive Call Analysis
+Software (Version 1.6.1) (Ithaca, NY: The Cornell Lab of Ornithology).
+Available at: http://www.birds.cornell.edu/raven.
+Cerchio, S., Strindberg, S., Collins, T., Bennett, C., and Rosenbaum, H. (2014).
+Seismic Surveys Negatively Affect Humpback Whale Singing Activity Off
+Northern Angola. PloS One 9 (3), e86464. doi: 10.1371/journal.pone.0086464
+Cholewiak, D. M., Sousa-Lima, R. S., and Cerchio, S. (2013). Humpback Whale
+Song Hierarchical Structure: Historical Context and Discussion of Current
+Classi ﬁcation Issues. Mar. Mamm. Sci. 29, E312 –E332. doi: 10.1111/
+mms.12005
+Comiso, J. C., and Gordon, A. L. (1987). Recurring Polynyas Over the Cosmonaut
+Sea and the Maud Rise. J. Geophys. Res. 92, 2819 –2833. doi: 10.1029/
+JC092iC03p02819
+Delarue, J. J.-Y., Moors-Murphy, H., Kowarski, K. A., Davis, G. E., Urazghildiiev, I.
+R., and Martin, S. B. In Press. Co-Acoustic Occurrence of Baleen Whales,
+Particularly Blue, Fin, and Humpback Whales, Off Eastern Canada 2015 –2017.
+Endanger. Species Res .
+Dey, S. P., Vichi, M., Fearon, G., Seyboth, E., Findlay, K. P., Meynecke, J. O., et al.
+(2021). Oceanographic Anomalies Coinciding With Humpback Whale Super-
+Group Occurrences in the Southern Benguela. Sci. Rep. 11, 20896. doi: 10.1038/
+s41598-021-00253-2
+Donovan, G. P. (1991). A Review of IWC Stock Boundaries. Rep. Int. Whal.
+Commn. Spec. 13, 39 –68.
+D u n l o p ,R .A . ,C a t o ,D .H . ,a n dN o a d ,M .J .( 2 0 0 8 ) .N o n - S o n gA c o u s t i c
+Communication in Migrating Humpback Whales ( Megaptera Novaeangliae ).
+Mar. Mamm. Sci. 24, 613 –629. doi: 10.1111/j.1748-7692.2008.00208.x
+Dunlop, R. A., and Noad, M. J. (2016). The “Risky” Business of Singing: Tactical
+Use of Song During Joining by Male Humpback Whales. Behav. Ecol. Sociobiol.
+70, 2149 –2160. doi: 10.1007/s00265-016-2218-8
+Dunlop, R. A., Noad, M. J., Cato, D. H., and Stokes, D. (2007). The Social
+Vocalization Repertoire of East Australian Migrating Humpback Whales
+(Megaptera Novaeangliae ). J. Acoust. Soc Am. 122 (5), 2893 –2905.
+Edds-Walton, P. L. (1997). Acoustic Communication Signals of Mysticete Whales.
+Bioacoustics 8, 47 –60. doi: 10.1080/09524622.1997.9753353
+El-Gabbas, A., Van Opzeeland, I., Burkhardt, E., and Boebel, O. (2021). Dynamic
+Species Distribution Models in the Marine Realm: Predicting Year-Round
+Habitat Suitability of Baleen Whales in the Southern Ocean. Front. Mar. Sci. 8,
+2276. doi: 10.3389/fmars.2021.802276
+Everson, I. (2000). Krill: Biology, Ecology and Fisheries (Malden, MA: Blackwell
+Sciences).
+Fetterer, F., Knowles, K., Meier, W., and Savoie, M. (2016). Sea Ice Index, Version 2
+(Boulder, Colorado USA: NSIDC: National Snow and Ice Data Center).
+doi: 10.7265/N5736NV7
+Findlay, K. P., and Best, P. B. (1995). Summer Incidence of Humpback Whales on
+the West Coast of South Africa. S. Afr. J. Mar. Sci. 15, 279–282. doi: 10.2989/
+02577619509504851
+Findlay, K. P., Seakamela, S. M., Meÿer, M. A., Kirkman, S. P., Barendse, J., Cade,
+D. E., et al. (2017). Humpback Whale “Super-Groups”- A Novel Low-Latitude
+Feeding Behaviour of Southern Hemisphere Humpback Whales ( Megaptera
+Novaeangliae) in the Benguela Upwelling System. PloS One 12 (3), e0172002.
+doi: 10.1371/journal.pone.0172002
+Fournet, M. E. H., Gabriele, C. M., Sharpe, F., Straley, J. M., and Szabo, A. (2018).
+Feeding Calls Produced by Solitary Humpback Whales. Mar. Mamm. Sci. 34
+(3), 851 –865. doi: 10.1111/mms.12485
+Garland, E. C., Gedamke, J., Rekdahl, M. L., Noad, M. J., Garrigue, C., and Gales,
+N. (2013). Humpback Whale Song on the Southern Ocean Feeding Grounds:
+Implications for Cultural Transmission. PloS One 8 (11), e79422. doi: 10.1371/
+journal.pone.0079422
+Garland, E. C., Rendell, L., Lamoni, L., Poole, M. M., and Noad, M. J. (2017). Song
+Hybridization Events During Revolutionary Song Change Provide Insights
+Into Cultural Transmission in Humpback Whales.Proc. Natl. Acad. Sci. U. S. A.
+114 (30), 7822 –7829. doi: 10.1073/pnas.1621072114
+Girola, E., Noad, M. J., Dunlop, R. A., and Cato, D. H. (2019). Source Levels of
+Humpback Whales Decrease With Freq uency Suggesting an Air-Filled
+Resonator is Used in Sound Production. J. Acoust. Soc Am. 145 (2), 869 –
+880. doi: 10.1121/1.5090492
+Gordon, A. L. (2009). “Bottom Water Formation, ” in Encyclopedia of Ocean
+Sciences, 2nd edn, vol. Vol 1 . Eds. J. H. Steele, S. A. Thorpe and K. K. Turekian
+(London: Academic Press), 415 –421 p.
+Gridley, T., Silva, M., Wilkinson, C., Seakamela, S., and Elwen, S. (2018). Song
+Recorded Near a Super-Group of Humpback Whales on a Mid-Latitude
+Feeding Ground Off South Africa. J. Acoust. Soc Am. 143 (4), EL298 –EL304.
+Guisan, A., Edwards, T. C., and Hastie, T. (2002). Generalized Linear and
+Generalized Additive Models in Studies of Species Distributions: Setting the
+Scene. Ecol. Model. 157, 89 –100. doi: 10.1016/S0304-3800(02)00204-1
+Hellmer, H. (2007). “Oceanography of Weddell Sea, ” in Encyclopedia of the
+Antarctic. Ed. B. Riffenburgh (New York, NY: Routledge), 1053 –1056, pp.
+Hewitt, R. P., Kim, S., Naganobu, M., Gutierrez, M., Kang, D., Takao, Y., et al.
+(2004). Variation in the Biomass Density and Demography of Antarctic Krill in
+the Vicinity of the South Shetland Islands During the 1999/2000 Austral
+Summer. Deep Sea Res. Part II Top. Stud. Oceanogr 51, 1411 –1419.
+Huang, X., and Jokat, W. (2016). Sedimentation and Potential Venting on the
+Rifted Continental Margin of Dronning Maud Land. Mar. Geophys. Res. 37,
+313–324.
+International Organization for Standardization. (2017). Underwater Acoustics –
+Measurement of Radiated Underwater Sound From Percussive Pile Driving
+(Geneva). Available at: https://www.iso.org/obp/ui/#iso:std:iso:18406:ed-1:v1:
+en. ISO 18406:2017(E).
+Kowarski, K., Cerchio, S., Whitehead, H., and Moors-Murphy, H. (2021). Where,
+When, and Why do Western North Atlantic Humpback Whales Begin to Sing?
+Bioacoustics. doi: 10.1080/09524622.2021.1972838
+Kowarski, K., Evers, C., Moors-Murphy, H., Martin, B., and Denes, S. L. (2017).
+Singing Through Winter Nights: Seasonal and Diel Occurrence of Humpback
+Whale ( Megaptera Novaeangliae ) Calls in and Around the Gully MPA,
+Offshore Eastern Canada. Mar. Mamm. Sci. 34 (1), 169 –189.
+Kowarski, K., Moors-Murphy, H., Maxner, E., and Cerchio, S. (2019). Western
+North Atlantic Humpback Whale Fall and Spring Acoustic Repertoire: Insight
+Into Onset and Cessation of Singing Behavior. J. Acoust. Soc Am. 145 (4),
+2305–2316.
+Letsheleha, I. S., Shabangu, F. W., Farrell, D., Andrew, R. K., la Grange, P. L., and
+Findlay, K. P. (2022). Year-Round Acoustic Monitoring of Antarctic Blue and
+in Whales in Relation to Environmental Conditions Off the West Coast of
+South Africa. Mar. Biol. 169, 41. doi: 10.1007/s00227-022-04026-x
+Lockyer, C. (1984). Review of Baleen Whale Reproduction and Implications for
+Management. Rep. Int. Whal. Commn. Spec. Iss. 6, 27 –50.
+Mackintosh, N. A. (1942). The Southern Stocks of Whalebone Whales. Discovery
+Rep. 22, 197–300.
+Martin, S. C., Aniceto, A. S., Ahonen, H., Pedersen, G., and Lindstrøm, U. (2021).
+Humpback Whale ( Megaptera Novaeangliae ) Song on a Subarctic Feeding
+Ground. Front. Mar. Sci. 8, 669748. doi: 10.3389/fmars.2021.669748
+Martin, S. B., Morris, C., Bröker, K., and O'Neill, C. (2019). Sound Exposure Level
+as a Metric for Analyzing and Managing Underwater Soundscapes. J. Acoust.
+Soc Am. 146 (1), 135 –149. doi: 10.1121/1.5113578
+Matthews, L. H. (1938). The Humpback Whale Megaptera Nodosa . Discov. Rep.
+17, 7 –92.
+Matthews, M.-N. R., and MacGillivray, A. O. (2013). Comparing Modeled and
+Measured Sound Levels From a Seismic Survey in the Canadian Beaufort Sea.
+Proc. Meet. Acoust. 19 (1), 1 –8. doi: 10.1121/1.4800553
+Mckay, S., Širović, A., Thiele, D., Abery, N. W., Chester, E. T., Hildebrand, J., et al.
+(2004). Combining Acoustic, Sighting Survey and Sea Ice Data to Investigate
+the Seasonal Presence of Humpback Whales, Megaptera Novaeangliae, in the
+Western Antarctic Peninsula (SC/56/E26) (Cambridge: International Whaling
+Commission), 9.
+Olsen, O. (1914). Whales and Whaling in South Africa (Translated From
+Norwegian). Bergens Mus Arb. 15 (5), 56.
+Parks, S., Cusano, D., Stimpert, A., Weinrich, M. T., Friedlaender, A. S., and Wiley,
+D. N. (2014). Evidence for Acoustic Communication Among Bottom Foraging
+Humpback Whales. Sci. Rep. 4, 7508. doi: 10.1038/srep07508
+Payne, R. S., and McVay, S. (1971). Songs of Humpback Whales. Science 173, 585–
+597. doi: 10.1126/science.173.3997.585
+Pomilla, C., and Rosenbaum, H. C. (2005). Against the Current: An Inter-Oceanic
+Whale Migration Event. Biol. Lett. 1, 1476 –1479. doi: 10.1098/rsbl.2005.0351
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 82732411
+Purdon, J., Shabangu, F. W., Yemane, D., Pienaar, M., Somers, M. J., and Findlay,
+K. (2020). Species Distribution Modelling of Bryde ’s Whales, Humpback
+Whales, Southern Right Whales, and Sperm Whales in the Southern African
+Region to Inform Their Conservation in Expanding Economies. PeerJ 8, e9997.
+Reisinger, R. R., Friedlaender, A. S., Zerbini, A. N., Palacios, D. M., Andrews-Goff,
+V., Dalla Rosa, L., et al. (2021). Combining Regional Habitat Selection Models
+for Large-Scale Prediction: Circumpolar Habitat Selection of Southern Ocean
+Humpback Whales. Remote Sens. 13, 13112074. doi: 10.3390/rs13112074
+Rosenbaum, H. C., Pomilla, C., Leslie, M., Best, P. B., Findlay, K. P., Engel, M. H.,
+et al. (2004). Mitochondrial DNA Diversity and Population Structure of
+Humpback Whales From their Wintering Areas in the Indian and South
+Atlantic Ocean (Breeding Regions A, B, C and X) (SC/56/SH3) (Cambridge:
+International Whaling Commission), 9.
+Rosenbaum, H. C., Pomilla, C., Mendez, M., Leslie, M. S., Best, P. B., Findlay, K. P.,
+et al. (2009). Population Structure of Humpback Whales From Their Breeding
+Grounds in the South Atlantic and Indian Oceans. PloS One 4 (10), e7318. doi:
+10.1371/journal.pone.0007318
+Ross-Marsh, E. C., Elwen, S. H., Prinsloo, A. S., James, B. S., and Gridley, T. (2021).
+Singing in South Africa: Monitoring the Occurrence of Humpback Whale
+(Megaptera Novaeangliae ) Song Near the Western Cape. Bioacoustics 30 (2),
+163–179. doi: 10.1080/09524622.2019.1710254
+Schall, E., Thomisch, K., Boebel, O., Gerlach, G., Spiesecke, S., and Van Opzeeland,
+I. (2020). Large-Scale Spatial Variabilities in the Humpback Whale Acoustic
+Presence in the Atlantic Sector of the Southern Ocean. R. Soc Open Sci. 7,
+201347. doi: 10.1098/rsos.201347
+Schall, E., Thomisch, K., Boebel, O., Gerlach, G., Woods, S. M., El-Gabbas, A., et al.
+(2021a). Multi-Year Presence of Humpback Whales in the Atlantic Sector of
+the Southern Ocean But Not During El Niño. Commun. Biol. 4, 790.
+doi: 10.1038/s42003-021-02332-6
+Schall, E., Thomisch, K., Boebel, O., Gerlach, G., Woods, S. M., Roca, I. T., et al.
+(2021b). Humpback Whale Song Rec ordings Suggest Common Feeding
+Ground Occupation by Multiple Populations. Sci. Rep. 11, 18806.
+doi: 10.1038/s41598-021-98295-z
+Shabangu, F. W., and Andrew, R. K. (2020). Clicking Throughout the Year: Sperm
+Whale Clicks in Relation to Environmental Conditions Off the West Coast of
+South Africa. Endanger. Species Res. 43, 475 –494. doi: 10.3354/esr01089
+Shabangu, F. W., Andrew, R. K., and Findlay, K. (2021). Acoustic Occurrence,
+Diel-Vocalizing Pattern and Detection Ranges of Southern Right Whale
+Gunshot Sounds Off South Africa ’s West Coast. Mar. Mamm Sci. 37, 733 –
+750. doi: 10.1111/mms.12760
+Shabangu, F. W., Andrew, R. K., Yemane, D., and Findlay, K. P. (2020a). Acoustic
+Seasonality, Behaviour and Detection Ranges of Antarctic Blue and Fin Whales
+Under Different Sea Ice Conditions Off Antarctica. Endang. Species Res. 43, 21–
+37. doi: 10.3354/esr01050
+Shabangu, F. W., and Charif, R. A. (2021). Short Moan Call Reveals Seasonal
+Occurrence and Diel-Calling Pattern of Crabeater Seals in the Weddell Sea,
+Antarctica. Bioacoustics 30 (5), 543 –563. doi: 10.1080/09524622.2020.
+1819877
+Shabangu, F. W., Findlay, K., and Stafford, K. M. (2020b). Seasonal Acoustic
+Occurrence, Diel-Vocalizing Patterns and Bioduck Call-Type Composition of
+Antarctic Minke Whales Off the West Coast of South Africa and the Maud
+Rise, Antarctica. Mar. Mamm. Sci. 36, 658 –675. doi: 10.1111/mms.12669
+Shabangu, F. W., Findlay, K. P., Yemane, D., Stafford, K. M., van den Berg, M.,
+Blows, B., et al. (2019). Seasonal Occurrence and Diel Calling Behavior of
+Antarctic Blue Whales and Fin Whales in Relation to Environmental
+Conditions Off the West Coast of South Africa. J. Mar Syst. 190, 25 –39. doi:
+10.1016/j.jmarsys.2018.11.002
+Shabangu, F. W., and Rogers, T. L. (2021). Summer Circumpolar Acoustic
+Occurrence and Call Rates of Ross
+Ommatophoca Rossii ,a n dL e o p a r d ,
+Hydrurga Leptonyx , Seals in the Southern Ocean. Polar Biol. 44, 433 –450.
+doi: 10.1007/s00300-021-02804-9
+Shabangu, F. W., Yemane, D., Stafford, K. M., Ensor, P., and Findlay, K. P. (2017).
+Modelling the Effects of Environmental Conditions on the Acoustic
+Occurrence and Behavior of Antarctic Blue Whales. PloS One 12 (2),
+e0172705. doi: 10.1371/journal.pone.0172705
+Shannon, V. (2009). “Benguela Current, ” in Encyclopedia of Ocean Sciences , 2nd
+edn. Eds. J. H. Steele, S. A. Thorpe and K. K. Turekian (London: Academic
+Press), 316 –327, p.
+Smith, W. H. F., and Sandwell, D. T. (1997). Global Sea Floor Topography From
+Satellite Altimetry and Ship Depth Soundings. Science 277 (5334), 1956 –1962.
+doi: 10.1126/science.277.5334.1956
+Spreen, G., Kaleschke, L., and Heygster, G. (2008). Sea Ice Remote Sensing Using
+AMSR-E 89-GHz Channels. J. Geophys. Res. Oceans 113, C2S03. doi: 10.1029/
+2005JC003384
+Stimpert, A. K., Peavey, L. E., Friedlaender, A. S., and Nowacek, D. P. (2012).
+Humpback Whale Song and Foraging Behavior on an Antarctic Feeding
+Ground. PloS One 7 (12), e51214. doi: 10.1371/journal.pone.0051214
+Stimpert, A. K., Wiley, D. N., Au, W. W. L., Johnson, M. P., and Arsenault, R.
+(2007). “Megapclicks”: Acoustic Click Trains and Buzzes Produced During
+Nighttime Foraging of Humpback Whales ( Megaptera Novaeangliae ). Biol.
+Lett. 3, 467 –470. doi: 10.1098/rsbl.2007.0281
+Teague, W. J., Carronand, M. J., and Hogan, P. J. (1990). A Comparison Between
+the Generalized Digital Environmental Model and Levitus Climatologies.
+J. Geophys. Res. 95 (C5), 7167 –7183. doi: 10.1029/JC095iC05p07167
+Thiele, D., Chester, E. T., Moore, S. E., S ̌irović, A., Hildebrand, J. A., and
+Friedlaender, A. S. (2004). Seasonal Variability in Whale Encounters in the
+Western Antarctic Peninsula. Deep-Sea Res. II 51, 2311 –2325. doi: 10.1016/
+j.dsr2.2004.07.007
+Thomisch, K., Boebel, O., Bachmann, J., Filun, D., Neumann, S., Spiesecke, S., et al.
+(2019). Temporal Patterns in the Acoustic Presence of Baleen Whale Species in
+a Presumed Breeding Area Off Namibia. Mar. Ecol. Prog. Ser. 620, 201 –214.
+doi: 10.3354/meps12952
+Van Opzeeland, I., Van Parijs, S., Kindermann, L., Burkhardt, E., and Boebel, O.
+(2013). Calling in the Cold: Pervasive Acoustic Presence of Humpback Whales
+(Megaptera Novaeangliae) in Antarctic Coastal Waters. PloS One 8 (9), e73007.
+doi: 10.1371/journal.pone.0073007
+Videsen, S. K. A., Bejder, L., Johnson, M., and Madsen, P. T. (2017). High Suckling
+Rates and Acoustic Crypsis of Humpback Whale Neonates Maximise Potential
+for Mother-Calf Energy Transfer. Funct. Ecol. 31, 1561 –1573. doi: 10.1111/
+1365-2435.12871
+Warren, V. E., S ̌irović, A., McPherson, C., Goetz, K. T., Radford, C. A., and
+Constantine, R. (2021). Passive Acoustic Monitoring Reveals Spatio-Temporal
+Distributions of Antarctic and Pygmy Blue Whales Around Central New
+Zealand. Front. Mar. Sci. 7, 575257. doi: 10.3389/fmars.2020.575257
+Wood, S. N. (2017). P-Splines With Derivative Based Penalties and Tensor
+Product Smoothing of Unevenly Distributed Data. Stat. Comput. 27 (4),
+985–989. doi: 10.1007/s11222-016-9666-x
+Zoidis, A. M., Smultea, M. A., Frankel, A. S., Hopkins, J. L., Day, A., McFarland, A.
+S., et al. (2008). Vocalizations Produced by Humpback Whale ( Megaptera
+Novaeangliae) Calves Recorded in Hawaii. J. Acoust. Soc Am. 123 (3), 1737 –
+1346. doi: 10.1121/1.2836750
+Conﬂict of Interest: KAK is employed by JASCO Applied Sciences (Canada) Ltd.
+The remaining authors declare that the research was conducted in the absence of
+any commercial or ﬁnancial relationships that could be construed as a potential
+conﬂict of interest.
+Publisher’s Note: All claims expressed in this article are solely those of the authors
+and do not necessarily represent those of their af ﬁliated organizations, or those of
+the publisher, the editors and the reviewers. Any product that may be evaluated in
+this article, or claim that may be made by its manufacturer, is not guaranteed or
+endorsed by the publisher.
+Copyright © 2022 Shabangu and Kowarski. This is an open-access article distributed
+under the terms of the Creative Commons Attribution License (CC BY). The use,
+distribution or reproduction in other forums is permitted, provided the original
+author(s) and the copyright owner(s) are credited and that the original publication in
+this journal is cited, in accordance with accepted academic practice. No use,
+distribution or reproduction is permitted which does not comply with these terms.
+Shabangu and Kowarski Songs on a Migration Route/Foraging Ground
+Frontiers in Marine Science | www.frontiersin.org April 2022 | Volume 9 | Article 82732412

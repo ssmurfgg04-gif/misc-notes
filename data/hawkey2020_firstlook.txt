@@ -1,0 +1,549 @@
+1 
+ 
+First look at humpback whale (Megaptera novaeangliae) song structure from 
+western South Africa 
+James Seymour Hawkey1, Simon Harvey Elwen1,2,4, Bridget Susan James1,4, Alexa Simone 
+Prinsloo1,2 and Tess Gridley1,3,4* 
+  
+1 Sea Search Research and Conservation NPO, Muizenberg, Cape Town, South Africa 
+2 Department of Zoology and Entomology, University of Pretoria, Pretoria, South Africa 
+3 Department of Statistical Sciences, University of Cape Town, Cape Town, South Africa 
+4 Department of Botany and Zoology, Stellenbosch University, Stellenbosch, South Africa 
+ 
+*Correspondence: tessgridley@yahoo.co.uk  
+ 
+Abstract 
+Humpback whales are known for their complex and well-structured song that is typically 
+produced on low-latitude breeding grounds. However, there is increasing evidence of song 
+production on migration routes and high-latitude feeding grounds. Within a breeding ground 
+and season, males share songs that progressively change over time. Song production on 
+migration routes leads to the cultural transmission and sharing of songs. This is the first 
+assessment of song structure in humpback whales recorded near Cape Town, South Africa. 
+Song was identified in recordings made between 9 September 2016 and 21 October 2016 
+on a moored hydrophone located in Fish Hoek, False Bay. Thirty-nine song sessions were 
+recorded, consisting of nine distinct units, forming ten themes. Themes occasionally 
+overlapped in time, indicating multiple simultaneous singers. They were repeated on multiple 
+days with consistent patterns in theme transition, demonstrating song sharing amongst 
+individuals. Convergence on a similar song structure suggests singing whales originate from 
+the same breeding stock. We propose that an unknown proportion of these whales continue 
+to sing beyond the recognised breeding season. These data support previous studies that 
+found that singing is not restricted to low-latitude breeding sites. 
+Keywords: breeding, singing, suspended migration, vocalisation 
+ 
+Introduction 
+The song produced by male humpback whales (Megaptera novaeangliae) is considered one 
+of the most unique forms of communication in the animal kingdom, because of its complex 
+characteristics, rapid evolution and cultural transmission within and between populations 
+(Payne and McVay 1971; Darling et al. 2006; Garland et al. 2011; Garland et al. 2013). 
+Humpback whale song is highly stereotypical and based on a hierarchical structure; units are 
+repeated in a fixed sequence to make a phrase; repeated phrases comprise themes. 
+Sequences of themes in a specific order make up a song (Payne and McVay 1971; 
+Cholewiak et al. 2013). Males repeat songs during a song session, which can continue for 
+up to eight hours (Payne and Payne 1985; Garland et al. 2013). Song units are highly 
+variable in frequency range, with most energy concentrated in the 100 Hz to 4 000 Hz band 
+(Tyack and Clark 2000). However, low frequency components at 30 Hz and harmonics as 
+high as 24 000 Hz have been documented (Payne and Payne 1985; Au et al. 2006). 
+ 
+The function of humpback whale song is not fully understood (Herman et al. 2013; Herman 
+2017), though its production is strongly linked to breeding behaviour (Payne and McVay 
+1971; Cerchio et al. 2001; Cholewiak 2008). Although song is extensively produced at 
+2 
+ 
+breeding grounds, there are increasing reports of singing behaviour on low-latitude feeding 
+grounds and during annual migrations when breeding is not observed (Gabriele and Frankel 
+2002; Clark and Clapham 2004; Vu et al. 2012; Garland et al. 2013; Gridley et al. 2018; 
+Magnúsdóttir and Lim 2019). Within breeding grounds, song largely conforms to a single 
+type, with only minor individual variation (Payne and Payne 1985; Helweg et al. 1992; 
+Garland et al. 2013). However, at the same time the song is also constantly evolving (Payne 
+and Payne 1985). Different populations show similarities in song type, i.e. a sharing of units 
+and phrases, with the extent of shared song content being relative to the geographical 
+distance of separation (Helweg et al. 1998; Cerchio et al. 2001; Garland et al. 2013, 2015;  
+Rekdahl et al. 2018). Therefore, in addition to traditional methods, such as, photo 
+identification, genetic sampling and satellite tracking (Barendse et al. 2011; Rosenbaum et  
+al. 2014), detailed analysis of song structure may provide a contemporary and cost-effective 
+indicator of population structure and interchange (Rekdahl et al. 2018). 
+ 
+In the Southern Hemisphere, humpback whales are typically observed spending summer 
+months feeding in high-latitude Antarctic waters, migrating north to low-latitude breeding 
+grounds during the winter months (Kellogg 1929; Barendse et al. 2011; Best 2011; Findlay et 
+al. 2017). The coastal waters of southern Africa are used as a migration path, with the west 
+coast population referred to as Breeding stock B (BSB), split into two subpopulations BSB1 
+(Gulf of Guinea) and BSB2 (west South Africa), and the east coast population as Breeding 
+stock C (BSC) (IWC 1998). 
+The International Whaling Commission’s moratorium on commercial whaling (introduced in 
+1982, effective by 1985), has been a huge conservation success for humpback whales, with 
+many stocks growing markedly in abundance since the moratorium was put in place 
+(Wedekin et al. 2017), including BSB (IWC 2012). As stock sizes change, there have been 
+remarkable behavioural shifts within humpback whale populations (Mobley et al. 1999; Félix 
+and Haase 2001). The cold, nutrient rich upwelled water of the Benguela current off the west 
+coast of southern Africa has long been recognised as a potentially important feeding ground 
+for migrating whales. In this area animals have been observed feeding well after the typical 
+southern migration period (October–November), in what has been termed a ‘suspended 
+migration’ (Best et al. 1995; Barendse et al. 2011). Along the west coast of South Africa, 
+large feeding aggregations of whales have been documented in the past eight years, with 
+‘super-groups’ of animals in excess of 200 individuals feeding for hours at a time (Findlay et 
+al. 2017; Gridley et al. 2018). Song was recently documented from recordings of humpback 
+whales feeding in super-groups (Gridley et al. 2018); however, very little other information 
+about the singing behaviour of whales on the west coast of southern Africa exists. Studying 
+song may provide insight into the population structure and movements along this migratory 
+corridor. Here we conducted a preliminary investigation into song occurrence and structure 
+within western South African waters to investigate song convergence. We demonstrate the 
+viability of passive acoustic monitoring in near shore waters of the West coast of South 
+Africa to acoustically monitor humpback whale behaviour and presence over time. 
+Materials and methods  
+The data analysed in this study were collected as part of a broader project focusing on 
+coastal dolphin distribution in False Bay, South Africa (34.2° S, 18.7° E). False Bay is a 
+shallow sloped, sandy-bottomed bay roughly 30 × 30 km in extent. Four SoundTrap 
+hydrophones (Ocean Instruments NZ, Auckland, New Zealand), were deployed at sites 
+within False Bay in water depths of 30 m or less between September 2016 and January 
+2018 (Figure 1). Hydrophones were set with a high gain preamplification mode and acoustic 
+data saved as SUD raw files through lossless compression. Because the original project 
+goal was to record dolphin presence, an intermittent duty cycle of 5 min on and 5 min off was 
+3 
+ 
+used, with acoustic data sampled at 96 000 Hz. This had implications for the consistent 
+identification and description of whale song structure, outlined below. 
+ 
+Figure 1: Map of the study area showing hydrophone location at Fish Hoek 
+Acoustic data were converted to Long-Term Spectral Averages (LTSAs) using the MATLAB 
+based program Triton (Matlab v.2017b, Triton v. 1.93.20160524) with a time and frequency 
+resolution of 5 s and 50 Hz, respectively. A manual analysis (author AP) searching for 
+dolphin vocalisations scanned the LTSAs at a 30 min time window, confirming dolphin 
+encounters by selecting the signal of interest and viewing the full resolution spectrogram with 
+a time window of 10 s. During this process, it became clear that whale song was present 
+during several recordings corresponding to the austral spring in 2016, for which incidental 
+observations were logged. 
+A complementary study, Ross-Marsh et al. (2020) documents the long-term presence of 
+song from the four sites. The current study, however, focuses only on whale song recorded 
+at Fish Hoek (34°14’ S, 18°44’ E), over one deployment spanning 9 September 2016 to 21 
+October 2016. Fish Hoek is located in the north-west corner of False Bay. All logged song 
+was confirmed by inspecting a full resolution spectrogram with the expand function in Triton 
+(frequency bandwidth 0 to 6 000 Hz, time window of 30 s, FFT 8192, 50% overlap, 
+brightness of 25 to 30 dB and contrast of 100%) and by using the audio-playback  
+feature to confirm signal classification. We systematically went through recordings and built 
+
+4 
+ 
+a catalogue of units, phrases and themes, using the standard hierarchical methodology 
+applied to humpback whale song (Payne and McVay 1971). Signal to noise ratio (SNR) was 
+visually assessed by the author (JH) and songs of low quality (i.e. units unclear or faint) were 
+discounted from the detailed analysis section. Because songs can change in SNR  
+over the song cycle, it is impractical to quantify the SNR for all units and visual assessment 
+of SNR is typical in humpback song research (Cholewiak et al. 2013; Garland  
+et al. 2015; Herman 2017). As can be seen by the sample sizes, we distilled the data to the 
+best possible song sessions (six sessions out of 39 used) so that we could be confident in 
+our results. Units were labelled with numbers and phrases/themes were labelled with letters. 
+Because of the intermittent nature of the acoustic duty cycle, it was not possible to conduct a 
+full analysis of continuous song structure. However, we used the data to describe song  
+characteristics and investigated similarities in song type between song sessions indicative of 
+signal convergence. Song separated by quiet periods exceeding one hour were defined as 
+separate song sessions. 
+We investigated song structure by looking at patterns in theme and phrase transitions 
+identified within the six high quality song sessions. This was the only effective way to 
+analyse similarities in song type, because of the limitations of the five-minute duration 
+recordings. Theme transitions were defined as the change from one theme to another  
+(e.g. A-C or B-A for example). The theme transitions from each song session were pooled to 
+identify if there were similarities in song type between the song sessions identified. 
+Regarding song stability, previous studies have found phrase duration to be a stable feature 
+of song that is more consistently produced within and between individuals (reviewed in 
+Cholewiak et al. 2013), while theme duration is more variable (Payne and Payne 1985). 
+Phrase duration was measured following Cholewiak et al. (2013), including the period of 
+silence between phrases, and measuring from the onset of the first unit in one phrase to the 
+analogous unit in the subsequent phrase. Investigating theme duration was problematic, 
+because of the duty cycle. However, where the whole theme could be resolved we made a  
+conservative measure of theme duration. Phrase and theme duration were compared using 
+the coefficient of variation CV) expressed as a percentage (CV = SD/mean × 100) to  
+provide a standardised measurement of variation. Because of sample size constraints, CVs 
+were calculated from duration data pooled over sessions and compared for phrases/themes  
+ 
+Results 
+In total, 490 hours of recordings were available from just less than 42 consecutive days 
+between 9 September 2016 and 21 October 2016. The first song session was recorded on 9 
+September, and the last song session was recorded on 16 October 2016. During this period, 
+we identified 39 song sessions lasting between 5 min and 8 h (mean 1 h 43 min ± 2 h 5 min 
+SD). Songs consisted of nine distinct units, forming ten phrases, repeated into themes. 
+Although uncommon, observations of overlapping song occurred in three song sessions, 
+indicating the presence of multiple singers. 
+Of the song sessions identified, six (3, 23, 26, 30, 34 and 35) were visually assessed as 
+having a high signal-to noise ratio and were used for detailed analysis. Out of the six song 
+sessions selected, two pairs were close in time: session 23 and 26 were separated by 12 h 
+38 min and session 34 and 35 separated by 1 h and 49 mins. All others were separated by 
+one to seven days. The same themes were identified within different recording sessions, 
+with theme A, B, and C recorded in all song sessions, theme D recorded in four of the six 
+song sessions and E and F in three of the six (Figure 2, Table 1). Of the 10 themes recorded 
+in total, four themes were rare and not recorded within the songs selected for detailed 
+analysis, with subsequent results focusing on the most common themes, A to F. Overall 93% 
+of the 407 theme occurrences documented were classified as either themes A (38%),  
+B (23%) or C (32%), indicating high levels of similarity between the structure of songs 
+5 
+ 
+recorded. Within song sessions, the proportion of themes of different types was  
+also very similar (Table 1). 
+A-C only. 
+ 
+Figure 2: Spectrogram of the most frequently occurring song themes, from humpback whales 
+recorded in Fish Hoek (10 September 2016). The best example of units within themes are labelled in 
+white text 
+
+6 
+ 
+Table 1: Summary of song occurrence (date/ time, duration) and breakdown by theme (count with 
+percentages shown) for different humpback whale song sessions analysed. Songs were recorded in 
+Fish Hoek, False Bay, South Africa, between 9 September and 16 October 2016 
+ 
+ 
+In total, 18 theme transition combinations were documented and within song sessions there 
+were generally consistent patterns in theme transition (Figure 3, Figure 4). The most 
+frequent theme transitions were A to C (30%) and B to A (22%). Transition B to C (10%) was 
+also common and present in all song sessions, excluding session 35. There was only 
+sufficient data to resolve meaningful duration information for the most common themes A, B, 
+and C. Of these, A was the longest (mean 1 min 38 sec ± 52 sec SD), then theme C (mean 
+1 min 16 sec ± 43 sec SD) and finally theme B (mean 56 ± 27 sec SD, Figure 5), which also 
+showed less variability in duration. The duration for themes D to F was much shorter than 
+the main themes, but measurement was based on much smaller sample sizes. The duration 
+of themes sung was more variable than phrases (Figure 5) with the CV of theme duration for 
+A, B and C being 54%, 49% and 57%, respectively. For comparison, the CV for phrase 
+duration was 15%, 17% and 20% for A, B and C, respectively. 
+In summary, we documented substantial singing activity in humpback whales over this 42-
+day period and a strong similarity in song type between the six discrete song sessions 
+analysed. 
+ 
+ 
+Figure 3: Spectrogram of phrase transition A to C 
+
+7 
+ 
+ 
+Figure 4: Stacked bar chart showing frequency of humpback whale song theme transition as a 
+proportion of each song session of whales recorded in Fish Hoek, South Africa, between 9  
+September and 16 October 2016. The figure demonstrates overall similarity in the structural 
+composition of the songs identified 
+
+8 
+ 
+ 
+Figure 5: Average duration(s) of song phrases and themes identified from Fish Hoek, South Africa, 
+between 9 September and 16 October 2016 
+ 
+Discussion 
+In this study we provide a first description of the song structure of humpback whales 
+recorded in South Africa. We detected a substantial amount of song at Fish Hoek during 
+September and October, sometimes produced by multiple animals. The analysis of theme 
+occurrence, proportions, transitions and phrase durations indicates convergence in song 
+type between individuals, with themes A, B and C the most commonly occurring in the songs 
+identified. As with early descriptions of humpback whale song (Payne and McVay 1971; 
+Payne and Payne 1985), we found that song sessions could last multiple hours, with 
+consistent structure and sequence of themes. Themes A, B and C were the most common 
+
+9 
+ 
+(Table 1) and the order in which they were sung was structured. The transitions A-C and B-A 
+were common to all song sessions. Other transitions, such as A-B or C-A, were 
+comparatively rare. As in other studies (reviewed by Cholewiak et al. 2013), phrase duration 
+was more consistent than theme duration (Figure 4). The number of themes identified (10),  
+was also similar to that identified in other populations (for example, Payne and Payne 1985 
+typically found 5–9 themes in any given year). 
+In general, humpback whale song is very well studied (reviewed in Parsons et al. 2008; 
+Herman 2017). In the South Pacific, for example, there have been extensive studies of the 
+cultural transmission of song between different regional populations where some phrases 
+were found to be common to all populations (Helweg et al. 1998; Garland et al. 2015). 
+Although based on limited sample sizes, a comparison between song characteristics of West 
+(BSB) and East (BSC) African coastal stocks demonstrated similarities within most years, 
+indicative of song sharing (Rekdahl et al. 2018). In addition, humpback whales breeding in 
+Angola show similarities in song type when compared with whales recorded off Brazil in the 
+south-west Atlantic Ocean, suggesting seasonal mixing and sharing of song components on 
+the winter feeding grounds in the Antarctic (Darling and Sousa-Lima 2005). However, there 
+is very little information on the acoustic behaviour of humpback whales inhabiting or 
+migrating through South African waters with no confirmed observations of singing whales 
+within the study area. Singing whales may travel slowly (Noad and Cato 2007), or be 
+characterised by a downward facing position (Au et al. 2006). In South Africa, Gridley et al. 
+(2018) documented song produced by or near to feeding whales, and Ross-Marsh et al. 
+(2020) documented the seasonal and diel patterns in song. However, no detailed analysis on 
+song structure has been conducted in South African waters. Our study demonstrates 
+similarities in song structure between sessions over a 42-day period and is the first step in 
+describing the song of migrating whales in South African waters. During passive acoustic 
+monitoring in the near shore waters of False Bay, we were able to record extensive song 
+and multiple singers, demonstrating the potential for this region to be an area of song 
+exchange and transmission between the various stocks breeding around Africa. 
+ 
+Our study raises questions on individual singing behaviour, the source population of the 
+singers and the purpose of such extensive song on what is currently believed to be a 
+southbound migration route. Although there are documented similarities in the song of 
+humpback whales between separate breeding stocks (Darling and Sousa-Lima 2005; 
+Garland et al. 2017), including between the west and east coasts of southern Africa 
+(Rekdahl et al. 2018), the relatively discrete timing of song production (September to 
+October) and similarity in song suggests that the singers detected were from the same 
+breeding stock. All these song sessions were recorded in September, a time of year when 
+there are large numbers of humpback whales occurring in coastal South African waters. In 
+most cases, there were sufficient intervals between songs to indicate different singers were 
+recorded, however, in cases of songs sessions occurring close in time (23/26, and 34/36), 
+the repeated recording of the same individual cannot be discounted. 
+ 
+The South African coast largely acts as a migration corridor for humpback whales and the 
+study site lies near the southern limit of the coastline and just to the east of known feeding 
+grounds in the southern Benguela (Barendse et al. 2011; Findlay et al. 2011). The location 
+and timing of whale presence in this area suggests that the animals detected are most likely 
+from the West coast BSB population, but could also be from the East coast BSC population 
+(Vinding et al. 2015). 
+ 
+10 
+ 
+The recordings analysed in this study were made during the expected southern migration 
+period for animals observed in this region, but given the timing and the distance from the 
+known breeding ground, the extent of song recorded was unexpected. These data indicate 
+that an unknown proportion of the humpback whale populations using the west coast of 
+South Africa as a migratory corridor and feeding grounds continue to sing beyond the 
+documented breeding season (June-August) and that singing is not restricted to the known 
+low-latitude breeding sites. Whether singing whales are from BSB and engaged in 
+southwards migration, originated from the BSC population, or have remained in South 
+African waters without migrating to the breeding grounds is currently unknown. Our 
+information adds to the growing body of evidence, indicating that humpback whale singing is 
+not restricted to breeding grounds, and that breeding display behaviour may be common on 
+migration routes and feeding grounds, year round (McSweeney et al. 1989; Clapham and 
+Mattila 1990; Clark and Clapham 2004; Stimpert et al. 2012; Gridley et al. 2018). 
+Alternatively, as sexually immature males may engage in singing (Herman  
+et al. 2013), it is also possible the animals detected were non-breeding animals that had not 
+completed the full northwards migration. 
+ 
+This study highlights the potential opportunity to monitor the evolution of song on the 
+migration route. Of particular interest is the potential cultural transmission of song 
+components between BSB1 and BSB2 on the west coast. Additional investigation of 
+horizontal cultural transmission of song types between the east coast (BSC) and west coast 
+(BSB) populations is also warranted. Continuous multiyear passive acoustic monitoring 
+within South African waters and at breeding grounds of BSB and BSC (and substocks) is 
+therefore recommended to enable detailed analyses of song structure and evolution over 
+time, such as those conducted in other locations (Payne and Payne 1985; Noad et al. 2000; 
+Garland et al. 2013, 2015), and to investigate stock structure using acoustic methodology 
+(Darling et al. 2014). 
+ 
+Summary 
+Long-term passive acoustic monitoring from fixed locations provides a new research method 
+in this study area for the collection of population level data on humpback whale occurrence 
+and behaviour (Ross-Marsh et al. 2020, Thomisch et al. 2019). Although not directly 
+representative of abundance, the data collected indicates the presence of humpback whales 
+and is far superior in temporal coverage than the limited sightings data that are currently 
+available. Year-round acoustic monitoring for humpback whale song and social sounds will 
+undoubtedly provide important information on the occurrence and breeding behaviour of the 
+growing whale population, while providing insight into population and substock dynamics 
+over time, as well as cultural transmission of song. Additional data collection could provide a 
+unique opportunity to link song to behaviour on this migratory route for the first time. 
+ 
+Acknowledgments 
+This research (2016–2018) was supported by Sea Search Research and Conservation NPO 
+and grant 93689 to SE from the South African National Research Foundation. Research was 
+conducted under a series of research and ethics permits issued to SE by the South African 
+Department of Environmental Affairs and the University of Pretoria Animal Use and Care 
+Committee, respectively. The authors would like to thank Monique Laubscher, Els 
+Vermeulen, Chris Wilkinson and Pieter Truter and his team for help at sea in deployment 
+and recovery of hydrophones and Erin Ross-Marsh for helpful comments on versions of this 
+manuscript. 
+11 
+ 
+Ethics approval  
+The following approvals were obtained: Animal ethics committee approval under project 
+(EC074-15), SANParks permit CRC/2016-2017/026-2015/V2 and a Government research 
+permit (DEA/DAFF) for 2016: RES2016/86. 
+ 
+ORCIDs 
+Simon Harvey Elwen: https://orcid.org/0000-0002-7467-6121 
+Bridget Susan James: https://orcid.org/0000-0002-0974-8619 
+Tess Gridley: https://orcid.org/0000-0003-0925-5782 
+ 
+References 
+Au WW, Pack AA, Lammers MO, Herman LM, Deakos MH, Andrews K. 2006. Acoustic 
+properties of humpback whale songs. The Journal of the Acoustical Society of America 
+120(2): 1103–1110. https://doi.org/10.1121/1.2211547. 
+ 
+Barendse J, Best PB, Thornton M, Elwen SH, Rosenbaum HC, Carvalho I, Pomilla C, Collins 
+TJ, Meÿer MA, Leeney RH. 2011. Transit station or destination? Attendance patterns, 
+movements and abundance estimate of humpback whales off west South Africa from 
+photographic and genotypic matching. African Journal of Marine Science 33(3): 353–73. 
+https://doi.org/10.2989/1814232X.2011.637343. 
+ 
+Best PB. 2011. Where is the breeding ground for humpback whales from Breeding Stock 
+B2? Paper SC/63/SH17 submitted to the Scientific Committee of the International Whaling 
+Commission, pp 1–8. 
+ 
+Best PB, Sekiguchi K, Findlay KP. 1995. A suspended migration of humpback whales 
+Megaptera novaeangliae on the west coast of South Africa. Marine Ecology Progress Series 
+118: 1–12. https://doi.org/10.3354/meps118001. 
+ 
+Cerchio S, Jacobsen JK, Norris TF. 2001. Temporal and geographical variation in songs of 
+humpback whales, Megaptera novaeangliae: synchronous change in Hawaiian and Mexican 
+breeding assemblages. Animal Behaviour 62(2): 313–329.  
+https://doi.org/10.1006/anbe.2001.1747. 
+ 
+Clark CW, Clapham PJ. 2004. Acoustic monitoring on a humpback whale (Megaptera 
+novaeangliae) feeding ground shows continual singing into late spring. Proceedings of the 
+Royal Society of London series B 271: 1051–1057. https://doi.org/10.1098/rspb.2004.2699. 
+ 
+Clapham PJ, Mattila DK. 1990. Humpback whale songs as indicators of migration routes. 
+Marine Mammal Science 6: 155–160. https://doi.org/10.1111/j.1748-7692.1990.tb00238.x. 
+ 
+12 
+ 
+Cholewiak D. 2008. Evaluating the role of song in the humpback whale (Megaptera 
+novaeangliae) breeding system with respect to intra-sexual interactions. PhD thesis, Cornell 
+University, New York. pp 174. 
+ 
+Cholewiak DM, Sousa-Lima RS, Cerchio S. 2013. Humpback whale song hierarchical 
+structure: Historical context and discussion of current classification issues. Marine Mammal 
+Science 29(3): E312–E332. doi: 10.1111/mms.12005. https://doi.org/10.1111/mms.12005. 
+ 
+Darling JD, Acebes JMV, Yamaguchi M. 2014. Similarity yet a range of differences between 
+humpback whale songs recorded in the Philippines, Japan and Hawaii in 2006. Aquatic 
+Biology 21(2): 93–107. https://doi.org/10.3354/ab00570. 
+ 
+Darling JD, Sousa-Lima RS. 2005. Songs indicate interaction between humpback whale 
+(Megaptera novaeangliae) populations in the western and eastern South Atlantic Ocean. 
+Marine Mammal Science 21(3): 557–566.                                  
+https://doi.org/10.1111/j.1748-7692.2005.tb01249.x. 
+ 
+Darling JD, Jones ME, Nicklin CP. 2006. Humpback whale songs: Do they organize males 
+during the breeding season? Behaviour 143: 1051–1101. 
+https://doi.org/10.1163/156853906778607381. 
+Félix F, Haase B. 2001. The humpback whale off the coast of Ecuador, population 
+parameters and behavior. Revista de Biología Marina y Oceanografía 36(1): 61–74. 
+https://doi.org/10.4067/S0718-19572001000100006. 
+ 
+Findlay KP, Best PB, Meÿer MA. 2011. Migrations of humpback whales past Cape Vidal, 
+South Africa, and an estimate of the population increase rate (1988–2002). African Journal 
+of Marine Science 33(3): 375–392. https://doi.org/10.2989/1814232X.2011.637345. 
+ 
+Findlay KP, Seakamela SM, Meÿer MA, Kirkman SP, Barendse J, Cade DE, Hurwitz D, 
+Kennedy AS, Kotze PG, McCue SA, et al. 2017. Humpback whale “super-groups”–A novel 
+low-latitude feeding behaviour of Southern Hemisphere humpback whales (Megaptera 
+novaeangliae) in the Benguela Upwelling System. PloS One 12(3): e0172002. 
+https://doi.org/10.1371/journal.pone.0172002. 
+ 
+Gabriele CM, Frankel AS. 2002. Surprising humpback whale songs in Glacier Bay National 
+Park. Alaska Park Science: Connections to Natural and Cultural Resource Studies in 
+Alaska’s National Parks, pp 17–21. 
+ 
+Garland EC, Rendell L, Luca L, Poole MM, Noad MJ. 2017. Song Hybridization events 
+during revolutionary song change provides insights into cultural transmission in humpback 
+whales. Proceedings of the National Academy of Sciences of the United States of America 
+114(30): 7822–7829. https://doi.org/10.1073/pnas.1621072114. 
+ 
+13 
+ 
+Garland EC, Goldizen AW, Lilley MS, Rekdahl ML, Garrigue C, Constantine R, Hauser ND, 
+Poole MM, Robbins J, Noad MJ. 2015. Population structure of humpback whales in the 
+western and central South Pacific Ocean as determined by vocal exchange among 
+populations. Conservation Biology 29(4): 1198–1207. https://doi.org/10.1111/cobi.12492.  
+ 
+Garland EC, Goldizen, AW, Rekdahl ML, Constantine R, Garrigue C, Hauser ND, Poole MM, 
+Robbins J, Noad MJ. 2011. Dynamic horizontal cultural transmission of humpback whale 
+song at the ocean basin scale. Current Biology 21(8): 687–691. 
+https://doi.org/10.1016/j.cub.2011.03.019. 
+ 
+Garland EC, Noad MJ, Goldizen AW, Lilley MS, Rekdahl ML, Garrigue C, Constantine R, 
+Daeschler HN, Poole MM, Robbins J. 2013. Quantifying humpback whale song sequences 
+to understand the dynamics of song exchange at the ocean basin scale. The Journal of the 
+Acoustical Society of America 133(1): 560–569. https://doi.org/10.1121/1.4770232. 
+ 
+Gridley T, Silva M, Wilkinson C, Seakamela M, Elwen S. 2018. Song recorded near a super-
+group of humpback whales on a mid-latitude feeding ground off South Africa. The Journal  
+of the Acoustical Society of America 143: EL298–EL304. doi: 10.1121/1.5032126. 
+ 
+Helweg DA, Frankel AS, Mobley JR, Herman LM. 1992. Humpback whale song: Our current 
+understanding. (p 459–483). In: Thomas, JA, Kastelein RA, Supin (Eds), Marine mammal 
+sensory systems. Boston, MA: Springer. https://doi.org/10.1007/978-1-4615-3406-8_32. 
+ 
+Helweg DA, Cato DH, Jenkins PF, Garrigue C, McCauley RD. 1998. Geographic variation in 
+South Pacific humpback whale songs. Behaviour 135(1): 1–27. 
+https://doi.org/10.1163/156853998793066438. 
+ 
+Herman LM. 2017. The multiple functions of male song within the humpback whale 
+(Megaptera novaeangliae) mating system: review, evaluation, and synthesis. Biological 
+Reviews of the Cambridge Philosophical Society 92(3): 1795–1818. 
+https://doi.org/10.1111/brv.12309. 
+ 
+Herman LM, Pack AA, Spitz SS, Herman EY, Rose K, Hakala S, Deakos MH. 2013. 
+Humpback whale song: Who sings? Behavioral Ecology and Sociobiology 67(10): 1653–
+1663. https://doi.org/10.1007/s00265-013-1576-8. 
+ 
+International Whaling Commission. 1998. Annex G - report of the sub-committee on 
+comprehensive assessment of Southern Hemisphere humpback whales. Reports of the 
+International Whaling Commission 48: 170–182. 
+ 
+International Whaling Commission. 2012. Report of the Scientific Committee. Annex H: 
+Report of the sub-committee on other Southern Hemisphere whale stocks. Journal of 
+Cetacean Research and Management (Supplemental) 13: 192–216. 
+14 
+ 
+Kellogg R. 1929. What is known of the migration of some of the whalebone whales. 
+Smithsonian Institution. Annual Report of the Board of Regents 1928: pp 467–94. 
+ 
+Magnúsdóttir EE, Lim R. 2019. Subarctic singers: Humpback whale (Megaptera 
+novaeangliae) song structure and progression from an Icelandic feeding ground during 
+winter. PloS One 14(1): e0210057. https://doi.org/10.1371/journal.pone.0210057. 
+ 
+McSweeney D, Chu K, Dolphin WF, Guinee LN. 1989. North Pacific humpback whale songs: 
+A comparison of southeast Alaskan feeding ground songs with Hawaiian wintering ground  
+songs. Marine Mammal Science 5: 139–148.                                        
+https://doi.org/10.1111/j.1748-7692.1989.tb00328.x. 
+ 
+Mobley JR, Bauer GB, Herman LM. 1999. Changes over a ten-year interval in the 
+distribution and relative abundance of humpback whales (Megaptera novaeangliae) 
+wintering in Hawaiian waters. Aquatic Mammals 25: 63–72. 
+ 
+Noad MJ, Cato DH. 2007. Swimming speeds of singing and non-singing humpback whales 
+during migration. Marine Mammal Science 23(3): 481–495.                  
+https://doi.org/10.1111/j.1748-7692.2007.02414.x. 
+ 
+Noad MJ, Cato DH, Bryden MM, Jenner MN, Jenner KCS. 2000. Cultural revolution in whale 
+songs. Nature (London) 408: 537. https://doi.org/10.1038/35046199. 
+ 
+Parsons ECM, Wright AJ, Gore MA. 2008. The nature of humpback whale (Megaptera 
+novaeangliae) song. Journal of Marine Animals & Their Ecology 1(1): 22–31. 
+ 
+Payne K, Payne RS. 1985. Large scale changes over 19 years in songs of humpback 
+whales in Bermuda. Zeitschrift für Tierpsychologie 68: 89–114. 
+https://doi.org/10.1111/j.1439-0310.1985.tb00118.x. 
+ 
+Payne RS, McVay S. 1971. Songs of humpback whales. Science 173: 585–597. 
+https://doi.org/10.1126/science.173.3997.585. 
+ 
+Rekdahl ML, Garland EC, Carvajal GA, King CD, Collins T, Razafindrakoto Y, Rosenbaum 
+H. 2018. Culturally transmitted song exchange between humpback whales (Megaptera 
+novaeangliae) in the southeast Atlantic and southwest Indian Ocean basins. Royal Society 
+Open Science 5(11): 172305. https://doi.org/10.1098/rsos.172305. 
+ 
+Rosenbaum HC, Maxwell SM, Kershaw F, Mate B. 2014. Long-range movement of 
+humpback whales and their overlap with anthropogenic activity in the South Atlantic Ocean. 
+Conservation Biology 28(2): 604–615. https://doi.org/10.1111/cobi.12225. 
+15 
+ 
+Ross-Marsh EC, Elwen SH, Prinsloo AS, James BS, Gridley T. 2020. Singing in South 
+Africa: Monitoring the occurrence of humpback whale (Megaptera novaeangliae) song near 
+the Western Cape. Bioacoustics doi:10.1080/09524622.2019.1710254. 
+ 
+Stimpert AK, Peavey LE, Friedlaender AS, Nowacek DP. 2012. Humpback whale song and 
+foraging behavior on an Antarctic feeding ground. PLoS ONE 7(12): e51214. 
+https://doi.org/10.1371/journal.pone.0051214. https://doi.org/10.1371/journal.pone.0051214. 
+ 
+Thomisch K, Boebel O, Bachmann J, Filun D, Neumann S, Spiesecke S, Van Opzeeland I. 
+2019. Temporal patterns in the acoustic presence of baleen whale species in a presumed 
+breeding area off Namibia. Marine Ecology Progress Series 620: 201–214. 
+https://doi.org/10.3354/meps12952. 
+ 
+Tyack PL, Clark CW. 2000. Communication and acoustic behavior of dolphins and whales. 
+(p 156–224). In: Au WWL, Fay RR, Popper AN (Eds), Hearing by Whales and Dolphins 
+Springer Handbook of Auditory Research 12: (p 156–224). New York, NY: Springer. 
+https://doi.org/10.1007/978-1-4612-1150-1_4. 
+ 
+Vinding K, Bester M, Kirkman SP, Chivell W, Elwen SH. 2015. The use of data from a 
+platform of opportunity (whale watching) to study coastal cetaceans on the southwest coast 
+of South Africa. Tourism in Marine Environments 11(1): 33–54. 
+https://doi.org/10.3727/154427315X14398263718439. 
+ 
+Vu ET, Risch D, Clark CW, Gaylord S, Hatch LT, Thompson MA, Wiley DN, Van Parijs SM. 
+2012. Humpback whale song occurs extensively on feeding grounds in the western North 
+Atlantic Ocean. Aquatic Biology 14(2): 175–183. https://doi.org/10.3354/ab00390. 
+ 
+Wedekin LL, Engel MH, Andriolo A, Prado PI, Zerbini AN, Marcondes MMC, Kinas PG, 
+Simões-Lopes PC. 2017. Running fast in the slow lane: rapid population growth of 
+humpback whales after exploitation. Marine Ecology Progress Series 575: 195–206. 
+https://doi.org/10.3354/meps12211. 
+ 
