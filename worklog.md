@@ -172,3 +172,19 @@ synthetic, more real; update plan.md).
 - A30 flag: top-3 winners assign worldwide copyright of solution code to Zindi — acceptable?
 
 **Process lesson:** R4b blend ran inline (never persisted) → unrecoverable; R6 rebuilt from spec. Rule 9 (script persistence) now enforced with zero exceptions.
+
+### R6 addendum — D13 compliance purge (same day)
+
+- Audit caught challenge-derived binaries tracked in the PUBLIC repo (introduced
+  by the bulk auto-sync commit 09e84ca: synth_v3_mixed X/f/bgfeat/aux/bg_sums =
+  mixtures of real SA backgrounds; r4 submission CSVs; zenodo CSV bundle) —
+  D13 violation risk (challenge data must not be redistributed publicly).
+- Fix: history rewritten (soft reset to b547d4d → selective re-stage → single
+  clean commit 705a41d → force-with-lease push). Verified: no commit in history
+  touches the purged paths; `git ls-files` = 66 files (code/docs/metrics only).
+- .gitignore hardened (skills/, data binaries, submissions, SA package, zenodo,
+  backup) so future `git add -A` cannot regress.
+- Public repo keeps: src/, docs/, plan.md, worklog.md, HANDOFF.md, report JSONs,
+  sha256 sidecars, blend-sweep metric CSVs. Everything data-shaped lives in the
+  private misc-notes-data (main: submissions/ + reports/ + snapshots; releases
+  v1/v2/v3).
