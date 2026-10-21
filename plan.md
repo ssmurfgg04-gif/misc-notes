@@ -734,3 +734,45 @@ Cumulative hunt: 33 + 18 = 51 probes. Remaining routes: user enquiry (NOW SHARP:
 "08 ∈ {Strandfontein, Rooi Els, Smitswinkel Bay}? 11/12 ∈ {Robben, Dassen,
 Langebaan, Yzerfontein, Table Bay}?") to Sea Search / SAEON / SAMSA; SAEON
 portal via tempmail (authorized, not yet attempted).
+
+## 6m. R7c — Shrinkage hedge built; Heliyon table verified; fleet-inference closed (docs/hunt_log_r7c.json)
+
+**A45 (r7_v3 family, ready):** user-proposed shrink fix built from r7_v2:
+p_k = μ + k·(p̂ − μ), μ=0.13007576. Files (all moment-verified, values in (0,1),
+SHA256SUMS updated): **k=0.35** (E[p²]=0.022268, sha 8b51e3af…), **k=0.45**
+(E[p²]=0.025761, sha 98775aed…, PRIMARY), **k=0.55** (E[p²]=0.030127,
+sha c17ce982…). Model RMSE² = σ_f²(1−2kρ+k²): k=0.45 beats the 0.791 constant
+iff ρ>0.225 and beats pinned iff ρ<0.725 ⇒ near-maxmin (worst case ≈0.789 at
+ρ→0.2 vs pinned worst ≈0.736). Side benefit: kills the >1.0 tail (r7_v2 share
+max = 1.1696 — unknown Zindi clipping behaviour no longer exposed).
+**A46 (Heliyon table RESOLVED):** the Julius/Awe/Sparks 2023 Table 1 EXISTS
+(R7b's "claimed table not found" is SUPERSEDED). Independent confirmation via
+the CPUT thesis metadata (Gordan's Bay=12, Kalk Bay=9, Mouille Point=6) plus
+user's snippet set (02 Eland's Bay, 07 Maiden's Cove, 08 Simon's Town, 11
+Strand). Verdict UNCHANGED but now evidence-based: **not the registry** — its
+09 = Kalk Bay conflicts with competition 09 = Fish Hoek (exact Sea Search
+coords), sites are intertidal microplastic beaches, W Cape only. Simon's Town /
+Strand / Gordon's Bay remain REJECTED. 08/11-12 candidate slates UNCHANGED.
+**A47 (fleet-inference CLOSED):** corr(r7_v2, r4_v2/r6_v2/r6_v3) = 0.223/0.258/
+0.218 — under the single-factor model these imply ρ₇ > 1 (impossible) ⇒ the
+shared variance is a NON-truth factor (background/site level). Cross-vector
+correlation cannot pre-estimate the bump vector's ρ; **only the LB readout
+can.** Do not use fleet correlations for the k decision.
+**A48 (ATAP eliminated):** Acoustic Tracking Array Platform = Vemco VR2W shark
+telemetry, not passive acoustics — removed from supplier space. Sea Search FB
+confirms a LIVE maintained hydrophone at Fish Hoek (supporting A38).
+**Hunt probes this round:** 10 logged (4 HIT/PARTIAL, 2 ELIMINATED, 4
+pending/budget-exhausted: YouTube-native, Twitter/X, Reddit, 4chan-archive).
+Cumulative: 61.
+
+## 7e. R7c next actions
+
+1. USER GATE — choose ONE for the next slot: **r7_v3_k045** (safe hedge, our
+   recommendation if ρ prior ≤ 0.6), **r7_v2** (pinned, if ρ prior > 0.6), or
+   **r7_v3_k035** (most conservative). LB readout ⇒ real ρ via
+   RMSE² = σ_f²(1−2kρ+k²) ⇒ pick k* = ρ for the slot after.
+2. Pending probes (web budget): YouTube-native search (Sea Search channel,
+   SAEON, Shabangu lectures), Twitter/X SoundTrap-SA, Reddit r/bioacoustics,
+   4chan archives (desuarchive /sci/). Low prior on all — name-hunt, not
+   evidence-hunt.
+3. User enquiry to Sea Search/SAEON/SAMSA remains the highest-yield route (§6l).

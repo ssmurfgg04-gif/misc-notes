@@ -1,0 +1,73 @@
+{
+ "round": "R7c",
+ "date": "2026-10-21",
+ "task": "shrinkage hedge r7_v3 family",
+ "mu": 0.1300757620833333,
+ "E_f2": 0.06057997689999998,
+ "sigma_f2": 0.043660273018440054,
+ "source_sha_input": "/home/z/my-project/workspace/misc-notes-data/submissions/submission_r7_v2_bumpshare_repinned.csv",
+ "variants": [
+  {
+   "file": "submission_r7_v3_k035.csv",
+   "k": 0.35,
+   "sha256": "8b51e3afd92837872905c6eddf52fbdf263328f4c21bbf3c09fd86f914f7fa2c",
+   "E_p": 0.1300757620833333,
+   "E_p2": 0.02226808732631883,
+   "expected_E_p2": 0.022268087326318832,
+   "sigma_p": 0.07313264281262438,
+   "min": 0.08454924535416664,
+   "max": 0.4939243314057107,
+   "spearman_vs_pinned": 1.0,
+   "score_if_rho=0.3": 0.8004,
+   "score_if_rho=0.5": 0.8163,
+   "score_if_rho=0.7": 0.8338,
+   "beats_constant_iff_rho>": 1.254
+  },
+  {
+   "file": "submission_r7_v3_k045.csv",
+   "k": 0.45,
+   "sha256": "98775aede764cc858ab497ebc785d85e68e6d95cd100d6da4974b5756138fc10",
+   "E_p": 0.1300757620833333,
+   "E_p2": 0.02576090916779403,
+   "expected_E_p2": 0.02576090916779404,
+   "sigma_p": 0.09402768361623136,
+   "min": 0.07154166914583332,
+   "max": 0.5978810654978186,
+   "spearman_vs_pinned": 1.0,
+   "score_if_rho=0.3": 0.7982,
+   "score_if_rho=0.5": 0.8187,
+   "score_if_rho=0.7": 0.8419,
+   "beats_constant_iff_rho>": 0.886
+  },
+  {
+   "file": "submission_r7_v3_k055.csv",
+   "k": 0.55,
+   "sha256": "c17ce982c66db330adadfc3b397d9f8e6ace1228a824621671c9761ba980c438",
+   "E_p": 0.13007576208333327,
+   "E_p2": 0.03012693646963804,
+   "expected_E_p2": 0.030126936469638044,
+   "sigma_p": 0.11492272441983839,
+   "min": 0.058534092937499976,
+   "max": 0.7018377995899264,
+   "spearman_vs_pinned": 1.0,
+   "score_if_rho=0.3": 0.7939,
+   "score_if_rho=0.5": 0.8187,
+   "score_if_rho=0.7": 0.8475,
+   "beats_constant_iff_rho>": 0.634
+  }
+ ],
+ "corr_to_fleet": {
+  "submission_r4_v2_mixed.csv": {
+   "pearson_vs_k045": 0.2231387697927367,
+   "pearson_vs_pinned": 0.22313876979273686
+  },
+  "submission_r6_v2_blend.csv": {
+   "pearson_vs_k045": 0.2583209899401559,
+   "pearson_vs_pinned": 0.2583209899401559
+  },
+  "submission_r6_v3_real.csv": {
+   "pearson_vs_k045": 0.21849738634083155,
+   "pearson_vs_pinned": 0.21849738634083157
+  }
+ }
+}

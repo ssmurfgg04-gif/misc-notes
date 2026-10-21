@@ -1,0 +1,36 @@
+{
+ "round": "R7c",
+ "date": "2026-10-21",
+ "directive": "user R7c: verify Heliyon tbl1 (S2405-8440(23)05767-5); sweep YouTube/Twitter/4chan/Reddit/papers; re-check leading candidates; Rainbolt-style geo cross-check; build the user-proposed shrink fix",
+ "probes": [
+  {"id": "R7c-01", "target": "Heliyon Table 1 direct URL (embargoed.www.cell.com showFullTableHTML)", "result": "MISS — Cloudflare security interstitial, no table content"},
+  {"id": "R7c-02", "target": "ScienceDirect article page S2405844023057675", "result": "MISS — JS/captcha wall, no table"},
+  {"id": "R7c-03", "target": "Europe PMC MED/37560631", "result": "PARTIAL — abstract only; confirms 14 sites summer 2020, no table"},
+  {"id": "R7c-04", "target": "CPUT thesis (same author/study) etd.cput.ac.za handle 20.500.11838/3723", "result": "HIT (independent confirmation) — thesis metadata names: Gordan's Bay = site 12, Kalk Bay = site 9, Mouille Point = site 6. Corroborates user's snippet reading: 02 Eland's Bay, 07 Maiden's Cove, 08 Simon's Town, 11 Strand"},
+  {"id": "R7c-05", "target": "Sea Search website (seasearch.co.za) projects/updates", "result": "PARTIAL — site live; project pages 404 (JS-routed). Projects list includes 'Humpback Whale Ecology & Acoustic Behaviour' and 'Sound Search - Acoustic Training & Equipment'; updates index has no deployment locations in snippets"},
+  {"id": "R7c-06", "target": "Sea Search social (Facebook via search)", "result": "HIT (supporting) — Sea Search FB post: 'swap over our hydrophone in Fish Hoek' (ongoing False Bay hydrophone maintenance; matches station 09 = Fish Hoek, Sea Search network)"},
+  {"id": "R7c-07", "target": "ATAP (Acoustic Tracking Array Platform, SA)", "result": "ELIMINATED — Vemco VR2W receivers (shark telemetry), not passive hydrophones; not the competition network"},
+  {"id": "R7c-08", "target": "YouTube sweep (4 query variants: Sea Search False Bay / SoundTrap SA / Shabangu / NMU Algoa Bay)", "result": "MISS (query level) — site:youtube.com filters returned empty; deeper YouTube-native sweep still pending (web budget exhausted)"},
+  {"id": "R7c-09", "target": "Twitter/X, Reddit, 4chan-archive sweep", "result": "NOT COMPLETED — web tool budget exhausted before these probes; explicitly pending next round"},
+  {"id": "R7c-10", "target": "De Hoop MPA acoustic monitoring literature", "result": "NOT COMPLETED — pending (was §C1 candidate family for station 08 gap)"}
+ ],
+ "verdicts": [
+  "Heliyon 2023 (Julius, Awe & Sparks) site table = CONFIRMED REAL (R7b verdict #7 'claimed table not found' is SUPERSEDED — the table exists via CPUT thesis + user snippets)",
+  "Heliyon table = NOT the competition registry (independent microplastics study; numbering conflicts: its 09 = Kalk Bay vs competition 09 = Fish Hoek exact Sea Search coords; its sites are intertidal beaches, not hydrophone moorings; competition spans KZN→Saldanha, paper is W Cape only)",
+  "Simon's Town / Strand / Gordon's Bay remain REJECTED for 08/11/12 (coincidental coastal-list reuse)",
+  "Leading candidates UNCHANGED: 08 ∈ {Strandfontein (lead), Rooi Els, Smitswinkel Bay}; 11/12 ∈ {Robben I. (lead, Probert 2025 ST300 evidence), Dassen I., Langebaan, Yzerfontein, Table Bay}",
+  "ATAP removed from candidate-supplier space (telemetry, not acoustics)"
+ ],
+ "negative_results": [
+  "Single-factor fleet model BREAKS: corr(r7_v2, prior vectors) = 0.22–0.26 with prior measured per-window rho 0.11–0.31 implies implied rho7 > 1 (impossible) -> the shared variance is a NON-truth factor (background/site level), not vessel signal",
+  "Consequence: fleet cross-correlation CANNOT pre-estimate the bump vector's real-test rho; only an LB readout can. This closes the 'infer rho before submitting' route",
+  "Pinned r7_v2 share column exceeds 1.0 (max 1.1696, power-map tail) -> unknown Zindi clipping behaviour is a residual risk that the shrunk family eliminates (k<=0.55 keeps max <= 0.70)"
+ ],
+ "builds": [
+  "scripts/r7_shrink.py -> r7_v3 family: p_k = mu + k*(p_pinned - mu), mu=0.13007576",
+  "k=0.35: E[p2]=0.022268, LB-model 0.8004 (rho.3) / 0.8163 (rho.5) / 0.8338 (rho.7), sha 8b51e3af…",
+  "k=0.45: E[p2]=0.025761, LB-model 0.7982 / 0.8187 / 0.8419, sha 98775aed… (PRIMARY HEDGE: beats constant iff rho>0.225, beats pinned iff rho<0.725)",
+  "k=0.55: E[p2]=0.030127, LB-model 0.7939 / 0.8187 / 0.8475, sha c17ce982…",
+  "all moments verified exactly vs theory; all values within (0,1); SHA256SUMS_submissions.txt updated"
+ ]
+}

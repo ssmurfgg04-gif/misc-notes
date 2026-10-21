@@ -1,3 +1,13 @@
+# HANDOFF — state banner (updated 2026-10-21, R7c)
+
+**R7c in one line:** shrink hedge r7_v3 family BUILT (k=0.35/0.45/0.55, moments
+exact; k=0.45 primary — beats 0.791 constant iff ρ>0.225, beats pinned iff
+ρ<0.725). Heliyon 2023 table VERIFIED REAL (CPUT thesis) but NOT the registry
+(A46). Fleet cross-correlation CANNOT predict bump ρ — >1 impossibility (A47).
+ATAP eliminated (Vemco). r7_v2 share max 1.1696 — clipping risk noted. Pending:
+YouTube/X/Reddit/4chan probes (budget), SAEON portal (tempmail), sharp enquiry.
+**NEXT USER ACTION:** submit r7_v3_k045 (rec) or r7_v2 → read ρ → k*=ρ.
+
 # HANDOFF.md — read this first (next-AI pickup, updated every round)
 
 > Last updated: R7, 2026-10-21. Repo: `ssmurfgg04-gif/misc-notes` (public, bland name).

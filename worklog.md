@@ -265,3 +265,31 @@ auth-gated sites).
   Smitswinkel Bay}? 11/12 ∈ {Robben, Dassen, Langebaan, Yzerfontein, Table Bay}?"
 - SAEON portal via tempmail (authorized; not attempted — web-tool throttle +
   time-box; still the strongest remaining public-data route).
+
+---
+
+## R7c — 2026-10-21 — shrink hedge built, Heliyon table resolved, fleet-inference closed
+
+**Agent:** Z.ai (main). **Directive:** user R7c message (verify Heliyon tbl1
+S2405-8440(23)05767-5; sweep YouTube/Twitter/4chan/Reddit/papers Rainbolt-style;
+re-check leading candidates; user's shrink-fix math p = 0.1301 + k·(p̂−0.1301)).
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | Heliyon tbl1 verification | Cloudflare/JS walls on Cell+ScienceDirect; Europe PMC abstract-only; **CPUT thesis metadata independently confirms the table** (Gordan's Bay=12, Kalk Bay=9, Mouille Point=6) + user's snippets (02 Eland's Bay, 07 Maiden's Cove, 08 Simon's Town, 11 Strand) → A46: table REAL, still NOT the registry (its 09 Kalk Bay ≠ competition 09 Fish Hoek exact coords) |
+| 2 | R7b verdict correction | verdict #7 ("claimed table not found") SUPERSEDED — table exists; Simon's Town/Strand/Gordon's Bay REJECTED with evidence now |
+| 3 | Social sweep | Sea Search FB = live Fish Hoek hydrophone maintenance (supports A38); **ATAP = Vemco shark telemetry, ELIMINATED** (A48); YouTube/Reddit/Twitter/4chan probes pending (web budget exhausted, logged in hunt_log_r7c.json) |
+| 4 | r7_v3 shrink family | scripts/r7_shrink.py: k∈{0.35,0.45,0.55} on share_added_vessel (NOT the zero-weight score col — first run grabbed wrong col, caught by moment check); all E[p]=0.130076, E[p²]=0.022268/0.025761/0.030127 exact; shas 8b51e3af/98775aed/c17ce982; k=0.45 PRIMARY (beats constant iff ρ>0.225, beats pinned iff ρ<0.725; worst case ≈0.789) |
+| 5 | Clipping risk found | r7_v2 share max = **1.1696** (>1, power-map tail) — unknown Zindi behaviour; shrink family eliminates (max ≤0.70) |
+| 6 | Fleet-inference closed | corr(r7_v2, priors)=0.223/0.258/0.218 → single-factor model implies ρ₇>1 (impossible) ⇒ shared variance = background/site factor, NOT truth → **A47: fleet correlations cannot predict bump ρ; LB readout is the only estimator** |
+| 7 | Docs + backup | plan.md §6m/§7e; docs/hunt_log_r7c.json (10 probes, cum 61); SHA256SUMS updated; both repos pushed |
+
+**Decisions**
+- D24: r7_v3_k045 = recommended submission if ρ prior ≤ 0.6; r7_v2 if > 0.6; k*=ρ after the first readout (RMSE² = σ_f²(1−2kρ+k²)).
+- D25: Heliyon microplastics table classified "real, coincidental reuse" — closed as a registry lead.
+- D26: remaining platform probes (YouTube-native/X/Reddit/4chan) = low-prior name-hunt, execute only if budget allows next round.
+
+**Open / blocked-on-user**
+- Submit ONE of {r7_v3_k045 (rec), r7_v2, r7_v3_k035} — §7e decision table.
+- Sea Search/SAEON/SAMSA sharp enquiry (§6l wording) — still the highest-yield route.
