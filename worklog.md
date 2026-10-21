@@ -656,3 +656,15 @@ Stage Summary:
 - D39: wind/f_pc features = no gain over T1T2 (A69 re-confirmed at feature level); iso(f_pc) floor valid ONLY for E5-family vectors (r7 track), not the LGB path
 - D40: candidate order after rho readout: rho>=0.5 -> r8b_v2_floor (rank check vs r7_v2 0.473 noted, D36 gate applies); conservative swap -> r7_v4_softfloor (Spearman 0.998, pure floor-mass fix)
 - Infrastructure: all builds stage-persisted + resumable; every submission through build_submission.py gate; milestone backups M0-M2 pushed
+
+---
+Task ID: BK-20261021_213654
+Agent: backup_milestone.sh
+Task: milestone backup — R10-M3: worklog R10-main + candidates ledgered
+
+Work Log:
+- git add/commit/push (fail=0)
+- tarball download/backups/milestone_20261021_213654.tar.gz created, ledger now 7 entries
+
+Stage Summary:
+- Milestone R10-M3: worklog R10-main + candidates ledgered backed up at 20261021_213654

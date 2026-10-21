@@ -1074,3 +1074,11 @@ VALclassB_G1 < 0.0507; W3 softfloor must not worsen any pool; W4 rank-REST
 must beat unmapped on its own class pool. Candidate r8b vector (softfloor +
 wind lgb) moment-pinned via build_submission.py --repin, gated on user +
 ρ readout (D36 unchanged: r8 candidates only after r7_v3_k045 ρ).
+
+### §7l.1 — R8b gate results (final)
+- Wind/f_pc feature arms: B_G1 0.0525 (full) / 0.0513 (windonly) vs 0.0507 gate → REJECTED (D39)
+- rank-REST quantile mapping: 0.221-0.246 across A/B/C pools vs 0.036-0.053 unmapped → CATASTROPHIC, DEAD (D38)
+- CAL no-bump optimal prediction: iso(f_pc) 0.0816 < const 0.0715 0.0871 < const 0 0.0986 → r7-family floor fix justified
+- Candidates (moment-exact unless noted): r8b_v2_floor_repin e50eb50e (Spearman vs r7_v2 0.473;
+  per-group G0 0.525 / G1 0.397 / G2 0.486), r7_v4_softfloor_repin 05323cc8 (Spearman vs PIN 0.998)
+- Submission doctrine unchanged (D36): r7_v3_k045 first → ρ → then LGB-family slot only if ρ≥0.5.

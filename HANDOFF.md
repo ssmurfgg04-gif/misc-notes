@@ -1,3 +1,24 @@
+# HANDOFF — state banner (updated 2026-10-22, R10)
+
+**R10 in one line:** EXECUTION HARDENING round. **Code audit clean** (no leakage;
+determinism verified). **5 silent issues FIXED** (wipe-loss Test.csv/refs restored
+from release v1/v2 checksums; wrong-column submission trap -> scripts/
+build_submission.py is now the ONLY submission gate: share-col assert + ID-order
+assert + point-mass census + sha ledger + refuse-overwrite; PIN floor point-mass
+507/1500 @ 0.07154 quantified -> iso(f_pc) floor fix (CAL: iso 0.0816 beats
+floor 0.0871 and zero 0.0986); requirements.txt pinned; detached-process reaping
+-> stage-persisted resumable builds). **R8b gates honest:** wind/f_pc features
+REJECTED (B_G1 0.0513-0.0525 vs 0.0507), rank-REST/quantile domain adaptation
+CATASTROPHIC (0.22-0.25) -> **D38: AdaBN/CORAL recipes do not transfer to
+GBDT mixtures**; T1T2 stack stands. **3 candidates ledgered:** r8b_v2_floor_repin
+(moments EXACT; Spearman vs r7_v2 0.473 — G1 re-ranks most, 0.397), r8b_v1_repin,
+r7_v4_softfloor_repin (Spearman vs PIN 0.998 — conservative floor fix).
+Backup system: milestone tarballs + LEDGER.sha256 + RESTORE_CARD; M0-M3 pushed.
+**NEXT: submit r7_v3_k045 → ρ → k*=ρ; then r8b_v2_floor (if ρ≥0.5, D36) or
+r7_v4_softfloor (conservative).** Rival intel: pipeline reconstructed (mirror of
+r7 family minus transductive layer; 0.8720 = honest execution); docs/
+intel_r10_{oss,vtuad2,ruicodex2}.md + writeup_skeleton.md (prize track live).
+
 # HANDOFF — state banner (updated 2026-10-22, R9)
 
 **R9 in one line:** Intel + R8 build round. **A66: Dines thesis PDF ACQUIRED**
