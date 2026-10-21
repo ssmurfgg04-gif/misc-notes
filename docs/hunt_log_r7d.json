@@ -1,0 +1,42 @@
+{
+ "round": "R7d",
+ "date": "2026-10-21",
+ "directive": "user R7d: test the 7-rank counterintuitive-hides theory with data; continue queued YouTube/X/Reddit/4chan probes; south-coast literature sweep (Hermanus/Gansbaai/Agulhas never swept)",
+ "local_analysis": {
+  "data_recovery": "sandbox data re-pulled: Test.csv (md5 f45428f9 OFFICIAL) + sa_acoustics.zip (release v1) via GH API asset flow; pyarrow+sklearn reinstalled",
+  "method": [
+   "A36 check: registry parquets = 10 sites; recorders.csv gives per-era units (ST300 201650217: Fish Hoek->Sea Point; ST300 5344: Fish Hoek->Saldanha; ST600 8230: Riy Banks->Durban; URN 6509/8321: Bird/StCroix; SM2M: St Francis)",
+   "NOTEBOOK CELL 2 CORRECTION: m01..m15 = MINUTE POSITIONS 1..15 within each 15-min window (NOT metric types). Missingness = window-edge cropping per export batch",
+   "availability fingerprints (2-bit: m01 present? x m15 present?) -> 3 robust groups, silhouette 0.998: G0=777 (nothing missing), G1=623 (m01 missing), G2=99 (m15 missing); +8 dropout-noise windows; group sizes consistent with aggregate missingness 41.6%/6.7%",
+   "within-group level histograms unimodal -> one station per group",
+   "quiet-bed (P20) floor matching to train sites: absolute band levels + tilt"
+  ],
+  "groups": {
+   "G0_full_777": {"bed_broadband_db": 62.96, "tilt_db_dec": -8.3, "best_matches": "13_Saldanha (61.4/-9.3, RMSE 2.23) > 02_Durban (3.84) > 09_FishHoek (5.25, tilt -3.0 mismatch)", "reading": "ST300-class west-coast bed -> 11 or 12"},
+   "G1_m01miss_623": {"bed_broadband_db": 72.17, "tilt_db_dec": -5.7, "best_matches": "NO good match: 05_StCroix (72.8 level but tilt -10.5, RMSE 4.43), 03_CapeRecife (73.8, tilt -0.2, RMSE 6.22); all tilts >=2.7 off", "reading": "UNMATCHED acoustic environment -> lead candidate for 08 (open-coast 72 dB class); public south coast has NO competition-era moored deployments (Hofmeyr-Juritz 1999/2011 Walker Bay = short boat sessions) -> consistent with an unpublicised agency/private deployment"},
+   "G2_m15miss_99": {"bed_broadband_db": 64.84, "tilt_db_dec": -8.0, "best_matches": "02_Durban (67.5/-8.9, RMSE 2.47) > 13_Saldanha (4.02)", "reading": "harbor-tinged ST300-class bed, SHORT campaign (99 windows) -> the other of 11/12; harbor signature raises Table Bay/Cape Town harbour"}
+  },
+  "shape_era_notes": "band-share-space era matches (no level): G1->StFrancis SM2M (369/620) — soft south-coast link; G0->Saldanha ST300 + StCroix URN + SeaPoint ST300; G2->SeaPoint ST300 + Durban ST600. All test recorders have HF support (hf_top ~0.95) -> not 12k-class"
+ },
+ "verdicts_on_7_ranks": [
+  {"rank": 1, "theory": "08 = south-coast site (Hermanus/Gansbaai/Agulhas/Mossel Bay/Knysna/Plett)", "verdict": "ELEVATED — data-backed: G1 bed matches NO released site; south coast has zero public competition-era moorings (easiest hide). Belief now ~40% that 08 = G1-class south-coast/unmatched site"},
+  {"rank": 2, "theory": "11/12 = False Bay (Strand/Gordon's Bay/Simon's Town/Kalk Bay/Muizenberg/Hout Bay)", "verdict": "WEAKENED — G0/G2 beds are west-coast/harbor class; Fish Hoek ST300 bed tilt (-3.0) mismatches both groups (-8.3/-8.0). Microplastics-name revival stays rejected on registry grounds too. Residual ~10%"},
+  {"rank": 3, "theory": "08 = Smitswinkel Bay (hidden in plain sight)", "verdict": "ALIVE, LOWERED — Smitswinkel would look Fish Hoek-like (62-63 dB), but G0 (the ST300-like group) fits Saldanha better on tilt; if 08=G1 then Smitswinkel is out. ~5-10%"},
+  {"rank": 4, "theory": "reserved / no-data slot", "verdict": "REJECTED — exactly 3 export-fingerprint groups for 3 slots; all three have real data (even the smallest: 99 windows)"},
+  {"rank": 5, "theory": "duplicate of Sea Point / Fish Hoek under new number", "verdict": "UNLIKELY — no group bed matches a released site bed closely (nearest 2.2 dB RMSE with tilt off); duplicate would still carry its own export fingerprint, so not fully excluded. ~5%"},
+  {"rank": 6, "theory": "offshore mooring (SAMBA/AURAL-style)", "verdict": "WEAK-POSSIBLE for G1 only — an offshore/deep bed could explain the unmatched environment; no alien recorder signature found. ~10% folded into G1 reading"},
+  {"rank": 7, "theory": "non-SA site (Walvis Bay/Luderitz/Maputo)", "verdict": "REJECTED — all test beds sit inside the SA registry's level/shape/convention envelope; export conventions identical"}
+ ],
+ "mapping": {
+  "lead": "G1<->08, {G0,G2}<->{11,12} (west-coast pair from the ST300/agency pool; G2 short campaign, harbor-tinged -> Table Bay; G0 open west-coast -> Robben/Dassen/Langebaan)",
+  "alternative": "G1<->11/12 (exposed island/Atlantic swell bed), one of G0/G2<->08 — less supported (False Bay ST300 tilt mismatch)"
+ },
+ "web_probes": [
+  {"target": "south-coast literature (Hermanus/Gansbaai/Walker Bay/Agulhas/Mossel Bay/Knysna/Plett)", "result": "Hofmeyr-Juritz & Best 2011 (Walker Bay SRW acoustics) + 2010 MSc = 1999 short boat sessions ONLY; no competition-era moored deployments publicly documented on the south coast. Whalewise HydroMoth listening lines = small/affordable, locations not specific"},
+  {"target": "YouTube-native (3 attempts incl. direct results-page fetch)", "result": "0 usable — JS-walled/no results"},
+  {"target": "Reddit", "result": "0 relevant (no SA hydrophone network / no competition chatter indexed)"},
+  {"target": "4chan archives (desuarchive/archived.moe/warosu via search)", "result": "0 results"},
+  {"target": "Twitter/X indexed", "result": "0 results — login wall + no indexed hits"}
+ ],
+ "enquiry_card_upgrade": "Ask Sea Search/SAEON/SAMSA the ACOUSTIC FINGERPRINT question, not just names: 'Do you operate/have records of a deployment whose quiet-bed broadband level is ~72 dB with -5.7 dB/decade tilt (open coast), exported in batches missing minute 1 of each 15-min window? Plus two west-coast-class beds at ~63 and ~65 dB with -8 dB/decade tilt (one short campaign, harbor-tinged).' Fingerprint form is answerable without revealing registry names."
+}

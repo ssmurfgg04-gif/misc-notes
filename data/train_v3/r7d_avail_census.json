@@ -1,0 +1,405 @@
+{
+ "round": "R7d",
+ "k": 8,
+ "silhouette": 0.998,
+ "sweep": {
+  "2": 0.8919422498768793,
+  "3": 0.9898109727232917,
+  "4": 0.9924155992884177,
+  "5": 0.9958135838867501,
+  "6": 0.9966322490014069,
+  "7": 0.9975285954792089,
+  "8": 0.998
+ },
+ "groups": [
+  {
+   "group": 0,
+   "n": 775,
+   "avail_profile": {
+    "m01": 1.0,
+    "m02": 1.0,
+    "m03": 1.0,
+    "m04": 1.0,
+    "m05": 1.0,
+    "m06": 1.0,
+    "m07": 1.0,
+    "m08": 1.0,
+    "m09": 1.0,
+    "m10": 1.0,
+    "m11": 1.0,
+    "m12": 1.0,
+    "m13": 1.0,
+    "m14": 1.0,
+    "m15": 1.0
+   },
+   "dmin_p10_p50_p90": [
+    1.08,
+    1.91,
+    3.97
+   ],
+   "top_era_assignments": [
+    [
+     "13_Saldhana_Bay|ST300",
+     155
+    ],
+    [
+     "05_St_Croix_Island|URN.StCroix.2022",
+     122
+    ],
+    [
+     "10_Sea_Point|ST300",
+     89
+    ],
+    [
+     "01_Richards_Bay|201383949",
+     57
+    ]
+   ]
+  },
+  {
+   "group": 1,
+   "n": 620,
+   "avail_profile": {
+    "m02": 1.0,
+    "m03": 1.0,
+    "m04": 1.0,
+    "m05": 1.0,
+    "m06": 1.0,
+    "m07": 1.0,
+    "m08": 1.0,
+    "m09": 1.0,
+    "m10": 1.0,
+    "m11": 1.0,
+    "m12": 1.0,
+    "m13": 1.0,
+    "m14": 1.0,
+    "m15": 1.0
+   },
+   "dmin_p10_p50_p90": [
+    1.24,
+    3.66,
+    7.71
+   ],
+   "top_era_assignments": [
+    [
+     "07_St_Francis|SM2M",
+     369
+    ],
+    [
+     "10_Sea_Point|ST300",
+     49
+    ],
+    [
+     "13_Saldhana_Bay|ST300",
+     44
+    ],
+    [
+     "03_Cape_Recife|8210",
+     30
+    ]
+   ]
+  },
+  {
+   "group": 2,
+   "n": 97,
+   "avail_profile": {
+    "m01": 1.0,
+    "m02": 1.0,
+    "m03": 1.0,
+    "m04": 1.0,
+    "m05": 1.0,
+    "m06": 1.0,
+    "m07": 1.0,
+    "m08": 1.0,
+    "m09": 1.0,
+    "m10": 1.0,
+    "m11": 1.0,
+    "m12": 1.0,
+    "m13": 1.0,
+    "m14": 1.0
+   },
+   "dmin_p10_p50_p90": [
+    0.99,
+    1.59,
+    3.06
+   ],
+   "top_era_assignments": [
+    [
+     "10_Sea_Point|ST300",
+     22
+    ],
+    [
+     "02_Durban|8230",
+     14
+    ],
+    [
+     "01_Richards_Bay|201383949",
+     12
+    ],
+    [
+     "01_Richards_Bay|5708",
+     9
+    ]
+   ]
+  },
+  {
+   "group": 3,
+   "n": 2,
+   "avail_profile": {
+    "m01": 1.0,
+    "m02": 1.0,
+    "m03": 1.0,
+    "m04": 1.0,
+    "m05": 1.0,
+    "m06": 1.0,
+    "m07": 1.0,
+    "m08": 1.0,
+    "m09": 1.0,
+    "m10": 1.0,
+    "m11": 1.0,
+    "m12": 1.0,
+    "m13": 1.0
+   },
+   "dmin_p10_p50_p90": [
+    1.58,
+    1.89,
+    2.19
+   ],
+   "top_era_assignments": [
+    [
+     "13_Saldhana_Bay|ST300",
+     1
+    ],
+    [
+     "01_Richards_Bay|201383949",
+     1
+    ]
+   ]
+  },
+  {
+   "group": 4,
+   "n": 3,
+   "avail_profile": {
+    "m03": 1.0,
+    "m04": 1.0,
+    "m05": 1.0,
+    "m06": 1.0,
+    "m07": 1.0,
+    "m08": 1.0,
+    "m09": 1.0,
+    "m10": 1.0,
+    "m11": 1.0,
+    "m12": 1.0,
+    "m13": 1.0,
+    "m14": 1.0,
+    "m15": 1.0
+   },
+   "dmin_p10_p50_p90": [
+    1.96,
+    4.73,
+    8.8
+   ],
+   "top_era_assignments": [
+    [
+     "04_Bird_Island|URN",
+     1
+    ],
+    [
+     "07_St_Francis|SM2M",
+     1
+    ],
+    [
+     "01_Richards_Bay|201383949",
+     1
+    ]
+   ]
+  },
+  {
+   "group": 5,
+   "n": 1,
+   "avail_profile": {
+    "m01": 1.0,
+    "m02": 1.0,
+    "m03": 1.0,
+    "m04": 1.0,
+    "m05": 1.0,
+    "m06": 1.0,
+    "m07": 1.0,
+    "m10": 1.0,
+    "m11": 1.0,
+    "m12": 1.0,
+    "m13": 1.0,
+    "m14": 1.0,
+    "m15": 1.0
+   },
+   "dmin_p10_p50_p90": [
+    1.07,
+    1.07,
+    1.07
+   ],
+   "top_era_assignments": [
+    [
+     "02_Durban|8230",
+     1
+    ]
+   ]
+  },
+  {
+   "group": 6,
+   "n": 1,
+   "avail_profile": {
+    "m01": 1.0,
+    "m02": 1.0,
+    "m03": 1.0,
+    "m04": 1.0,
+    "m05": 1.0,
+    "m06": 1.0,
+    "m07": 1.0,
+    "m08": 1.0,
+    "m09": 1.0,
+    "m10": 1.0,
+    "m11": 1.0,
+    "m12": 1.0,
+    "m15": 1.0
+   },
+   "dmin_p10_p50_p90": [
+    1.31,
+    1.31,
+    1.31
+   ],
+   "top_era_assignments": [
+    [
+     "02_Durban|8230",
+     1
+    ]
+   ]
+  },
+  {
+   "group": 7,
+   "n": 1,
+   "avail_profile": {
+    "m02": 1.0,
+    "m03": 1.0,
+    "m04": 1.0,
+    "m05": 1.0,
+    "m06": 1.0,
+    "m07": 1.0,
+    "m08": 1.0,
+    "m09": 1.0,
+    "m10": 1.0,
+    "m11": 1.0,
+    "m12": 1.0,
+    "m13": 1.0
+   },
+   "dmin_p10_p50_p90": [
+    3.9,
+    3.9,
+    3.9
+   ],
+   "top_era_assignments": [
+    [
+     "06_Riy_Banks|8230",
+     1
+    ]
+   ]
+  }
+ ],
+ "crosstab": {
+  "0": {
+   "01_Richards_Bay": 117,
+   "02_Durban": 46,
+   "03_Cape_Recife": 19,
+   "04_Bird_Island": 14,
+   "05_St_Croix_Island": 205,
+   "06_Riy_Banks": 9,
+   "07_St_Francis": 38,
+   "09_Fish_Hoek": 34,
+   "10_Sea_Point": 89,
+   "13_Saldhana_Bay": 204
+  },
+  "1": {
+   "01_Richards_Bay": 52,
+   "02_Durban": 15,
+   "03_Cape_Recife": 30,
+   "04_Bird_Island": 14,
+   "05_St_Croix_Island": 25,
+   "06_Riy_Banks": 9,
+   "07_St_Francis": 369,
+   "09_Fish_Hoek": 6,
+   "10_Sea_Point": 49,
+   "13_Saldhana_Bay": 51
+  },
+  "2": {
+   "01_Richards_Bay": 29,
+   "02_Durban": 14,
+   "03_Cape_Recife": 4,
+   "04_Bird_Island": 1,
+   "05_St_Croix_Island": 10,
+   "06_Riy_Banks": 0,
+   "07_St_Francis": 3,
+   "09_Fish_Hoek": 5,
+   "10_Sea_Point": 22,
+   "13_Saldhana_Bay": 9
+  },
+  "3": {
+   "01_Richards_Bay": 1,
+   "02_Durban": 0,
+   "03_Cape_Recife": 0,
+   "04_Bird_Island": 0,
+   "05_St_Croix_Island": 0,
+   "06_Riy_Banks": 0,
+   "07_St_Francis": 0,
+   "09_Fish_Hoek": 0,
+   "10_Sea_Point": 0,
+   "13_Saldhana_Bay": 1
+  },
+  "4": {
+   "01_Richards_Bay": 1,
+   "02_Durban": 0,
+   "03_Cape_Recife": 0,
+   "04_Bird_Island": 1,
+   "05_St_Croix_Island": 0,
+   "06_Riy_Banks": 0,
+   "07_St_Francis": 1,
+   "09_Fish_Hoek": 0,
+   "10_Sea_Point": 0,
+   "13_Saldhana_Bay": 0
+  },
+  "5": {
+   "01_Richards_Bay": 0,
+   "02_Durban": 1,
+   "03_Cape_Recife": 0,
+   "04_Bird_Island": 0,
+   "05_St_Croix_Island": 0,
+   "06_Riy_Banks": 0,
+   "07_St_Francis": 0,
+   "09_Fish_Hoek": 0,
+   "10_Sea_Point": 0,
+   "13_Saldhana_Bay": 0
+  },
+  "6": {
+   "01_Richards_Bay": 0,
+   "02_Durban": 1,
+   "03_Cape_Recife": 0,
+   "04_Bird_Island": 0,
+   "05_St_Croix_Island": 0,
+   "06_Riy_Banks": 0,
+   "07_St_Francis": 0,
+   "09_Fish_Hoek": 0,
+   "10_Sea_Point": 0,
+   "13_Saldhana_Bay": 0
+  },
+  "7": {
+   "01_Richards_Bay": 0,
+   "02_Durban": 0,
+   "03_Cape_Recife": 0,
+   "04_Bird_Island": 0,
+   "05_St_Croix_Island": 0,
+   "06_Riy_Banks": 1,
+   "07_St_Francis": 0,
+   "09_Fish_Hoek": 0,
+   "10_Sea_Point": 0,
+   "13_Saldhana_Bay": 0
+  }
+ }
+}

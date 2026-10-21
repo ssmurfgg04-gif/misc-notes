@@ -1,3 +1,15 @@
+# HANDOFF — state banner (updated 2026-10-21, R7d)
+
+**R7d in one line:** TEST-WINDOW CENSUS — exactly **3 export-fingerprint
+groups = 3 hidden stations** (G0=777 / G1=623 / G2=99; sil 0.998; m01..m15 =
+minute positions per notebook cell 2). Bed floors: G0 ≈ Saldanha ST300 (63.0
+dB/−8.3), G2 ≈ Durban-harbor class (64.8/−8.0, short campaign), **G1 matches
+NOTHING (72.2/−5.7)** ⇒ south-coast 08 ELEVATED (~40%), False-Bay 11/12
+WEAKENED, reserved-slot + non-SA REJECTED. Mapping: G1↔08, {G0,G2}↔{11,12}
+(Table Bay raised). Enquiry card = acoustic-fingerprint form (A53). Platform
+probes 0 hits. **NEXT USER ACTION:** submit r7_v3_k045 (rec) or r7_v2; send
+A53 enquiry.
+
 # HANDOFF — state banner (updated 2026-10-21, R7c)
 
 **R7c in one line:** shrink hedge r7_v3 family BUILT (k=0.35/0.45/0.55, moments

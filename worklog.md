@@ -293,3 +293,30 @@ re-check leading candidates; user's shrink-fix math p = 0.1301 + k·(p̂−0.130
 **Open / blocked-on-user**
 - Submit ONE of {r7_v3_k045 (rec), r7_v2, r7_v3_k035} — §7e decision table.
 - Sea Search/SAEON/SAMSA sharp enquiry (§6l wording) — still the highest-yield route.
+
+---
+
+## R7d — 2026-10-21 — test-window census: 3 groups = 3 stations; south-coast 08 elevated
+
+**Agent:** Z.ai (main). **Directive:** user R7d (test the 7-rank
+counterintuitive-hides theory against data; queued YouTube/X/Reddit/4chan
+probes; south-coast literature never swept).
+
+**Done**
+| # | Task | Outcome |
+|---|---|---|
+| 1 | Data recovery | Test.csv (md5 = official) + sa_acoustics.zip from release v1 via GH API asset flow; pyarrow/sklearn reinstalled |
+| 2 | Notebook correction | **m01..m15 = minute positions 1..15** (cell 2), NOT metric types — missingness = export window-edge cropping |
+| 3 | Availability census | 2-bit fingerprint → **exactly 3 groups** (sil 0.998): G0=777 / G1=623 (m01-missing) / G2=99 (m15-missing) + 8 noise; unimodal levels ⇒ 3 stations, one slot each — **reserved-slot theory REJECTED** |
+| 4 | Bed-floor matching | G0 63.0 dB/−8.3 ≈ **Saldanha ST300** (RMSE 2.23); G2 64.8/−8.0 ≈ **Durban harbour** (2.47) — short campaign; **G1 72.2/−5.7 matches NOTHING** (best 4.43, tilts ≥2.7 off) |
+| 5 | Verdicts | 7 ranks: #1 south-coast 08 ELEVATED (G1 unmatched + zero public south-coast moorings — Hofmeyr-Juritz 1999/2011 = boat sessions only); #2 False-Bay 11/12 WEAKENED (tilt mismatch); #4/#7 REJECTED; #5 ~5%; #3 alive-lowered; #6 weak-possible for G1. Mapping: **G1↔08, {G0,G2}↔{11,12}** (G2 harbor-tinged → Table Bay raised) |
+| 6 | Platform probes | YouTube ×3 JS-walled; Reddit 0; 4chan archives 0; X 0 — no public trail |
+| 7 | Docs + backup | hunt_log_r7d.json; plan.md §6n/§7f; HANDOFF banner; both repos pushed |
+
+**Decisions**
+- D27: counterintuitive-hides theory = PARTIALLY VINDICATED by data (rank 1 only); the rest rejected/weakened. Enquiry card upgraded to acoustic-fingerprint form (answerable without naming).
+- D28: station-name slate revised — 08: south-coast/unmatched-class ~40% (Hermanus/Gansbaai/Agulhas/Mossel Bay etc.), Sea Search False Bay pool ~30%; 11/12: west-coast pair ~65% with Table Bay harbour RAISED (G2 harbor bed), Robben/Dassen/Langebaan retained.
+
+**Open / blocked-on-user**
+- Submit r7_v3_k045 (rec) or r7_v2 → ρ readout → k* = ρ.
+- Send the A53 fingerprint enquiry to Sea Search/SAEON/SAMSA.

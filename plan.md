@@ -776,3 +776,47 @@ Cumulative: 61.
    4chan archives (desuarchive /sci/). Low prior on all — name-hunt, not
    evidence-hunt.
 3. User enquiry to Sea Search/SAEON/SAMSA remains the highest-yield route (§6l).
+
+## 6n. R7d — TEST-WINDOW CENSUS: the data answers the counterintuitive-hides theory (docs/hunt_log_r7d.json)
+
+**A49 (3 groups = 3 stations, data-backed):** availability fingerprints
+(2-bit: m01 present? × m15 present?) split the 1,500 test windows into
+**exactly 3 robust groups** (silhouette 0.998): **G0 = 777** (nothing
+missing), **G1 = 623** (m01 missing — matches the 41.6% aggregate), **G2 = 99**
+(m15 missing — matches 6.7%); +8 dropout-noise windows. Notebook cell 2
+correction: m01..m15 = minute positions, so missingness = window-edge cropping
+per EXPORT BATCH ⇒ 3 source exports ≈ 3 stations. Within-group level
+histograms unimodal ⇒ one station per group.
+**A50 (bed fingerprints):** quiet-bed (P20) floors vs train sites:
+**G0** 63.0 dB/−8.3 dB·dec⁻¹ ≈ **Saldanha ST300** (61.4/−9.3, RMSE 2.23) —
+west-coast class. **G2** 64.8/−8.0 ≈ **Durban harbour** (67.5/−8.9, RMSE 2.47)
+then Saldanha — harbor-tinged, SHORT campaign. **G1** 72.2/−5.7 matches
+**NOTHING** (best 4.43 dB RMSE, every tilt ≥2.7 off) — an acoustic environment
+absent from the released registry.
+**A51 (verdicts on the 7 counterintuitive ranks):** #4 reserved-slot
+**REJECTED** (3 data-backed groups); #7 non-SA **REJECTED** (all beds inside
+the SA envelope); #5 duplicate **UNLIKELY** (~5%, nearest bed 2.2 dB off);
+#2 False-Bay 11/12 **WEAKENED** (tilt −8 vs Fish Hoek −3.0); #3 Smitswinkel
+**ALIVE, LOWERED**; #6 offshore **WEAK-POSSIBLE for G1**; **#1 south-coast 08
+ELEVATED — the only theory the data actively supports**: G1 = unmatched
+open-coast 72 dB bed, and the south coast has ZERO public competition-era
+moored deployments (Hofmeyr-Juritz 1999/2011 Walker Bay = short boat sessions)
+⇒ nothing for competitors to find.
+**A52 (mapping):** lead = **G1↔08, {G0,G2}↔{11,12}** (west-coast pair;
+G2 harbor-tinged short campaign raises **Table Bay/Cape Town harbour**;
+G0 open west-coast keeps Robben/Dassen/Langebaan). Alternative (less
+supported): G1 = exposed island for 11/12.
+**A53 (enquiry card upgraded):** ask the ACOUSTIC-FINGERPRINT question
+(bed level/tilt + minute-1 cropping) — answerable without revealing names;
+see hunt_log_r7d.json for exact wording.
+**Platform probes:** YouTube ×3 (JS-walled), Reddit 0, 4chan-archives 0,
+X-indexed 0 — no public social trail (consistent with a deliberate hide).
+Cumulative hunt: 61 + 12 = 73 probes.
+
+## 7f. R7d next actions
+
+1. USER GATE unchanged: submit r7_v3_k045 (rec) / r7_v2; readout ⇒ ρ ⇒ k*.
+2. Enquiry (NOW SHARP): fingerprint-form question to Sea Search / SAEON /
+   SAMSA (A53).
+3. Optional: bed-level matching for the 16 VTUAD background clips vs G1
+   (provenance check of the synthetic pool — R8, low priority).
