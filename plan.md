@@ -366,3 +366,66 @@ Orange River, so those leads can only match WITHHELD stations (8/11/12?).
    ensemble, shape-based} (E6/A23 diversity rule).
 5. Write-up track: every claim → figure/control/held-out number (E7); checksums
    + DOIs + notebook cells; negative results with search logs (B1–B11).
+
+## 6g. R4b — the recipe question (HIGHEST PRIORITY finding, 2026-10-21)
+
+**Context.** The parallel hunt session pushed a mission update ("Users note on r4
+previous findings", commit d9241a3) claiming the effective organiser recipe is
+**H_B background-matched addition: M ≈ B/(1−f)** — i.e. the added component has the
+window's own background shape, spectral shape carries NO vessel signal, and the
+whole game reduces to conditional ΣB regression (f = 1 − ΣB/ΣM, A17). Under H_A
+(vessel-shaped addition, our R2/R4 generator) shape features carry the signal.
+The two hypotheses imply DIFFERENT optimal estimators and were resolved empirically.
+
+**Independent verification run (src/recipe_discrimination.py + train_v3.py):**
+
+| experiment | result | reading |
+|---|---|---|
+| P: plant H_A additions into real pool backgrounds (f≥0.1) | 99.5% detected by our presence head; real bg p50 = 0.0 | detector works in-distribution |
+| P: same head on raw test | p50 = 0.987 PRESENT (broad) | contradicts hunt-note p0=0.981 ABSENT ⇒ detector outputs on test are condition-dominated, not recipe evidence |
+| R: matched-level shape residuals (test − level-matched pool bg) | low bands −0.5…−1.0 dB, mid bands (12–16) +2.0…+2.3 dB, high bands −1.5…−2.9 dB; null = 0.0 | test periods are windier/flatter than level-matched pool windows — condition shift, recipe-non-diagnostic by itself |
+| M1 (H_A two-head) on H_A val / H_B val | 0.0446 / 0.2394 | recipes are mutually exclusive for shape models |
+| M2 (mixed-recipe two-head, synth v3: 50% H_B + 35% loud-tail) | **0.0727 H_A / 0.1018 H_B** | recipe-robust; learns ΣB-estimation internally |
+| M3 lock-v2 (ΣB̂ w/ absolute feats) | ΣB̂ err 0.06 dB on real bg, but f bias −0.19 on mixtures | absolute-level features poison ΣB̂ on mixed windows |
+| lock-v2b (ΣB̂ scale-invariant feats only) | ΣB̂ err 0.23 dB p50 / 1.7 dB p90; f RMSE H_B 0.205 raw; **blend w=0.3 + const: 0.1259 → 0.8741 synthetic-equivalent** | shrunk conditional-ΣB path is viable |
+
+**The pack evidence (decisive Bayesian argument).** Under H_A, shape signal is
+99.5% detectable in-distribution; a 122-competitor field with 2 subs/day should
+have found it — yet the pack (0.816–0.824) sits BELOW best-const (0.859) and only
+#1 (0.872) beats it. Under H_B this is exactly expected: shape features are pure
+condition noise on test, constants are near-optimal, and #1's edge = conditional
+ΣB̂ regression. Also: best-const 0.859 = 1 − 0.141 (grid std, A16-consistent), and
+#1's 0.872 is reproducible by our blend (0.8741) on H_B val. **Posterior ≈ 85% H_B
+(or H_C close to it).** Not treated as certainty — A6 disclaims exactness; a
+partial background-matching (H_C) reconciles cell 9's VTUAD disclosure with the
+plant results.
+
+**Caveats (honest).** (1) All H_B numbers are synthetic-domain: real test sits
++6–15 dB above the pool at matched shape ⇒ ΣB̂ extrapolation risk, partially
+mitigated by loud-tail oversampling + blend shrinkage. (2) ΣB̂-family results share
+mild circularity (val synth windows built from pool backgrounds the regressor also
+saw); R5 protocol must enforce background-window-level group splits. (3) Hunt-note
+detector numbers (p0=0.981) could not be reproduced — our head gives the opposite;
+both are condition artifacts.
+
+**Decision table (submissions prepared, user-gated, E6/A23):**
+| file | recipe bet | synthetic-domain score (H_A / H_B val) |
+|---|---|---|
+| `submission_r4_v1.csv` (H_A two-head, primary grid) | H_A | 0.955 / 0.82 (pack-level) |
+| `submission_r4_v2_mixed.csv` (M2 mixed two-head) | robust | 0.927 / **0.898** |
+| `submission_r4_v3_HA.csv` (H_A refit) | H_A | = v1 class |
+| `submission_r4_v6_blend_lockv2b.csv` (w=0.3 lock blend) | H_B | 0.815 / **0.874** |
+(`submission_r4_v4_lockv2.csv` broken — superseded; `r4_v5_lockv2b.csv` raw lock.)
+
+**Recommended smoke test:** `r4_v2_mixed` (highest information: public ≈0.87+ ⇒
+H_B + extrapolation OK; ≈0.82–0.86 ⇒ H_B partial; <0.80 ⇒ extrapolation failure).
+Second submission same day if needed: `r4_v6_blend`. Private pair (A23): M2 + blend
+(both H_B-robust, different shrinkage) OR M2 + v1 (recipe diversification) —
+decide AFTER the smoke test, never on public-LB rank tuning (E6).
+
+**R5 queue (revised by recipe question):** (1) ΣB̂ v3: conditional
+site×band×condition regression with loud-condition extrapolation (quantile heads,
+weather proxies), background-window-group-split protocol; (2) duty-cycle
+fingerprint features (m01 pattern across span); (3) residual HF-deficit features
+(wind proxy); (4) optional H_C partial-matching generator scenario; (5) hunt
+vectors 2–10 (parallel track, unchanged).
