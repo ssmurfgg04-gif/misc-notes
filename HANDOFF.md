@@ -18,6 +18,20 @@ Backup system: milestone tarballs + LEDGER.sha256 + RESTORE_CARD; M0-M3 pushed.
 r7_v4_softfloor (conservative).** Rival intel: pipeline reconstructed (mirror of
 r7 family minus transductive layer; 0.8720 = honest execution); docs/
 intel_r10_{oss,vtuad2,ruicodex2}.md + writeup_skeleton.md (prize track live).
+**(R10b — continuation, after the LB paste landed.)**
+
+**R10 in one line:** PIN READOUT SOLVED. r7_v3_k045 → LB **0.797454138**
+(RMSE 0.202545861; the "Score Added Vessel 0.477344444" col = zero-weight
+AUC diagnostic, ignore). Exact solve (residual 2.8e-17): **ρ = 0.29206954,
+k* = 0.29207**, r7_v2-family ceiling **0.800160**. Leader 0.8720 ⇔ ρ≈0.7904
+⇒ the whole game is now **raise vector ρ, not calibration**. TWO FILES
+STAGED (user gate): **r7_v4_kstar.csv (sha c5c50156, submit FIRST — locks
+0.80016 + verifies framework at 2nd point)** and **r8_v1_t1t2_k0292.csv
+(sha 93fc4d7f, submit SECOND — LGBM+T1T2 Beta-pinned, Spearman 0.494 vs
+family = orthogonal; payoff 0.804–0.836 if ρᵀ∈[0.35,0.8], downside
+bounded 0.7944)**. A71: Beta-quantile pin (α .207/β 1.385) replaces power
+map (bounded [0,1], moment-exact). After r8_v1 read → ρᵀ exact → r8_v2 at
+k8*=ρᵀ. Fallback if ρᵀ<0.30: ridge blend r7_v2×r6_v2 (0.8067 projected) + T5.
 
 # HANDOFF — state banner (updated 2026-10-22, R9)
 

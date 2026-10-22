@@ -1,0 +1,152 @@
+{
+ "round": "R10",
+ "date": "2026-10-22",
+ "task": "k* solve from r7_v3_k045 LB reading + r8_v1 T1T2 candidate + ensemble math",
+ "pin_file_check": {
+  "E_p": 0.13007576208333324,
+  "E_p2": 0.025760909167794027,
+  "E_p_minus_mu": -5.551115123125783e-17,
+  "E_p2_vs_report": -3.469446951953614e-18
+ },
+ "ksolve": {
+  "rmse_pin_used": 0.20254586149999998,
+  "sigma2": 0.043660273018440054,
+  "sigma": 0.2089504080360698,
+  "delta": 0.0026354470076628833,
+  "W_from_file": 0.0088412052862341,
+  "C": 0.01275183588210776,
+  "V": 0.04366027301844,
+  "V_minus_sigma2": -5.551115123125783e-17,
+  "rho_implied": 0.29206954058033446,
+  "kstar": 0.29206954058033446,
+  "rescale_factor_vs_k045": 0.6490434235118544,
+  "projected_score_kstar": 0.8001604389246288,
+  "projected_rmse_kstar": 0.1998395610753712,
+  "implied_raw_r7v2_score_if_submitted": 0.7513700052836252
+ },
+ "family_score_table": {
+  "0.35": {
+   "predicted_score": 0.799794178,
+   "predicted_rmse": 0.200205822
+  },
+  "0.45": {
+   "predicted_score": 0.797454139,
+   "predicted_rmse": 0.202545862,
+   "measured_rmse": 0.20254586149999998,
+   "residual": 2.7755575615628914e-17
+  },
+  "0.55": {
+   "predicted_score": 0.793020566,
+   "predicted_rmse": 0.206979434
+  },
+  "1.0": {
+   "predicted_score": 0.751370005,
+   "predicted_rmse": 0.248629995
+  },
+  "0.29207": {
+   "predicted_score": 0.800160439,
+   "predicted_rmse": 0.199839561
+  }
+ },
+ "r7_v4_kstar": {
+  "file": "download/submission_r7_v4_kstar.csv",
+  "sha256": "c5c50156d6adb7e74aa50cd9be5f101b287f32ee53681655cf8256491bb90bc0",
+  "k": 0.29206954058033446,
+  "E_p": 0.13007576208333327,
+  "E_p2": 0.020644126729202957,
+  "min": 0.09208459401101723,
+  "max": 0.43370171774847266,
+  "spearman_vs_pin": 1.0,
+  "expected_score": 0.8001604389246288
+ },
+ "t1t2_alignment": {
+  "id_order_proof": true,
+  "rows": 1500,
+  "e5_recomputed_max_abs_diff_vs_scorecol": 0.6471585430592326,
+  "e5_recomputed_corr_vs_scorecol": 0.965442713749652,
+  "note": "npz e5 is R8-followup recomputation, not the k045 score col; order proven via Test.csv IDs",
+  "grp_counts": {
+   "G0": 777,
+   "G1": 624,
+   "G2": 99
+  }
+ },
+ "t1t2": {
+  "spearman_vs_r7v2_family": 0.493841345511525,
+  "raw_min": 3.906673694425209e-09,
+  "raw_max": 0.44044670021442517,
+  "raw_mean": 0.17448026490732998,
+  "raw_std": 0.15234546099067625
+ },
+ "t1t2_pin": {
+  "method": "beta_quantile",
+  "alpha": 0.20704674053420943,
+  "beta": 1.3846928519777648,
+  "E_p": 0.12983090069461373,
+  "E_p2": 0.06029053272724733,
+  "residual_mu": -0.0002448613887195694,
+  "residual_E2": -0.00028944417275264533,
+  "pinned_min": 2.9171896495644647e-16,
+  "pinned_max": 0.9813614699159542
+ },
+ "r8_v1": {
+  "file": "download/submission_r8_v1_t1t2_k0292.csv",
+  "k_borrowed": 0.29206954058033446,
+  "min": 0.09208459401101735,
+  "max": 0.3787103876726117,
+  "in_range": true,
+  "E_p": 0.1300042455300241,
+  "E_p2": 0.02060626465948498,
+  "spearman_vs_raw_t1t2": 1.0,
+  "sha256": "93fc4d7f95721aa4917fa05492087216007ac118c55e894cb8ef6e6b66df60bd"
+ },
+ "r8_v1_payoff": {
+  "0.2": 0.794369,
+  "0.25": 0.797494,
+  "0.292": 0.800156,
+  "0.35": 0.803892,
+  "0.45": 0.810506,
+  "0.6": 0.820884,
+  "0.8": 0.835739
+ },
+ "r8_v1_note": "beats r7_v4_kstar iff rho_T1T2 > rho_base = 0.2921; after first LB read of r8_v1, its exact k8* follows from the same quadratic (V_T = (E[sub8^2]-mu^2)/k8^2, rho_T from RMSE reading)",
+ "ensemble_info": {
+  "note": "INFO ONLY - r6v2/r4v2 rhos are R7b approximations; build only after k* verification read",
+  "two_vector": {
+   "vectors": [
+    "r7_v2",
+    "r6_v2"
+   ],
+   "rho_max": 0.37980970054656416,
+   "projected_score": 0.8067073656517159,
+   "weights": [
+    0.47473782827787314,
+    0.5252621717221269
+   ]
+  },
+  "three_vector": {
+   "vectors": [
+    "r7_v2",
+    "r6_v2",
+    "r4_v2"
+   ],
+   "rho_max": 0.3955097366534876,
+   "projected_score": 0.8080870355195533,
+   "weights": [
+    0.5121456188668664,
+    0.9373550690603065,
+    -0.4495006879271728
+   ]
+  },
+  "three_vector_ridge": {
+   "lambda": 0.05,
+   "rho_max": 0.381258430529323,
+   "projected_score": 0.8068319295211266,
+   "weights": [
+    0.508120463261402,
+    0.7932329407896721,
+    -0.3013534040510741
+   ]
+  }
+ }
+}

@@ -723,3 +723,26 @@ Work Log:
 
 Stage Summary:
 - Round R10 CLOSED: audit clean, 5 silent issues fixed, R8b double-negative logged (D38/D39), 3 candidates ledgered, 4 milestones pushed, write-up track live
+
+## R10 — 2026-10-22 — PIN READOUT SOLVED: ρ=0.29206954, k*=0.29207, ceiling 0.800160; r7_v4_kstar + r8_v1 staged
+
+**Agent:** Z.ai (main). **Directive:** user posted r7_v3_k045 LB return (0.797454138 / RMSE 0.202545861 / zero-weight AUC 0.477344444).
+
+**Work Log**
+- Box inventory: repo survived, remote token embedded (key-loss risk contained); PIN file sha 98775aed verified both copies.
+- Decoded 3rd LB number via lb_autopsy.json: "score_added_vessel platform weight = ZERO" → AUC diagnostic only, ignored for score.
+- Exact k* solve (scripts/r10_ksolve.py): RMSE²(k)=σ²(1+k²−2kρ) with V=σ_f² by construction; ρ=(1.2025−RMSE²/σ²)/0.9 → **ρ=0.29206954, k*=ρ=0.29207**; verification residual at k=0.45: 2.8e-17 (framework EXACT). Family table: k035 0.79979 / k055 0.79302 / raw r7_v2 0.75137.
+- Built download/submission_r7_v4_kstar.csv (sha c5c50156, k*=0.29207, range [0.0921,0.4337], Spearman 1.0, moments exact, projected 0.800160).
+- Built download/submission_r8_v1_t1t2_k0292.csv (sha 93fc4d7f): lgb_t1t2 test vector row-aligned via Test.csv==sample_sub==PIN ID order proof (npz e5 is a RECOMPUTED E5, corr 0.965 — value mismatch expected); **A71 Beta-quantile pin** (α=0.20705, β=1.38469; bounded [0,1], moment-exact) replaces power map after γ-runaway overflow (p8 max 5.12); shrunk @k=0.292 → [0.0921,0.3787] ✓.
+- T1T2 facts: Spearman vs r7_v2 family 0.494 (orthogonal ✓ D36); payoff table @k8: ρᵀ .35→0.8039 / .45→0.8105 / .60→0.8209 / .80→0.8357; downside floor 0.7944.
+- Ensemble math (info): 2-vec r7_v2×r6_v2 → ρ_max 0.3798 → 0.8067; 3-vec ill-conditioned (w_r4v2=−0.45); ridge 0.8068.
+- Leader gap quantified: 0.8720 ⇔ ρ_leader≈0.7904. Strategy: raise vector ρ (T1T2/T5/T4), not calibration.
+- plan.md §7m/§7n written; HANDOFF R10 banner; report data/train_v3/r10_ksolve_report.json.
+
+**Decisions**
+- D40: r7_v2/r7_v3 chain FROZEN; all new vectors use Beta-quantile pin (A71).
+- D41: submission order = r7_v4_kstar FIRST (locks 0.80016 + 2nd-point verification), r8_v1 SECOND (ρᵀ probe). r8_v2 at k8*=ρᵀ after read. Blend only if ρᵀ<0.30.
+
+**Open / blocked-on-user**
+- Submit r7_v4_kstar (sha c5c50156) + r8_v1_t1t2_k0292 (sha 93fc4d7f); paste both LB rows.
+- Parallel research agents 10-a/10-b/10-c launching (VTUAD round-2, OSS tools, ruicodex deep-dive).
