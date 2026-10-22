@@ -761,3 +761,29 @@ Stage Summary:
 **Final picks (user gate, ledgered):** r7_v4_kstar c5c50156 (expect 0.80016) + r8_v1_t1t2_k0292 93fc4d7f (ρᵀ probe, floor 0.7944 / payoff to 0.8357). r8b_v1/v2 raw k=1 vectors UNSUBMITTABLE as-is (need k*=0.292 rescale if ever used).
 
 **Note:** build_submission.py TEST path points at data/Test.csv which is still absent locally (restored copies live at data/sa_package/Test.csv); gate run pending a path fix — files were ledgered manually in matching format.
+
+---
+
+## R11 — 2026-10-22 — EFFECTIVE-MEASURE LOCK + DETECT-THEN-QUANTIFY PIVOT (D43)
+
+**Agent:** Z.ai (main). **Trigger:** user pasted r7_v4_kstar 0.798997 (predicted 0.800160 — identity BROKEN at 2nd point) + r8_v1 0.791513 + top-6 leaderboard (ruicodex 0.8720, iztanmaymohan 0.8674, Alioukun 0.8265, pack 0.8238/0.8237/0.8218).
+
+**Findings**
+- **F-A (measure):** share-RMSE evaluates an EFFECTIVE measure Ω ≠ full-file uniform (V_Ω/V_full = 0.768). Two-point exact solve: V_Ω=0.033550, C_Ω=0.010477, ρ_Ω=0.2737, k*_Ω=0.31228, **E5 ceiling 0.799031**; current 0.798997 → **E5 family CLOSED (gap 3.4e-5, no slots)**.
+- **F-B (T1T2):** family ceiling 0.7921–0.7944 across sane V_TS → BELOW E5. **D42: LGBM share-regressor transfer collapsed** (val ρ 0.949 → test ρ_Ω ≈ 0.14). Recipe-honest val does not predict LB for the trained family.
+- **F-C (THE GAP):** Spearman(share,score)=1.0 in PIN ⇒ our AUC 0.4773 = OUR BEST VECTOR's passage-separation = INDEPENDENT of the evidence partition. Leaders: 0.713/0.666/0.524. AUC rational = 42961/90000 exact across all pasted values; balanced partition feasible (P(P)≈0.5, E[y|P]=0.26), 300/1200@1500 infeasible. **Leaders DETECT passages; E5 only quantifies within-passage. Detection-first is the whole 0.799→0.872 gap.**
+- **F-D:** starter notebook: no per-window weights documented; score col = "evidence support for the controlled addition", AUC diag weight-0 = intended free channel for model outputs (NOT probing — group-testing probes stay banned per rules rail).
+- **F-E:** competition zip = starter + Test + sample only → no organiser train windows; self-mixed labels the only supervised path (rival's route).
+
+**Deliverables**
+- scripts/r11_analyze.py + data/train_v3/r11_analyze_report.json (all numbers above).
+- **download/submission_r11_v1_kstarshare_t1t2score.csv (sha 5182746a):** share col = r7_v4_kstar values (locked 0.798997); score col = lgb_t1t2 raw ranking → free read of T1T2's detection AUC. Ledgered.
+
+**Decisions**
+- D42: T1T2 share-regressor line DEAD on LB measure (ceiling < E5).
+- D43: **detect-then-quantify doctrine** — R11 build = (1) binary passage-present head on D20 mixtures (exact planted labels), validated VIA the AUC channel (score col = detector P(passage) ranking — intended diagnostic use); (2) quantify share within predicted passages; (3) combiner share = P(passage)^τ × quantified, Beta-pin + 2-point-Ω shrink. VTUAD real vessel audio for mixture realism.
+- D44: E5 family closed; no further shrink slots on it.
+
+**Open / next**
+- USER: submit r11_v1 (5182746a) — zero share risk; paste Share + Score AUC values.
+- R11 build: detection head + label-definition audit vs starter + raw-band-power mirror arm.

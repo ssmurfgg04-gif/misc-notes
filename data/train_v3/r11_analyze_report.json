@@ -1,0 +1,48 @@
+{
+ "round": "R11",
+ "date": "2026-10-22",
+ "task": "effective-measure lock + doctrine pivot",
+ "e5_family_effective": {
+  "V_Omega": 0.033550119172974506,
+  "C_Omega": 0.01047705126687801,
+  "rho_Omega": 0.2737466491942826,
+  "kstar_Omega": 0.3122805976593236,
+  "ceiling_rmse": 0.2009688861170107,
+  "ceiling_score": 0.7990311138829893,
+  "current_best_score": 0.7989970200000001,
+  "residual_gap_to_ceiling": 3.409388298925009e-05,
+  "check_k045": -6.938893903907228e-18,
+  "check_kstar": 0.0,
+  "V_ratio_vs_fullfile": 0.7684358537749983
+ },
+ "t1t2_family": {
+  "rmse_measured": 0.208487118,
+  "ceiling_score_range": [
+   0.7920664145798598,
+   0.7943736894563522
+  ],
+  "best_case_ceiling_score": 0.7943736894563522,
+  "best_case_V_TS": 0.06,
+  "verdict": "ceiling BELOW E5 family (0.79903) across sane V_TS => share-regressor transfer collapsed (D42)"
+ },
+ "auc_channel": {
+  "rational": "42961/90000 (m=1) => N_pairs in {90000,180000,270000,360000}",
+  "hypotheses": {
+   "750 public (600/150 or 150/600)": 90000,
+   "1200 public (600/600 or 300/900)": 180000,
+   "1500 full (300/1200)": 360000
+  },
+  "feasibility": "300/1200@1500 INFEASIBLE with E[y^2]=0.06058 if partition={y>0}; balanced P(P)=0.5 feasible (E[y|P]=0.26, RMS|P=0.348)",
+  "reading": "ours 0.4773 = our share ranking is INDEPENDENT of passage partition; leaders 0.71/0.67 DETECT passages",
+  "doctrine": "DETECT-then-QUANTIFY (D43); score col = model's own P(passage) output = intended use, NOT probing"
+ },
+ "r11_v1": {
+  "file": "download/submission_r11_v1_kstarshare_t1t2score.csv",
+  "sha256": "5182746aad87c52ff05362b35757b09e8f895533347d5347af71508db817d649",
+  "share_col": "identical to r7_v4_kstar (score locked at 0.798997)",
+  "score_col": "lgb_t1t2 raw (1500)",
+  "spearman_score_vs_share": 0.493841345511525,
+  "expected_share_score": 0.798997019,
+  "expected_auc_read": "T1T2 detection skill; >=0.60 => detect-then-quantify viable with LGBM family"
+ }
+}
