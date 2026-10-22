@@ -746,3 +746,18 @@ Stage Summary:
 **Open / blocked-on-user**
 - Submit r7_v4_kstar (sha c5c50156) + r8_v1_t1t2_k0292 (sha 93fc4d7f); paste both LB rows.
 - Parallel research agents 10-a/10-b/10-c launching (VTUAD round-2, OSS tools, ruicodex deep-dive).
+
+---
+
+## R10b — 2026-10-22 — parallel-session merge + candidate reconciliation (follow-on to R10 above)
+
+**Agent:** Z.ai (main). Rebase conflict vs parallel R10 (execution-hardening session) resolved: both contributions kept (remote = hardening/floor-fix/intel; local = k* solve). Commit 079e602; D-number collision fixed (local D38/D39 → D40/D41).
+
+**Reconciliation (Spearman matrix, 6 vectors):**
+- r8b_v1_repin ≈ r8_v1_t1t2 (0.993): parallel session independently built the T1T2 vector — but raw k=1 (would score ~0.75) with 410-window point-mass at 0 (power-map pin artifact). Local r8_v1 (Beta-pin A71, k=0.292 borrowed, 5 ties, bounded) is the clean representative of the LGBM family.
+- softfloor_repin ≈ PIN ranking (0.998): E5 floor fix, est. +0.0008 only, own 145-mass at 0 → NOT a slot tonight; revisit as E5-family v2 if T1T2 probe disappoints.
+- Two orthogonal families confirmed (E5 ↔ LGBM Spearman ≈ 0.49) → blend math live once ρᵀ is measured.
+
+**Final picks (user gate, ledgered):** r7_v4_kstar c5c50156 (expect 0.80016) + r8_v1_t1t2_k0292 93fc4d7f (ρᵀ probe, floor 0.7944 / payoff to 0.8357). r8b_v1/v2 raw k=1 vectors UNSUBMITTABLE as-is (need k*=0.292 rescale if ever used).
+
+**Note:** build_submission.py TEST path points at data/Test.csv which is still absent locally (restored copies live at data/sa_package/Test.csv); gate run pending a path fix — files were ledgered manually in matching format.
