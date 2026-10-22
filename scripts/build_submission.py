@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 BASE = "/home/z/my-project"
-TEST = f"{BASE}/data/Test.csv"
+TEST = f"{BASE}/data/sa_package/Test.csv"   # R12b fix: package layout (data/Test.csv absent)
 DL = f"{BASE}/download"
 MU, E_F2 = 0.1300757620833333, 0.06057997689999998
 
@@ -101,6 +101,20 @@ def main():
     assert out["share_added_vessel"].notna().all()
     assert len(out) == 1500 and out["ID"].equals(test["ID"]), "ID order broken"
 
+    # ---- R12b fix: carry score col through (weight-0 AUC diagnostic channel) ----
+    score_note = None
+    if a.csv:
+        src = pd.read_csv(a.csv, dtype={"ID": str})
+        if "score_added_vessel" in src.columns:
+            sc = src["score_added_vessel"].to_numpy(float)
+            assert len(sc) == 1500 and np.isfinite(sc).all(), "bad score col"
+            assert ((sc >= 0) & (sc <= 1)).all(), "score col outside [0,1] (starter cell 8)"
+            out["score_added_vessel"] = sc
+            score_note = "carried from source csv"
+        else:
+            out["score_added_vessel"] = out["share_added_vessel"]
+            score_note = "defaulted to share col (source had none)"
+
     path = f"{DL}/submission_{tag}.csv"
     if os.path.exists(path) and not a.force:
         sys.exit(f"REFUSING to overwrite {path} (use --force)")
@@ -116,6 +130,7 @@ def main():
         "clipped_rows": n_clip,
         "point_masses_top3": pm,
         "mass_at_min": float((s == s.min()).mean()),
+        "score_col": score_note,
         "notes": "share col verified (A33 zero-weight score col excluded)",
     }
     # spearman vs pinned references

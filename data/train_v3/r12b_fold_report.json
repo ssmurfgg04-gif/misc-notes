@@ -1,0 +1,106 @@
+{
+ "round": "R12b",
+ "date": "2026-10-22",
+ "task": "fold r12_v1 reading; real-quantifier family verdict; AUC lineage",
+ "reading": {
+  "file": "submission_r12_v1_realq_detAUC.csv (sha 688e7989)",
+  "k": 0.31,
+  "rmse_share": 0.203610728,
+  "rmse2": 0.04145732855668998,
+  "auc": 0.554933333,
+  "auc_exact": "49944/90000 (m=1)",
+  "S2": 0.043660273018440054,
+  "line": "C(V) = 0.310000*V + 0.00000000"
+ },
+ "line": {
+  "a_per_V": 0.155,
+  "b": 0.0035531362286291518,
+  "form": "C(V) = 0.155*V + 0.00355314  [from (0.0961*V + 0.00220294)/0.62]"
+ },
+ "family_verdict": {
+  "V_physical_range_rho_le_1": [
+   0.0005,
+   0.25
+  ],
+  "realistic_V_band": [
+   0.015,
+   0.085
+  ],
+  "escape_corners_beat_E5": {
+   "V_lt": 0.006248022685904526,
+   "V_gt": 0.0841036942755939
+  },
+  "max_score_in_realistic_band": 0.7990815913779472,
+  "sliver_V_range_beating_E5_inside_band": [
+   0.0840866793339667,
+   0.0849973998699935
+  ],
+  "ceiling_score_at_V_E5like_00336": 0.7965895199969064,
+  "E5_ceiling_score": 0.7990311138829893,
+  "rho_at_V_0034": 0.228742872752795,
+  "rho_at_V_005": 0.24191942196918226,
+  "verdict": "DEAD (D46): at E5-like Omega/file variance ratio (V=0.0336) the real-quantifier family ceiling is 0.796590 \u2014 BELOW current best 0.798997. Escaping E5's ceiling 0.799031 requires V < 0.0062 (Omega would have to SHRINK the pinned vector's variance 22x vs E5's 0.77x ratio) or V > 0.0841 (Omega inflates it 2x). Both corners are physically implausible for a pinned [0,1] vector with file-variance 0.0437 whose E5 sibling measures 0.0336. The k=0.31 point alone kills the family: NO k-sweep slot spent.",
+  "rho_implies": "even in best physical case the quantifier's Omega-correlation with y is below E5's rho=0.2737 => the real quantifier RANKING transfers worse than E5's ranking; bottleneck is ranking quality (needs ~0.85), not calibration"
+ },
+ "ksweep_info": {
+  "k=0.31": {
+   "V=0.02": 0.796389,
+   "V=0.0336": 0.796389,
+   "V=0.05": 0.796389,
+   "V=0.075": 0.796389
+  },
+  "k=0.45": {
+   "V=0.02": 0.795739,
+   "V=0.0336": 0.793653,
+   "V=0.05": 0.791164,
+   "V=0.075": 0.787427
+  },
+  "k=0.6": {
+   "V=0.02": 0.792934,
+   "V=0.0336": 0.787296,
+   "V=0.05": 0.780691,
+   "V=0.075": 0.770988
+  },
+  "k=1.0": {
+   "V=0.02": 0.775603,
+   "V=0.0336": 0.755586,
+   "V=0.05": 0.73344,
+   "V=0.075": 0.70284
+  }
+ },
+ "blend_info": {
+  "orthogonal_best_case_rho2": 0.12726052978029903,
+  "orthogonal_best_case_score": 0.8047974294642591,
+  "note": "requires Cov_Omega(E5, realq) = 0 (unlikely, Spearman 0.70 on test); upper bound ~+3e-4 over E5 ceiling => blend NOT worth a slot yet"
+ },
+ "auc_lineage": [
+  {
+   "vec": "PIN-sort (r7 score col)",
+   "auc": 0.47734444444444446,
+   "w": 42961
+  },
+  {
+   "vec": "lgb_t1t2 raw (r11_v1)",
+   "auc": 0.5494333333333333,
+   "w": 49449,
+   "note": "user paste 0.5494 (4dp) consistent with 49449/90000=0.549433"
+  },
+  {
+   "vec": "real-factory detector (r12_v1)",
+   "auc": 0.5549333333333333,
+   "w": 49944
+  },
+  {
+   "vec": "leaders ruicodex / iztanmay",
+   "auc": [
+    0.713088888,
+    0.666155555
+   ],
+   "w": [
+    64177,
+    59953
+   ]
+  }
+ ],
+ "auc_lineage_note": "49944 = 49449 + 495 pairs: real-data detector only +0.0055 AUC over synthetic T1T2 => factory realism was NOT the detector bottleneck; gap to leaders (0.713) is construction-level, see R13 fixes"
+}

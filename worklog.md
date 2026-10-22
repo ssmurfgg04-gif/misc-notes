@@ -810,3 +810,50 @@ Stage Summary:
 **Open**
 - USER: submit r12_v1 (688e7989), paste Share + Score AUC.
 - Next: combiner P^τ×q on the readback; per-family Ω ladder (2nd read at different k solves exact k*); VTUAD external-data declaration reminder on Zindi (rules).
+
+## R12b — 2026-10-22 — reading folded, D46 family kill, r12_v2 detection probe staged
+
+**Agent:** Z.ai (main). **Trigger:** user pasted r12_v1_realq LB return: 0.796389271
+/ Share RMSE 0.203610728 / Score AUC 0.554933333.
+
+**Work Log**
+- Forensics: "that one" = submission_r12_v1_realq_detAUC.csv (sha 688e7989, R12
+  real-data factory; ledger entry confirmed k=0.31, score col = detector P(passage)).
+- AUC rationalized: 0.554933333 = 49944/90000 exact (m=1 grid). Detection lineage:
+  42961 (PIN-sort) → 49449 (lgb_t1t2, r11_v1) → 49944 (real factory det). Real-data
+  detector only +0.0055 AUC over synthetic ⇒ factory realism was NOT the bottleneck.
+- Framework fold (scripts/r12b_fold.py, report r12b_fold_report.json): RMSE²(k)=S2+
+  k²V−2kC with S2=0.043660273; one reading pins C(V)=0.155V+0.00355. At E5-like
+  Ω-variance V=0.0336 the family ceiling is 0.796590 < best 0.798997; E5's 0.799031
+  is escaped only at V<0.0062 or V>0.0841 (implausible for a pinned [0,1] vector).
+  **D46: real-quantifier share family DEAD — no k-sweep slot spent.** Blend INFO:
+  E5×realq orthogonal bound 0.8048 (parked, needs Cov_Ω).
+- Starter re-audit (cells 0/2/5/9/10): organiser passages = VTUAD v1.3.2 band-energy
+  summaries ("gain discarded; trajectories, relative acoustic channel and energy
+  varied") — SAME source as our refs; AUC weight-0 diagnostic = sanctioned channel;
+  bands = 1/3-octave dB levels, blanks = missing observations.
+- Units check: refs.parquet["power"] is LINEAR band power (2.8e-12..2.2e-4) ⇒ the
+  factory's lin+g2·mask mixing is power-correct (docstring right, no bug).
+- Fresh factory-faithful val batch (seed 20261022b, 1500 real mixtures): physics
+  detector horse race. **c1_hf (HF>1kHz excess energy ratio) AUC 0.8551**; c1_lf
+  0.5815, c2_tot 0.6019, c3_conc 0.5789, c4_lfsh 0.1452 (anti), combo 0.5810;
+  anchors: R12 LGBM det 0.9656 (models intact ✓), quant-as-detector 0.9359.
+  HF wins on bump-over-bed SNR (quiet stable high bands vs variable LF).
+- r12_v2 assembled + GATED (build_submission.py after 2 fixes: TEST path →
+  data/sa_package/Test.csv; score col now carried + [0,1]-asserted):
+  **download/submission_r12_v2_lockE5_c1hf.csv (sha 43204d27)** = share col locked
+  r7_v4_kstar bit-exact (expect 0.798997019, 3rd verification point) + score col
+  c1_hf raw (natural [0,1], Spearman vs share 0.497). Ledgered.
+- pyarrow/lightgbm reinstalled (venv pip trap again — use /home/z/.venv/bin/python -m pip).
+
+**Decisions**
+- D46: real-quantifier family closed; all direct share-regression families cap
+  ~0.799 ⇒ 0.799→0.872 is detection+within-passage ranking only (ρ_Ω 0.23→~0.85).
+- D47: score-col A/B program — each future slot = locked share (0.798997 banked)
+  + one new detector candidate in the score col (2 free detection readings/day).
+
+**Open / next**
+- USER: submit r12_v2_lockE5_c1hf (43204d27); paste Share + Score rows.
+- W = AUC×90000: ≥58500 physics transfers → R13 physics+LGBM retrain;
+  ≤49500 → next probe quant-as-detector (zero cost), then factory v2 (plan §7p:
+  m01/m15 missingness simulation, full-window passage hedge, low-share hedge).

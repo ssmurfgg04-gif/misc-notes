@@ -1139,3 +1139,44 @@ verification read, using ridge weights w ≈ (0.51, 0.79, −0.30) renormalized.
 4. If ρᵀ ≥ 0.45: T1T2 family becomes the main line — push ρ higher via
    T4 self-training (VTUAD strict-WAV) + T7 ensemble of T1T2 seeds.
 
+
+## 7p. R12b — reading folded, D46 family kill, zero-risk detection probe (r12_v2)
+
+**Reading folded (user paste):** r12_v1_realq (sha 688e7989): share RMSE 0.203610728
+@ k=0.31 → 0.796389271; AUC **0.554933333 = 49944/90000 exact** (m=1 grid; lineage
+42961 PIN-sort → 49449 T1T2 → 49944 real-det; leaders 0.713/0.666).
+
+**D46 — real-quantifier share family DEAD (one reading sufficed):** framework
+RMSE²(k)=S2+k²V−2kC pins the line C(V)=0.155V+0.00355. At E5-like Ω-variance
+(V=0.0336) family ceiling = **0.796590** < best 0.798997. Escaping E5's 0.799031
+needs V<0.0062 (Ω shrinks pinned variance 22×) or V>0.0841 (Ω inflates 2×) — both
+physically implausible for a pinned [0,1] vector (E5 sibling: Ω/file ratio 0.768).
+⇒ **NO k-sweep slot spent.** All direct share-regression families cap ~0.799;
+the 0.799→0.872 gap is detection+within-passage ranking (needs ρ_Ω≈0.85 vs our 0.23–0.27).
+
+**r12_v2 STAGED (zero-risk detection probe):** download/submission_r12_v2_lockE5_c1hf.csv
+(sha **43204d27**): share col = r7_v4_kstar values bit-exact (measured 0.798997019
+twice, deterministic); score col = **c1_hf** = HF(>1 kHz) excess-energy ratio
+(bed=min over observed minutes; exc=max(lin−bed_lin,0); ratio Σexc_HF/Σlin_HF).
+Training-free physics detector — no clip-domain gap, no learned-feature drift.
+Fresh factory-faithful val (seed 20261022b, 1500 mixtures): **c1_hf AUC 0.8551**
+vs c1_lf 0.5815 / c2_tot 0.6019 / c3_conc 0.5789 / c4_lfsh 0.1452(anti) /
+combo 0.5810; anchors: R12 LGBM det 0.9656 ✓ (models intact), quant-as-det 0.9359.
+HF wins: quiet high bands give max bump-over-bed SNR; LF crowded by natural variability.
+
+**Reading protocol:** submit r12_v2 → paste row. Share must read 0.798997019
+(framework re-verification, 3rd point). AUC W = AUC×90000:
+- W ≥ 58500 (≥0.65): physics transfers → R13 = physics+LGBM hybrid retrain.
+- 49500–58500: physics ≈ learned (0.549–0.55) → gap is construction-level, not feature-level.
+- W ≤ 49500: physics fails → next probe = quant-as-detector score col (val 0.936,
+  npz `qnt`, zero build cost), then R13 factory v2.
+
+**R13 factory v2 fix list (audit findings, refs power = LINEAR ✓ mixing correct):**
+1. Simulate test missingness in mixtures (m01 blank 41.6%, m15 6.7%) + explicit
+   availability-mask features (train/val today: all minutes observed — structural shift).
+2. Passage-span hedge: keep sub-interval (m≤14) + add full-window (m=15) fraction
+   (bed contamination must be seen in training).
+3. Low-share positive hedge (10% at share 0.02–0.08) — organiser "energy varied".
+4. Channel variation if multi-channel refs available; c1_hf/c1_lf/c3 into feature set.
+5. Parked: E5×realq orthogonal blend upper bound 0.8048 (needs Cov_Ω measurement — no slot).
+

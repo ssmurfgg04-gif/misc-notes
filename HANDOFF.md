@@ -1,3 +1,23 @@
+# HANDOFF — state banner (updated 2026-10-22, R12b)
+
+**R12b in one line:** READING FOLDED + D46 + ZERO-RISK DETECTION PROBE STAGED.
+r12_v1_realq read: share RMSE 0.203610728 @ k=0.31 (0.796389271), AUC
+0.554933333 = **49944/90000 exact** (lineage 42961→49449→49944; leaders 0.713/0.666).
+**D46: real-quantifier share family DEAD** — at E5-like Ω-variance its ceiling is
+0.796590 < best 0.798997; escape needs V<0.0062 or V>0.0841 (physically implausible).
+⇒ NO k-sweep slot spent; single reading was decisive. All share-regression families
+cap ~0.799; **the whole remaining gap is detection+within-passage ranking.**
+**STAGED: download/submission_r12_v2_lockE5_c1hf.csv (sha 43204d27)** — share col
+LOCKED r7_v4_kstar (guaranteed 0.798997019, 3rd verification point); score col =
+c1_hf HF-excess-energy ratio (training-free physics, fresh-val AUC **0.8551**;
+c1_lf 0.58, LGBM anchor 0.9656 ✓, quant-as-det 0.9359). Gate updated: TEST path
+fixed (sa_package), score col now carried + range-asserted.
+**NEXT: user submits r12_v2 → paste row.** W=AUC×90000 ≥58500 ⇒ physics transfers
+(R13 = physics+LGBM retrain); ≤49500 ⇒ next probe quant-as-detector, then factory v2
+(missingness simulation m01 41.6%, full-window passage hedge, low-share hedge).
+R13 fix list: plan §7p. Fold math: scripts/r12b_fold.py (report r12b_fold_report.json);
+build: scripts/r12b_build.py (report r12b_build_report.json).
+
 # HANDOFF — state banner (updated 2026-10-22, R10)
 
 **R10 in one line:** EXECUTION HARDENING round. **Code audit clean** (no leakage;
