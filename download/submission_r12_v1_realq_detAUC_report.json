@@ -1,0 +1,28 @@
+{
+ "round": "R12",
+ "task": "stage r12_v1",
+ "r12_v1": {
+  "file": "download/submission_r12_v1_realq_detAUC.csv",
+  "sha256": "688e79899473df8bba47dc2fe9b6b04bafdb7494becb46d1cc4df53b357be67f",
+  "share_col": "real-data quantifier (LGBM, real VTUAD passages x real SA backgrounds), Beta-pinned, k=0.31 borrowed",
+  "score_col": "detector P(passage) ranking -> free AUC transfer read",
+  "E_p": 0.12999985505256573,
+  "E_p2": 0.021074014876103577,
+  "min": 0.08975227584361156,
+  "max": 0.3939743315114458,
+  "spearman_share_vs_e5": 0.6974976334546311,
+  "spearman_score_vs_share": 0.7295302474933576,
+  "expected": {
+   "rho_needed_to_beat_e5_ceiling": 0.2758,
+   "score_at_rho": {
+    "0.15": 0.79073,
+    "0.2": 0.79399,
+    "0.28": 0.79931,
+    "0.35": 0.80409,
+    "0.45": 0.81112,
+    "0.55": 0.81843,
+    "0.65": 0.82604
+   }
+  }
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "round": "R12",
+ "date": "2026-10-22",
+ "task": "real-data detect-then-quantify factory",
+ "bg_supply": {
+  "runs_ge15min": 18623,
+  "minutes_total": 1715779,
+  "sites": 10
+ },
+ "clips": {
+  "n_usable": 349,
+  "minutes_hist": {
+   "3": 145,
+   "4": 91,
+   "5": 40,
+   "6": 30,
+   "8": 11,
+   "7": 6,
+   "13": 4,
+   "9": 4,
+   "10": 4,
+   "12": 3,
+   "11": 2,
+   "14": 2,
+   "23": 2,
+   "16": 1,
+   "19": 1,
+   "20": 1,
+   "18": 1,
+   "17": 1
+  }
+ },
+ "splits_draft": {
+  "val_runs": 2793,
+  "train_runs": 15830
+ },
+ "splits": {
+  "bg_runs_train": 15830,
+  "bg_runs_val": 2793,
+  "clips_train": 308,
+  "clips_val": 41
+ },
+ "build": {
+  "n_train": 7823,
+  "n_val": 1279,
+  "train_minutes": 9.6,
+  "pos_rate": 0.5078614342323917
+ },
+ "detector_val": {
+  "auc_all": 0.9723503209425447,
+  "auc_B_south": 0.9711375212224108
+ },
+ "quantifier_val": {
+  "rmse_all": 0.08635495038111927,
+  "rho_all": 0.9237474094963459,
+  "rmse_pos": 0.11506217081220356,
+  "rho_pos": 0.8842685840152047,
+  "rmse_B_south": 0.127284576547654
+ },
+ "test_vec": {
+  "det_mean": 0.8783930277828487,
+  "det_p50": 0.9999865896840585,
+  "q_mean": 0.3098324327478303,
+  "q_p50": 0.2804302936226398,
+  "spearman_q_vs_e5": 0.6974976334546311,
+  "spearman_det_vs_e5": 0.3741214986010846
+ }
+}
